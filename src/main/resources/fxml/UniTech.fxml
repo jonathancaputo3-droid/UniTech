@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HomePageController">
+   <top>
+      <BorderPane prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <right>
+            <ImageView fx:id="loginIcon" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../it/uid/unitech/Images/Login.png" />
+               </image>
+               <BorderPane.margin>
+                  <Insets right="80.0" />
+               </BorderPane.margin>
+            </ImageView>
+         </right>
+         <left>
+            <ImageView fx:id="logoView" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets left="80.0" />
+               </BorderPane.margin>
+               <image>
+                  <Image url="@../it/uid/unitech/Images/UniTechLogo.png" />
+               </image>
+            </ImageView>
+         </left>
+      </BorderPane>
+   </top>
+   <center>
+      <BorderPane fx:id="contentArea"/>
+   </center>
+</BorderPane>
