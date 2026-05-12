@@ -1,6 +1,7 @@
 package Controller;
 
 import javafx.animation.FadeTransition;
+import javafx.animation.ParallelTransition;
 import javafx.animation.ScaleTransition;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
@@ -68,28 +69,21 @@ public class HomePageController {
             scale.play();
         });
 
-        loginIcon.setOnMouseExited(e -> {
-            ScaleTransition scale = new ScaleTransition(Duration.millis(150), loginIcon);
-            scale.setToX(1);
-            scale.setToY(1);
-            scale.play();
-        });
-
         loginIcon.setOnMouseClicked(e -> {
             if (!dropDownMenu.isVisible()) {
                 dropDownMenu.setVisible(true);
                 dropDownMenu.setManaged(true);
-
                 dropDownMenu.setTranslateY(-10);
                 dropDownMenu.setOpacity(0);
 
                 TranslateTransition tt = new TranslateTransition(Duration.millis(200), dropDownMenu);
                 tt.setToY(0);
-                tt.play();
 
                 FadeTransition ft = new FadeTransition(Duration.millis(200), dropDownMenu);
                 ft.setToValue(1);
-                ft.play();
+
+                ParallelTransition open = new ParallelTransition(tt, ft);
+                open.play();
 
             } else {
                 TranslateTransition tt = new TranslateTransition(Duration.millis(150), dropDownMenu);
@@ -98,15 +92,15 @@ public class HomePageController {
                 FadeTransition ft = new FadeTransition(Duration.millis(150), dropDownMenu);
                 ft.setToValue(0);
 
-                tt.setOnFinished(event -> {
+                ParallelTransition close = new ParallelTransition(tt, ft);
+                close.setOnFinished(event -> {
                     dropDownMenu.setVisible(false);
                     dropDownMenu.setManaged(false);
                     dropDownMenu.setTranslateY(0);
                     dropDownMenu.setOpacity(1);
                 });
 
-                tt.play();
-                ft.play();
+                close.play();
             }
         });
     }
