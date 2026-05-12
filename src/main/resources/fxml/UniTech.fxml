@@ -1,36 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HomePageController">
-   <top>
-      <BorderPane prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
-         <right>
-            <ImageView fx:id="loginIcon" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-               <image>
-                  <Image url="@../it/uid/unitech/Images/Login.png" />
-               </image>
-               <BorderPane.margin>
-                  <Insets right="80.0" />
-               </BorderPane.margin>
-            </ImageView>
-         </right>
-         <left>
-            <ImageView fx:id="logoView" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-               <BorderPane.margin>
-                  <Insets left="80.0" />
-               </BorderPane.margin>
-               <image>
-                  <Image url="@../it/uid/unitech/Images/UniTechLogo.png" />
-               </image>
-            </ImageView>
-         </left>
+<StackPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../Style/style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HomePageController">
+   <children>
+
+      <!-- MAIN UI (prima, sta sotto) -->
+      <BorderPane fx:id="contentArea" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: lightgrey;">
+         <top>
+            <BorderPane style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <left>
+                  <ImageView fx:id="logoView" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <BorderPane.margin>
+                        <Insets left="80.0" />
+                     </BorderPane.margin>
+                     <image>
+                        <Image url="@../it/uid/unitech/Images/UniTechLogo.png" />
+                     </image>
+                  </ImageView>
+               </left>
+               <right>
+                  <ImageView fx:id="loginIcon" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <BorderPane.margin>
+                        <Insets right="80.0" />
+                     </BorderPane.margin>
+                     <image>
+                        <Image url="@../it/uid/unitech/Images/Login.png" />
+                     </image>
+                  </ImageView>
+               </right>
+            </BorderPane>
+         </top>
       </BorderPane>
-   </top>
-   <center>
-      <BorderPane fx:id="contentArea"/>
-   </center>
-</BorderPane>
+
+      <!-- DROPDOWN MENU (dopo, sta sopra) -->
+      <VBox fx:id="dropDownMenu" fillWidth="false" managed="false" maxHeight="200.0" prefHeight="200.0" visible="false" StackPane.alignment="TOP_RIGHT">
+         <StackPane.margin>
+            <Insets top="20.0" />
+         </StackPane.margin>
+         <style>
+            -fx-background-color: white;
+            -fx-background-radius: 12;
+            -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 12, 0, 0, 4);
+            -fx-border-color: #e0e0e0;
+            -fx-border-radius: 12;
+            -fx-border-width: 0.5;
+         </style>
+         <padding>
+            <Insets bottom="8" top="8" />
+         </padding>
+
+         <Label fx:id="profiloLabel" prefWidth="180.0" style="-fx-padding: 10 16 10 16; -fx-font-family: Segoe UI; -fx-font-size: 13px; -fx-text-fill: #1d1d1f; -fx-cursor: hand;" styleClass="menu-label-accedi" text="Profilo">
+            <font>
+               <Font name="Segoe UI" size="12.0" />
+            </font></Label>
+
+         <Separator style="-fx-opacity: 0.3;" />
+
+         <Label fx:id="creaAccountLabel" prefWidth="180.0" style="-fx-padding: 10 16 10 16; -fx-font-size: 13px; -fx-text-fill: #1d1d1f; -fx-cursor: hand;" styleClass="menu-label-accedi" text="Crea un account" />
+
+         <Separator style="-fx-opacity: 0.3;" />
+
+         <Label fx:id="accediLabel" prefWidth="180.0" style="-fx-padding: 10 16 10 16; -fx-font-size: 13px; -fx-text-fill: #0071e3; -fx-font-weight: bold; -fx-cursor: hand;" text="Accedi" />
+      </VBox>
+
+   </children>
+</StackPane>

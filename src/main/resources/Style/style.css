@@ -1,0 +1,21 @@
+.root {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 13px;
+}
+
+.menu-label {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 13px;
+    -fx-text-fill: #1d1d1f;
+    -fx-cursor: hand;
+    -fx-padding: 10 16 10 16;
+}
+
+.menu-label-accedi {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0071e3;
+    -fx-cursor: hand;
+    -fx-padding: 10 16 10 16;
+}
