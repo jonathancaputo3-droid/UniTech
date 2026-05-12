@@ -6,24 +6,26 @@ import javafx.animation.ScaleTransition;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 import javafx.util.Duration;
+import org.kordamp.ikonli.javafx.FontIcon;
 
 public class HomePageController {
 
     @FXML
     private ImageView logoView;
-
     @FXML
-    private ImageView loginIcon;
-
+    private FontIcon loginIcon;
     @FXML
     private BorderPane contentArea;
-
     @FXML
     private VBox dropDownMenu;
     @FXML
@@ -152,6 +154,30 @@ public class HomePageController {
             scaleTransition.setToX(1);
             scaleTransition.setToY(1);
             scaleTransition.play();
+        });
+
+        accediLabel.setOnMouseClicked(event -> {
+            try {
+
+                Stage stage= (Stage) ((Node) event.getSource()).getScene().getWindow();
+                Parent root = FXMLLoader.load(getClass().getResource("/fxml/Login.fxml"));
+                Scene scene= stage.getScene();
+
+                FadeTransition fadeOut=new FadeTransition(Duration.millis(200), scene.getRoot());
+                fadeOut.setFromValue(1);
+                fadeOut.setToValue(0);
+                fadeOut.setOnFinished(e->{
+                    scene.setRoot(root);
+                    FadeTransition fadeIn=new FadeTransition(Duration.millis(200), root);
+                    fadeIn.setFromValue(0);
+                    fadeIn.setToValue(1);
+                    fadeIn.play();
+                });
+                fadeOut.play();
+
+            }catch (Exception ex) {
+                ex.printStackTrace();
+            }
         });
 
     }

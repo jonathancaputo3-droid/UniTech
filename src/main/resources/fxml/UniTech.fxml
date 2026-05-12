@@ -11,14 +11,15 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<StackPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../Style/style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HomePageController">
+<StackPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F0F4F8; -fx-background-radius: 20;" stylesheets="@../Style/style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HomePageController">
    <children>
 
       <!-- MAIN UI (prima, sta sotto) -->
-      <BorderPane fx:id="contentArea" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: lightgrey;">
+      <BorderPane fx:id="contentArea" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: lightgrey; -fx-background-radius: 30;">
          <top>
-            <HBox prefHeight="20.0" prefWidth="600.0" style="-fx-background-color: white;">
+            <HBox prefHeight="20.0" prefWidth="600.0" style="-fx-background-color: white; -fx-background-radius: 30;">
                <children>
                   <ImageView fx:id="logoView" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -28,16 +29,19 @@
                         <Insets left="100.0" />
                      </HBox.margin>
                   </ImageView>
-                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
-                  <ImageView fx:id="loginIcon" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
                      <HBox.margin>
-                        <Insets right="100.0" />
+                        <Insets top="20.0" />
+                     </HBox.margin></Region>
+                  <FontIcon fx:id="loginIcon" iconColor="#049e8f" iconLiteral="fas-user" iconSize="20">
+                     <HBox.margin>
+                        <Insets right="50.0" />
                      </HBox.margin>
-                     <image>
-                        <Image url="@../it/uid/unitech/Images/Login.png" />
-                     </image>
-                  </ImageView>
+                  </FontIcon>
                </children>
+               <BorderPane.margin>
+                  <Insets top="2.0" />
+               </BorderPane.margin>
             </HBox>
          </top>
       </BorderPane>
@@ -45,7 +49,7 @@
       <!-- DROPDOWN MENU (dopo, sta sopra) -->
       <VBox fx:id="dropDownMenu" fillWidth="false" managed="false" maxHeight="100.0" prefHeight="100.0" visible="false" StackPane.alignment="TOP_RIGHT">
          <StackPane.margin>
-            <Insets top="20.0" />
+            <Insets top="15.0" />
          </StackPane.margin>
          <style>
             -fx-background-color: white;

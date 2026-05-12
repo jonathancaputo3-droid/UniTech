@@ -4,7 +4,9 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class UniTech extends Application {
 
@@ -18,7 +20,6 @@ public class UniTech extends Application {
         Parent root = loader.load();
 
         Scene scene = new Scene(root);
-
         stage.setTitle("UniTech");
         stage.setScene(scene);
         stage.setMaximized(true);

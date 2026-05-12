@@ -1,6 +1,11 @@
 module it.uid.unitech {
     requires javafx.controls;
     requires javafx.fxml;
+    requires MaterialFX;
+    requires org.kordamp.ikonli.javafx;
+    requires org.kordamp.ikonli.materialdesign2;
+    requires org.controlsfx.controls;
+    requires de.jensd.fx.glyphs.fontawesome;
 
     opens it.uid.unitech to javafx.fxml;
     opens Controller to javafx.fxml;
