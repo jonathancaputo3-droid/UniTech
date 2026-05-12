@@ -7,6 +7,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -24,12 +25,13 @@
                         <Image url="@../it/uid/unitech/Images/UniTechLogo.png" />
                      </image>
                      <HBox.margin>
-                        <Insets left="50.0" />
+                        <Insets left="100.0" />
                      </HBox.margin>
                   </ImageView>
+                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
                   <ImageView fx:id="loginIcon" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <HBox.margin>
-                        <Insets left="400.0" />
+                        <Insets right="100.0" />
                      </HBox.margin>
                      <image>
                         <Image url="@../it/uid/unitech/Images/Login.png" />
