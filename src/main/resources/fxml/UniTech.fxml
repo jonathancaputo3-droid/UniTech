@@ -6,6 +6,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -16,33 +17,31 @@
       <!-- MAIN UI (prima, sta sotto) -->
       <BorderPane fx:id="contentArea" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: lightgrey;">
          <top>
-            <BorderPane style="-fx-background-color: white;" BorderPane.alignment="CENTER">
-               <left>
+            <HBox prefHeight="20.0" prefWidth="600.0" style="-fx-background-color: white;">
+               <children>
                   <ImageView fx:id="logoView" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                     <BorderPane.margin>
-                        <Insets left="80.0" />
-                     </BorderPane.margin>
                      <image>
                         <Image url="@../it/uid/unitech/Images/UniTechLogo.png" />
                      </image>
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
                   </ImageView>
-               </left>
-               <right>
                   <ImageView fx:id="loginIcon" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                     <BorderPane.margin>
-                        <Insets right="80.0" />
-                     </BorderPane.margin>
+                     <HBox.margin>
+                        <Insets left="400.0" />
+                     </HBox.margin>
                      <image>
                         <Image url="@../it/uid/unitech/Images/Login.png" />
                      </image>
                   </ImageView>
-               </right>
-            </BorderPane>
+               </children>
+            </HBox>
          </top>
       </BorderPane>
 
       <!-- DROPDOWN MENU (dopo, sta sopra) -->
-      <VBox fx:id="dropDownMenu" fillWidth="false" managed="false" maxHeight="200.0" prefHeight="200.0" visible="false" StackPane.alignment="TOP_RIGHT">
+      <VBox fx:id="dropDownMenu" fillWidth="false" managed="false" maxHeight="100.0" prefHeight="100.0" visible="false" StackPane.alignment="TOP_RIGHT">
          <StackPane.margin>
             <Insets top="20.0" />
          </StackPane.margin>
@@ -58,14 +57,14 @@
             <Insets bottom="8" top="8" />
          </padding>
 
-         <Label fx:id="profiloLabel" prefWidth="180.0" style="-fx-padding: 10 16 10 16; -fx-font-family: Segoe UI; -fx-font-size: 13px; -fx-text-fill: #1d1d1f; -fx-cursor: hand;" styleClass="menu-label-accedi" text="Profilo">
+         <Label fx:id="profileLabel" prefWidth="180.0" style="-fx-padding: 10 16 10 16; -fx-font-family: Segoe UI; -fx-font-size: 13px; -fx-text-fill: #1d1d1f; -fx-cursor: hand;" styleClass="menu-label-profilo" text="Profilo">
             <font>
                <Font name="Segoe UI" size="12.0" />
             </font></Label>
 
          <Separator style="-fx-opacity: 0.3;" />
 
-         <Label fx:id="creaAccountLabel" prefWidth="180.0" style="-fx-padding: 10 16 10 16; -fx-font-size: 13px; -fx-text-fill: #1d1d1f; -fx-cursor: hand;" styleClass="menu-label-accedi" text="Crea un account" />
+         <Label fx:id="creaAccountLabel" prefWidth="180.0" style="-fx-padding: 10 16 10 16; -fx-font-size: 13px; -fx-text-fill: #1d1d1f; -fx-cursor: hand;" styleClass="menu-label-crea-account" text="Crea un account" />
 
          <Separator style="-fx-opacity: 0.3;" />
 

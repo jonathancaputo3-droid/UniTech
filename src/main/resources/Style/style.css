@@ -1,12 +1,15 @@
-.root {
-    -fx-font-family: "Segoe UI";
-    -fx-font-size: 13px;
-}
-
-.menu-label {
+.menu-label-profilo {
     -fx-font-family: "Segoe UI";
     -fx-font-size: 13px;
     -fx-text-fill: #1d1d1f;
+    -fx-font-weight: bold;
+}
+
+.menu-label-crea-account {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 13px;
+    -fx-text-fill: #1d1d1f;
+    -fx-font-weight: bold;
     -fx-cursor: hand;
     -fx-padding: 10 16 10 16;
 }
