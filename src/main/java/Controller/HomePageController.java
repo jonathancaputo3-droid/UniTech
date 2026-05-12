@@ -69,13 +69,6 @@ public class HomePageController {
             scale.play();
         });
 
-        loginIcon.setOnMouseExited(e -> {
-            ScaleTransition scale = new ScaleTransition(Duration.millis(150), loginIcon);
-            scale.setToX(1);
-            scale.setToY(1);
-            scale.play();
-        });
-
         loginIcon.setOnMouseClicked(e -> {
             if (!dropDownMenu.isVisible()) {
                 dropDownMenu.setVisible(true);
