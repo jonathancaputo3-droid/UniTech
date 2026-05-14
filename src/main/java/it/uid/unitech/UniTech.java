@@ -14,7 +14,7 @@ public class UniTech extends Application {
     public void start(Stage stage) throws Exception {
 
         FXMLLoader loader = new FXMLLoader(
-                getClass().getResource("/fxml/UniTech.fxml")
+                getClass().getResource("/fxml/HomePage.fxml")
         );
 
         Parent root = loader.load();

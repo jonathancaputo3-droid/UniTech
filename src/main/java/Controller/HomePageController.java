@@ -11,6 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
@@ -34,10 +35,20 @@ public class HomePageController {
     private Label accediLabel;
     @FXML
     private Label profileLabel;
+    @FXML
+    private AnchorPane rootPane;      // fx:id="rootPane" nell'FXML
+    @FXML
+    private ImageView backgroundImage;
 
     public void initialize() {
 
-        logoView.setOnMouseEntered(e -> {
+        backgroundImage.fitWidthProperty().bind(rootPane.widthProperty());
+        backgroundImage.fitHeightProperty().bind(rootPane.heightProperty());
+        backgroundImage.setPreserveRatio(false);
+        backgroundImage.setSmooth(true);
+        backgroundImage.setCache(true);
+
+        /*logoView.setOnMouseEntered(e -> {
             ScaleTransition scale = new ScaleTransition(Duration.millis(150), logoView);
             scale.setToX(0.9);
             scale.setToY(0.9);
@@ -62,9 +73,9 @@ public class HomePageController {
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
-        });
+        });*/
 
-        loginIcon.setOnMouseEntered(e -> {
+        /*loginIcon.setOnMouseEntered(e -> {
             ScaleTransition scale = new ScaleTransition(Duration.millis(150), loginIcon);
             scale.setToX(0.9);
             scale.setToY(0.9);
@@ -178,7 +189,7 @@ public class HomePageController {
             }catch (Exception ex) {
                 ex.printStackTrace();
             }
-        });
+        });*/
 
     }
 }
