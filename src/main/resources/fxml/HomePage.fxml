@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Rectangle2D?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
 
-
-<AnchorPane fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HomePageController">
+<StackPane fx:id="rootPane" maxHeight="720.0" maxWidth="1080.0" minHeight="720.0" minWidth="1080.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white; -fx-background-radius: 25;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HomePageController">
    <children>
-      <ImageView fx:id="backgroundImage" fitHeight="362.0" fitWidth="600.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <ImageView fx:id="backgroundImage" fitHeight="641.0" fitWidth="1080.0" pickOnBounds="true" style="-fx-preserve-ratio: 1;">
          <image>
             <Image url="@../it/uid/unitech/Images/splashScreen.jpeg" />
          </image>
-         <viewport>
-            <Rectangle2D />
-         </viewport>
       </ImageView>
+      <FontIcon fx:id="loginArrow" iconColor="#bb81c7" iconLiteral="fas-arrow-circle-right" iconSize="60" text="" textAlignment="CENTER" StackPane.alignment="CENTER">
+         <StackPane.margin>
+            <Insets right="200.0" top="40.0" />
+         </StackPane.margin>
+         <rotationAxis>
+            <Point3D />
+         </rotationAxis>
+      </FontIcon>
    </children>
-</AnchorPane>
+</StackPane>

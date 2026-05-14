@@ -1,9 +1,6 @@
 package Controller;
 
-import javafx.animation.FadeTransition;
-import javafx.animation.ParallelTransition;
-import javafx.animation.ScaleTransition;
-import javafx.animation.TranslateTransition;
+import javafx.animation.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -13,11 +10,14 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import org.kordamp.ikonli.javafx.FontIcon;
+
+import java.io.IOException;
 
 public class HomePageController {
 
@@ -36,18 +36,43 @@ public class HomePageController {
     @FXML
     private Label profileLabel;
     @FXML
-    private AnchorPane rootPane;      // fx:id="rootPane" nell'FXML
+    private StackPane rootPane;
     @FXML
     private ImageView backgroundImage;
+    @FXML
+    private FontIcon loginArrow;
 
     public void initialize() {
 
-        backgroundImage.fitWidthProperty().bind(rootPane.widthProperty());
-        backgroundImage.fitHeightProperty().bind(rootPane.heightProperty());
-        backgroundImage.setPreserveRatio(false);
         backgroundImage.setSmooth(true);
         backgroundImage.setCache(true);
 
+        ScaleTransition pulse = new ScaleTransition(Duration.millis(2000), loginArrow);
+        pulse.setFromX(0.9);
+        pulse.setFromY(0.9);
+        pulse.setToX(1.0);
+        pulse.setToY(1.0);
+        pulse.setAutoReverse(true);
+        pulse.setInterpolator(Interpolator.EASE_BOTH);
+        pulse.setCycleCount(Animation.INDEFINITE);
+        pulse.play();
+
+        loginArrow.setOnMouseClicked(event -> {
+            pulse.stop();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Login.fxml"));
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            try {
+                Parent root = loader.load();
+                Scene scene = new Scene(root,stage.getWidth(),stage.getHeight());
+                stage.setScene(scene);
+                stage.setMaximized(true);
+                stage.show();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        });
         /*logoView.setOnMouseEntered(e -> {
             ScaleTransition scale = new ScaleTransition(Duration.millis(150), logoView);
             scale.setToX(0.9);
