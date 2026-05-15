@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('src/main/resources/Fonts/Poppins-Bold.ttf');
+}
+
+.label {
+    -fx-font-family: 'Poppins';
+    -fx-font-weight: bold;
+}

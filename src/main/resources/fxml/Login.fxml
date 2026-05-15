@@ -1,33 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-<?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F0F4F8;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightgrey; -fx-background-radius: 20;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
-         <left>
-            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-radius: 20; -fx-background-color: white;">
-               <children>
-                  <FontAwesomeIconView fill="#1de1b4" glyphName="COG" selectionStart="1" size="40" textAlignment="CENTER" wrappingWidth="40.99994373321533">
-                     <font>
-                        <Font name="Blackadder ITC" size="46.0" />
-                     </font>
-                  </FontAwesomeIconView>
-                  <Region prefHeight="200.0" prefWidth="200.0" />
-                  <FontIcon iconLiteral="fas-user-circle" iconSize="40" />
-               </children>
-               <padding>
-                  <Insets left="25.0" top="20.0" />
-               </padding>
-            </VBox>
-         </left>
-      </BorderPane>
+      <VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #D4D5EE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-100.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="NEVER">
+               <image>
+                  <Image url="@../it/uid/unitech/Images/PcIconLogin.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="200.0" top="200.0" />
+               </VBox.margin>
+            </ImageView>
+         </children></VBox>
    </children>
 </AnchorPane>

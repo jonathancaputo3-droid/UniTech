@@ -5,16 +5,14 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.StackPane?>
-<?import org.kordamp.ikonli.javafx.FontIcon?>
-
-<StackPane fx:id="rootPane" maxHeight="720.0" maxWidth="1080.0" minHeight="720.0" minWidth="1080.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white; -fx-background-radius: 25;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HomePageController">
+<?import org.kordamp.ikonli.javafx.FontIcon?><StackPane fx:id="rootPane" maxHeight="720.0" maxWidth="1080.0" minHeight="720.0" minWidth="1080.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #D4D5EE; -fx-background-radius: 25;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SplashScreenController">
    <children>
       <ImageView fx:id="backgroundImage" fitHeight="641.0" fitWidth="1080.0" pickOnBounds="true" style="-fx-preserve-ratio: 1;">
          <image>
-            <Image url="@../it/uid/unitech/Images/splashScreen.jpeg" />
+            <Image url="@../it/uid/unitech/Images/splashScreen.png" />
          </image>
       </ImageView>
-      <FontIcon fx:id="loginArrow" iconColor="#bb81c7" iconLiteral="fas-arrow-circle-right" iconSize="60" text="" textAlignment="CENTER" StackPane.alignment="CENTER">
+      <FontIcon fx:id="loginArrow" iconColor="#c64ee1" iconLiteral="fas-arrow-circle-right" iconSize="60" text="" textAlignment="CENTER" StackPane.alignment="CENTER">
          <StackPane.margin>
             <Insets right="200.0" top="40.0" />
          </StackPane.margin>
@@ -24,3 +22,5 @@
       </FontIcon>
    </children>
 </StackPane>
+
+
