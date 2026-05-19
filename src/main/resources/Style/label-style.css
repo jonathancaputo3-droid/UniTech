@@ -6,6 +6,16 @@
 }
 
 @font-face {
+    font-family: 'DMSans';
+    src: url('DMSans-Regular.ttf');
+}
+
+@font-face{
+    font-family: 'CooperHewitt';
+    src: url('CooperHewitt-Bold.otf');
+}
+
+@font-face {
     font-family: 'PoppinsRegular';
     src: url('Poppins-Regular.ttf');
 }
@@ -16,36 +26,38 @@
 }
 
 
-/* ===== TITOLI ===== */
 .title {
-    -fx-font-family: 'Poppins';
+    -fx-font-family: 'CooperHewitt';
     -fx-font-weight: bold;
     -fx-font-size: 32px;
     -fx-text-fill: black;
 }
 
-/* ===== SOTTOTITOLI ===== */
 .subtitle {
-    -fx-font-family: 'PoppinsRegular';
+    -fx-font-family: 'DMSans';
+    -fx-font-weight: bold;
     -fx-font-size: 15px;
     -fx-text-fill: black;
 }
+.registration-label {
+    -fx-font-family: 'DMSans';
+    -fx-font-weight: medium;
+    -fx-font-size: 15px;
+    -fx-text-fill: #02AFEB;
+}
 
-/* ===== TESTO NORMALE ===== */
 .body-text {
     -fx-font-family: 'PoppinsRegular';
     -fx-font-size: 13px;
     -fx-text-fill: #374151;
 }
 
-/* ===== TESTO PICCOLO / NOTE ===== */
 .caption {
     -fx-font-family: 'PoppinsLight';
     -fx-font-size: 11px;
     -fx-text-fill: #9CA3AF;
 }
 
-/* ===== LABEL ERRORE ===== */
 .error-text {
     -fx-font-family: 'PoppinsRegular';
     -fx-font-size: 12px;
@@ -57,7 +69,7 @@
     -fx-font-size: 14px;
     -fx-text-fill: black;
     -fx-prompt-text-fill: #9CA3AF;
-    -fx-background-color: #D4D5EE;
+    -fx-background-color: #F9FAFE;
     -fx-border-color: #D1D5DB;
     -fx-border-width: 1.2px;
     -fx-border-radius: 6px;
@@ -71,11 +83,32 @@
         -fx-font-size: 14px;
         -fx-text-fill: black;
         -fx-prompt-text-fill: #9CA3AF;
-        -fx-background-color: #D4D5EE;
+        -fx-background-color: #F9FAFE;
         -fx-border-color: #D1D5DB;
         -fx-border-width: 1.2px;
         -fx-border-radius: 6px;
         -fx-background-radius: 6px;
         -fx-padding: 10px 14px;
         -fx-pref-height: 42px;
+}
+
+.splash-screen-title{
+    -fx-font-family: 'CopperHewitt';
+    -fx-font-weight: bold;
+    -fx-font-size: 122px;
+    -fx-text-fill: black;
+}
+
+.splash-screen-subtitle{
+    -fx-font-family: 'CopperHewitt';
+    -fx-font-weight: light;
+    -fx-font-size: 105px;
+    -fx-text-fill: black;
+}
+
+.splash-screen-text{
+    -fx-font-family: 'DmSans';
+    -fx-font-weight: light;
+    -fx-font-size: 18px;
+    -fx-text-fill: black;
 }
