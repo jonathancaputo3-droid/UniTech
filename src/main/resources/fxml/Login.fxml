@@ -1,23 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #D4D5EE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-100.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <ImageView fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="NEVER">
-               <image>
-                  <Image url="@../it/uid/unitech/Images/PcIconLogin.png" />
-               </image>
-               <VBox.margin>
-                  <Insets left="200.0" top="200.0" />
-               </VBox.margin>
-            </ImageView>
-         </children></VBox>
-   </children>
+<AnchorPane prefHeight="400.0" prefWidth="900.0" style="-fx-background-radius: 25;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+
+   <!-- SINISTRA: invariata -->
+   <VBox maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="550.0" style="-fx-background-color: #D4D5EE; -fx-background-radius: 25;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="0">
+      <children>
+         <ImageView cache="true" cacheHint="QUALITY" fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../it/uid/unitech/Images/PcIconLogin.png" />
+            </image>
+            <VBox.margin>
+               <Insets left="300.0" top="200.0" />
+            </VBox.margin>
+         </ImageView>
+      </children>
+   </VBox>
+
+         <Label layoutX="920.0" layoutY="78.0" minWidth="-Infinity" prefHeight="22.0" prefWidth="354.0" styleClass="subtitle" stylesheets="@../Style/label-style.css" text="Esegui il Login Per Accedere All'App!" AnchorPane.topAnchor="145.0">
+      <padding>
+         <Insets left="80.0" />
+      </padding>
+   </Label>
+   <Label layoutX="890.0" layoutY="31.0" minWidth="-Infinity" styleClass="title" stylesheets="@../Style/label-style.css" text="BENTORNATO SU UNITECH" textAlignment="CENTER" AnchorPane.topAnchor="100.0" />
+   <TextField layoutX="978.0" layoutY="222.0" minWidth="-Infinity" prefWidth="238.0" promptText="E-mail" styleClass="text-field-login" stylesheets="@../Style/label-style.css" AnchorPane.topAnchor="222.0" />
+
 </AnchorPane>

@@ -1,9 +1,67 @@
+/* ===== FONTS ===== */
 @font-face {
     font-family: 'Poppins';
-    src: url('src/main/resources/Fonts/Poppins-Bold.ttf');
+    src: url('Poppins-Bold.ttf');
+    -fx-font-weight: bold;
 }
 
-.label {
+@font-face {
+    font-family: 'PoppinsRegular';
+    src: url('Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'PoppinsLight';
+    src: url('Poppins-Light.ttf');
+}
+
+
+/* ===== TITOLI ===== */
+.title {
     -fx-font-family: 'Poppins';
     -fx-font-weight: bold;
+    -fx-font-size: 32px;
+    -fx-text-fill: black;
+}
+
+/* ===== SOTTOTITOLI ===== */
+.subtitle {
+    -fx-font-family: 'PoppinsRegular';
+    -fx-font-size: 15px;
+    -fx-text-fill: black;
+}
+
+/* ===== TESTO NORMALE ===== */
+.body-text {
+    -fx-font-family: 'PoppinsRegular';
+    -fx-font-size: 13px;
+    -fx-text-fill: #374151;
+}
+
+/* ===== TESTO PICCOLO / NOTE ===== */
+.caption {
+    -fx-font-family: 'PoppinsLight';
+    -fx-font-size: 11px;
+    -fx-text-fill: #9CA3AF;
+}
+
+/* ===== LABEL ERRORE ===== */
+.error-text {
+    -fx-font-family: 'PoppinsRegular';
+    -fx-font-size: 12px;
+    -fx-text-fill: #EF4444;
+}
+
+.text-field-login {
+    -fx-font-family: 'PoppinsRegular';
+    -fx-font-size: 14px;
+    -fx-text-fill: black;
+    -fx-prompt-text-fill: #9CA3AF;
+    -fx-background-color: #D4D5EE;
+    -fx-border-color: #D1D5DB;
+    -fx-border-width: 1.2px;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 10px 14px;
+    -fx-pref-height: 42px;
 }

@@ -5,7 +5,9 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.StackPane?>
-<?import org.kordamp.ikonli.javafx.FontIcon?><StackPane fx:id="rootPane" maxHeight="720.0" maxWidth="1080.0" minHeight="720.0" minWidth="1080.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #D4D5EE; -fx-background-radius: 25;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SplashScreenController">
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<StackPane fx:id="rootPane" prefWidth="600.0" style="-fx-background-color: #D4D5EE; -fx-background-radius: 35;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SplashScreenController">
    <children>
       <ImageView fx:id="backgroundImage" fitHeight="641.0" fitWidth="1080.0" pickOnBounds="true" style="-fx-preserve-ratio: 1;">
          <image>
@@ -22,5 +24,3 @@
       </FontIcon>
    </children>
 </StackPane>
-
-
