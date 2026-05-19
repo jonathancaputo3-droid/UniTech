@@ -16,7 +16,6 @@
 }
 
 
-/* ===== TITOLI ===== */
 .title {
     -fx-font-family: 'Poppins';
     -fx-font-weight: bold;
@@ -24,28 +23,24 @@
     -fx-text-fill: black;
 }
 
-/* ===== SOTTOTITOLI ===== */
 .subtitle {
     -fx-font-family: 'PoppinsRegular';
     -fx-font-size: 15px;
     -fx-text-fill: black;
 }
 
-/* ===== TESTO NORMALE ===== */
 .body-text {
     -fx-font-family: 'PoppinsRegular';
     -fx-font-size: 13px;
     -fx-text-fill: #374151;
 }
 
-/* ===== TESTO PICCOLO / NOTE ===== */
 .caption {
     -fx-font-family: 'PoppinsLight';
     -fx-font-size: 11px;
     -fx-text-fill: #9CA3AF;
 }
 
-/* ===== LABEL ERRORE ===== */
 .error-text {
     -fx-font-family: 'PoppinsRegular';
     -fx-font-size: 12px;
@@ -57,7 +52,7 @@
     -fx-font-size: 14px;
     -fx-text-fill: black;
     -fx-prompt-text-fill: #9CA3AF;
-    -fx-background-color: #D4D5EE;
+    -fx-background-color: #F9FAFE;
     -fx-border-color: #D1D5DB;
     -fx-border-width: 1.2px;
     -fx-border-radius: 6px;
@@ -71,7 +66,7 @@
         -fx-font-size: 14px;
         -fx-text-fill: black;
         -fx-prompt-text-fill: #9CA3AF;
-        -fx-background-color: #D4D5EE;
+        -fx-background-color: #F9FAFE;
         -fx-border-color: #D1D5DB;
         -fx-border-width: 1.2px;
         -fx-border-radius: 6px;

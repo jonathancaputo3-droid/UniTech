@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
@@ -10,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="400.0" prefWidth="900.0" style="-fx-background-radius: 25;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="400.0" prefWidth="900.0" style="-fx-background-radius: 25;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginPageController">
 
    <!-- SINISTRA: invariata -->
    <VBox maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="550.0" style="-fx-background-color: #D4D5EE; -fx-background-radius: 25;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="0">
@@ -38,7 +39,8 @@
          <Point3D />
       </rotationAxis>
    </TextField>
-   <Label layoutX="890.0" layoutY="402.0" styleClass="subtitle" stylesheets="@../Style/label-style.css" text="Password" AnchorPane.topAnchor="402.0" />
-   <PasswordField layoutX="890.0" layoutY="424.0" prefWidth="238.0" promptText="es. 12345" styleClass="password-field-login" stylesheets="@../Style/label-style.css" AnchorPane.topAnchor="424.0" />
+   <Label layoutX="890.0" layoutY="380.0" styleClass="subtitle" stylesheets="@../Style/label-style.css" text="Password" AnchorPane.topAnchor="364.0" />
+   <PasswordField layoutX="889.0" layoutY="386.0" minWidth="-Infinity" prefWidth="238.0" promptText="es. 12345" styleClass="password-field-login" stylesheets="@../Style/label-style.css" AnchorPane.topAnchor="386.0" />
+   <Button fx:id="loginButton" layoutX="890.0" layoutY="460.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="238.0" styleClass="button-login" stylesheets="@../Style/button-style.css" text="Accedi!" />
 
 </AnchorPane>
