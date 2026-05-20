@@ -7,24 +7,19 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import org.kordamp.ikonli.javafx.FontIcon;
 
 public class SplashScreenController {
-
-    @FXML
-    private ImageView backgroundImage;
     @FXML
     private FontIcon loginArrow;
     @FXML
-    private StackPane rootPane;
+    private AnchorPane rootPane;
 
     public void initialize() {
-
-        backgroundImage.setSmooth(true);
-        backgroundImage.setCache(true);
 
         ScaleTransition pulse = new ScaleTransition(Duration.millis(2000), loginArrow);
         pulse.setFromX(0.9);
