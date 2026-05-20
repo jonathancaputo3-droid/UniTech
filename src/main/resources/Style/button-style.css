@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'PoppinsRegular';
+    src: url('Poppins-Regular.ttf');
+}
+
+.button-login{
+    -fx-font-family: PoppinsRegular;
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-background-color: #5C5FD6;
+    -fx-border-color: #4A4DBF;
+    -fx-border-width: 1.2px;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 10px 14px;
+    -fx-pref-height: 42px;
+}
