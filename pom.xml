@@ -42,11 +42,6 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
-            <dependency>
-                <groupId>io.github.palexdev</groupId>
-                <artifactId>materialfx</artifactId>
-                <version>11.17.0</version>
-            </dependency>
         <dependency>
             <groupId>org.kordamp.ikonli</groupId>
             <artifactId>ikonli-javafx</artifactId>
@@ -69,7 +64,6 @@
             <artifactId>fontawesomefx-fontawesome</artifactId>
             <version>4.7.0-9.1.2</version>
         </dependency>
-
         <dependency>
         <groupId>io.github.mkpaz</groupId>
         <artifactId>atlantafx-base</artifactId>
