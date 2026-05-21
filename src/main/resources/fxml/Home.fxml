@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.scene.Scene?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
@@ -10,7 +11,13 @@
         <Scene stylesheets="@cupertino-light.css">
             <AnchorPane prefHeight="1080.0" prefWidth="1920.0">
             <children>
-               <HBox prefHeight="80.0" prefWidth="1920.0" />
+               <HBox prefHeight="80.0" prefWidth="1920.0" style="-fx-border-color:: -color-accent-emphasis;">
+                  <styleClass>
+                     <String fx:value="bg-default" />
+                     <String fx:value="border-default" />
+                     <String fx:value="elevated-1" />
+                  </styleClass>
+               </HBox>
             </children></AnchorPane>
         </Scene>
     </scene>
