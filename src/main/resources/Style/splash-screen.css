@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "Cooper Hewitt";
+    src: url("../Fonts/CooperHewitt-Bold.otf");
+}
+
+@font-face {
+    font-family: "Cooper Hewitt";
+    src: url("../Fonts/DMSans-Regular.ttf");
+}
+
+.splash-title {
+    -fx-font-family: "CooperHewitt";
+    -fx-font-size: 120px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+.splash-subtitle{
+    -fx-font-family: "CooperHewitt";
+    -fx-font-size: 105px;
+    -fx-font-weight: regular;
+    -fx-text-fill: black;
+}
+
+.splash-text{
+    -fx-font-family: DMSans;
+    -fx-font-size: 20px;
+    -fx-font-weight: regular;
+    -fx-text-fill: black;
+}

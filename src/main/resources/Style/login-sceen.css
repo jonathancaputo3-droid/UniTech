@@ -1,0 +1,133 @@
+.password-field {
+    -fx-text-fill: #2b2b2b;
+
+    -fx-background-color: #f1f3f6;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+
+    -fx-border-color: #d6dae3;
+    -fx-border-width: 1.2;
+
+    -fx-font-size: 15px;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            #d9dde5,
+            10,
+            0.15,
+            0,
+            2
+    );
+}
+
+.password-field:focused {
+    -fx-background-color: #f7f8fa;
+
+    -fx-border-color: #5c5fd6;
+    -fx-border-width: 1.8;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            #c9cdf7,
+            14,
+            0.2,
+            0,
+            0
+    );
+}
+
+.password-field .text {
+    -fx-fill: #2b2b2b;
+}
+
+.password-field .prompt-text {
+    -fx-fill: #8b8f99;
+}
+
+.text-field .password-field,
+.text-field {
+
+    -fx-text-fill: #2b2b2b;
+
+    -fx-background-color: #f3f4f7;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+
+    -fx-border-color: #d9dde5;
+    -fx-border-width: 1;
+
+    -fx-padding: 8 12 8 12;
+
+    -fx-font-size: 14px;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            #cfd4dc,
+            8,
+            0.18,
+            0,
+            2
+    );
+}
+
+.password-field:focused,
+.text-field:focused {
+
+    -fx-background-color: #ffffff;
+
+    -fx-border-color: #5c5fd6;
+    -fx-border-width: 1.3;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            #bcc2ff,
+            12,
+            0.25,
+            0,
+            2
+    );
+}
+
+.password-field .text,
+.text-field .text {
+    -fx-fill: #2b2b2b;
+}
+
+.password-field .prompt-text,
+.text-field .prompt-text {
+    -fx-fill: #9095a1;
+}
+.text-field:focused {
+    -fx-background-color: #f7f8fa;
+
+    -fx-border-color: #5c5fd6;
+    -fx-border-width: 1.8;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            #c9cdf7,
+            14,
+            0.2,
+            0,
+            0
+    );
+}
+
+.text-field .text {
+    -fx-fill: #2b2b2b;
+}
+
+.text-field .prompt-text {
+    -fx-fill: #8b8f99;
+}
+.login-title {
+    -fx-text-fill: #1e1e2e;
+    -fx-font-size: 50px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, #d0d3f0, 6, 0.1, 0, 1);
+}
+.login-subtitle {
+    -fx-text-fill: #6b6f80;
+    -fx-font-size: 25px;
+    -fx-font-weight: normal;
+}
