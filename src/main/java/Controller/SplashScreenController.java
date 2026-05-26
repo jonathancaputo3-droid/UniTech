@@ -6,9 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import org.kordamp.ikonli.javafx.FontIcon;
@@ -47,7 +45,7 @@ public class SplashScreenController {
 
             outTransition.setOnFinished(e -> {
                 try {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Login.fxml"));
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Login.fxml"));
                     Parent root = loader.load();
 
                     root.setTranslateX(1200);
