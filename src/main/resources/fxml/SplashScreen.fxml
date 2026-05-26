@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-radius: 35;" stylesheets="@../Style/splash-screen.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SplashScreenController">
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-radius: 35;" stylesheets="@../Style/unitech.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SplashScreenController">
    <children>
       <Label cache="true" cacheHint="QUALITY" layoutX="150.0" layoutY="200.0" minWidth="-Infinity" prefHeight="94.0" styleClass="splash-title" text="FROM PEOPLE" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="190.0" />
       <Label layoutX="150.4" layoutY="298.6" minWidth="-Infinity" prefHeight="94.0" styleClass="splash-subtitle" stylesheets="@../Style/label-style.css" text="TO PEOPLE" AnchorPane.leftAnchor="88.0" AnchorPane.topAnchor="303.6" />
@@ -22,7 +22,7 @@
             <Image url="@../it/uid/unitech/Images/computerIcon.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="88.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="81.0" AnchorPane.topAnchor="53.0">
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="88.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="81.0" AnchorPane.topAnchor="57.0">
          <image>
             <Image url="@../it/uid/unitech/Images/UnitechLogo.png" />
          </image>

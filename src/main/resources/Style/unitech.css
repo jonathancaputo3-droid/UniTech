@@ -1,0 +1,101 @@
+/*============FONTS===========*/
+
+@font-face {
+    font-family: "Cooper Hewitt";
+    src: url("../Fonts/CooperHewitt-Bold.otf");
+}
+
+@font-face {
+    font-family: "DMSans";
+    src: url("../Fonts/DMSans-Regular.ttf");
+}
+
+/*================BUTTON DEFAULT==========*/
+
+.button{
+    -fx-font-family: CooperHewitt;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-color: #2092e4;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-width: 1.2;
+}
+
+/*================SPLASH SCREEN CLASS===============*/
+
+.splash-title {
+    -fx-font-family: "CooperHewitt";
+    -fx-font-size: 120px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1e1e2e;
+}
+
+.splash-subtitle{
+    -fx-font-family: "CooperHewitt";
+    -fx-font-size: 105px;
+    -fx-font-weight: regular;
+    -fx-text-fill: #6b6f80;
+}
+
+.splash-text{
+    -fx-font-family: DMSans;
+    -fx-font-size: 20px;
+    -fx-font-weight: regular;
+    -fx-text-fill: #1e1e2e;
+
+}
+
+
+/* === TEXT FIELD & PASSWORD FIELD === */
+
+.text-field,
+.password-field {
+    -fx-text-fill: #2b2b2b;
+    -fx-background-color: #f1f3f6;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #d6dae3;
+    -fx-border-width: 1.2;
+    -fx-padding: 8 12 8 12;
+    -fx-font-size: 15px;
+    -fx-effect: dropshadow(gaussian, #d9dde5, 10, 0.15, 0, 2);
+}
+
+.text-field:focused,
+.password-field:focused {
+    -fx-background-color: #f7f8fa;
+    -fx-border-color: #5c5fd6;
+    -fx-border-width: 1.8;
+    -fx-effect: dropshadow(gaussian, #c9cdf7, 14, 0.2, 0, 0);
+}
+
+.text-field .text,
+.password-field .text {
+    -fx-fill: #2b2b2b;
+}
+
+.text-field .prompt-text,
+.password-field .prompt-text {
+    -fx-fill: #8b8f99;
+}
+
+.label-email-password{
+    -fx-font-family: CooperHewitt;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+/* === TITLE & SUBTITLE LOGIN PAGE=== */
+.login-title {
+    -fx-text-fill: #1e1e2e;
+    -fx-font-size: 50px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, #d0d3f0, 6, 0.1, 0, 1);
+}
+
+.login-subtitle {
+    -fx-text-fill: #6b6f80;
+    -fx-font-size: 25px;
+}
