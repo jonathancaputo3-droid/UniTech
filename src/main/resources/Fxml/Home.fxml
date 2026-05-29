@@ -33,11 +33,6 @@
 
                                             <!-- NAVBAR -->
                                             <HBox fillHeight="false" minHeight="54.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="54.0" prefWidth="1230.0" style="-fx-border-radius: 6;">
-                                                <styleClass>
-                                                    <String fx:value="bg-default" />
-                                                    <String fx:value="border-default" />
-                                                    <String fx:value="elevated-1" />
-                                                </styleClass>
                                                 <children>
                                                     <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                                         <image>
@@ -50,21 +45,25 @@
 
                                                     <MenuButton mnemonicParsing="false" text="iPhone">
                                                         <items>
-                                                            <MenuItem mnemonicParsing="false" text="iPhone 17" />
-                                                            <MenuItem mnemonicParsing="false" text="iPhone SE" />
+                                                            <MenuItem mnemonicParsing="false" text="iPhone 17 Pro" />
+                                                            <MenuItem mnemonicParsing="false" text="iPhone Air" />
+                                             <MenuItem mnemonicParsing="false" text="iPhone 17" />
+                                             <MenuItem mnemonicParsing="false" text="iPhone 16" />
                                                         </items>
                                                         <font><Font name="Segoe UI" size="18.0" /></font>
-                                                        <styleClass>
-                                                            <String fx:value="button-outlined" />
-                                                            <String fx:value="flat" />
-                                                        </styleClass>
                                                         <HBox.margin><Insets left="30.0" top="10.0" /></HBox.margin>
+                                          <styleClass>
+                                             <String fx:value="button-outlined" />
+                                             <String fx:value="flat" />
+                                          </styleClass>
                                                     </MenuButton>
 
                                                     <MenuButton mnemonicParsing="false" text="iPad">
                                                         <items>
                                                             <MenuItem mnemonicParsing="false" text="iPad Pro" />
                                                             <MenuItem mnemonicParsing="false" text="iPad Air" />
+                                             <MenuItem mnemonicParsing="false" text="iPad " />
+                                             <MenuItem mnemonicParsing="false" text="iPad Mini" />
                                                         </items>
                                                         <font><Font name="Segoe UI" size="18.0" /></font>
                                                         <styleClass>
@@ -76,8 +75,8 @@
 
                                                     <MenuButton mnemonicParsing="false" text="iMac">
                                                         <items>
-                                                            <MenuItem mnemonicParsing="false" text="Mac Mini" />
                                                             <MenuItem mnemonicParsing="false" text="iMac" />
+                                                            <MenuItem mnemonicParsing="false" text="Mac Mini" />
                                                         </items>
                                                         <font><Font name="Segoe UI" size="18.0" /></font>
                                                         <styleClass>
@@ -89,8 +88,9 @@
 
                                                     <MenuButton mnemonicParsing="false" text="MacBook">
                                                         <items>
-                                                            <MenuItem mnemonicParsing="false" text="MacBook Pro" />
+                                                            <MenuItem mnemonicParsing="false" text="MacBook Neo" />
                                                             <MenuItem mnemonicParsing="false" text="MacBook Air" />
+                                             <MenuItem mnemonicParsing="false" text="MacBook Pro" />
                                                         </items>
                                                         <font><Font name="Segoe UI" size="18.0" /></font>
                                                         <styleClass>
@@ -102,8 +102,9 @@
 
                                                     <MenuButton mnemonicParsing="false" text="Watch">
                                                         <items>
-                                                            <MenuItem mnemonicParsing="false" text="Apple Watch Pro" />
-                                                            <MenuItem mnemonicParsing="false" text="Apple Watch SE" />
+                                                            <MenuItem mnemonicParsing="false" text="Apple Watch Series 11" />
+                                                            <MenuItem mnemonicParsing="false" text="Apple Watch SE 3" />
+                                             <MenuItem mnemonicParsing="false" text="Apple Watch Ultra 3" />
                                                         </items>
                                                         <font><Font name="Segoe UI" size="18.0" /></font>
                                                         <styleClass>
@@ -115,8 +116,9 @@
 
                                                     <MenuButton mnemonicParsing="false" text="AirPods" HBox.hgrow="ALWAYS">
                                                         <items>
-                                                            <MenuItem mnemonicParsing="false" text="AirPods Max" />
                                                             <MenuItem mnemonicParsing="false" text="AirPods 4" />
+                                                            <MenuItem mnemonicParsing="false" text="AirPods Pro 3" />
+                                             <MenuItem mnemonicParsing="false" text="AirPods Max 2" />
                                                         </items>
                                                         <font><Font name="Segoe UI" size="18.0" /></font>
                                                         <styleClass>
@@ -131,22 +133,27 @@
                                                     </TextField>
 
                                                     <FontIcon iconLiteral="fas-search">
-                                                        <HBox.margin><Insets left="10.0" top="15.0" /></HBox.margin>
+                                                        <HBox.margin><Insets left="10.0" top="20.0" /></HBox.margin>
                                                     </FontIcon>
 
                                                     <FontIcon iconLiteral="fas-shopping-bag">
-                                                        <HBox.margin><Insets left="20.0" top="16.0" /></HBox.margin>
+                                                        <HBox.margin><Insets left="20.0" top="20.0" /></HBox.margin>
                                                     </FontIcon>
 
                                                     <FontIcon iconLiteral="fas-user-alt">
-                                                        <HBox.margin><Insets left="30.0" top="16.0" /></HBox.margin>
+                                                        <HBox.margin><Insets left="30.0" top="20.0" /></HBox.margin>
                                                     </FontIcon>
                                                 </children>
                                                 <padding><Insets left="2.0" /></padding>
                                                 <VBox.margin><Insets left="350.0" top="40.0" /></VBox.margin>
+                                    <styleClass>
+                                       <String fx:value="bg-default" />
+                                       <String fx:value="border-default" />
+                                       <String fx:value="elevated-1" />
+                                    </styleClass>
                                             </HBox>
 
-                                            <AnchorPane prefHeight="800.0" prefWidth="1600.0" style="-fx-background-color: #F1EFF4; -fx-background-radius: 8;" styleClass="elevated-2">
+                                            <AnchorPane prefHeight="800.0" prefWidth="1600.0" styleClass="background-iPhone-Home">
                                                 <children>
                                                     <ImageView fitHeight="431.0" fitWidth="948.0" layoutX="359.0" layoutY="391.0" pickOnBounds="true" preserveRatio="true">
                                                         <image>
@@ -168,17 +175,17 @@
                                                     </Button>
                                                     <Button layoutX="970.0" layoutY="276.0" minHeight="40.0" minWidth="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Acquista" textFill="#0039e3">
                                                         <font><Font size="18.0" /></font>
-                                                        <styleClass>
-                                                            <String fx:value="accent" />
-                                                            <String fx:value="button-outlined" />
-                                                        </styleClass>
+                                          <styleClass>
+                                             <String fx:value="accent" />
+                                             <String fx:value="button-outlined" />
+                                          </styleClass>
                                                     </Button>
                                                 </children>
                                                 <VBox.margin><Insets left="160.0" top="60.0" /></VBox.margin>
                                             </AnchorPane>
 
                  
-                                            <AnchorPane prefHeight="800.0" prefWidth="1600.0" style="-fx-background-color: linear-gradient(to bottom, #c6e4f6, #f3f7fa); -fx-background-radius: 8;" styleClass="elevated-2">
+                                            <AnchorPane prefHeight="800.0" prefWidth="1600.0" styleClass="background-iPad-Home">
                                                 <children>
                                                     <ImageView fitHeight="450.0" fitWidth="688.0" layoutX="454.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true">
                                                         <image>
@@ -208,7 +215,7 @@
                                                 </children>
                                                 <VBox.margin><Insets left="160.0" top="40.0" /></VBox.margin>
                                             </AnchorPane>
-                                 <AnchorPane minHeight="600.0" minWidth="750.0" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: white; -fx-background-radius: 8;" styleClass="elevated-2">
+                                 <AnchorPane minHeight="600.0" minWidth="750.0" prefHeight="600.0" prefWidth="600.0" styleClass="background-AirPods-Home">
                                     <children>
                                        <Label layoutX="316.0" layoutY="151.0" text="Super sonici">
                                           <font>
@@ -220,11 +227,7 @@
                                              <Font name="Segoe UI Bold" size="56.0" />
                                           </font>
                                        </Label>
-                                       <Button layoutX="183.0" layoutY="216.0" minHeight="40.0" minWidth="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Scopri di più" textFill="WHITE">
-                                          <styleClass>
-                                             <String fx:value="button" />
-                                             <String fx:value="accent" />
-                                          </styleClass>
+                                       <Button layoutX="183.0" layoutY="216.0" minHeight="40.0" minWidth="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" styleClass="accent" text="Scopri di più" textFill="WHITE">
                                           <font>
                                              <Font name="System Bold" size="18.0" />
                                           </font>
@@ -248,7 +251,7 @@
                                        <Insets left="160.0" top="40.0" />
                                     </VBox.margin>
                                  </AnchorPane>
-                                 <AnchorPane minHeight="600.0" minWidth="760.0" prefHeight="600.0" prefWidth="760.0" style="-fx-background-color: linear-gradient(to bottom, #dbe2d4, #ffffff); -fx-background-radius: 8;" styleClass="elevated-2">
+                                 <AnchorPane minHeight="600.0" minWidth="760.0" prefHeight="600.0" prefWidth="760.0" styleClass="background-AppleWatchHome">
                                     <children>
                                        <Label layoutX="144.0" layoutY="149.0" text="Il meglio per monitorare la tua salute">
                                           <font>
@@ -288,47 +291,7 @@
                                        <Insets left="1000.0" top="-600.0" />
                                     </VBox.margin>
                                  </AnchorPane>
-                                 <AnchorPane prefHeight="800.0" prefWidth="1600.0" style="-fx-background-color: linear-gradient(from 0% 0% to 0% 100%, #eadaa2 0%, #f3ede0 60%, #ffffff 100%); -fx-background-radius: 8;" styleClass="elevated-2">
-                                    <children>
-                                       <ImageView fitHeight="441.0" fitWidth="1039.0" layoutX="310.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
-                                          <image>
-                                             <Image url="@../it/uid/unitech/Images/MacBook%20Air%20Home.png" />
-                                          </image>
-                                       </ImageView>
-                                       <Label layoutX="666.0" layoutY="198.0" text="La Potenza vola alto">
-                                          <font>
-                                             <Font name="Segoe UI" size="36.0" />
-                                          </font>
-                                       </Label>
-                                       <Label layoutX="635.0" layoutY="104.0" text="MacBook Air" AnchorPane.topAnchor="104.0">
-                                          <font>
-                                             <Font name="Segoe UI Bold" size="64.0" />
-                                          </font>
-                                       </Label>
-                                       <Button layoutX="582.0" layoutY="296.0" minHeight="40.0" minWidth="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Scopri di più" textFill="WHITE">
-                                          <styleClass>
-                                             <String fx:value="button" />
-                                             <String fx:value="accent" />
-                                          </styleClass>
-                                          <font>
-                                             <Font name="System Bold" size="18.0" />
-                                          </font>
-                                       </Button>
-                                       <Button layoutX="938.0" layoutY="295.0" minHeight="40.0" minWidth="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Acquista" textFill="#0039e3">
-                                          <font>
-                                             <Font size="18.0" />
-                                          </font>
-                                          <styleClass>
-                                             <String fx:value="accent" />
-                                             <String fx:value="button-outlined" />
-                                          </styleClass>
-                                       </Button>
-                                    </children>
-                                    <VBox.margin>
-                                       <Insets left="160.0" top="40.0" />
-                                    </VBox.margin>
-                                 </AnchorPane>
-                                 <AnchorPane prefHeight="800.0" prefWidth="1600.0" style="-fx-background-color: linear-gradient(from 0% 0% to 0% 100%, #fca881 0%, #fef3eb 60%, #ffffff 100%); -fx-background-radius: 8;" styleClass="elevated-2">
+                                 <AnchorPane prefHeight="800.0" prefWidth="1600.0" styleClass="background-iMacHome">
                                     <children>
                                        <ImageView fitHeight="419.0" fitWidth="1526.0" layoutX="48.0" layoutY="391.0" pickOnBounds="true" preserveRatio="true">
                                           <image>
@@ -364,6 +327,46 @@
                                           </styleClass>
                                        </Button>
                                        <TextFlow layoutX="951.0" layoutY="106.0" prefHeight="200.0" prefWidth="200.0" />
+                                    </children>
+                                    <VBox.margin>
+                                       <Insets left="160.0" top="40.0" />
+                                    </VBox.margin>
+                                 </AnchorPane>
+                                 <AnchorPane prefHeight="800.0" prefWidth="1600.0" styleClass="background-MacBookHome">
+                                    <children>
+                                       <ImageView fitHeight="441.0" fitWidth="1039.0" layoutX="310.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                             <Image url="@../it/uid/unitech/Images/MacBook%20Air%20Home.png" />
+                                          </image>
+                                       </ImageView>
+                                       <Label layoutX="666.0" layoutY="198.0" text="La Potenza vola alto">
+                                          <font>
+                                             <Font name="Segoe UI" size="36.0" />
+                                          </font>
+                                       </Label>
+                                       <Label layoutX="635.0" layoutY="104.0" text="MacBook Air" AnchorPane.topAnchor="104.0">
+                                          <font>
+                                             <Font name="Segoe UI Bold" size="64.0" />
+                                          </font>
+                                       </Label>
+                                       <Button layoutX="582.0" layoutY="296.0" minHeight="40.0" minWidth="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Scopri di più" textFill="WHITE">
+                                          <styleClass>
+                                             <String fx:value="button" />
+                                             <String fx:value="accent" />
+                                          </styleClass>
+                                          <font>
+                                             <Font name="System Bold" size="18.0" />
+                                          </font>
+                                       </Button>
+                                       <Button layoutX="938.0" layoutY="295.0" minHeight="40.0" minWidth="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Acquista" textFill="#0039e3">
+                                          <font>
+                                             <Font size="18.0" />
+                                          </font>
+                                          <styleClass>
+                                             <String fx:value="accent" />
+                                             <String fx:value="button-outlined" />
+                                          </styleClass>
+                                       </Button>
                                     </children>
                                     <VBox.margin>
                                        <Insets left="160.0" top="40.0" />
