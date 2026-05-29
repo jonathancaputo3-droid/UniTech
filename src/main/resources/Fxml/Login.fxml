@@ -11,10 +11,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="400.0" prefWidth="900.0" style="-fx-background-radius: 25;" stylesheets="@../Style/login.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginPageController">
+<AnchorPane prefHeight="400.0" prefWidth="900.0" style="-fx-background-radius: 25;" stylesheets="@../Style/unitech.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginPageController">
 
    <!-- SINISTRA: invariata -->
-   <VBox maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="550.0" style="-fx-background-color: #5c5fd6; -fx-background-radius: 25;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="0">
+   <VBox maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="550.0" style="-fx-background-color: #A4BEE3; -fx-background-radius: 25;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="0">
       <children>
          <ImageView cache="true" cacheHint="QUALITY" fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
             <image>
@@ -33,21 +33,21 @@
       </padding>
    </Label>
    <Label cache="true" cacheHint="QUALITY" layoutX="834.0" layoutY="145.0" minWidth="-Infinity" mnemonicParsing="true" styleClass="login-title" text="BENVENUTO SU UNITECH" textAlignment="CENTER" AnchorPane.leftAnchor="834.0" AnchorPane.topAnchor="145.0" />
-   <Label layoutX="834.0" layoutY="280.0" styleClass="label-email-password" text="E-mail" AnchorPane.topAnchor="280.0" />
-   <TextField layoutX="834.0" layoutY="299.0" minWidth="-Infinity" prefWidth="238.0" promptText="es. mario@gmail.com" styleClass="text-field" AnchorPane.leftAnchor="834.0" AnchorPane.topAnchor="299.0">
+   <Label layoutX="834.0" layoutY="280.0" styleClass="label-email-password" text="E-mail" AnchorPane.leftAnchor="834.4" AnchorPane.topAnchor="280.0" />
+   <TextField layoutX="834.0" layoutY="299.0" minWidth="-Infinity" prefHeight="35.0" prefWidth="238.0" promptText="es. mario@gmail.com" styleClass="text-field" AnchorPane.leftAnchor="834.0" AnchorPane.topAnchor="299.0">
       <rotationAxis>
          <Point3D />
       </rotationAxis>
    </TextField>
-   <Label layoutX="834.0" layoutY="366.0" styleClass="label-email-password" text="Password" AnchorPane.topAnchor="366.0" />
-   <PasswordField layoutX="834.0" layoutY="386.0" minWidth="-Infinity" prefWidth="238.0" promptText="es. 12345" styleClass="password-field" AnchorPane.topAnchor="386.0" />
-   <Button fx:id="loginButton" layoutX="834.0" layoutY="454.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="238.0" text="Accedi!" />
+   <Label layoutX="834.0" layoutY="366.0" styleClass="label-email-password" text="Password" AnchorPane.leftAnchor="834.4" AnchorPane.topAnchor="366.0" />
+   <PasswordField layoutX="834.0" layoutY="386.0" minWidth="-Infinity" prefHeight="35.0" prefWidth="238.0" promptText="es. 12345" styleClass="password-field" AnchorPane.leftAnchor="834.0" AnchorPane.topAnchor="386.0" />
+   <Button fx:id="loginButton" layoutX="834.0" layoutY="454.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="238.0" text="Accedi!" AnchorPane.leftAnchor="834.0" AnchorPane.topAnchor="454.0" />
    <ImageView cache="true" cacheHint="QUALITY" fitHeight="32.0" fitWidth="32.0" layoutX="1479.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="1450.0" AnchorPane.topAnchor="167.0">
       <image>
          <Image url="@../it/uid/unitech/Images/UnitechLogo.png" />
       </image>
    </ImageView>
-   <Label layoutX="834.0" layoutY="514.0" styleClass="label-email-password" text="Non hai un Account?" AnchorPane.topAnchor="501.0" />
-   <Label fx:id="signUp" layoutX="979.0" layoutY="501.0" style="-fx-text-fill: #2092e4; -fx-font-weight: bold;" text="Registrati!" textFill="#2092e4" underline="true" AnchorPane.topAnchor="501.0" />
+   <Label layoutX="834.0" layoutY="514.0" styleClass="label-email-password" text="Non hai un Account?" AnchorPane.leftAnchor="834.0" AnchorPane.topAnchor="501.0" />
+   <Label fx:id="signUp" layoutX="979.0" layoutY="501.0" style="-fx-text-fill: #2092e4; -fx-font-weight: bold;" text="Registrati!" textFill="#2092e4" underline="true" AnchorPane.leftAnchor="979.0" AnchorPane.topAnchor="501.0" />
 
 </AnchorPane>

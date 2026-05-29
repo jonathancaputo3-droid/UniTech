@@ -10,7 +10,7 @@
 <AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-radius: 35;" stylesheets="@../Style/unitech.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SplashScreenController">
    <children>
       <Label cache="true" cacheHint="QUALITY" layoutX="150.0" layoutY="200.0" minWidth="-Infinity" prefHeight="94.0" styleClass="splash-title" text="FROM PEOPLE" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="190.0" />
-      <Label layoutX="150.4" layoutY="298.6" minWidth="-Infinity" prefHeight="94.0" styleClass="splash-subtitle" stylesheets="@../Style/label-style.css" text="TO PEOPLE" AnchorPane.leftAnchor="88.0" AnchorPane.topAnchor="303.6" />
+      <Label layoutX="150.4" layoutY="298.6" minWidth="-Infinity" prefHeight="94.0" styleClass="splash-subtitle" text="TO PEOPLE" AnchorPane.leftAnchor="88.0" AnchorPane.topAnchor="303.6" />
       <Label layoutX="80.0" layoutY="449.8" minWidth="-Infinity" prefHeight="18.0" styleClass="splash-text" text="Un progetto che nasce con lo scopo di avvicinare le persone al mondo tech" wrapText="true" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="449.8">
          <font>
             <Font name="Dubai Regular" size="12.0" />
@@ -30,9 +30,9 @@
       <Label layoutX="128.0" layoutY="39.0" styleClass="splash-text" text="UNITECH" AnchorPane.topAnchor="49.0" />
       <Label layoutX="128.0" layoutY="68.0" styleClass="splash-text" text="STORE" AnchorPane.topAnchor="69.0" />
       <Label layoutX="978.0" layoutY="53.0" styleClass="splash-text" text="BUILD" />
-      <Label layoutX="1095.0" layoutY="53.0" styleClass="splash-text" stylesheets="@../Style/label-style.css" text="LEARN" />
-      <Label layoutX="1213.0" layoutY="53.0" styleClass="splash-text" stylesheets="@../Style/label-style.css" text="IMPROVE" />
-      <Label layoutX="1348.0" layoutY="53.0" styleClass="splash-text" stylesheets="@../Style/label-style.css" text="REPEAT" />
+      <Label layoutX="1095.0" layoutY="53.0" styleClass="splash-text" text="LEARN" />
+      <Label layoutX="1213.0" layoutY="53.0" styleClass="splash-text" text="IMPROVE" />
+      <Label layoutX="1348.0" layoutY="53.0" styleClass="splash-text" text="REPEAT" />
       <FontIcon fx:id="loginArrow" cache="true" cacheHint="QUALITY" iconColor="#5c5fd6" iconLiteral="far-arrow-alt-circle-right" iconSize="70" layoutX="630.0" layoutY="406.0" selectionFill="RED" text="" wrappingWidth="55.19999999999993" AnchorPane.leftAnchor="630.0" AnchorPane.topAnchor="351.0" />
    </children>
 </AnchorPane>

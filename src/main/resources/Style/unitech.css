@@ -99,3 +99,33 @@
     -fx-text-fill: #6b6f80;
     -fx-font-size: 25px;
 }
+
+/*======== SIGNUP PAGE=======*/
+
+.signup-title {
+    -fx-font-family: CooperHewitt;
+    -fx-font-size: 45px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1e1e2e;
+}
+
+.signup-subtitle {
+    -fx-font-family: DMSans;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #6b6f80;
+}
+
+.signup-field{
+    -fx-font-family: CooperHewitt;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+.signup-error{
+    -fx-font-family: CooperHewitt;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: red;
+}

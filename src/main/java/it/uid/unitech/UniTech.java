@@ -22,8 +22,6 @@ public class UniTech extends Application {
         stage.setScene(scene);
         stage.setMaximized(true);
         stage.show();
-        stage.setOnCloseRequest(event -> {
-            System.exit(0);
-        });
+        stage.setOnCloseRequest(event -> System.exit(0));
     }
 }
