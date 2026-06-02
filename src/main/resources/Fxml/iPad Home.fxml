@@ -2,7 +2,6 @@
 
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.Scene?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
@@ -12,302 +11,280 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<?import javafx.stage.Stage?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<Stage xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
-    <scene>
-        <Scene stylesheets="@../Style/cupertino-light.css">
-            <AnchorPane style="-fx-background-color: #F3F3F5;">
-            <children>
-             <AnchorPane minHeight="0.0" minWidth="0.0" />
-               <VBox fillWidth="false" layoutY="14.0" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: trasparent;">
-                  <children>
-                     <HBox fillHeight="false" minHeight="54.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="54.0" prefWidth="1217.0" style="-fx-border-radius: 6;">
-                        <styleClass>
-                           <String fx:value="bg-default" />
-                           <String fx:value="border-default" />
-                           <String fx:value="elevated-1" />
-                        </styleClass>
-                        <children>
-                           <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                              <image>
-                                 <Image url="@../it/uid/unitech/Images/UnitechLogo.png" />
-                              </image>
-                              <HBox.margin>
-                                 <Insets left="30.0" top="7.0" />
-                              </HBox.margin>
-                           </ImageView>
-                           <MenuButton mnemonicParsing="false" text="iPhone">
-                              <items>
-                                 <MenuItem mnemonicParsing="false" text="iPhone 17 Pro" />
-                                 <MenuItem mnemonicParsing="false" text="iPhone Air" />
-                                 <MenuItem mnemonicParsing="false" text="iPhone 17" />
-                                 <MenuItem mnemonicParsing="false" text="iPhone 16" />
-                              </items>
-                              <font>
-                                 <Font name="Segoe UI" size="18.0" />
-                              </font>
-                              <styleClass>
-                                 <String fx:value="button-outlined" />
-                                 <String fx:value="flat" />
-                              </styleClass>
-                              <HBox.margin>
-                                 <Insets left="30.0" top="10.0" />
-                              </HBox.margin>
-                           </MenuButton>
-                           <MenuButton mnemonicParsing="false" text="iPad">
-                              <items>
-                                 <MenuItem mnemonicParsing="false" text="iPad Pro" />
-                                 <MenuItem mnemonicParsing="false" text="iPad Air" />
-                                 <MenuItem mnemonicParsing="false" text="iPad " />
-                                 <MenuItem mnemonicParsing="false" text="iPad Mini" />
-                              </items>
-                              <font>
-                                 <Font name="Segoe UI" size="18.0" />
-                              </font>
-                              <styleClass>
-                                 <String fx:value="button-outlined" />
-                                 <String fx:value="flat" />
-                              </styleClass>
-                              <HBox.margin>
-                                 <Insets left="20.0" top="10.0" />
-                              </HBox.margin>
-                           </MenuButton>
-                           <MenuButton mnemonicParsing="false" text="iMac">
-                              <items>
-                                 <MenuItem mnemonicParsing="false" text="iMac" />
-                                 <MenuItem mnemonicParsing="false" text="Mac Mini" />
-                              </items>
-                              <font>
-                                 <Font name="Segoe UI" size="18.0" />
-                              </font>
-                              <styleClass>
-                                 <String fx:value="button-outlined" />
-                                 <String fx:value="flat" />
-                              </styleClass>
-                              <HBox.margin>
-                                 <Insets left="20.0" top="10.0" />
-                              </HBox.margin>
-                           </MenuButton>
-                           <MenuButton mnemonicParsing="false" text="MacBook">
-                              <items>
-                                 <MenuItem mnemonicParsing="false" text="MacBook Neo" />
-                                 <MenuItem mnemonicParsing="false" text="MacBook Air" />
-                                 <MenuItem mnemonicParsing="false" text="MacBook Pro" />
-                              </items>
-                              <font>
-                                 <Font name="Segoe UI" size="18.0" />
-                              </font>
-                              <styleClass>
-                                 <String fx:value="button-outlined" />
-                                 <String fx:value="flat" />
-                              </styleClass>
-                              <HBox.margin>
-                                 <Insets left="20.0" top="10.0" />
-                              </HBox.margin>
-                           </MenuButton>
-                           <MenuButton mnemonicParsing="false" text="Watch">
-                              <items>
-                                 <MenuItem mnemonicParsing="false" text="Apple Watch Series 11" />
-                                 <MenuItem mnemonicParsing="false" text="Apple Watch SE 3" />
-                                 <MenuItem mnemonicParsing="false" text="Apple Watch Ultra 3" />
-                              </items>
-                              <font>
-                                 <Font name="Segoe UI" size="18.0" />
-                              </font>
-                              <styleClass>
-                                 <String fx:value="button-outlined" />
-                                 <String fx:value="flat" />
-                              </styleClass>
-                              <HBox.margin>
-                                 <Insets left="20.0" top="10.0" />
-                              </HBox.margin>
-                           </MenuButton>
-                           <MenuButton mnemonicParsing="false" text="AirPods" HBox.hgrow="ALWAYS">
-                              <items>
-                                 <MenuItem mnemonicParsing="false" text="AirPods 4" />
-                                 <MenuItem mnemonicParsing="false" text="AirPods Pro 3" />
-                                 <MenuItem mnemonicParsing="false" text="AirPods Max 2" />
-                              </items>
-                              <font>
-                                 <Font name="Segoe UI" size="18.0" />
-                              </font>
-                              <styleClass>
-                                 <String fx:value="button-outlined" />
-                                 <String fx:value="flat" />
-                              </styleClass>
-                              <HBox.margin>
-                                 <Insets left="20.0" top="10.0" />
-                              </HBox.margin>
-                           </MenuButton>
-                           <TextField prefHeight="32.0" prefWidth="260.0" promptText="Cerca" styleClass="text-field">
-                              <HBox.margin>
-                                 <Insets left="25.0" top="10.0" />
-                              </HBox.margin>
-                           </TextField>
-                           <FontIcon iconLiteral="fas-search">
-                              <HBox.margin>
-                                 <Insets left="10.0" top="20.0" />
-                              </HBox.margin>
-                           </FontIcon>
-                           <FontIcon iconLiteral="fas-shopping-bag">
-                              <HBox.margin>
-                                 <Insets left="20.0" top="20.0" />
-                              </HBox.margin>
-                           </FontIcon>
-                           <FontIcon iconLiteral="fas-user-alt">
-                              <HBox.margin>
-                                 <Insets left="30.0" top="20.0" />
-                              </HBox.margin>
-                           </FontIcon>
-                        </children>
-                        <padding>
-                           <Insets left="2.0" />
-                        </padding>
-                        <VBox.margin>
-                           <Insets left="350.0" top="40.0" />
-                        </VBox.margin>
-                     </HBox>
-                     <Label text="Ecco la squadra al completo">
-                        <font>
-                           <Font name="Segoe UI Bold" size="48.0" />
-                        </font>
-                        <VBox.margin>
-                           <Insets left="340.0" top="100.0" />
-                        </VBox.margin>
-                     </Label>
-                     <AnchorPane prefWidth="411.0">
-                        <children>
-                           <AnchorPane prefHeight="408.0" prefWidth="391.0" styleClass="background-iPadProHome">
-                              <children>
-                                 <ImageView fitHeight="420.0" fitWidth="392.0" layoutX="-1.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true" styleClass="background-iPadProHome" AnchorPane.rightAnchor="20.0">
-                                    <image>
-                                       <Image url="@../it/uid/unitech/Images/iPad%20Pro_ipdHome.png" />
-                                    </image>
-                                 </ImageView>
-                              </children>
-                           </AnchorPane>
-                           <Button layoutX="77.0" layoutY="579.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" styleClass="accent" text="Scopri di più">
-                              <font>
-                                 <Font size="16.0" />
-                              </font>
-                           </Button>
-                           <Button layoutX="224.0" layoutY="579.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" style="-fx-background-color: trasparent; -fx-text-fill: #0066cc;" text="Acquista">
-                              <font>
-                                 <Font size="16.0" />
-                              </font>
-                           </Button>
-                           <Label prefHeight="493.0" prefWidth="392.0" text="iPad Pro">
-                              <padding>
-                                 <Insets left="130.0" top="450.0" />
-                              </padding>
-                              <font>
-                                 <Font name="Segoe UI Bold" size="36.0" />
-                              </font>
-                           </Label>
-                           <Label layoutX="-5.0" layoutY="-10.0" prefHeight="574.0" prefWidth="391.0" text="L’iPad più evoluto, con la nostra&#10;&#9;   tecnologia di punta.">
-                              <padding>
-                                 <Insets left="80.0" top="520.0" />
-                              </padding>
-                              <font>
-                                 <Font size="18.0" />
-                              </font>
-                           </Label>
-                        </children>
-                        <VBox.margin>
-                           <Insets left="350.0" top="40.0" />
-                        </VBox.margin>
-                     </AnchorPane>
-                     <AnchorPane>
-                        <children>
-                           <AnchorPane prefHeight="408.0" prefWidth="391.0" styleClass="background-iPadAirHome">
-                              <children>
-                                 <ImageView fitHeight="420.0" fitWidth="392.0" layoutX="-1.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="20.0">
-                                    <image>
-                                       <Image url="@../it/uid/unitech/Images/iPad%20Air_ipdHome.png" />
-                                    </image>
-                                 </ImageView>
-                              </children>
-                           </AnchorPane>
-                           <Button layoutX="77.0" layoutY="579.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" styleClass="accent" text="Scopri di più">
-                              <font>
-                                 <Font size="16.0" />
-                              </font>
-                           </Button>
-                           <Button layoutX="224.0" layoutY="579.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" style="-fx-background-color: trasparent; -fx-text-fill: #0066cc;" text="Acquista">
-                              <font>
-                                 <Font size="16.0" />
-                              </font>
-                           </Button>
-                           <Label prefHeight="493.0" prefWidth="392.0" text="iPad Air">
-                              <padding>
-                                 <Insets left="130.0" top="450.0" />
-                              </padding>
-                              <font>
-                                 <Font name="Segoe UI Bold" size="36.0" />
-                              </font>
-                           </Label>
-                           <Label layoutX="-5.0" layoutY="-10.0" prefHeight="574.0" prefWidth="391.0" text="Grande potenza, in un design&#10;&#9;    sottile e leggero.">
-                              <padding>
-                                 <Insets left="90.0" top="520.0" />
-                              </padding>
-                              <font>
-                                 <Font size="18.0" />
-                              </font>
-                           </Label>
-                        </children>
-                        <VBox.margin>
-                           <Insets left="770.0" top="-615.0" />
-                        </VBox.margin>
-                     </AnchorPane>
-                     <AnchorPane>
-                        <children>
-                           <AnchorPane prefHeight="408.0" prefWidth="391.0" styleClass="background-iPadHome">
-                              <children>
-                                 <ImageView fitHeight="420.0" fitWidth="392.0" layoutX="-1.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="20.0">
-                                    <image>
-                                       <Image url="@../it/uid/unitech/Images/iPad_ipHome.png" />
-                                    </image>
-                                 </ImageView>
-                              </children>
-                           </AnchorPane>
-                           <Button layoutX="77.0" layoutY="579.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" styleClass="accent" text="Scopri di più">
-                              <font>
-                                 <Font size="16.0" />
-                              </font>
-                           </Button>
-                           <Button layoutX="224.0" layoutY="579.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" style="-fx-background-color: trasparent; -fx-text-fill: #0066cc;" text="Acquista">
-                              <font>
-                                 <Font size="16.0" />
-                              </font>
-                           </Button>
-                           <Label prefHeight="493.0" prefWidth="392.0" text="iPad">
-                              <padding>
-                                 <Insets left="155.0" top="450.0" />
-                              </padding>
-                              <font>
-                                 <Font name="Segoe UI Bold" size="36.0" />
-                              </font>
-                           </Label>
-                           <Label layoutX="-5.0" layoutY="-10.0" prefHeight="574.0" prefWidth="391.0" text="    All-screen e supercolorato.&#10;L’iPad per fare tutto, tutti i giorni." AnchorPane.rightAnchor="6.0">
-                              <padding>
-                                 <Insets left="75.0" top="520.0" />
-                              </padding>
-                              <font>
-                                 <Font size="18.0" />
-                              </font>
-                           </Label>
-                        </children>
-                        <VBox.margin>
-                           <Insets left="1190.0" top="-615.0" />
-                        </VBox.margin>
-                     </AnchorPane>
-                  </children>
-               </VBox>
-            </children></AnchorPane>
-        </Scene>
-    </scene>
-</Stage>
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #F3F3F5;" stylesheets="@../Style/cupertino-light.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+
+      <HBox fillHeight="false" layoutX="350.0" layoutY="54.0" minHeight="54.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="54.0" prefWidth="1217.0" style="-fx-border-radius: 6;">
+         <styleClass>
+            <String fx:value="bg-default" />
+            <String fx:value="border-default" />
+            <String fx:value="elevated-1" />
+         </styleClass>
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../it/uid/unitech/Images/UnitechLogo.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="30.0" top="7.0" />
+               </HBox.margin>
+            </ImageView>
+            <MenuButton mnemonicParsing="false" text="iPhone">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="iPhone 17 Pro" />
+                  <MenuItem mnemonicParsing="false" text="iPhone Air" />
+                  <MenuItem mnemonicParsing="false" text="iPhone 17" />
+               </items>
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="button-outlined" />
+                  <String fx:value="flat" />
+               </styleClass>
+               <HBox.margin>
+                  <Insets left="30.0" top="10.0" />
+               </HBox.margin>
+            </MenuButton>
+            <MenuButton mnemonicParsing="false" text="iPad">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="iPad Pro" />
+                  <MenuItem mnemonicParsing="false" text="iPad Air" />
+                  <MenuItem mnemonicParsing="false" text="iPad " />
+               </items>
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="button-outlined" />
+                  <String fx:value="flat" />
+               </styleClass>
+               <HBox.margin>
+                  <Insets left="20.0" top="10.0" />
+               </HBox.margin>
+            </MenuButton>
+            <MenuButton mnemonicParsing="false" text="iMac">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="iMac" />
+                  <MenuItem mnemonicParsing="false" text="Mac Mini" />
+                  <MenuItem mnemonicParsing="false" text="Mac Studio" />
+               </items>
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="button-outlined" />
+                  <String fx:value="flat" />
+               </styleClass>
+               <HBox.margin>
+                  <Insets left="20.0" top="10.0" />
+               </HBox.margin>
+            </MenuButton>
+            <MenuButton mnemonicParsing="false" text="MacBook">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="MacBook Neo" />
+                  <MenuItem mnemonicParsing="false" text="MacBook Air" />
+                  <MenuItem mnemonicParsing="false" text="MacBook Pro" />
+               </items>
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="button-outlined" />
+                  <String fx:value="flat" />
+               </styleClass>
+               <HBox.margin>
+                  <Insets left="20.0" top="10.0" />
+               </HBox.margin>
+            </MenuButton>
+            <MenuButton mnemonicParsing="false" text="Watch">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Apple Watch Series 11" />
+                  <MenuItem mnemonicParsing="false" text="Apple Watch SE 3" />
+                  <MenuItem mnemonicParsing="false" text="Apple Watch Ultra 3" />
+               </items>
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="button-outlined" />
+                  <String fx:value="flat" />
+               </styleClass>
+               <HBox.margin>
+                  <Insets left="20.0" top="10.0" />
+               </HBox.margin>
+            </MenuButton>
+            <MenuButton mnemonicParsing="false" text="AirPods">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="AirPods 4" />
+                  <MenuItem mnemonicParsing="false" text="AirPods Pro 3" />
+                  <MenuItem mnemonicParsing="false" text="AirPods Max 2" />
+               </items>
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="button-outlined" />
+                  <String fx:value="flat" />
+               </styleClass>
+               <HBox.margin>
+                  <Insets left="20.0" top="10.0" />
+               </HBox.margin>
+            </MenuButton>
+            <TextField prefHeight="32.0" prefWidth="260.0" promptText="Cerca" styleClass="text-field">
+               <HBox.margin>
+                  <Insets left="25.0" top="10.0" />
+               </HBox.margin>
+            </TextField>
+            <FontIcon iconLiteral="fas-search">
+               <HBox.margin>
+                  <Insets left="10.0" top="20.0" />
+               </HBox.margin>
+            </FontIcon>
+            <FontIcon iconLiteral="fas-shopping-bag">
+               <HBox.margin>
+                  <Insets left="20.0" top="20.0" />
+               </HBox.margin>
+            </FontIcon>
+            <FontIcon iconLiteral="fas-user-alt">
+               <HBox.margin>
+                  <Insets left="30.0" top="20.0" />
+               </HBox.margin>
+            </FontIcon>
+         </children>
+         <padding>
+            <Insets left="2.0" />
+         </padding>
+      </HBox>
+
+      <Label layoutX="340.0" layoutY="208.0" text="Ecco la squadra al completo">
+         <font>
+            <Font name="Segoe UI Bold" size="48.0" />
+         </font>
+      </Label>
+
+      <AnchorPane layoutX="350.0" layoutY="348.0" prefWidth="411.0">
+         <children>
+            <AnchorPane prefHeight="408.0" prefWidth="391.0" styleClass="background-iPadProHome">
+               <children>
+                  <ImageView fitHeight="420.0" fitWidth="392.0" layoutX="-1.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true" styleClass="background-iPadProHome" AnchorPane.rightAnchor="20.0">
+                     <image>
+                        <Image url="@../it/uid/unitech/Images/iPad%20Pro_ipdHome.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Button layoutX="77.0" layoutY="579.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" styleClass="accent" text="Scopri di più">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="224.0" layoutY="579.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" style="-fx-background-color: transparent; -fx-text-fill: #0066cc;" text="Acquista">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Label prefHeight="493.0" prefWidth="392.0" text="iPad Pro">
+               <padding>
+                  <Insets left="130.0" top="450.0" />
+               </padding>
+               <font>
+                  <Font name="Segoe UI Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="-5.0" layoutY="-10.0" prefHeight="574.0" prefWidth="391.0" text="L’iPad più evoluto, con la nostra&#10;&#9;   tecnologia di punta.">
+               <padding>
+                  <Insets left="80.0" top="520.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+
+      <AnchorPane layoutX="770.0" layoutY="348.0">
+         <children>
+            <AnchorPane prefHeight="408.0" prefWidth="391.0" styleClass="background-iPadAirHome">
+               <children>
+                  <ImageView fitHeight="420.0" fitWidth="392.0" layoutX="-1.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="20.0">
+                     <image>
+                        <Image url="@../it/uid/unitech/Images/iPad%20Air_ipdHome.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Button layoutX="77.0" layoutY="579.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" styleClass="accent" text="Scopri di più">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="224.0" layoutY="579.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" style="-fx-background-color: transparent; -fx-text-fill: #0066cc;" text="Acquista">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Label prefHeight="493.0" prefWidth="392.0" text="iPad Air">
+               <padding>
+                  <Insets left="130.0" top="450.0" />
+               </padding>
+               <font>
+                  <Font name="Segoe UI Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="-5.0" layoutY="-10.0" prefHeight="574.0" prefWidth="391.0" text="Grande potenza, in un design&#10;&#9;    sottile e leggero.">
+               <padding>
+                  <Insets left="90.0" top="520.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+
+      <AnchorPane layoutX="1190.0" layoutY="348.0">
+         <children>
+            <AnchorPane prefHeight="408.0" prefWidth="391.0" styleClass="background-iPadHome">
+               <children>
+                  <ImageView fitHeight="420.0" fitWidth="392.0" layoutX="-1.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="20.0">
+                     <image>
+                        <Image url="@../it/uid/unitech/Images/iPad_ipHome.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Button layoutX="77.0" layoutY="579.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" styleClass="accent" text="Scopri di più">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="224.0" layoutY="579.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" style="-fx-background-color: transparent; -fx-text-fill: #0066cc;" text="Acquista">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Label prefHeight="493.0" prefWidth="392.0" text="iPad">
+               <padding>
+                  <Insets left="155.0" top="450.0" />
+               </padding>
+               <font>
+                  <Font name="Segoe UI Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="-5.0" layoutY="-10.0" prefHeight="574.0" prefWidth="391.0" text="    All-screen e supercolorato.&#10;L’iPad per fare tutto, tutti i giorni." AnchorPane.rightAnchor="6.0">
+               <padding>
+                  <Insets left="75.0" top="520.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+
+   </children>
+</AnchorPane>
