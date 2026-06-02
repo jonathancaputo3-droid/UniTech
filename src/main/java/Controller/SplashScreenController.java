@@ -1,5 +1,6 @@
 package Controller;
 
+import Util.DatabaseConnection;
 import javafx.animation.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,6 +12,8 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 import org.kordamp.ikonli.javafx.FontIcon;
 
+import java.sql.SQLException;
+
 public class SplashScreenController {
     @FXML
     private FontIcon loginArrow;
@@ -18,6 +21,12 @@ public class SplashScreenController {
     private AnchorPane rootPane;
 
     public void initialize() {
+
+        try {
+            DatabaseConnection.inizializzaDB();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
         ScaleTransition pulse = new ScaleTransition(Duration.millis(2000), loginArrow);
         pulse.setFromX(0.9);

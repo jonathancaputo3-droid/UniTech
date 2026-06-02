@@ -1,5 +1,8 @@
 package Controller;
 
+import Model.Utente;
+import Model.UtenteDAO;
+import Util.DatabaseConnection;
 import javafx.animation.FadeTransition;
 import javafx.animation.ScaleTransition;
 import javafx.fxml.FXML;
@@ -15,6 +18,7 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class SignUpController {
 
@@ -47,6 +51,13 @@ public class SignUpController {
     private static final String PASSWORD = "^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[#@!.&%$])[a-zA-Z0-9#@!.&%$]{8,}$";
 
     public void initialize(){
+
+        try {
+            DatabaseConnection.inizializzaDB();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
         nomeErrorLabel.setVisible(false);
         nomeField.textProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue.isEmpty()){
@@ -111,6 +122,30 @@ public class SignUpController {
             }
             else{
                 confermaErrorLabelEmpty.setVisible(false);
+                try {
+                    Utente u = new Utente(
+                            nomeField.getText().trim(),
+                            cognomeField.getText().trim(),
+                            emailField.getText().trim(),
+                            passwordField.getText()
+                    );
+                    boolean successo = UtenteDAO.registra(u);
+
+                    if (!successo) {
+                        confermaErrorLabelEmpty.setText("Errore durante la registrazione.");
+                        confermaErrorLabelEmpty.setVisible(true);
+                        return;
+                    }
+                } catch (SQLException e) {
+                    if (e.getMessage().contains("UNIQUE")) {
+                        confermaErrorLabelEmpty.setText("Email già registrata!");
+                    } else {
+                        confermaErrorLabelEmpty.setText("Errore durante la registrazione.");
+                        e.printStackTrace();
+                    }
+                    confermaErrorLabelEmpty.setVisible(true);
+                    return;
+                }
                 Node root=confermaButton.getScene().getRoot();
                 FadeTransition fadeOut= new FadeTransition(Duration.millis(600), root);
                 fadeOut.setFromValue(1.0);

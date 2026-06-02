@@ -1,0 +1,41 @@
+package Util;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class DatabaseConnection {
+
+    private static final String URL="jdbc:sqlite:database.db";
+    private static Connection connessione;
+
+    public static Connection getConnessione() throws SQLException {
+        if(connessione==null || connessione.isClosed()){
+            connessione = DriverManager.getConnection(URL);
+        }
+        return connessione;
+    }
+
+    public static void inizializzaDB() throws SQLException{
+        Connection conn=getConnessione();
+        Statement st=conn.createStatement();
+        st.execute("""
+                CREATE TABLE IF NOT EXISTS utenti(
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    nome TEXT NOT NULL,
+                    cognome TEXT NOT NULL,
+                    email TEXT NOT NULL,
+                    password TEXT NOT NULL
+                )
+            """);
+    }
+
+    public static void chiudi() throws SQLException{
+        if (connessione!=null && !connessione.isClosed()){
+            connessione.close();
+        }
+    }
+}
+
+

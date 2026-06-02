@@ -5,6 +5,8 @@ module it.uid.unitech {
     requires org.kordamp.ikonli.materialdesign2;
     requires org.controlsfx.controls;
     requires de.jensd.fx.glyphs.fontawesome;
+    requires java.sql;
+    requires spring.security.crypto;
 
     opens it.uid.unitech to javafx.fxml;
     opens Controller to javafx.fxml;
