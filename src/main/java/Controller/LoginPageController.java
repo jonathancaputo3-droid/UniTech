@@ -3,6 +3,7 @@ package Controller;
 import Model.Utente;
 import Model.UtenteDAO;
 import Util.DatabaseConnection;
+import Util.SessioneUtente;
 import javafx.animation.FadeTransition;
 import javafx.animation.ScaleTransition;
 import javafx.fxml.FXML;
@@ -73,6 +74,7 @@ public class LoginPageController {
                     erroreLabel.setVisible(true);
                     return;
                 }
+                SessioneUtente.setUtente(u);
             } catch (SQLException e) {
                 erroreLabel.setText("Errore di connessione al database.");
                 erroreLabel.setVisible(true);
@@ -87,7 +89,7 @@ public class LoginPageController {
             fadeOut.setToValue(0);
             fadeOut.setOnFinished(event1 -> {
                 try {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Home.fxml"));
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/ProfileOption.fxml"));
                     Parent newRoot = loader.load();
                     newRoot.setOpacity(0);
                     Stage stage = (Stage) loginButton.getScene().getWindow();

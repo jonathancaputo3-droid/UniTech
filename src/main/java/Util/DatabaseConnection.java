@@ -26,7 +26,13 @@ public class DatabaseConnection {
                     nome TEXT NOT NULL,
                     cognome TEXT NOT NULL,
                     email TEXT NOT NULL,
-                    password TEXT NOT NULL
+                    password TEXT NOT NULL,
+                    sesso TEXT,
+                    lingua TEXT,
+                    dataNascita TEXT,
+                    indirizzo TEXT,
+                    cellulare TEXT,
+                    citta TEXT
                 )
             """);
     }

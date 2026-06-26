@@ -16,13 +16,13 @@
 <?import javafx.scene.text.TextFlow?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<AnchorPane stylesheets="@../Style/cupertino-light.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane style="-fx-background-color: red;" stylesheets="@../Style/cupertino-light.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="0.0" layoutY="0.0" style="-fx-background-color: #f5f5f7;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <content>
-            <AnchorPane prefWidth="1920.0">
+            <AnchorPane minWidth="-Infinity" prefWidth="1280.0">
                <children>
-                  <HBox fillHeight="false" layoutX="350.0" layoutY="40.0" minHeight="54.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="54.0" prefWidth="1230.0" style="-fx-border-radius: 6;" AnchorPane.bottomAnchor="4019.9999999999995" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="339.1999999999998" AnchorPane.topAnchor="40.0">
+                  <HBox fillHeight="false" layoutX="27.0" layoutY="36.0" minHeight="54.0" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="54.0" prefWidth="803.0" style="-fx-border-radius: 6;" AnchorPane.bottomAnchor="4061.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="327.0" AnchorPane.topAnchor="36.0">
                      <children>
                         <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -32,11 +32,12 @@
                               <Insets left="30.0" top="7.0" />
                            </HBox.margin>
                         </ImageView>
-                        <MenuButton mnemonicParsing="false" text="iPhone">
+                        <MenuButton minWidth="-Infinity" mnemonicParsing="false" text="iPhone">
                            <items>
                               <MenuItem mnemonicParsing="false" text="iPhone 17 Pro" />
                               <MenuItem mnemonicParsing="false" text="iPhone Air" />
                               <MenuItem mnemonicParsing="false" text="iPhone 17" />
+                              <MenuItem mnemonicParsing="false" text="iPhone 16" />
                            </items>
                            <font>
                               <Font name="Segoe UI" size="18.0" />
@@ -49,11 +50,12 @@
                               <String fx:value="flat" />
                            </styleClass>
                         </MenuButton>
-                        <MenuButton mnemonicParsing="false" text="iPad">
+                        <MenuButton minWidth="-Infinity" mnemonicParsing="false" text="iPad">
                            <items>
                               <MenuItem mnemonicParsing="false" text="iPad Pro" />
                               <MenuItem mnemonicParsing="false" text="iPad Air" />
                               <MenuItem mnemonicParsing="false" text="iPad " />
+                              <MenuItem mnemonicParsing="false" text="iPad Mini" />
                            </items>
                            <font>
                               <Font name="Segoe UI" size="18.0" />
@@ -66,11 +68,10 @@
                               <Insets left="20.0" top="10.0" />
                            </HBox.margin>
                         </MenuButton>
-                        <MenuButton mnemonicParsing="false" text="iMac">
+                        <MenuButton minWidth="-Infinity" mnemonicParsing="false" text="iMac">
                            <items>
                               <MenuItem mnemonicParsing="false" text="iMac" />
                               <MenuItem mnemonicParsing="false" text="Mac Mini" />
-                              <MenuItem mnemonicParsing="false" text="Mac Studio" />
                            </items>
                            <font>
                               <Font name="Segoe UI" size="18.0" />
@@ -83,7 +84,7 @@
                               <Insets left="20.0" top="10.0" />
                            </HBox.margin>
                         </MenuButton>
-                        <MenuButton mnemonicParsing="false" text="MacBook">
+                        <MenuButton minWidth="-Infinity" mnemonicParsing="false" text="MacBook">
                            <items>
                               <MenuItem mnemonicParsing="false" text="MacBook Neo" />
                               <MenuItem mnemonicParsing="false" text="MacBook Air" />
@@ -100,7 +101,7 @@
                               <Insets left="20.0" top="10.0" />
                            </HBox.margin>
                         </MenuButton>
-                        <MenuButton mnemonicParsing="false" text="Watch">
+                        <MenuButton minWidth="-Infinity" mnemonicParsing="false" text="Watch">
                            <items>
                               <MenuItem mnemonicParsing="false" text="Apple Watch Series 11" />
                               <MenuItem mnemonicParsing="false" text="Apple Watch SE 3" />
@@ -117,7 +118,7 @@
                               <Insets left="20.0" top="10.0" />
                            </HBox.margin>
                         </MenuButton>
-                        <MenuButton mnemonicParsing="false" text="AirPods" HBox.hgrow="ALWAYS">
+                        <MenuButton minWidth="-Infinity" mnemonicParsing="false" text="AirPods" HBox.hgrow="ALWAYS">
                            <items>
                               <MenuItem mnemonicParsing="false" text="AirPods 4" />
                               <MenuItem mnemonicParsing="false" text="AirPods Pro 3" />
@@ -134,7 +135,7 @@
                               <Insets left="20.0" top="10.0" />
                            </HBox.margin>
                         </MenuButton>
-                        <TextField prefHeight="32.0" prefWidth="260.0" promptText="Cerca">
+                        <TextField minWidth="-Infinity" prefHeight="32.0" prefWidth="76.0" promptText="Cerca">
                            <HBox.margin>
                               <Insets left="25.0" top="10.0" />
                            </HBox.margin>
@@ -164,10 +165,9 @@
                         <String fx:value="elevated-1" />
                      </styleClass>
                   </HBox>
-
-                  <AnchorPane layoutX="160.0" layoutY="154.0" prefHeight="800.0" prefWidth="1600.0" styleClass="background-iPhone-Home">
+                  <AnchorPane layoutX="157.0" layoutY="155.2" prefHeight="822.0" prefWidth="1113.0" styleClass="background-iPhone-Home" AnchorPane.leftAnchor="157.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="155.0">
                      <children>
-                        <ImageView fitHeight="431.0" fitWidth="948.0" layoutX="359.0" layoutY="391.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView cache="true" cacheHint="QUALITY" fitHeight="400.0" fitWidth="600.0" layoutX="359.0" layoutY="391.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="136.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="362.0" AnchorPane.topAnchor="391.0">
                            <image>
                               <Image url="@../it/uid/unitech/Images/iPhone%2017%20Home.png" />
                            </image>
@@ -202,8 +202,7 @@
                         </Button>
                      </children>
                   </AnchorPane>
-
-                  <AnchorPane layoutX="160.0" layoutY="994.0" prefHeight="800.0" prefWidth="1600.0" styleClass="background-iPad-Home">
+                  <AnchorPane layoutX="157.0" layoutY="1017.7999877929688" prefHeight="800.0" prefWidth="1600.0" styleClass="background-iPad-Home">
                      <children>
                         <ImageView fitHeight="450.0" fitWidth="688.0" layoutX="454.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -240,8 +239,7 @@
                         </Button>
                      </children>
                   </AnchorPane>
-
-                  <AnchorPane layoutX="160.0" layoutY="1834.0" minHeight="600.0" minWidth="750.0" prefHeight="600.0" prefWidth="600.0" styleClass="background-AirPods-Home">
+                  <AnchorPane layoutX="157.0" layoutY="1870.5999755859375" minHeight="600.0" minWidth="750.0" prefHeight="600.0" prefWidth="600.0" styleClass="background-AirPods-Home">
                      <children>
                         <Label layoutX="316.0" layoutY="151.0" text="Super sonici">
                            <font>
@@ -274,8 +272,7 @@
                         </Button>
                      </children>
                   </AnchorPane>
-
-                  <AnchorPane layoutX="1000.0" layoutY="1834.0" minHeight="600.0" minWidth="760.0" prefHeight="600.0" prefWidth="760.0" styleClass="background-AppleWatchHome">
+                  <AnchorPane layoutX="997.0" layoutY="1870.5999755859375" minHeight="600.0" minWidth="760.0" prefHeight="600.0" prefWidth="760.0" styleClass="background-AppleWatchHome">
                      <children>
                         <Label layoutX="144.0" layoutY="149.0" text="Il meglio per monitorare la tua salute">
                            <font>
@@ -312,8 +309,7 @@
                         </Button>
                      </children>
                   </AnchorPane>
-
-                  <AnchorPane layoutX="160.0" layoutY="2474.0" prefHeight="800.0" prefWidth="1600.0" styleClass="background-iMacHome">
+                  <AnchorPane layoutX="157.0" layoutY="2510.60009765625" prefHeight="800.0" prefWidth="1600.0" styleClass="background-iMacHome">
                      <children>
                         <ImageView fitHeight="419.0" fitWidth="1526.0" layoutX="48.0" layoutY="391.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -351,8 +347,7 @@
                         <TextFlow layoutX="951.0" layoutY="106.0" prefHeight="200.0" prefWidth="200.0" />
                      </children>
                   </AnchorPane>
-
-                  <AnchorPane layoutX="160.0" layoutY="3314.0" prefHeight="800.0" prefWidth="1600.0" styleClass="background-MacBookHome">
+                  <AnchorPane layoutX="157.0" layoutY="3350.60009765625" prefHeight="800.0" prefWidth="1600.0" styleClass="background-MacBookHome">
                      <children>
                         <ImageView fitHeight="441.0" fitWidth="1039.0" layoutX="310.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
                            <image>

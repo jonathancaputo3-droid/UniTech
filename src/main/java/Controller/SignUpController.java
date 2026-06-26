@@ -3,6 +3,7 @@ package Controller;
 import Model.Utente;
 import Model.UtenteDAO;
 import Util.DatabaseConnection;
+import Util.SessioneUtente;
 import javafx.animation.FadeTransition;
 import javafx.animation.ScaleTransition;
 import javafx.fxml.FXML;
@@ -136,6 +137,7 @@ public class SignUpController {
                         confermaErrorLabelEmpty.setVisible(true);
                         return;
                     }
+                    SessioneUtente.setUtente(u);
                 } catch (SQLException e) {
                     if (e.getMessage().contains("UNIQUE")) {
                         confermaErrorLabelEmpty.setText("Email già registrata!");

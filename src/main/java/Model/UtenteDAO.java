@@ -42,9 +42,46 @@ public class UtenteDAO {
                         passwordCriptata
                 );
                 u.setId(rs.getInt("id"));
+                u.setSesso(rs.getString("sesso"));
+                u.setLingua(rs.getString("lingua"));
+                u.setDataNascita(rs.getString("dataNascita"));
+                u.setIndirizzo(rs.getString("indirizzo"));
+                u.setCellulare(rs.getString("cellulare"));
+                u.setCitta(rs.getString("citta"));
                 return u;
             }
         }
         return null; // email non trovata o password errata
     }
+
+    public static boolean aggiornaProfilo(Utente u) throws SQLException{
+        Connection conn = DatabaseConnection.getConnessione();
+        PreparedStatement st = conn.prepareStatement("""
+            UPDATE utenti SET
+                nome = ?,
+                cognome = ?,
+                email = ?,
+                sesso = ?,
+                lingua=?,
+                dataNascita = ?,
+                indirizzo   = ?,
+                cellulare   = ?,
+                citta = ?
+            WHERE id = ?
+                
+        """);
+        st.setString(1, u.getNome());
+        st.setString(2, u.getCognome());
+        st.setString(3, u.getEmail());
+        st.setString(4, u.getSesso());
+        st.setString(5, u.getLingua());
+        st.setString(6, u.getDataNascita());
+        st.setString(7, u.getIndirizzo());
+        st.setString(8, u.getCellulare());
+        st.setString(9, u.getCitta());
+        st.setInt(10, u.getId());
+        return st.executeUpdate()>0;
+    }
+
+
 }

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #A4BEE3;" stylesheets="@../Style/unitech.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ProfileController">
+   <children>
+      <AnchorPane layoutX="59.0" layoutY="61.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="670.0" prefWidth="1206.0" style="-fx-background-color: white; -fx-background-radius: 20;" AnchorPane.leftAnchor="59.0" AnchorPane.rightAnchor="43.40000000000009" AnchorPane.topAnchor="61.0">
+         <children>
+            <Circle fill="#cccccc" radius="60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="372.00000000000006" AnchorPane.topAnchor="50.0" />
+            <FontIcon iconColor="WHITE" iconLiteral="fas-user" iconSize="60" layoutX="75.0" layoutY="134.0" text="" wrappingWidth="36.10004425048828" AnchorPane.bottomAnchor="227.40000000000003" AnchorPane.leftAnchor="74.0" AnchorPane.topAnchor="79.0" />
+            <Label fx:id="nomeLabel" layoutX="192.0" layoutY="74.0" minWidth="-Infinity" prefHeight="20.0" styleClass="profile-option-text" text="Nome" textFill="#ff1c1c" AnchorPane.leftAnchor="192.0" AnchorPane.topAnchor="74.0" />
+            <Label fx:id="emailLabel" layoutX="199.0" layoutY="122.0" minWidth="-Infinity" prefHeight="20.0" styleClass="profile-option-subtext" text="Email" AnchorPane.leftAnchor="192.0" />
+            <Separator layoutX="18.0" layoutY="180.0" prefHeight="9.0" prefWidth="496.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="17.600000000000023" AnchorPane.topAnchor="180.0" />
+            <Label layoutX="22.0" layoutY="337.0" minWidth="-Infinity" prefHeight="20.0" styleClass="profile-main-text" text="Data di Nascita" AnchorPane.leftAnchor="468.0" AnchorPane.topAnchor="350.0" />
+            <Label layoutX="22.0" layoutY="200.0" minWidth="-Infinity" prefHeight="20.0" styleClass="profile-main-text" text="Nome" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="200.0" />
+            <Label layoutX="219.0" layoutY="427.0" minWidth="-Infinity" prefHeight="20.0" styleClass="profile-main-text" text="Lingua" AnchorPane.leftAnchor="22.4" AnchorPane.topAnchor="500.4" />
+            <TextField fx:id="nomeTextField" editable="false" layoutX="26.0" layoutY="230.0" prefHeight="41.0" prefWidth="292.0" text="Nome" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="230.0" />
+            <TextField fx:id="cognomeTextField" editable="false" layoutX="26.0" layoutY="367.0" prefWidth="292.0" text="Cognome" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="380.0" />
+            <TextField fx:id="linguaTextField" editable="false" prefWidth="292.0" promptText="es. Italiano" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="530.0" />
+            <Label layoutX="468.0" layoutY="199.0" minWidth="-Infinity" prefHeight="20.0" styleClass="profile-main-text" text="Sesso" AnchorPane.leftAnchor="468.0" AnchorPane.topAnchor="200.0" />
+            <TextField fx:id="sessoTextField" editable="false" layoutX="497.0" layoutY="228.0" prefWidth="292.0" promptText="es. M/F" AnchorPane.leftAnchor="468.0" AnchorPane.topAnchor="230.0" />
+            <TextField fx:id="datanascitaTextField" editable="false" layoutX="493.0" layoutY="380.0" prefWidth="292.0" promptText="es. 12/03/2005" AnchorPane.leftAnchor="468.0" AnchorPane.topAnchor="380.0" />
+            <Label layoutX="479.0" layoutY="351.0" minWidth="-Infinity" prefHeight="20.0" styleClass="profile-main-text" text="Cognome" AnchorPane.leftAnchor="22.4" AnchorPane.topAnchor="350.0" />
+            <Label layoutX="32.0" layoutY="347.0" minWidth="-Infinity" prefHeight="20.0" styleClass="profile-main-text" text="Cellulare" AnchorPane.leftAnchor="468.0" AnchorPane.topAnchor="500.0" />
+            <TextField fx:id="cellulareTextField" editable="false" prefWidth="292.0" promptText="es. 3458921578" AnchorPane.leftAnchor="468.0" AnchorPane.topAnchor="530.0" />
+            <Label layoutX="478.0" layoutY="209.0" minWidth="-Infinity" prefHeight="20.0" styleClass="profile-main-text" text="Città di Residenza" AnchorPane.leftAnchor="914.0" AnchorPane.topAnchor="200.0" />
+            <TextField fx:id="cittaTextField" editable="false" layoutX="507.0" layoutY="238.0" prefWidth="292.0" promptText="es. Rende" AnchorPane.leftAnchor="914.0" AnchorPane.topAnchor="230.0" />
+            <TextField fx:id="indirizzoTextField" editable="false" prefWidth="292.0" promptText="es. Via delle Orchidee" AnchorPane.leftAnchor="914.0" AnchorPane.topAnchor="380.0" />
+            <Label layoutX="32.0" layoutY="347.0" minWidth="-Infinity" prefHeight="20.0" styleClass="profile-main-text" text="Indirizzo" AnchorPane.leftAnchor="914.0" AnchorPane.topAnchor="350.0" />
+            <Label minWidth="-Infinity" prefHeight="20.0" styleClass="profile-main-text" text="Email" AnchorPane.leftAnchor="914.0" AnchorPane.topAnchor="500.0" />
+            <TextField fx:id="emailTextField" editable="false" layoutX="10.0" layoutY="10.0" prefWidth="292.0" text="email" AnchorPane.leftAnchor="914.0" AnchorPane.topAnchor="530.0" />
+            <Button fx:id="modificaDettagli" layoutX="547.0" layoutY="608.0" minWidth="-Infinity" mnemonicParsing="false" prefHeight="38.0" prefWidth="154.0" styleClass="button-profile" text="Modifica Dettagli!" AnchorPane.leftAnchor="443.0" AnchorPane.topAnchor="608.0" />
+            <Button fx:id="inviaBottone" layoutX="670.0" layoutY="608.0" minWidth="-Infinity" mnemonicParsing="false" prefHeight="38.0" prefWidth="154.0" style="-fx-background-color: red;" styleClass="button-profile" text="Invia!" AnchorPane.leftAnchor="643.0" AnchorPane.topAnchor="608.0" />
+            <Label fx:id="cognomeLabel" layoutX="281.0" layoutY="71.0" minWidth="-Infinity" prefHeight="20.0" styleClass="profile-option-text" text="Cognome" textFill="#ff1c1c" AnchorPane.leftAnchor="296.0" AnchorPane.topAnchor="74.0" />
+            <Label fx:id="nomeError" layoutX="28.0" layoutY="272.0" styleClass="signup-error" text="Inserisci un Nome Valido!" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="273.0" />
+            <Label fx:id="messaggioSuccesso" cache="true" cacheHint="QUALITY" layoutX="458.0" layoutY="130.0" style="-fx-text-fill: white; -fx-background-color: green; -fx-font-size: 18; -fx-background-radius: 10;" styleClass="signup-error" text="Profilo Aggiornato Correttamente!" visible="false" AnchorPane.topAnchor="130.0" />
+            <Label fx:id="cognomeError" layoutX="38.0" layoutY="282.0" styleClass="signup-error" text="Inserisci un Cognome Valido!" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="423.0" />
+            <Label fx:id="sessoError" layoutX="38.0" layoutY="282.0" styleClass="signup-error" text="Inserisci un Sesso Valido (M/F)!" AnchorPane.leftAnchor="468.0" AnchorPane.topAnchor="273.0" />
+            <Label fx:id="linguaError" layoutX="38.0" layoutY="282.0" styleClass="signup-error" text="Inserisci una Lingua Valida!" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="573.0" />
+            <Label fx:id="dataError" layoutX="48.0" layoutY="292.0" styleClass="signup-error" text="Inserisci una Data Valida (XX/XX/XXXX)!" AnchorPane.leftAnchor="468.0" AnchorPane.topAnchor="423.0" />
+            <Label fx:id="cellulareError" layoutX="58.0" layoutY="302.0" styleClass="signup-error" text="Inserisci un Numero Valido!" AnchorPane.leftAnchor="468.0" AnchorPane.topAnchor="573.0" />
+            <Label fx:id="cittaError" layoutX="48.0" layoutY="292.0" styleClass="signup-error" text="Inserisci una Città Valida!" AnchorPane.leftAnchor="914.0" AnchorPane.topAnchor="273.0" />
+            <Label fx:id="emailError" styleClass="signup-error" text="Inserisci un'email Valida!" AnchorPane.leftAnchor="914.0" AnchorPane.topAnchor="573.0" />
+            <Label fx:id="indirizzoError" layoutX="58.0" layoutY="302.0" styleClass="signup-error" text="Inserisci un Indirizzo Valido!" AnchorPane.leftAnchor="914.0" AnchorPane.topAnchor="423.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
