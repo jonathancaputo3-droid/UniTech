@@ -9,29 +9,33 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #A4BEE3; -fx-background-radius: 30;" stylesheets="@../Style/unitech.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SignUpController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #A4BEE3;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SignUpController">
    <children>
-      <Label cache="true" cacheHint="QUALITY" layoutX="37.0" layoutY="63.0" mnemonicParsing="true" styleClass="signup-title" text="Registrati" AnchorPane.leftAnchor="37.0" AnchorPane.topAnchor="63.0" />
-      <Label cache="true" cacheHint="QUALITY" layoutX="37.0" layoutY="109.0" mnemonicParsing="true" styleClass="signup-subtitle" text="Hai già un account?" AnchorPane.leftAnchor="39.0" AnchorPane.topAnchor="134.0" />
-      <Label fx:id="accediQui" cache="true" cacheHint="QUALITY" layoutX="228.0" layoutY="123.0" mnemonicParsing="true" style="-fx-font-size: 15; -fx-text-fill: #3496ff;" styleClass="signup-subtitle" text="Accedi Qui!" textFill="#3496ff" underline="true" AnchorPane.leftAnchor="228.0" AnchorPane.topAnchor="139.0" />
-      <ImageView fitHeight="400.0" fitWidth="400.0" layoutX="908.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="946.0">
-         <image>
-            <Image url="@../it/uid/unitech/Images/signUpImage.png" />
-         </image>
-      </ImageView>
-      <Label cache="true" cacheHint="QUALITY" layoutX="39.0" layoutY="208.0" mnemonicParsing="true" styleClass="signup-field" text="Nome" AnchorPane.leftAnchor="39.0" AnchorPane.topAnchor="232.0" />
-      <Label cache="true" cacheHint="QUALITY" layoutX="37.0" layoutY="289.0" mnemonicParsing="true" styleClass="signup-field" text="Cognome" AnchorPane.leftAnchor="39.2" AnchorPane.topAnchor="332.0" />
-      <Label cache="true" cacheHint="QUALITY" layoutX="39.0" layoutY="532.0" mnemonicParsing="true" styleClass="signup-field" text="Password" AnchorPane.leftAnchor="39.2" AnchorPane.topAnchor="532.0" />
-      <Label cache="true" cacheHint="QUALITY" layoutX="38.0" layoutY="432.0" mnemonicParsing="true" styleClass="signup-field" text="E-mail" AnchorPane.leftAnchor="38.0" AnchorPane.topAnchor="432.0" />
-      <TextField fx:id="nomeField" layoutX="224.0" layoutY="225.0" minHeight="-Infinity" prefHeight="35.0" prefWidth="196.0" promptText="es. Mario" styleClass="text-field" AnchorPane.leftAnchor="218.0" AnchorPane.topAnchor="225.0" />
-      <TextField fx:id="cognomeField" layoutX="218.0" layoutY="325.0" minHeight="-Infinity" prefHeight="35.0" promptText="es. Rossi" styleClass="text-field" AnchorPane.leftAnchor="218.0" AnchorPane.topAnchor="325.0" />
-      <TextField fx:id="emailField" layoutX="218.0" layoutY="425.0" minHeight="-Infinity" prefHeight="35.0" promptText="es. Mario@gmail.com" styleClass="text-field" AnchorPane.leftAnchor="218.0" AnchorPane.topAnchor="425.0" />
-      <PasswordField fx:id="passwordField" layoutX="218.0" layoutY="525.0" minHeight="-Infinity" prefHeight="35.0" promptText="es. 12345" AnchorPane.leftAnchor="218.0" AnchorPane.topAnchor="525.0" />
-      <Label fx:id="nomeErrorLabel" layoutX="218.0" layoutY="267.0" styleClass="signup-error" text=" Usare solo Lettere senza Spazi!" AnchorPane.leftAnchor="218.4" AnchorPane.topAnchor="267.0" />
-      <Label fx:id="emailErrorLabel" layoutX="218.4" layoutY="467.0" styleClass="signup-error" text="Usare un'email Valida!" AnchorPane.leftAnchor="218.4" AnchorPane.topAnchor="467.0" />
-      <Label fx:id="cognomeErrorLabel" layoutX="218.4" layoutY="367.0" styleClass="signup-error" text=" Usare solo Lettere senza Spazi!" AnchorPane.leftAnchor="218.4" AnchorPane.topAnchor="367.0" />
-      <Label fx:id="passwordErrorLabel" layoutX="218.0" layoutY="560.0" minWidth="-Infinity" prefWidth="220.0" styleClass="signup-error" text="Includi un carattere Speciale: !.$&amp;%#@ Lunghezza minima 8 caratteri!" wrapText="true" AnchorPane.leftAnchor="218.0" AnchorPane.topAnchor="567.0" />
-      <Button fx:id="confermaButton" layoutX="218.0" layoutY="617.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="196.0" text="Conferma!" AnchorPane.leftAnchor="218.0" AnchorPane.topAnchor="637.0" />
-      <Label fx:id="confermaErrorLabelEmpty" layoutX="206.0" layoutY="665.0" minWidth="-Infinity" prefWidth="220.0" styleClass="signup-error" text="Compila i campi prima di Proseguire!" wrapText="true" AnchorPane.leftAnchor="218.0" AnchorPane.topAnchor="667.0" />
+      <AnchorPane layoutX="144.0" layoutY="61.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white; -fx-background-radius: 30;" stylesheets="@../Style/unitech.css" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="45.0">
+         <children>
+            <Label cache="true" cacheHint="QUALITY" layoutX="37.0" layoutY="63.0" mnemonicParsing="true" styleClass="signup-title" text="Registrati" AnchorPane.leftAnchor="37.0" AnchorPane.topAnchor="63.0" />
+            <Label cache="true" cacheHint="QUALITY" layoutX="37.0" layoutY="109.0" mnemonicParsing="true" styleClass="signup-subtitle" text="Hai già un account?" AnchorPane.leftAnchor="39.0" AnchorPane.topAnchor="134.0" />
+            <Label fx:id="accediQui" cache="true" cacheHint="QUALITY" layoutX="228.0" layoutY="123.0" mnemonicParsing="true" style="-fx-font-size: 15; -fx-text-fill: #3496ff;" styleClass="signup-subtitle" text="Accedi Qui!" textFill="#3496ff" underline="true" AnchorPane.leftAnchor="228.0" AnchorPane.topAnchor="139.0" />
+            <ImageView fitHeight="400.0" fitWidth="400.0" layoutX="908.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="946.0">
+               <image>
+                  <Image url="@../it/uid/unitech/Images/signUpImage.png" />
+               </image>
+            </ImageView>
+            <Label cache="true" cacheHint="QUALITY" layoutX="39.0" layoutY="208.0" mnemonicParsing="true" styleClass="signup-field" text="Nome" AnchorPane.leftAnchor="39.0" AnchorPane.topAnchor="232.0" />
+            <Label cache="true" cacheHint="QUALITY" layoutX="37.0" layoutY="289.0" mnemonicParsing="true" styleClass="signup-field" text="Cognome" AnchorPane.leftAnchor="39.2" AnchorPane.topAnchor="332.0" />
+            <Label cache="true" cacheHint="QUALITY" layoutX="39.0" layoutY="532.0" mnemonicParsing="true" styleClass="signup-field" text="Password" AnchorPane.leftAnchor="39.2" AnchorPane.topAnchor="532.0" />
+            <Label cache="true" cacheHint="QUALITY" layoutX="38.0" layoutY="432.0" mnemonicParsing="true" styleClass="signup-field" text="E-mail" AnchorPane.leftAnchor="38.0" AnchorPane.topAnchor="432.0" />
+            <TextField fx:id="nomeField" layoutX="224.0" layoutY="225.0" minHeight="-Infinity" prefHeight="35.0" prefWidth="196.0" promptText="es. Mario" styleClass="text-field" AnchorPane.leftAnchor="218.0" AnchorPane.topAnchor="225.0" />
+            <TextField fx:id="cognomeField" layoutX="218.0" layoutY="325.0" minHeight="-Infinity" prefHeight="35.0" promptText="es. Rossi" styleClass="text-field" AnchorPane.leftAnchor="218.0" AnchorPane.topAnchor="325.0" />
+            <TextField fx:id="emailField" layoutX="218.0" layoutY="425.0" minHeight="-Infinity" prefHeight="35.0" promptText="es. Mario@gmail.com" styleClass="text-field" AnchorPane.leftAnchor="218.0" AnchorPane.topAnchor="425.0" />
+            <PasswordField fx:id="passwordField" layoutX="218.0" layoutY="525.0" minHeight="-Infinity" prefHeight="35.0" promptText="es. 12345" AnchorPane.leftAnchor="218.0" AnchorPane.topAnchor="525.0" />
+            <Label fx:id="nomeErrorLabel" layoutX="218.0" layoutY="267.0" styleClass="signup-error" text=" Usare solo Lettere senza Spazi!" AnchorPane.leftAnchor="218.4" AnchorPane.topAnchor="267.0" />
+            <Label fx:id="emailErrorLabel" layoutX="218.4" layoutY="467.0" styleClass="signup-error" text="Usare un'email Valida!" AnchorPane.leftAnchor="218.4" AnchorPane.topAnchor="467.0" />
+            <Label fx:id="cognomeErrorLabel" layoutX="218.4" layoutY="367.0" styleClass="signup-error" text=" Usare solo Lettere senza Spazi!" AnchorPane.leftAnchor="218.4" AnchorPane.topAnchor="367.0" />
+            <Label fx:id="passwordErrorLabel" layoutX="218.0" layoutY="560.0" minWidth="-Infinity" prefWidth="220.0" styleClass="signup-error" text="Includi un carattere Speciale: !.$&amp;%#@ Lunghezza minima 8 caratteri!" wrapText="true" AnchorPane.leftAnchor="218.0" AnchorPane.topAnchor="567.0" />
+            <Button fx:id="confermaButton" layoutX="218.0" layoutY="617.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="196.0" text="Conferma!" AnchorPane.leftAnchor="218.0" AnchorPane.topAnchor="637.0" />
+            <Label fx:id="confermaErrorLabelEmpty" layoutX="206.0" layoutY="665.0" minWidth="-Infinity" prefWidth="220.0" styleClass="signup-error" text="Compila i campi prima di Proseguire!" wrapText="true" AnchorPane.leftAnchor="218.0" AnchorPane.topAnchor="667.0" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

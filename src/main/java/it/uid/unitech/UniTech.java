@@ -12,7 +12,7 @@ public class UniTech extends Application {
     public void start(Stage stage) throws Exception {
 
         FXMLLoader loader = new FXMLLoader(
-                getClass().getResource("/Fxml/SplashScreen.fxml")
+                getClass().getResource("/Fxml/Home.fxml")
         );
 
         Parent root = loader.load();

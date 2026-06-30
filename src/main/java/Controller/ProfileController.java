@@ -202,7 +202,7 @@ public class ProfileController {
             uCorrente.setEmail(emailTextField.getText().trim());
             uCorrente.setSesso(sessoTextField.getText().trim());
             uCorrente.setLingua(linguaTextField.getText().trim());
-            uCorrente.setDataNascita(cittaTextField.getText().trim());
+            uCorrente.setDataNascita(datanascitaTextField.getText().trim());
             uCorrente.setIndirizzo(indirizzoTextField.getText().trim());
             uCorrente.setCellulare(cellulareTextField.getText().trim());
             uCorrente.setCitta(cittaTextField.getText().trim());

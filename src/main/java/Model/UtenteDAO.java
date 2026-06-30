@@ -82,6 +82,4 @@ public class UtenteDAO {
         st.setInt(10, u.getId());
         return st.executeUpdate()>0;
     }
-
-
 }

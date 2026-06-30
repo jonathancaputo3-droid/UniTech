@@ -52,7 +52,7 @@
 
 {
 
-  -fx-background-color: #F1EFF4;
+  -fx-background-color: linear-gradient(to bottom, #f2c8ff, #f3f7fa);
 
   -fx-background-radius: 8;
 
@@ -80,7 +80,7 @@
 
 {
 
-  -fx-background-color: white;
+  -fx-background-color: linear-gradient(to bottom, #bcc1fb, #f3f7fa);
 
   -fx-background-radius: 8;
 
@@ -94,7 +94,7 @@
 
 {
 
-  -fx-background-color:  linear-gradient(to bottom, #dbe2d4, #ffffff);
+  -fx-background-color:  linear-gradient(to bottom, #d9fba7, #ffffff);
 
   -fx-background-radius: 8;
 
