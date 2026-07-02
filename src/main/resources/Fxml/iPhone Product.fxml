@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -11,455 +10,130 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="2516.0" prefWidth="1935.0" stylesheets="@../Style/cupertino-light.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <ScrollPane hbarPolicy="NEVER" minHeight="1000.0" prefHeight="1000.0" prefWidth="1935.0" vbarPolicy="ALWAYS">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2490.0" prefWidth="1920.0">
-               <children>
-                  <HBox fillHeight="false" layoutX="345.0" layoutY="45.0" minHeight="54.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="54.0" prefWidth="1230.0" style="-fx-border-radius: 6;" AnchorPane.topAnchor="45.0">
-                     <children>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../it/uid/unitech/Images/UnitechLogo.png" />
-                           </image>
-                           <HBox.margin>
-                              <Insets left="30.0" top="7.0" />
-                           </HBox.margin>
-                        </ImageView>
-                        <MenuButton mnemonicParsing="false" text="iPhone">
-                           <items>
-                              <MenuItem mnemonicParsing="false" text="iPhone 17 Pro" />
-                              <MenuItem mnemonicParsing="false" text="iPhone Air" />
-                              <MenuItem mnemonicParsing="false" text="iPhone 17" />
-                           </items>
-                           <font>
-                              <Font name="Segoe UI" size="18.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets left="30.0" top="10.0" />
-                           </HBox.margin>
-                           <styleClass>
-                              <String fx:value="button-outlined" />
-                              <String fx:value="flat" />
-                           </styleClass>
-                        </MenuButton>
-                        <MenuButton mnemonicParsing="false" text="iPad">
-                           <items>
-                              <MenuItem mnemonicParsing="false" text="iPad Pro" />
-                              <MenuItem mnemonicParsing="false" text="iPad Air" />
-                              <MenuItem mnemonicParsing="false" text="iPad " />
-                           </items>
-                           <font>
-                              <Font name="Segoe UI" size="18.0" />
-                           </font>
-                           <styleClass>
-                              <String fx:value="button-outlined" />
-                              <String fx:value="flat" />
-                           </styleClass>
-                           <HBox.margin>
-                              <Insets left="20.0" top="10.0" />
-                           </HBox.margin>
-                        </MenuButton>
-                        <MenuButton mnemonicParsing="false" text="iMac">
-                           <items>
-                              <MenuItem mnemonicParsing="false" text="iMac" />
-                              <MenuItem mnemonicParsing="false" text="Mac Mini" />
-                              <MenuItem mnemonicParsing="false" text="Mac Studio" />
-                           </items>
-                           <font>
-                              <Font name="Segoe UI" size="18.0" />
-                           </font>
-                           <styleClass>
-                              <String fx:value="button-outlined" />
-                              <String fx:value="flat" />
-                           </styleClass>
-                           <HBox.margin>
-                              <Insets left="20.0" top="10.0" />
-                           </HBox.margin>
-                        </MenuButton>
-                        <MenuButton mnemonicParsing="false" text="MacBook">
-                           <items>
-                              <MenuItem mnemonicParsing="false" text="MacBook Neo" />
-                              <MenuItem mnemonicParsing="false" text="MacBook Air" />
-                              <MenuItem mnemonicParsing="false" text="MacBook Pro" />
-                           </items>
-                           <font>
-                              <Font name="Segoe UI" size="18.0" />
-                           </font>
-                           <styleClass>
-                              <String fx:value="button-outlined" />
-                              <String fx:value="flat" />
-                           </styleClass>
-                           <HBox.margin>
-                              <Insets left="20.0" top="10.0" />
-                           </HBox.margin>
-                        </MenuButton>
-                        <MenuButton mnemonicParsing="false" text="Watch">
-                           <items>
-                              <MenuItem mnemonicParsing="false" text="Apple Watch Series 11" />
-                              <MenuItem mnemonicParsing="false" text="Apple Watch SE 3" />
-                              <MenuItem mnemonicParsing="false" text="Apple Watch Ultra 3" />
-                           </items>
-                           <font>
-                              <Font name="Segoe UI" size="18.0" />
-                           </font>
-                           <styleClass>
-                              <String fx:value="button-outlined" />
-                              <String fx:value="flat" />
-                           </styleClass>
-                           <HBox.margin>
-                              <Insets left="20.0" top="10.0" />
-                           </HBox.margin>
-                        </MenuButton>
-                        <MenuButton mnemonicParsing="false" text="AirPods" HBox.hgrow="ALWAYS">
-                           <items>
-                              <MenuItem mnemonicParsing="false" text="AirPods 4" />
-                              <MenuItem mnemonicParsing="false" text="AirPods Pro 3" />
-                              <MenuItem mnemonicParsing="false" text="AirPods Max 2" />
-                           </items>
-                           <font>
-                              <Font name="Segoe UI" size="18.0" />
-                           </font>
-                           <styleClass>
-                              <String fx:value="button-outlined" />
-                              <String fx:value="flat" />
-                           </styleClass>
-                           <HBox.margin>
-                              <Insets left="20.0" top="10.0" />
-                           </HBox.margin>
-                        </MenuButton>
-                        <TextField prefHeight="32.0" prefWidth="260.0" promptText="Cerca">
-                           <HBox.margin>
-                              <Insets left="25.0" top="10.0" />
-                           </HBox.margin>
-                        </TextField>
-                        <FontIcon iconLiteral="fas-search">
-                           <HBox.margin>
-                              <Insets left="10.0" top="20.0" />
-                           </HBox.margin>
-                        </FontIcon>
-                        <FontIcon iconLiteral="fas-shopping-bag">
-                           <HBox.margin>
-                              <Insets left="20.0" top="20.0" />
-                           </HBox.margin>
-                        </FontIcon>
-                        <FontIcon iconLiteral="fas-user-alt">
-                           <HBox.margin>
-                              <Insets left="30.0" top="20.0" />
-                           </HBox.margin>
-                        </FontIcon>
-                     </children>
-                     <padding>
-                        <Insets left="2.0" />
-                     </padding>
-                     <styleClass>
-                        <String fx:value="bg-default" />
-                        <String fx:value="border-default" />
-                        <String fx:value="elevated-1" />
-                     </styleClass>
-                  </HBox>
-                  <Label layoutX="544.0" layoutY="160.0" text="Scegli il tuo modello di iPhone" AnchorPane.topAnchor="160.0">
-                     <font>
-                        <Font name="System Bold" size="58.0" />
-                     </font>
-                  </Label>
-                  <AnchorPane layoutX="345.0" layoutY="340.0" prefHeight="597.0" prefWidth="324.0">
-                     <children>
-                        <ImageView fitHeight="488.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../it/uid/unitech/Images/iPhone%2017%20Pro_ipProduct.png" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="83.0" layoutY="430.0" text="iPhone 17 Pro">
-                           <font>
-                              <Font name="System Bold" size="24.0" />
-                           </font>
-                        </Label>
-                        <Separator layoutY="497.0" prefHeight="1.0" prefWidth="319.0" />
-                        <Button layoutX="73.0" layoutY="538.0" mnemonicParsing="false" styleClass="accent" text="Aggiungi al carrello">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Button>
-                     </children></AnchorPane>
-                  <AnchorPane layoutX="798.0" layoutY="340.0" prefHeight="597.0" prefWidth="324.0">
-                     <children>
-                        <ImageView fitHeight="488.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../it/uid/unitech/Images/iPhone%20Air_ipProduct.png" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="103.0" layoutY="430.0" text="iPhone Air">
-                           <font>
-                              <Font name="System Bold" size="24.0" />
-                           </font>
-                        </Label>
-                        <Separator layoutY="497.0" prefHeight="1.0" prefWidth="319.0" />
-                        <Button layoutX="73.0" layoutY="538.0" mnemonicParsing="false" styleClass="accent" text="Aggiungi al carrello">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Button>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="1215.0" layoutY="340.0" prefHeight="597.0" prefWidth="324.0">
-                     <children>
-                        <ImageView fitHeight="488.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../it/uid/unitech/Images/iPhone%2017_ipProduct.png" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="106.0" layoutY="429.0" text="iPhone 17">
-                           <font>
-                              <Font name="System Bold" size="24.0" />
-                           </font>
-                        </Label>
-                        <Separator layoutY="497.0" prefHeight="1.0" prefWidth="319.0" />
-                        <Button layoutX="73.0" layoutY="538.0" mnemonicParsing="false" styleClass="accent" text="Aggiungi al carrello">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Button>
-                     </children>
-                  </AnchorPane>
-                  <Label layoutX="331.0" layoutY="1000.0" text="Caratteristiche Tecniche">
-                     <font>
-                        <Font name="System Bold" size="46.0" />
-                     </font>
-                  </Label>
-                  <Separator layoutX="331.0" layoutY="1109.0" prefHeight="0.0" prefWidth="1241.0" />
-                  
-                  <AnchorPane layoutX="331.0" layoutY="1135.0" prefHeight="1301.0" prefWidth="327.0">
-                     <children>
-                        <Label layoutX="121.0" layoutY="0.0" text="6.9&quot;">
-                           <font>
-                              <Font name="System Bold" size="64.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="75.0" layoutY="36.0" prefHeight="170.0" prefWidth="231.0" text="Display Super Retina XDR&#10;&#10;&#10;" textAlignment="JUSTIFY">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <ImageView fitHeight="91.0" fitWidth="142.0" layoutX="107.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../it/uid/unitech/Images/Aluminium%20Cover.png" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="83.0" layoutY="270.0" text="Unibody in alluminio&#10;&#10;&#10;&#10;" textAlignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <ImageView fitHeight="108.0" fitWidth="86.0" layoutX="123.0" layoutY="378.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../it/uid/unitech/Images/Ceramic%20Shield.png" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="28.0" layoutY="494.0" text="Parte frontale in Ceramic Shield 2,&#10;tre volte più resistente ai graffi" textAlignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <ImageView fitHeight="88.0" fitWidth="88.0" layoutX="122.0" layoutY="579.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../it/uid/unitech/Images/A19%20Pro.png" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="114.0" layoutY="698.0" text="Chip A19 Pro">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <ImageView fitHeight="65.0" fitWidth="153.0" layoutX="101.0" layoutY="774.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../it/uid/unitech/Images/Battery.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="101.0" fitWidth="107.0" layoutX="115.0" layoutY="940.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../it/uid/unitech/Images/Selfie%20Camera.png" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="30.0" layoutY="873.0" text="Fino a 37 ore di riproduzione video">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="24.0" layoutY="1064.0" text="Fotocamera frontale Center Stage &#10;da 18MP" textAlignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <ImageView fitHeight="77.0" fitWidth="153.0" layoutX="115.0" layoutY="1167.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../it/uid/unitech/Images/Triple%20Camera.png" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="19.0" layoutY="1265.0" text="Sistema di fotocamere Pro Fusion &#10;da 48MP" textAlignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="788.0" layoutY="1133.0" prefHeight="1301.0" prefWidth="327.0">
-                     <children>
-                        <Label layoutX="121.0" layoutY="0.0" text="6.5&quot;">
-                           <font>
-                              <Font name="System Bold" size="64.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="75.0" layoutY="36.0" prefHeight="170.0" prefWidth="231.0" text="Display Super Retina XDR&#10;&#10;&#10;" textAlignment="JUSTIFY">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <ImageView fitHeight="91.0" fitWidth="142.0" layoutX="107.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../it/uid/unitech/Images/Aluminium%20Cover.png" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="83.0" layoutY="270.0" text="Unibody in alluminio&#10;&#10;&#10;&#10;" textAlignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <ImageView fitHeight="108.0" fitWidth="86.0" layoutX="123.0" layoutY="378.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../it/uid/unitech/Images/Ceramic%20Shield.png" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="28.0" layoutY="494.0" text="Parte frontale in Ceramic Shield 2,&#10;tre volte più resistente ai graffi" textAlignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <ImageView fitHeight="88.0" fitWidth="88.0" layoutX="122.0" layoutY="579.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../it/uid/unitech/Images/A19%20Pro.png" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="114.0" layoutY="698.0" text="Chip A19 Pro">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <ImageView fitHeight="65.0" fitWidth="153.0" layoutX="101.0" layoutY="774.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../it/uid/unitech/Images/Battery.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="101.0" fitWidth="107.0" layoutX="115.0" layoutY="940.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../it/uid/unitech/Images/Selfie%20Camera.png" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="30.0" layoutY="873.0" text="Fino a 27 ore di riproduzione video">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="24.0" layoutY="1064.0" text="Fotocamera frontale Center Stage &#10;da 18MP" textAlignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <ImageView fitHeight="77.0" fitWidth="153.0" layoutX="115.0" layoutY="1167.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../it/uid/unitech/Images/Single%20Camera.png" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="19.0" layoutY="1265.0" text="Sistema di fotocamere Pro Fusion &#10;da 48MP" textAlignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="1219.0" layoutY="1133.0" prefHeight="1301.0" prefWidth="327.0">
-                     <children>
-                        <Label layoutX="121.0" layoutY="0.0" text="6.3&quot;">
-                           <font>
-                              <Font name="System Bold" size="64.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="75.0" layoutY="36.0" prefHeight="170.0" prefWidth="231.0" text="Display Super Retina XDR&#10;&#10;&#10;" textAlignment="JUSTIFY">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <ImageView fitHeight="91.0" fitWidth="142.0" layoutX="107.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../it/uid/unitech/Images/Aluminium%20Cover.png" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="83.0" layoutY="270.0" text="Unibody in alluminio&#10;&#10;&#10;&#10;" textAlignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <ImageView fitHeight="108.0" fitWidth="86.0" layoutX="123.0" layoutY="378.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../it/uid/unitech/Images/Ceramic%20Shield.png" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="28.0" layoutY="494.0" text="Parte frontale in Ceramic Shield 2,&#10;tre volte più resistente ai graffi" textAlignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <ImageView fitHeight="88.0" fitWidth="88.0" layoutX="122.0" layoutY="579.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../it/uid/unitech/Images/A19%20Pro.png" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="129.0" layoutY="697.0" text="Chip A19 ">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <ImageView fitHeight="65.0" fitWidth="153.0" layoutX="101.0" layoutY="774.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../it/uid/unitech/Images/Battery.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="101.0" fitWidth="107.0" layoutX="115.0" layoutY="940.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../it/uid/unitech/Images/Selfie%20Camera.png" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="30.0" layoutY="873.0" text="Fino a 30 ore di riproduzione video">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="24.0" layoutY="1064.0" text="Fotocamera frontale Center Stage &#10;da 18MP" textAlignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <ImageView fitHeight="77.0" fitWidth="153.0" layoutX="115.0" layoutY="1167.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../it/uid/unitech/Images/Dual%20Camera.png" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="19.0" layoutY="1265.0" text="Sistema di fotocamere Pro Fusion &#10;da 48MP" textAlignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </AnchorPane>
-               </children>
-            </AnchorPane>
-        </content>
-      </ScrollPane>
-   </children>
-</AnchorPane>
+<ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="1000.0" prefWidth="1935.0" stylesheets="@../Style/cupertino-light.css" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+   <content>
+      <VBox alignment="TOP_CENTER" prefWidth="1920.0" spacing="50.0">
+         <padding>
+            <Insets bottom="50.0" left="20.0" right="20.0" top="45.0" />
+         </padding>
+         
+         <HBox alignment="CENTER" maxWidth="1230.0" minHeight="54.0" spacing="20.0" style="-fx-border-radius: 6;" styleClass="bg-default, border-default, elevated-1">
+            <padding>
+               <Insets left="30.0" right="30.0" />
+            </padding>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image> <Image url="@../it/uid/unitech/Images/UnitechLogo.png" /> </image>
+            </ImageView>
+            <MenuButton styleClass="button-outlined, flat" text="iPhone"><font><Font name="Segoe UI" size="18.0" /></font><items><MenuItem text="iPhone 17 Pro" /><MenuItem text="iPhone Air" /><MenuItem text="iPhone 17" /></items></MenuButton>
+            <MenuButton styleClass="button-outlined, flat" text="iPad"><font><Font name="Segoe UI" size="18.0" /></font><items><MenuItem text="iPad Pro" /><MenuItem text="iPad Air" /><MenuItem text="iPad " /></items></MenuButton>
+            <MenuButton styleClass="button-outlined, flat" text="iMac"><font><Font name="Segoe UI" size="18.0" /></font><items><MenuItem text="iMac" /><MenuItem text="Mac Mini" /><MenuItem text="Mac Studio" /></items></MenuButton>
+            <MenuButton styleClass="button-outlined, flat" text="MacBook"><font><Font name="Segoe UI" size="18.0" /></font><items><MenuItem text="MacBook Neo" /><MenuItem text="MacBook Air" /><MenuItem text="MacBook Pro" /></items></MenuButton>
+            <MenuButton styleClass="button-outlined, flat" text="Watch"><font><Font name="Segoe UI" size="18.0" /></font><items><MenuItem text="Apple Watch Series 11" /><MenuItem text="Apple Watch SE 3" /><MenuItem text="Apple Watch Ultra 3" /></items></MenuButton>
+            <MenuButton styleClass="button-outlined, flat" text="AirPods"><font><Font name="Segoe UI" size="18.0" /></font><items><MenuItem text="AirPods 4" /><MenuItem text="AirPods Pro 3" /><MenuItem text="AirPods Max 2" /></items></MenuButton>
+            <TextField prefWidth="260.0" promptText="Cerca" />
+            <FontIcon iconLiteral="fas-search" />
+            <FontIcon iconLiteral="fas-shopping-bag" />
+            <FontIcon iconLiteral="fas-user-alt" />
+         </HBox>
+
+         <Label text="Scegli il tuo modello di iPhone">
+            <font><Font name="System Bold" size="58.0" /></font>
+         </Label>
+
+         <HBox alignment="CENTER" spacing="100.0">
+            <VBox alignment="TOP_CENTER" spacing="10.0">
+               <ImageView fitHeight="488.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
+                  <image><Image url="@../it/uid/unitech/Images/iPhone%2017%20Pro_ipProduct.png" /></image>
+               </ImageView>
+               <Label text="iPhone 17 Pro"><font><Font name="System Bold" size="24.0" /></font></Label>
+               <Separator prefWidth="319.0" />
+               <Button styleClass="accent" text="Aggiungi al carrello"><font><Font size="18.0" /></font></Button>
+            </VBox>
+            <VBox alignment="TOP_CENTER" spacing="10.0">
+               <ImageView fitHeight="488.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
+                  <image><Image url="@../it/uid/unitech/Images/iPhone%20Air_ipProduct.png" /></image>
+               </ImageView>
+               <Label text="iPhone Air"><font><Font name="System Bold" size="24.0" /></font></Label>
+               <Separator prefWidth="319.0" />
+               <Button styleClass="accent" text="Aggiungi al carrello"><font><Font size="18.0" /></font></Button>
+            </VBox>
+            <VBox alignment="TOP_CENTER" spacing="10.0">
+               <ImageView fitHeight="488.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
+                  <image><Image url="@../it/uid/unitech/Images/iPhone%2017_ipProduct.png" /></image>
+               </ImageView>
+               <Label text="iPhone 17"><font><Font name="System Bold" size="24.0" /></font></Label>
+               <Separator prefWidth="319.0" />
+               <Button styleClass="accent" text="Aggiungi al carrello"><font><Font size="18.0" /></font></Button>
+            </VBox>
+         </HBox>
+
+         <VBox alignment="CENTER" maxWidth="1241.0" spacing="20.0">
+            <Label alignment="CENTER" text="Caratteristiche Tecniche">
+               <font><Font name="System Bold" size="46.0" /></font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <Separator prefWidth="1241.0" />
+            
+            <HBox alignment="TOP_CENTER" spacing="50.0">
+               <VBox alignment="TOP_CENTER" prefWidth="327.0" spacing="20.0">
+                  <Label text="6.9&quot;"><font><Font name="System Bold" size="64.0" /></font></Label>
+                  <Label text="Display Super Retina XDR" textAlignment="JUSTIFY"><font><Font name="System Bold" size="18.0" /></font></Label>
+                  <ImageView fitHeight="91.0" fitWidth="142.0" preserveRatio="true"><image><Image url="@../it/uid/unitech/Images/Aluminium%20Cover.png" /></image></ImageView>
+                  <Label text="Unibody in alluminio" textAlignment="CENTER"><font><Font name="System Bold" size="18.0" /></font></Label>
+                  <ImageView fitHeight="108.0" fitWidth="86.0" preserveRatio="true"><image><Image url="@../it/uid/unitech/Images/Ceramic%20Shield.png" /></image></ImageView>
+                  <Label text="Parte frontale in Ceramic Shield 2,&#10;tre volte più resistente ai graffi" textAlignment="CENTER"><font><Font name="System Bold" size="18.0" /></font></Label>
+                  <ImageView fitHeight="88.0" fitWidth="88.0" preserveRatio="true"><image><Image url="@../it/uid/unitech/Images/A19%20Pro.png" /></image></ImageView>
+                  <Label text="Chip A19 Pro"><font><Font name="System Bold" size="18.0" /></font></Label>
+                  <ImageView fitHeight="65.0" fitWidth="153.0" preserveRatio="true"><image><Image url="@../it/uid/unitech/Images/Battery.png" /></image></ImageView>
+                  <Label text="Fino a 37 ore di riproduzione video"><font><Font name="System Bold" size="18.0" /></font></Label>
+                  <ImageView fitHeight="101.0" fitWidth="107.0" preserveRatio="true"><image><Image url="@../it/uid/unitech/Images/Selfie%20Camera.png" /></image></ImageView>
+                  <Label text="Fotocamera frontale Center Stage &#10;da 18MP" textAlignment="CENTER"><font><Font name="System Bold" size="18.0" /></font></Label>
+                  <ImageView fitHeight="77.0" fitWidth="153.0" preserveRatio="true"><image><Image url="@../it/uid/unitech/Images/Triple%20Camera.png" /></image></ImageView>
+                  <Label text="Sistema di fotocamere Pro Fusion &#10;da 48MP" textAlignment="CENTER"><font><Font name="System Bold" size="18.0" /></font></Label>
+               </VBox>
+
+               <VBox alignment="TOP_CENTER" prefWidth="327.0" spacing="20.0">
+                  <Label text="6.5&quot;"><font><Font name="System Bold" size="64.0" /></font></Label>
+                  <Label text="Display Super Retina XDR" textAlignment="JUSTIFY"><font><Font name="System Bold" size="18.0" /></font></Label>
+                  <ImageView fitHeight="91.0" fitWidth="142.0" preserveRatio="true"><image><Image url="@../it/uid/unitech/Images/Aluminium%20Cover.png" /></image></ImageView>
+                  <Label text="Unibody in alluminio" textAlignment="CENTER"><font><Font name="System Bold" size="18.0" /></font></Label>
+                  <ImageView fitHeight="108.0" fitWidth="86.0" preserveRatio="true"><image><Image url="@../it/uid/unitech/Images/Ceramic%20Shield.png" /></image></ImageView>
+                  <Label text="Parte frontale in Ceramic Shield 2,&#10;tre volte più resistente ai graffi" textAlignment="CENTER"><font><Font name="System Bold" size="18.0" /></font></Label>
+                  <ImageView fitHeight="88.0" fitWidth="88.0" preserveRatio="true"><image><Image url="@../it/uid/unitech/Images/A19%20Pro.png" /></image></ImageView>
+                  <Label text="Chip A19 Pro"><font><Font name="System Bold" size="18.0" /></font></Label>
+                  <ImageView fitHeight="65.0" fitWidth="153.0" preserveRatio="true"><image><Image url="@../it/uid/unitech/Images/Battery.png" /></image></ImageView>
+                  <Label text="Fino a 27 ore di riproduzione video"><font><Font name="System Bold" size="18.0" /></font></Label>
+                  <ImageView fitHeight="101.0" fitWidth="107.0" preserveRatio="true"><image><Image url="@../it/uid/unitech/Images/Selfie%20Camera.png" /></image></ImageView>
+                  <Label text="Fotocamera frontale Center Stage &#10;da 18MP" textAlignment="CENTER"><font><Font name="System Bold" size="18.0" /></font></Label>
+                  <ImageView fitHeight="77.0" fitWidth="153.0" preserveRatio="true"><image><Image url="@../it/uid/unitech/Images/Single%20Camera.png" /></image></ImageView>
+                  <Label text="Sistema di fotocamere Pro Fusion &#10;da 48MP" textAlignment="CENTER"><font><Font name="System Bold" size="18.0" /></font></Label>
+               </VBox>
+
+               <VBox alignment="TOP_CENTER" prefWidth="327.0" spacing="20.0">
+                  <Label text="6.3&quot;"><font><Font name="System Bold" size="64.0" /></font></Label>
+                  <Label text="Display Super Retina XDR" textAlignment="JUSTIFY"><font><Font name="System Bold" size="18.0" /></font></Label>
+                  <ImageView fitHeight="91.0" fitWidth="142.0" preserveRatio="true"><image><Image url="@../it/uid/unitech/Images/Aluminium%20Cover.png" /></image></ImageView>
+                  <Label text="Unibody in alluminio" textAlignment="CENTER"><font><Font name="System Bold" size="18.0" /></font></Label>
+                  <ImageView fitHeight="108.0" fitWidth="86.0" preserveRatio="true"><image><Image url="@../it/uid/unitech/Images/Ceramic%20Shield.png" /></image></ImageView>
+                  <Label text="Parte frontale in Ceramic Shield 2,&#10;tre volte più resistente ai graffi" textAlignment="CENTER"><font><Font name="System Bold" size="18.0" /></font></Label>
+                  <ImageView fitHeight="88.0" fitWidth="88.0" preserveRatio="true"><image><Image url="@../it/uid/unitech/Images/A19%20Pro.png" /></image></ImageView>
+                  <Label text="Chip A19"><font><Font name="System Bold" size="18.0" /></font></Label>
+                  <ImageView fitHeight="65.0" fitWidth="153.0" preserveRatio="true"><image><Image url="@../it/uid/unitech/Images/Battery.png" /></image></ImageView>
+                  <Label text="Fino a 30 ore di riproduzione video"><font><Font name="System Bold" size="18.0" /></font></Label>
+                  <ImageView fitHeight="101.0" fitWidth="107.0"><image><Image url="@../it/uid/unitech/Images/Selfie%20Camera.png" /></image></ImageView>
+                  <Label text="Fotocamera frontale Center Stage &#10;da 18MP" textAlignment="CENTER"><font><Font name="System Bold" size="18.0" /></font></Label>
+                  <ImageView fitHeight="77.0" fitWidth="153.0" preserveRatio="true"><image><Image url="@../it/uid/unitech/Images/Dual%20Camera.png" /></image></ImageView>
+                  <Label text="Sistema di fotocamere Pro Fusion &#10;da 48MP" textAlignment="CENTER"><font><Font name="System Bold" size="18.0" /></font></Label>
+               </VBox>
+            </HBox>
+         </VBox>
+      </VBox>
+   </content>
+</ScrollPane>

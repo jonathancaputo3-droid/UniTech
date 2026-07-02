@@ -6,20 +6,24 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #A4BEE3;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <AnchorPane layoutX="406.0" layoutY="248.0" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #F3F3F5; -fx-background-radius: 15;" stylesheets="@../Style/cupertino-light.css" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="60.0">
+<ScrollPane fitToWidth="true" style="-fx-background-color: #F3F3F5;" stylesheets="@../Style/cupertino-light.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+   <content>
+      <VBox alignment="TOP_CENTER" spacing="50.0">
+         <padding>
+            <Insets bottom="50.0" top="50.0" />
+         </padding>
          <children>
-            <HBox fillHeight="false" layoutX="350.0" layoutY="40.0" minHeight="54.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="54.0" prefWidth="1217.0" style="-fx-border-radius: 6;" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="40.0">
+
+            <HBox alignment="CENTER_LEFT" fillHeight="false" maxWidth="1217.0" minHeight="54.0" prefHeight="54.0" prefWidth="1217.0" style="-fx-border-radius: 6;">
                <styleClass>
                   <String fx:value="bg-default" />
                   <String fx:value="border-default" />
@@ -31,7 +35,7 @@
                         <Image url="@../it/uid/unitech/Images/UnitechLogo.png" />
                      </image>
                      <HBox.margin>
-                        <Insets left="30.0" top="7.0" />
+                        <Insets left="30.0" />
                      </HBox.margin>
                   </ImageView>
                   <MenuButton mnemonicParsing="false" text="iPhone">
@@ -48,7 +52,7 @@
                         <String fx:value="flat" />
                      </styleClass>
                      <HBox.margin>
-                        <Insets left="30.0" top="10.0" />
+                        <Insets left="30.0" />
                      </HBox.margin>
                   </MenuButton>
                   <MenuButton mnemonicParsing="false" text="iPad">
@@ -65,7 +69,7 @@
                         <String fx:value="flat" />
                      </styleClass>
                      <HBox.margin>
-                        <Insets left="20.0" top="10.0" />
+                        <Insets left="20.0" />
                      </HBox.margin>
                   </MenuButton>
                   <MenuButton mnemonicParsing="false" text="iMac">
@@ -82,7 +86,7 @@
                         <String fx:value="flat" />
                      </styleClass>
                      <HBox.margin>
-                        <Insets left="20.0" top="10.0" />
+                        <Insets left="20.0" />
                      </HBox.margin>
                   </MenuButton>
                   <MenuButton mnemonicParsing="false" text="MacBook">
@@ -99,7 +103,7 @@
                         <String fx:value="flat" />
                      </styleClass>
                      <HBox.margin>
-                        <Insets left="20.0" top="10.0" />
+                        <Insets left="20.0" />
                      </HBox.margin>
                   </MenuButton>
                   <MenuButton mnemonicParsing="false" text="Watch">
@@ -116,7 +120,7 @@
                         <String fx:value="flat" />
                      </styleClass>
                      <HBox.margin>
-                        <Insets left="20.0" top="10.0" />
+                        <Insets left="20.0" />
                      </HBox.margin>
                   </MenuButton>
                   <MenuButton mnemonicParsing="false" text="AirPods">
@@ -133,153 +137,175 @@
                         <String fx:value="flat" />
                      </styleClass>
                      <HBox.margin>
-                        <Insets left="20.0" top="10.0" />
+                        <Insets left="20.0" />
                      </HBox.margin>
                   </MenuButton>
                   <TextField prefHeight="32.0" prefWidth="260.0" promptText="Cerca" styleClass="text-field">
                      <HBox.margin>
-                        <Insets left="25.0" top="10.0" />
+                        <Insets left="25.0" />
                      </HBox.margin>
                   </TextField>
                   <FontIcon iconLiteral="fas-search">
                      <HBox.margin>
-                        <Insets left="10.0" top="20.0" />
+                        <Insets left="10.0" />
                      </HBox.margin>
                   </FontIcon>
                   <FontIcon iconLiteral="fas-shopping-bag">
                      <HBox.margin>
-                        <Insets left="20.0" top="20.0" />
+                        <Insets left="20.0" />
                      </HBox.margin>
                   </FontIcon>
                   <FontIcon iconLiteral="fas-user-alt">
                      <HBox.margin>
-                        <Insets left="30.0" top="20.0" />
+                        <Insets left="30.0" />
                      </HBox.margin>
                   </FontIcon>
                </children>
-               <padding>
-                  <Insets left="2.0" />
-               </padding>
             </HBox>
-            <Label layoutX="366.0" layoutY="129.0" text="Ecco la squadra al completo" AnchorPane.leftAnchor="366.0" AnchorPane.topAnchor="129.0">
-               <font>
-                  <Font name="Segoe UI Bold" size="48.0" />
-               </font>
-            </Label>
-            <AnchorPane layoutX="100.0" layoutY="250.39999389648438" prefHeight="408.0" prefWidth="391.0" styleClass="background-iPhone17ProHome" AnchorPane.leftAnchor="100.0">
+
+            <VBox alignment="CENTER_LEFT" maxWidth="1217.0" prefWidth="1217.0">
                <children>
-                  <ImageView fitHeight="420.0" fitWidth="392.0" layoutX="-1.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../it/uid/unitech/Images/iPhone%2017%20Pro_ipHome.png" />
-                     </image>
-                  </ImageView>
-                  <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" style="-fx-background-color: transparent; -fx-text-fill: #0066cc;" text="Acquista">
+                  <Label text="Ecco la squadra al completo">
                      <font>
-                        <Font size="16.0" />
-                     </font>
-                  </Button>
-                  <Label prefHeight="574.0" prefWidth="391.0" text="  Design innovativo per prestazioni&#10;estreme e un’autonomia eccezionale.">
-                     <padding>
-                        <Insets left="60.0" top="520.0" />
-                     </padding>
-                     <font>
-                        <Font size="18.0" />
+                        <Font name="Segoe UI Bold" size="48.0" />
                      </font>
                   </Label>
-                  <Label prefHeight="493.0" prefWidth="392.0" text="iPhone 17 Pro">
-                     <padding>
-                        <Insets left="90.0" top="450.0" />
-                     </padding>
-                     <font>
-                        <Font name="Segoe UI Bold" size="36.0" />
-                     </font>
-                  </Label>
-                  <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" styleClass="accent" text="Scopri di più">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                  </Button>
                </children>
-            </AnchorPane>
-            <AnchorPane layoutX="770.0" layoutY="300.0" AnchorPane.leftAnchor="600.0" AnchorPane.topAnchor="250.0">
+            </VBox>
+
+            <HBox alignment="CENTER" maxWidth="1217.0" spacing="30.0">
                <children>
-                  <AnchorPane prefHeight="408.0" prefWidth="391.0" styleClass="background-iPhoneAirHome">
+
+                  <!-- Card iPhone 17 Pro -->
+                  <VBox alignment="TOP_CENTER" prefWidth="391.0" spacing="15.0">
                      <children>
-                        <ImageView fitHeight="420.0" fitWidth="392.0" layoutX="-1.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../it/uid/unitech/Images/iPhone%20Air_ipHome.png" />
-                           </image>
-                        </ImageView>
+                        <VBox alignment="CENTER" prefHeight="408.0" prefWidth="391.0" styleClass="background-iPhone17ProHome">
+                           <children>
+                              <ImageView fitHeight="420.0" fitWidth="392.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../it/uid/unitech/Images/iPhone%2017%20Pro_ipHome.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                        <Label text="iPhone 17 Pro">
+                           <font>
+                              <Font name="Segoe UI Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <Label text="Design innovativo per prestazioni&#10;estreme e un'autonomia eccezionale." textAlignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" spacing="20.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" styleClass="accent" text="Scopri di più">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" style="-fx-background-color: transparent; -fx-text-fill: #0066cc;" text="Acquista">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                        </HBox>
                      </children>
-                  </AnchorPane>
-                  <Button layoutX="77.0" layoutY="579.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" styleClass="accent" text="Scopri di più">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="224.0" layoutY="579.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" style="-fx-background-color: transparent; -fx-text-fill: #0066cc;" text="Acquista">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                  </Button>
-                  <Label prefHeight="493.0" prefWidth="392.0" text="iPhone Air">
-                     <padding>
-                        <Insets left="110.0" top="450.0" />
-                     </padding>
-                     <font>
-                        <Font name="Segoe UI Bold" size="36.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="-5.0" layoutY="-10.0" prefHeight="574.0" prefWidth="391.0" text="  L’iPhone più sottile.&#10;La potenza di un pro.">
-                     <padding>
-                        <Insets left="120.0" top="520.0" />
-                     </padding>
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="1190.0" layoutY="300.0" AnchorPane.leftAnchor="1100.0" AnchorPane.topAnchor="250.0">
-               <children>
-                  <AnchorPane prefHeight="408.0" prefWidth="391.0" styleClass="background-iPhone17Home">
+                  </VBox>
+                  
+                  <!-- Card iPhone Air -->
+                  <VBox alignment="TOP_CENTER" prefWidth="391.0" spacing="15.0">
                      <children>
-                        <ImageView fitHeight="420.0" fitWidth="392.0" layoutX="-1.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../it/uid/unitech/Images/iPhone%2017_ipHome.png" />
-                           </image>
-                        </ImageView>
+                        <VBox alignment="CENTER" prefHeight="408.0" prefWidth="391.0" styleClass="background-iPhoneAirHome">
+                           <children>
+                              <ImageView fitHeight="420.0" fitWidth="392.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../it/uid/unitech/Images/iPhone%20Air_ipHome.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                        <Label text="iPhone Air">
+                           <font>
+                              <Font name="Segoe UI Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <Label text="L'iPhone più sottile.&#10;La potenza di un pro." textAlignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" spacing="20.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" styleClass="accent" text="Scopri di più">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" style="-fx-background-color: transparent; -fx-text-fill: #0066cc;" text="Acquista">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                        </HBox>
                      </children>
-                  </AnchorPane>
-                  <Button layoutX="77.0" layoutY="579.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" styleClass="accent" text="Scopri di più">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="224.0" layoutY="579.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" style="-fx-background-color: transparent; -fx-text-fill: #0066cc;" text="Acquista">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                  </Button>
-                  <Label prefHeight="493.0" prefWidth="392.0" text="iPhone 17">
-                     <padding>
-                        <Insets left="110.0" top="450.0" />
-                     </padding>
-                     <font>
-                        <Font name="Segoe UI Bold" size="36.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="-5.0" layoutY="-10.0" prefHeight="574.0" prefWidth="391.0" text="Si è fatto sempre più bello.&#10;    E sempre più robusto.">
-                     <padding>
-                        <Insets left="100.0" top="520.0" />
-                     </padding>
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
+                  </VBox>
+
+                  <!-- Card iPhone 17 -->
+                  <VBox alignment="TOP_CENTER" prefWidth="391.0" spacing="15.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="408.0" prefWidth="391.0" styleClass="background-iPhone17Home">
+                           <children>
+                              <ImageView fitHeight="420.0" fitWidth="392.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../it/uid/unitech/Images/iPhone%2017_ipHome.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                        <Label text="iPhone 17">
+                           <font>
+                              <Font name="Segoe UI Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <Label text="Si è fatto sempre più bello.&#10;E sempre più robusto." textAlignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" spacing="20.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" styleClass="accent" text="Scopri di più">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" style="-fx-background-color: transparent; -fx-text-fill: #0066cc;" text="Acquista">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+
                </children>
-            </AnchorPane>
+            </HBox>
+
          </children>
-      </AnchorPane>
-   </children>
-</AnchorPane>
+      </VBox>
+   </content>
+</ScrollPane>
