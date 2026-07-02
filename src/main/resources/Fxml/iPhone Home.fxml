@@ -17,9 +17,9 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #A4BEE3;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane layoutX="406.0" layoutY="248.0" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #F3F3F5; -fx-background-radius: 15;" stylesheets="@../Style/cupertino-light.css" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="60.0">
+      <AnchorPane layoutX="406.0" layoutY="248.0" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #F3F3F5; -fx-background-radius: 15;" stylesheets="@../Style/cupertino-light.css" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="60.0">
          <children>
-            <HBox fillHeight="false" layoutX="350.0" layoutY="40.0" minHeight="54.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="54.0" prefWidth="1217.0" style="-fx-border-radius: 6;">
+            <HBox fillHeight="false" layoutX="350.0" layoutY="40.0" minHeight="54.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="54.0" prefWidth="1217.0" style="-fx-border-radius: 6;" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="40.0">
                <styleClass>
                   <String fx:value="bg-default" />
                   <String fx:value="border-default" />
@@ -161,32 +161,31 @@
                   <Insets left="2.0" />
                </padding>
             </HBox>
-            <Label layoutX="350.0" layoutY="193.0" text="Ecco la squadra al completo">
+            <Label layoutX="366.0" layoutY="129.0" text="Ecco la squadra al completo" AnchorPane.leftAnchor="366.0" AnchorPane.topAnchor="129.0">
                <font>
                   <Font name="Segoe UI Bold" size="48.0" />
                </font>
             </Label>
-            <AnchorPane layoutX="350.0" layoutY="300.0" prefWidth="411.0">
+            <AnchorPane layoutX="100.0" layoutY="250.39999389648438" prefHeight="408.0" prefWidth="391.0" styleClass="background-iPhone17ProHome" AnchorPane.leftAnchor="100.0">
                <children>
-                  <AnchorPane prefHeight="408.0" prefWidth="391.0" styleClass="background-iPhone17ProHome">
-                     <children>
-                        <ImageView fitHeight="420.0" fitWidth="392.0" layoutX="-1.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../it/uid/unitech/Images/iPhone%2017%20Pro_ipHome.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </AnchorPane>
-                  <Button layoutX="77.0" layoutY="579.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" styleClass="accent" text="Scopri di più">
+                  <ImageView fitHeight="420.0" fitWidth="392.0" layoutX="-1.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../it/uid/unitech/Images/iPhone%2017%20Pro_ipHome.png" />
+                     </image>
+                  </ImageView>
+                  <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" style="-fx-background-color: transparent; -fx-text-fill: #0066cc;" text="Acquista">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Button>
-                  <Button layoutX="224.0" layoutY="579.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" style="-fx-background-color: transparent; -fx-text-fill: #0066cc;" text="Acquista">
+                  <Label prefHeight="574.0" prefWidth="391.0" text="  Design innovativo per prestazioni&#10;estreme e un’autonomia eccezionale.">
+                     <padding>
+                        <Insets left="60.0" top="520.0" />
+                     </padding>
                      <font>
-                        <Font size="16.0" />
+                        <Font size="18.0" />
                      </font>
-                  </Button>
+                  </Label>
                   <Label prefHeight="493.0" prefWidth="392.0" text="iPhone 17 Pro">
                      <padding>
                         <Insets left="90.0" top="450.0" />
@@ -195,17 +194,14 @@
                         <Font name="Segoe UI Bold" size="36.0" />
                      </font>
                   </Label>
-                  <Label layoutX="-5.0" layoutY="-10.0" prefHeight="574.0" prefWidth="391.0" text="  Design innovativo per prestazioni&#10;estreme e un’autonomia eccezionale.">
-                     <padding>
-                        <Insets left="60.0" top="520.0" />
-                     </padding>
+                  <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" styleClass="accent" text="Scopri di più">
                      <font>
-                        <Font size="18.0" />
+                        <Font size="16.0" />
                      </font>
-                  </Label>
+                  </Button>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="770.0" layoutY="300.0">
+            <AnchorPane layoutX="770.0" layoutY="300.0" AnchorPane.leftAnchor="600.0" AnchorPane.topAnchor="250.0">
                <children>
                   <AnchorPane prefHeight="408.0" prefWidth="391.0" styleClass="background-iPhoneAirHome">
                      <children>
@@ -244,7 +240,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="1190.0" layoutY="300.0">
+            <AnchorPane layoutX="1190.0" layoutY="300.0" AnchorPane.leftAnchor="1100.0" AnchorPane.topAnchor="250.0">
                <children>
                   <AnchorPane prefHeight="408.0" prefWidth="391.0" styleClass="background-iPhone17Home">
                      <children>
