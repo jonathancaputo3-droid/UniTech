@@ -367,25 +367,20 @@
 /* .accent - Pulsanti principali (Colore di sfondo Blu) */
 
 .button.accent, .menu-button.accent {
-
   -fx-background-color: -color-accent-5;
-
   -fx-text-fill: -color-light;
 
 }
 
 .button.accent:hover, .menu-button.accent:hover {
-
   -fx-background-color: -color-accent-4;
-
+  -fx-text-fill: -color-light;
 }
 
 .button.accent:armed, .menu-button.accent:armed {
-
   -fx-background-color: -color-accent-6;
-
+  -fx-text-fill: -color-light;
 }
-
 
 
 /* .button-outlined - Pulsanti con bordo */
