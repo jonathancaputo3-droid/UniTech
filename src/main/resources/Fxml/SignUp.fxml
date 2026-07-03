@@ -8,8 +8,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #A4BEE3;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SignUpController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #C4DEFF;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SignUpController">
    <children>
       <AnchorPane layoutX="144.0" layoutY="61.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white; -fx-background-radius: 30;" stylesheets="@../Style/unitech.css" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="45.0">
          <children>

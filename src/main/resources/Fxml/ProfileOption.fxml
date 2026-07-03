@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #A4BEE3;" stylesheets="@../Style/unitech.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ProfileController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #C4DEFF;" stylesheets="@../Style/unitech.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ProfileController">
    <children>
       <AnchorPane layoutX="59.0" layoutY="61.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="670.0" prefWidth="1206.0" style="-fx-background-color: white; -fx-background-radius: 20;" AnchorPane.leftAnchor="59.0" AnchorPane.rightAnchor="59.0" AnchorPane.topAnchor="61.0">
          <children>
@@ -47,6 +47,7 @@
             <Label fx:id="cellulareError" layoutX="58.0" layoutY="302.0" styleClass="signup-error" text="Inserisci un Numero Valido!" visible="false" AnchorPane.leftAnchor="468.0" AnchorPane.topAnchor="573.0" />
             <Label fx:id="cittaError" layoutX="48.0" layoutY="292.0" styleClass="signup-error" text="Inserisci una Città Valida!" visible="false" AnchorPane.leftAnchor="914.0" AnchorPane.topAnchor="273.0" />
             <Label fx:id="emailError" styleClass="signup-error" text="Inserisci un'email Valida!" visible="false" AnchorPane.leftAnchor="914.0" AnchorPane.topAnchor="573.0" />
+            <Label fx:id="tornaHome" layoutX="213.0" layoutY="37.0" style="-fx-font-size: 15; -fx-text-fill: #3496ff;" styleClass="signup-subtitle" text="Torna Alla Home!" textFill="#3496ff" underline="true" AnchorPane.leftAnchor="192.0" AnchorPane.topAnchor="37.0" />
             <Label fx:id="indirizzoError" layoutX="58.0" layoutY="302.0" styleClass="signup-error" text="Inserisci un Indirizzo Valido!" visible="false" AnchorPane.leftAnchor="914.0" AnchorPane.topAnchor="423.0" />
          </children>
       </AnchorPane>

@@ -36,10 +36,17 @@
 
   /* Proprietà JavaFX di base per i controlli */
 
-  -fx-font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  -fx-font-family: "Segoe UI", system-ui, -apple-system, sans-serif,"Cooper Hewitt","DM Sans";
 
 }
 
+/*============ BARRA NAVIGAZIONE ================*/
+
+.barra-items{
+  -fx-font-family: "Cooper Hewitt";
+  -fx-font-weight: bold;
+  -fx-font-size: 20px;
+}
 
 
 /*
@@ -47,6 +54,7 @@
       BACKGROUND ANCHOR PANE HOME
 
 */
+
 
 .background-iPhone-Home
 
@@ -129,6 +137,8 @@
   -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 8px, 0.5, 0, 2);
 
 }
+
+
 
 
 

@@ -6,7 +6,11 @@ import Util.SessioneUtente;
 import javafx.animation.FadeTransition;
 import javafx.animation.ScaleTransition;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -14,6 +18,7 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.sql.SQLException;
@@ -68,6 +73,8 @@ public class ProfileController {
     private Label indirizzoError;
     @FXML
     private Label emailError;
+    @FXML
+    private Label tornaHome;
 
     private static final String SOLO_LETTERE="^[a-zA-ZÀ-ù\\s]+$";
     private  static final String LETTERE_NUMERI="^[a-zA-ZÀ-ù0-9\\s]+$";
@@ -279,7 +286,43 @@ public class ProfileController {
             }
         });
 
+        tornaHome.setOnMouseEntered(event -> {
+            ScaleTransition scaleIn= new ScaleTransition(Duration.millis(150), tornaHome);
+            scaleIn.setToX(0.9);
+            scaleIn.setToY(0.9);
+            scaleIn.play();
+        });
 
+        tornaHome.setOnMouseExited(event -> {
+            ScaleTransition scaleOut = new ScaleTransition(Duration.millis(150), tornaHome);
+            scaleOut.setToX(1);
+            scaleOut.setToY(1);
+            scaleOut.play();
+        });
+
+        tornaHome.setOnMouseClicked(event -> {
+            Node root= tornaHome.getScene().getRoot();
+            FadeTransition fadeOut= new FadeTransition(Duration.millis(600), root);
+            fadeOut.setFromValue(1.0);
+            fadeOut.setToValue(0.0);
+            fadeOut.setOnFinished(event1 -> {
+                try {
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Home.fxml"));
+                    Parent newRoot= loader.load();
+                    newRoot.setOpacity(0.0);
+                    Stage stage = (Stage) tornaHome.getScene().getWindow();
+                    stage.setScene(new Scene(newRoot,stage.getWidth(),stage.getHeight()));
+                    stage.setResizable(true);
+                    FadeTransition fadeIn= new FadeTransition(Duration.millis(600), newRoot);
+                    fadeIn.setFromValue(0.0);
+                    fadeIn.setToValue(1.0);
+                    fadeIn.play();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            });
+            fadeOut.play();
+        });
 
     }
 

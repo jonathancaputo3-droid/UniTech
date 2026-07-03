@@ -89,7 +89,7 @@ public class LoginPageController {
             fadeOut.setToValue(0);
             fadeOut.setOnFinished(event1 -> {
                 try {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/ProfileOption.fxml"));
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Home.fxml"));
                     Parent newRoot = loader.load();
                     newRoot.setOpacity(0);
                     Stage stage = (Stage) loginButton.getScene().getWindow();
