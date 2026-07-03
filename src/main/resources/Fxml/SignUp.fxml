@@ -10,7 +10,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #C4DEFF;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SignUpController">
    <children>
-      <AnchorPane layoutX="144.0" layoutY="61.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white; -fx-background-radius: 30;" stylesheets="@../Style/unitech.css" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="45.0">
+      <AnchorPane layoutX="144.0" layoutY="61.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #EEF2FB; -fx-background-radius: 30;" stylesheets="@../Style/unitech.css" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="45.0">
          <children>
             <Label cache="true" cacheHint="QUALITY" layoutX="37.0" layoutY="63.0" mnemonicParsing="true" styleClass="signup-title" text="Registrati" AnchorPane.leftAnchor="37.0" AnchorPane.topAnchor="63.0" />
             <Label cache="true" cacheHint="QUALITY" layoutX="37.0" layoutY="109.0" mnemonicParsing="true" styleClass="signup-subtitle" text="Hai già un account?" AnchorPane.leftAnchor="39.0" AnchorPane.topAnchor="134.0" />
