@@ -86,7 +86,16 @@ public class SignUpController {
             }else if (!newValue.matches(ESTENSIONE_EMAIL)){
                 emailErrorLabel.setVisible(true);
             }else{
-                emailErrorLabel.setVisible(false);
+                try{
+                    if (UtenteDAO.emailEsistente((newValue))) {
+                        emailErrorLabel.setText("Email già registrata! Accedi!");
+                        emailErrorLabel.setVisible(true);
+                    }else{
+                        emailErrorLabel.setVisible(false);
+                    }
+                }catch (SQLException e){
+                    e.printStackTrace();
+                }
             }
         });
         passwordErrorLabel.setVisible(false);

@@ -27,14 +27,14 @@
             </padding>
             <children>
 
-                <HBox alignment="CENTER_LEFT" maxWidth="1230.0" minHeight="54.0" prefHeight="54.0" style="-fx-border-radius: 10; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
+                <HBox alignment="CENTER_LEFT" maxWidth="1230.0" minHeight="54.0" prefHeight="54.0" style="-fx-border-radius: 10; -fx-border-color: black; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
                     <styleClass>
                         <String fx:value="bg-default" />
                         <String fx:value="border-default" />
                         <String fx:value="elevated-1" />
                     </styleClass>
                     <children>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView cache="true" cacheHint="QUALITY" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../it/uid/unitech/Images/UnitechLogo.png" />
                             </image>

@@ -82,4 +82,14 @@ public class UtenteDAO {
         st.setInt(10, u.getId());
         return st.executeUpdate()>0;
     }
+
+    public static boolean emailEsistente(String email) throws SQLException{
+        Connection conn = DatabaseConnection.getConnessione();
+        PreparedStatement st = conn.prepareStatement("""
+                SELECT COUNT(*) FROM utenti WHERE email = ?
+        """);
+        st.setString(1, email);
+        ResultSet rs = st.executeQuery();
+        return rs.next() && rs.getInt(1)>0;
+    }
 }
