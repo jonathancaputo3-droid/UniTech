@@ -14,7 +14,7 @@
 <AnchorPane prefHeight="400.0" prefWidth="900.0" style="-fx-background-radius: 25;" stylesheets="@../Style/unitech.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginPageController">
 
    <!-- SINISTRA: invariata -->
-   <VBox maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="550.0" style="-fx-background-color: #A4BEE3; -fx-background-radius: 25;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="0">
+   <VBox maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="550.0" style="-fx-background-color: #C4DEFF; -fx-background-radius: 25;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="0">
       <children>
          <ImageView cache="true" cacheHint="QUALITY" fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
             <image>

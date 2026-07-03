@@ -16,18 +16,18 @@
 <?import javafx.scene.text.Font?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<ScrollPane fitToHeight="true" fitToWidth="true" styleClass="background-Home" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+<ScrollPane fitToHeight="true" fitToWidth="true" style="-fx-background-color: #C4DEFF;" styleClass="background-Home" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
     <stylesheets>
         <URL value="@../Style/cupertino-light.css" />
     </stylesheets>
     <content>
-        <VBox alignment="TOP_CENTER" spacing="40.0" style="-fx-background-color: #f5f5f7;">
+        <VBox alignment="TOP_CENTER" spacing="40.0" style="-fx-background-color: #C4DEFF;">
             <padding>
                 <Insets bottom="60.0" left="20.0" right="20.0" top="40.0" />
             </padding>
             <children>
 
-                <HBox alignment="CENTER_LEFT" maxWidth="1230.0" minHeight="54.0" prefHeight="54.0" style="-fx-border-radius: 6;" HBox.hgrow="ALWAYS">
+                <HBox alignment="CENTER_LEFT" maxWidth="1230.0" minHeight="54.0" prefHeight="54.0" style="-fx-border-radius: 10; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
                     <styleClass>
                         <String fx:value="bg-default" />
                         <String fx:value="border-default" />
@@ -43,7 +43,7 @@
                             </HBox.margin>
                         </ImageView>
 
-                        <MenuButton mnemonicParsing="false" text="iPhone">
+                        <MenuButton minWidth="-Infinity" mnemonicParsing="false" style="-fx-font-weight: bold; -fx-font-size: 20;" text="iPhone">
                             <items>
                                 <MenuItem mnemonicParsing="false" text="iPhone 17" />
                                 <MenuItem mnemonicParsing="false" text="iPhone SE" />
@@ -56,7 +56,7 @@
                             <HBox.margin><Insets left="30.0" /></HBox.margin>
                         </MenuButton>
 
-                        <MenuButton mnemonicParsing="false" text="iPad">
+                        <MenuButton minWidth="-Infinity" mnemonicParsing="false" style="-fx-font-size: 20; -fx-font-weight: bold;" text="iPad">
                             <items>
                                 <MenuItem mnemonicParsing="false" text="iPad Pro" />
                                 <MenuItem mnemonicParsing="false" text="iPad Air" />
@@ -69,7 +69,7 @@
                             <HBox.margin><Insets left="20.0" /></HBox.margin>
                         </MenuButton>
 
-                        <MenuButton mnemonicParsing="false" text="iMac">
+                        <MenuButton minWidth="-Infinity" mnemonicParsing="false" style="-fx-font-weight: bold; -fx-font-size: 20;" text="iMac">
                             <items>
                                 <MenuItem mnemonicParsing="false" text="Mac Mini" />
                                 <MenuItem mnemonicParsing="false" text="iMac" />
@@ -82,7 +82,7 @@
                             <HBox.margin><Insets left="20.0" /></HBox.margin>
                         </MenuButton>
 
-                        <MenuButton mnemonicParsing="false" text="MacBook">
+                        <MenuButton minWidth="-Infinity" mnemonicParsing="false" style="-fx-font-weight: bold; -fx-font-size: 20;" text="MacBook">
                             <items>
                                 <MenuItem mnemonicParsing="false" text="MacBook Pro" />
                                 <MenuItem mnemonicParsing="false" text="MacBook Air" />
@@ -95,7 +95,7 @@
                             <HBox.margin><Insets left="20.0" /></HBox.margin>
                         </MenuButton>
 
-                        <MenuButton mnemonicParsing="false" text="Watch">
+                        <MenuButton minWidth="-Infinity" mnemonicParsing="false" style="-fx-font-weight: bold; -fx-font-size: 20;" text="Watch">
                             <items>
                                 <MenuItem mnemonicParsing="false" text="Apple Watch Pro" />
                                 <MenuItem mnemonicParsing="false" text="Apple Watch SE" />
@@ -108,7 +108,7 @@
                             <HBox.margin><Insets left="20.0" /></HBox.margin>
                         </MenuButton>
 
-                        <MenuButton mnemonicParsing="false" text="AirPods">
+                        <MenuButton minWidth="-Infinity" mnemonicParsing="false" style="-fx-font-weight: bold; -fx-font-size: 20;" text="AirPods">
                             <items>
                                 <MenuItem mnemonicParsing="false" text="AirPods Max" />
                                 <MenuItem mnemonicParsing="false" text="AirPods 4" />
@@ -140,7 +140,7 @@
                     <padding><Insets left="2.0" right="20.0" /></padding>
                 </HBox>
 
-                <VBox alignment="TOP_CENTER" maxWidth="1600.0" prefHeight="800.0" spacing="15.0" style="-fx-background-color: #F1EFF4; -fx-background-radius: 8;" styleClass="elevated-2" VBox.vgrow="NEVER">
+                <VBox alignment="TOP_CENTER" maxWidth="1600.0" prefHeight="800.0" spacing="15.0" style="-fx-background-radius: 10;" VBox.vgrow="NEVER">
                     <padding>
                         <Insets bottom="20.0" left="20.0" right="20.0" top="60.0" />
                     </padding>
@@ -179,9 +179,13 @@
                      </VBox.margin>
                         </ImageView>
                     </children>
+               <styleClass>
+                  <String fx:value="elevated-2" />
+                  <String fx:value="background-iPhone-Home" />
+               </styleClass>
                 </VBox>
 
-                <VBox alignment="TOP_CENTER" maxWidth="1600.0" prefHeight="800.0" spacing="15.0" style="-fx-background-color: linear-gradient(to bottom, #c6e4f6, #f3f7fa); -fx-background-radius: 8;" styleClass="elevated-2">
+                <VBox alignment="TOP_CENTER" maxWidth="1600.0" prefHeight="800.0" spacing="15.0" style="-fx-background-color: linear-gradient(to bottom, #c6e4f6, #f3f7fa); -fx-background-radius: 10;" styleClass="background-iPad-Home">
                     <padding>
                         <Insets bottom="20.0" left="20.0" right="20.0" top="60.0" />
                     </padding>
@@ -201,18 +205,18 @@
                                     </styleClass>
                                     <font><Font size="18.0" /></font>
                                 </Button>
+                                <Button minHeight="40.0" minWidth="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Scopri di più" textFill="WHITE">
+                                    <styleClass>
+                                        <String fx:value="button" />
+                                        <String fx:value="accent" />
+                                    </styleClass>
+                                    <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                                </Button>
                             </children>
                             <VBox.margin><Insets bottom="20.0" top="10.0" /></VBox.margin>
                         </HBox>
-                          <Button minHeight="40.0" minWidth="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Scopri di più" textFill="WHITE">
-                              <styleClass>
-                                  <String fx:value="button" />
-                                  <String fx:value="accent" />
-                              </styleClass>
-                              <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                          </Button>
                         <ImageView fitHeight="450.0" fitWidth="688.0" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../it/uid/unitech/Images/iPad%20Air%20Home.png" />
@@ -223,7 +227,7 @@
 
                 <HBox alignment="CENTER" maxWidth="1600.0" spacing="40.0" HBox.hgrow="ALWAYS">
                     <children>
-                        <VBox alignment="TOP_CENTER" maxWidth="780.0" minHeight="600.0" spacing="15.0" style="-fx-background-color: white; -fx-background-radius: 8;" styleClass="elevated-2" HBox.hgrow="ALWAYS">
+                        <VBox alignment="TOP_CENTER" maxWidth="780.0" minHeight="600.0" prefHeight="600.0" prefWidth="590.0" spacing="15.0" style="-fx-background-radius: 10;" HBox.hgrow="ALWAYS">
                             <padding>
                                 <Insets bottom="20.0" left="20.0" right="20.0" top="50.0" />
                             </padding>
@@ -259,14 +263,18 @@
                                     </image>
                                 </ImageView>
                             </children>
+                     <styleClass>
+                        <String fx:value="elevated-2" />
+                        <String fx:value="background-AirPods-Home" />
+                     </styleClass>
                         </VBox>
 
-                        <VBox alignment="TOP_CENTER" maxWidth="780.0" minHeight="600.0" spacing="15.0" style="-fx-background-color: linear-gradient(to bottom, #dbe2d4, #ffffff); -fx-background-radius: 8;" styleClass="elevated-2" HBox.hgrow="ALWAYS">
+                        <VBox alignment="TOP_CENTER" maxWidth="780.0" minHeight="600.0" prefHeight="600.0" prefWidth="590.0" spacing="15.0" style="-fx-background-radius: 8;" HBox.hgrow="ALWAYS">
                             <padding>
                                 <Insets bottom="20.0" left="20.0" right="20.0" top="50.0" />
                             </padding>
                             <children>
-                                <Label text="Apple Watch Serie 11">
+                                <Label text="Apple Watch">
                                     <font><Font name="Segoe UI Bold" size="56.0" /></font>
                                 </Label>
                                 <Label text="Il meglio per monitorare la tua salute">
@@ -297,11 +305,15 @@
                                     </image>
                                 </ImageView>
                             </children>
+                     <styleClass>
+                        <String fx:value="elevated-2" />
+                        <String fx:value="background-AppleWatchHome" />
+                     </styleClass>
                         </VBox>
                     </children>
                 </HBox>
 
-                <VBox alignment="TOP_CENTER" maxWidth="1600.0" prefHeight="800.0" spacing="15.0" style="-fx-background-color: linear-gradient(from 0% 0% to 0% 100%, #eadaa2 0%, #f3ede0 60%, #ffffff 100%); -fx-background-radius: 8;" styleClass="elevated-2">
+                <VBox alignment="TOP_CENTER" maxWidth="1600.0" prefHeight="800.0" spacing="15.0" style="-fx-background-radius: 10;">
                     <padding>
                         <Insets bottom="20.0" left="20.0" right="20.0" top="60.0" />
                     </padding>
@@ -337,9 +349,13 @@
                             </image>
                         </ImageView>
                     </children>
+               <styleClass>
+                  <String fx:value="elevated-2" />
+                  <String fx:value="background-MacBookHome" />
+               </styleClass>
                 </VBox>
 
-                <VBox alignment="TOP_CENTER" maxWidth="1600.0" prefHeight="800.0" spacing="15.0" style="-fx-background-color: linear-gradient(from 0% 0% to 0% 100%, #fca881 0%, #fef3eb 60%, #ffffff 100%); -fx-background-radius: 8;" styleClass="elevated-2">
+                <VBox alignment="TOP_CENTER" maxWidth="1600.0" prefHeight="800.0" spacing="15.0" style="-fx-background-radius: 10;">
                     <padding>
                         <Insets bottom="20.0" left="20.0" right="20.0" top="60.0" />
                     </padding>
@@ -375,6 +391,10 @@
                             </image>
                         </ImageView>
                     </children>
+               <styleClass>
+                  <String fx:value="elevated-2" />
+                  <String fx:value="background-iMacHome" />
+               </styleClass>
                 </VBox>
 
             </children>
