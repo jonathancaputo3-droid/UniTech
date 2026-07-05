@@ -13,6 +13,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.Region?> 
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
 <ScrollPane fitToWidth="true" stylesheets="@../Style/cupertino-light.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
@@ -24,7 +25,7 @@
                   <Insets bottom="50.0" top="50.0" />
                </padding>
                <children>
-                  <HBox alignment="CENTER_LEFT" fillHeight="false" maxWidth="1233.0" minHeight="54.0" prefHeight="54.0" prefWidth="1233.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: black;">
+                  <HBox alignment="CENTER_LEFT" fillHeight="false" maxWidth="1217.0" minHeight="54.0" prefHeight="54.0" prefWidth="1217.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: black;">
                      <styleClass>
                         <String fx:value="bg-default" />
                         <String fx:value="border-default" />
@@ -173,7 +174,7 @@
                      </padding>
                   </HBox>
 
-                  <VBox alignment="CENTER_LEFT" maxWidth="1233.0" prefWidth="1233.0">
+                  <VBox alignment="CENTER_LEFT" maxWidth="1217.0" prefWidth="1217.0">
                      <children>
                         <Label text="Ecco la squadra al completo">
                            <font>
@@ -183,29 +184,39 @@
                      </children>
                   </VBox>
 
-                  <HBox alignment="CENTER_LEFT" maxWidth="1233.0" prefWidth="1233.0" spacing="30.0">
+                  <HBox alignment="TOP_CENTER" maxWidth="1217.0" spacing="30.0">
                      <children>
+                        
                         <VBox alignment="TOP_CENTER" prefWidth="391.0" spacing="15.0">
                            <children>
-                              <VBox alignment="CENTER" prefHeight="408.0" prefWidth="391.0" styleClass="background-iPadProHome">
+                              <VBox alignment="CENTER" prefHeight="408.0" prefWidth="391.0" styleClass="background-AppleWatchUltraHome">
                                  <children>
-                                    <ImageView fitHeight="420.0" fitWidth="391.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="420.0" fitWidth="392.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../it/uid/unitech/Images/iPad%20Pro_ipdHome.png" />
+                                          <Image url="@../it/uid/unitech/Images/WatchUltra3_AWHome.png" />
                                        </image>
                                     </ImageView>
                                  </children>
                               </VBox>
-                              <Label text="iPad Pro">
-                                 <font>
-                                    <Font name="Segoe UI Bold" size="36.0" />
-                                 </font>
-                              </Label>
-                              <Label text="L’iPad più evoluto, con la nostra&#10;tecnologia di punta." textAlignment="CENTER">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
+                              <VBox alignment="CENTER" minHeight="50.0" prefHeight="50.0">
+                                 <children>
+                                    <Label text="Apple Watch Ultra 3" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="32.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" minHeight="60.0" prefHeight="60.0">
+                                 <children>
+                                    <Label text="L’orologio ideale per lo sport&#10;e l’avventura." textAlignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <Region VBox.vgrow="ALWAYS" />
                               <HBox alignment="CENTER" spacing="20.0">
                                  <children>
                                     <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" styleClass="accent" text="Scopri di più">
@@ -219,34 +230,40 @@
                                        </font>
                                     </Button>
                                  </children>
-                                 <VBox.margin>
-                                    <Insets top="15.0" />
-                                 </VBox.margin>
                               </HBox>
                            </children>
                         </VBox>
 
                         <VBox alignment="TOP_CENTER" prefWidth="391.0" spacing="15.0">
                            <children>
-                              <VBox alignment="CENTER" prefHeight="408.0" prefWidth="391.0" styleClass="background-iPadAirHome">
+                              <VBox alignment="CENTER" prefHeight="408.0" prefWidth="391.0" styleClass="background-AppleWatchSeries11Home">
                                  <children>
-                                    <ImageView fitHeight="420.0" fitWidth="391.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="420.0" fitWidth="392.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../it/uid/unitech/Images/iPad%20Air_ipdHome.png" />
+                                          <Image url="@../it/uid/unitech/Images/WatchSeries11_AWHome.png" />
                                        </image>
                                     </ImageView>
                                  </children>
                               </VBox>
-                              <Label text="iPad Air">
-                                 <font>
-                                    <Font name="Segoe UI Bold" size="36.0" />
-                                 </font>
-                              </Label>
-                              <Label text="Grande potenza, in un design&#10;sottile e leggero." textAlignment="CENTER">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
+                              <VBox alignment="CENTER" minHeight="50.0" prefHeight="50.0">
+                                 <children>
+                                    <Label text="Apple Watch Series 11" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="32.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" minHeight="60.0" prefHeight="60.0">
+                                 <children>
+                                    <Label text="Il meglio per tenere d’occhio &#10;la tua salute." textAlignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <Region VBox.vgrow="ALWAYS" />
                               <HBox alignment="CENTER" spacing="20.0">
                                  <children>
                                     <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" styleClass="accent" text="Scopri di più">
@@ -257,37 +274,43 @@
                                     <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" style="-fx-background-color: transparent; -fx-text-fill: #0066cc;" text="Acquista">
                                        <font>
                                           <Font size="16.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+
+                        <VBox alignment="TOP_CENTER" prefWidth="391.0" spacing="15.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="408.0" prefWidth="391.0" styleClass="background-AppleWatchSE3Home">
+                                 <children>
+                                    <ImageView fitHeight="420.0" fitWidth="392.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../it/uid/unitech/Images/WatchSE3_AWHome.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" minHeight="50.0" prefHeight="50.0">
+                                 <children>
+                                    <Label text="Apple Watch SE 3" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="32.0" />
                                         </font>
-                                    </Button>
-                                 </children>
-                                 <VBox.margin>
-                                    <Insets top="15.0" />
-                                 </VBox.margin>
-                              </HBox>
-                           </children>
-                        </VBox>
-
-                        <VBox alignment="TOP_CENTER" prefWidth="391.0" spacing="15.0">
-                           <children>
-                              <VBox alignment="CENTER" prefHeight="408.0" prefWidth="391.0" styleClass="background-iPadHome">
-                                 <children>
-                                    <ImageView fitHeight="420.0" fitWidth="391.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../it/uid/unitech/Images/iPad_ipHome.png" />
-                                       </image>
-                                    </ImageView>
+                                    </Label>
                                  </children>
                               </VBox>
-                              <Label text="iPad">
-                                 <font>
-                                    <Font name="Segoe UI Bold" size="36.0" />
-                                 </font>
-                              </Label>
-                              <Label text="All-screen e supercolorato.&#10;L’iPad per fare tutto, tutti i giorni." textAlignment="CENTER">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
+                              <VBox alignment="TOP_CENTER" minHeight="60.0" prefHeight="60.0">
+                                 <children>
+                                    <Label text="Funzioni per la salute, essenziali&#10; e convenienti." textAlignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <Region VBox.vgrow="ALWAYS" />
                               <HBox alignment="CENTER" spacing="20.0">
                                  <children>
                                     <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="114.0" styleClass="accent" text="Scopri di più">
@@ -301,12 +324,10 @@
                                        </font>
                                     </Button>
                                  </children>
-                                 <VBox.margin>
-                                    <Insets top="15.0" />
-                                 </VBox.margin>
                               </HBox>
                            </children>
                         </VBox>
+
                      </children>
                   </HBox>
                </children>

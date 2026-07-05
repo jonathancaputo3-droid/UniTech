@@ -269,7 +269,7 @@
                                 </HBox>
                                 <ImageView cache="true" cacheHint="QUALITY" fitHeight="306.0" fitWidth="364.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@../it/uid/unitech/Images/Air%20Pods%204%20Home.png" />
+                                        <Image url="@../it/uid/unitech/Images/AirPods%204%20Home.png" />
                                     </image>
                                 </ImageView>
                             </children>

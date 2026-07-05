@@ -277,7 +277,114 @@
 }
 
 
+/*
 
+      BACKGROUND ANCHOR PANE WATCH HOME
+
+*/
+
+.background-AppleWatchUltraHome
+
+{
+
+  -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #0A0A0A 0%, #050505 55%, #000000 100%);
+
+  -fx-background-radius: 40;
+
+  -fx-effect: dropshadow(three-pass-box, -color-shadow-default, 8px, 0.5, 0, 2);
+
+  -fx-effect: dropshadow(three-pass-box, -color-shadow-default, 2px, 0.5, 0, 2);
+
+ 
+
+}
+
+.background-AppleWatchSeries11Home
+
+{
+
+  -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #FFFFFF 0%, #F7F7F8 50%, #EEEEF1 100%);
+
+  -fx-background-radius: 40;
+
+  -fx-effect: dropshadow(three-pass-box, -color-shadow-default, 8px, 0.5, 0, 2);
+
+  -fx-effect: dropshadow(three-pass-box, -color-shadow-default, 2px, 0.5, 0, 2);
+
+ 
+
+}
+
+.background-AppleWatchSE3Home
+
+{
+
+  -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #D8EDF9 0%, #D1E9F7 55%, #CAE5F5 100%);
+
+  -fx-background-radius: 40;
+
+  -fx-effect: dropshadow(three-pass-box, -color-shadow-default, 8px, 0.5, 0, 2);
+
+  -fx-effect: dropshadow(three-pass-box, -color-shadow-default, 2px, 0.5, 0, 2);
+
+ 
+
+}
+
+/*
+
+      BACKGROUND ANCHOR PANE AIRPODS HOME
+
+*/
+
+
+.background-AirPodsMax2Home
+
+{
+
+  -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #FFFFFF 0%, #F7F7F8 50%, #EEEEF1 100%);
+
+  -fx-background-radius: 40;
+
+  -fx-effect: dropshadow(three-pass-box, -color-shadow-default, 8px, 0.5, 0, 2);
+
+  -fx-effect: dropshadow(three-pass-box, -color-shadow-default, 2px, 0.5, 0, 2);
+
+ 
+
+}
+
+.background-AirPodsPro3Home
+
+{
+
+  -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #FFFFFF 0%, #F7F7F8 50%, #EEEEF1 100%);
+
+  -fx-background-radius: 40;
+
+  -fx-effect: dropshadow(three-pass-box, -color-shadow-default, 8px, 0.5, 0, 2);
+
+  -fx-effect: dropshadow(three-pass-box, -color-shadow-default, 2px, 0.5, 0, 2);
+
+ 
+
+}
+
+.background-AirPods4Home
+
+{
+
+  -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #FFFFFF 0%, #F7F7F8 50%, #EEEEF1 100%);
+
+  -fx-background-radius: 40;
+
+  -fx-effect: dropshadow(three-pass-box, -color-shadow-default, 8px, 0.5, 0, 2);
+
+  -fx-effect: dropshadow(three-pass-box, -color-shadow-default, 2px, 0.5, 0, 2);
+
+ 
+
+}
 
 
 /* ==========================================================================

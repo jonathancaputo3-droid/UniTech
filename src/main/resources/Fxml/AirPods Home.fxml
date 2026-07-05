@@ -24,7 +24,8 @@
                   <Insets bottom="50.0" top="50.0" />
                </padding>
                <children>
-                  <HBox alignment="CENTER_LEFT" fillHeight="false" maxWidth="1233.0" minHeight="54.0" prefHeight="54.0" prefWidth="1233.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: black;">
+                  
+                  <HBox alignment="CENTER_LEFT" fillHeight="false" maxWidth="1215.0" minHeight="54.0" prefHeight="54.0" prefWidth="1215.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-border-color: black;">
                      <styleClass>
                         <String fx:value="bg-default" />
                         <String fx:value="border-default" />
@@ -172,8 +173,8 @@
                         <Insets left="2.0" right="20.0" />
                      </padding>
                   </HBox>
-
-                  <VBox alignment="CENTER_LEFT" maxWidth="1233.0" prefWidth="1233.0">
+                  
+                  <VBox alignment="CENTER_LEFT" maxWidth="1215.0" prefWidth="1215.0">
                      <children>
                         <Label text="Ecco la squadra al completo">
                            <font>
@@ -182,26 +183,26 @@
                         </Label>
                      </children>
                   </VBox>
-
-                  <HBox alignment="CENTER_LEFT" maxWidth="1233.0" prefWidth="1233.0" spacing="30.0">
+                  
+                  <HBox alignment="CENTER" maxWidth="1215.0" prefWidth="1215.0" spacing="30.0">
                      <children>
-                        <VBox alignment="TOP_CENTER" prefWidth="391.0" spacing="15.0">
+                        <VBox alignment="TOP_CENTER" prefWidth="385.0" spacing="15.0">
                            <children>
-                              <VBox alignment="CENTER" prefHeight="408.0" prefWidth="391.0" styleClass="background-iPadProHome">
+                              <VBox alignment="CENTER" prefHeight="408.0" prefWidth="385.0" styleClass="background-AirPodsMax2Home">
                                  <children>
-                                    <ImageView fitHeight="420.0" fitWidth="391.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="420.0" fitWidth="385.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../it/uid/unitech/Images/iPad%20Pro_ipdHome.png" />
+                                          <Image url="@../it/uid/unitech/Images/AirPods%20Max%202%20Home.png" />
                                        </image>
                                     </ImageView>
                                  </children>
                               </VBox>
-                              <Label text="iPad Pro">
+                              <Label text="AirPods Max 2 ">
                                  <font>
                                     <Font name="Segoe UI Bold" size="36.0" />
                                  </font>
                               </Label>
-                              <Label text="L’iPad più evoluto, con la nostra&#10;tecnologia di punta." textAlignment="CENTER">
+                              <Label text="Le cuffie over‑ear &#10;per un ascolto davvero sublime." textAlignment="CENTER">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
@@ -225,24 +226,24 @@
                               </HBox>
                            </children>
                         </VBox>
-
-                        <VBox alignment="TOP_CENTER" prefWidth="391.0" spacing="15.0">
+                        
+                        <VBox alignment="TOP_CENTER" prefWidth="385.0" spacing="15.0">
                            <children>
-                              <VBox alignment="CENTER" prefHeight="408.0" prefWidth="391.0" styleClass="background-iPadAirHome">
+                              <VBox alignment="CENTER" prefHeight="408.0" prefWidth="385.0" styleClass="background-AirPodsPro3Home">
                                  <children>
-                                    <ImageView fitHeight="420.0" fitWidth="391.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="420.0" fitWidth="385.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../it/uid/unitech/Images/iPad%20Air_ipdHome.png" />
+                                          <Image url="@../it/uid/unitech/Images/AirPods%20Pro%203%20Home.png" />
                                        </image>
                                     </ImageView>
                                  </children>
                               </VBox>
-                              <Label text="iPad Air">
+                              <Label text="AirPods Pro 3">
                                  <font>
                                     <Font name="Segoe UI Bold" size="36.0" />
                                  </font>
                               </Label>
-                              <Label text="Grande potenza, in un design&#10;sottile e leggero." textAlignment="CENTER">
+                              <Label text="Gli auricolari con la migliore&#10; cancellazione attiva del rumore al mondo&#10;&#10;" textAlignment="CENTER">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
@@ -266,24 +267,24 @@
                               </HBox>
                            </children>
                         </VBox>
-
-                        <VBox alignment="TOP_CENTER" prefWidth="391.0" spacing="15.0">
+                        
+                        <VBox alignment="TOP_CENTER" prefWidth="385.0" spacing="15.0">
                            <children>
-                              <VBox alignment="CENTER" prefHeight="408.0" prefWidth="391.0" styleClass="background-iPadHome">
+                              <VBox alignment="CENTER" prefHeight="408.0" prefWidth="385.0" styleClass="background-AirPods4Home">
                                  <children>
-                                    <ImageView fitHeight="420.0" fitWidth="391.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="420.0" fitWidth="385.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../it/uid/unitech/Images/iPad_ipHome.png" />
+                                          <Image url="@../it/uid/unitech/Images/AirPods%204%20Home.png" />
                                        </image>
                                     </ImageView>
                                  </children>
                               </VBox>
-                              <Label text="iPad">
+                              <Label text="AirPods 4">
                                  <font>
                                     <Font name="Segoe UI Bold" size="36.0" />
                                  </font>
                               </Label>
-                              <Label text="All-screen e supercolorato.&#10;L’iPad per fare tutto, tutti i giorni." textAlignment="CENTER">
+                              <Label text="Suono, comfort, &#10;controllo del rumore: &#10;una nuova era." textAlignment="CENTER">
                                  <font>
                                     <Font size="18.0" />
                                  </font>

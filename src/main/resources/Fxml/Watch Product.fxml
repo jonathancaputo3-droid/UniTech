@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<ScrollPane fitToWidth="true" hbarPolicy="ALWAYS" style="-fx-background-color: white;" stylesheets="@../Style/cupertino-light.css" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+   <content>
+      <VBox style="-fx-background-color: #C4DEFF;">
+         <children>
+            <VBox alignment="TOP_CENTER" spacing="60.0" style="-fx-padding: 40 20 60 20; -fx-background-color: #EEF2FB; -fx-background-radius: 20; -fx-border-radius: 20;">
+               <children>
+                  <HBox alignment="CENTER_LEFT" fillHeight="false" maxWidth="1230.0" minHeight="54.0" prefHeight="54.0" style="-fx-border-radius: 10; -fx-border-color: black; -fx-background-radius: 10;">
+                     <children>
+                        <ImageView cache="true" cacheHint="QUALITY" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../it/uid/unitech/Images/UnitechLogo.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPhone">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="iPhone 17 Pro" />
+                              <MenuItem mnemonicParsing="false" text="iPhone Air" />
+                              <MenuItem mnemonicParsing="false" text="iPhone 17" />
+                           </items>
+                           <font>
+                              <Font name="Segoe UI" size="18.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="button-outlined" />
+                              <String fx:value="flat" />
+                              <String fx:value="barra-items" />
+                           </styleClass>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </MenuButton>
+                        <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPad">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="iPad Pro" />
+                              <MenuItem mnemonicParsing="false" text="iPad Air" />
+                              <MenuItem mnemonicParsing="false" text="iPad " />
+                           </items>
+                           <font>
+                              <Font name="Segoe UI" size="18.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="button-outlined" />
+                              <String fx:value="barra-items" />
+                              <String fx:value="flat" />
+                           </styleClass>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </MenuButton>
+                        <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iMac">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="iMac" />
+                              <MenuItem mnemonicParsing="false" text="Mac Mini" />
+                              <MenuItem mnemonicParsing="false" text="Mac Studio" />
+                           </items>
+                           <font>
+                              <Font name="Segoe UI" size="18.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="button-outlined" />
+                              <String fx:value="barra-items" />
+                              <String fx:value="flat" />
+                           </styleClass>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </MenuButton>
+                        <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="MacBook">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="MacBook Neo" />
+                              <MenuItem mnemonicParsing="false" text="MacBook Air" />
+                              <MenuItem mnemonicParsing="false" text="MacBook Pro" />
+                           </items>
+                           <font>
+                              <Font name="Segoe UI" size="18.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="button-outlined" />
+                              <String fx:value="barra-items" />
+                              <String fx:value="flat" />
+                           </styleClass>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </MenuButton>
+                        <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Watch">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Apple Watch Series 11" />
+                              <MenuItem mnemonicParsing="false" text="Apple Watch SE 3" />
+                              <MenuItem mnemonicParsing="false" text="Apple Watch Ultra 3" />
+                           </items>
+                           <font>
+                              <Font name="Segoe UI" size="18.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="button-outlined" />
+                              <String fx:value="barra-items" />
+                              <String fx:value="flat" />
+                           </styleClass>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </MenuButton>
+                        <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="AirPods" HBox.hgrow="ALWAYS">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="AirPods 4" />
+                              <MenuItem mnemonicParsing="false" text="AirPods Pro 3" />
+                              <MenuItem mnemonicParsing="false" text="AirPods Max 2" />
+                           </items>
+                           <font>
+                              <Font name="Segoe UI" size="18.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="button-outlined" />
+                              <String fx:value="barra-items" />
+                              <String fx:value="flat" />
+                           </styleClass>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </MenuButton>
+                        <TextField prefHeight="32.0" prefWidth="260.0" promptText="Cerca">
+                           <HBox.margin>
+                              <Insets left="25.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <FontIcon iconLiteral="fas-search">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </FontIcon>
+                        <FontIcon iconLiteral="fas-shopping-bag">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </FontIcon>
+                        <FontIcon iconLiteral="fas-user-alt">
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </FontIcon>
+                     </children>
+                     <styleClass>
+                        <String fx:value="bg-default" />
+                        <String fx:value="border-default" />
+                        <String fx:value="elevated-1" />
+                     </styleClass>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="2.0" right="20.0" />
+                     </padding>
+                  </HBox>
+                  
+                  <Label text="Scegli il tuo modello di Watch">
+                     <font>
+                        <Font name="System Bold" size="58.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  
+                  <HBox alignment="TOP_CENTER" maxWidth="1200.0" spacing="100.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefWidth="324.0" spacing="15.0">
+                           <children>
+                              <ImageView fitHeight="488.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../it/uid/unitech/Images/WatchUltra3_AWHome.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Apple Watch Ultra 3">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="319.0" />
+                              <Button maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" styleClass="accent" text="Aggiungi al carrello">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                        
+                        <VBox alignment="TOP_CENTER" prefWidth="324.0" spacing="15.0">
+                           <children>
+                              <ImageView fitHeight="488.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../it/uid/unitech/Images/WatchSeries11_AWHome.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Apple Watch Series 11">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="319.0" />
+                              <Button mnemonicParsing="false" styleClass="accent" text="Aggiungi al carrello">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                        
+                        <VBox alignment="TOP_CENTER" prefWidth="324.0" spacing="15.0">
+                           <children>
+                              <ImageView fitHeight="488.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../it/uid/unitech/Images/WatchSE3_AWHome.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Apple Watch SE 3">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefWidth="319.0" />
+                              <Button mnemonicParsing="false" styleClass="accent" text="Aggiungi al carrello">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  
+                  <VBox alignment="CENTER" maxWidth="1241.0" spacing="20.0">
+                     <VBox.margin>
+                        <Insets top="80.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label text="Caratteristiche Tecniche">
+                           <font>
+                              <Font name="System Bold" size="46.0" />
+                           </font>
+                        </Label>
+                        <Separator prefWidth="1241.0" />
+                     </children>
+                  </VBox>
+                  
+                  <HBox alignment="TOP_CENTER" maxWidth="1200.0" spacing="100.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefWidth="324.0" spacing="30.0">
+                           <children>
+                              <ImageView fitHeight="112.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../it/uid/unitech/Images/Case.png" />
+                                 </image>
+                              </ImageView>
+                              <Label minHeight="50.0" text="Cassa da 49 mm&#10;in titanio&#10;" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="112.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../it/uid/unitech/Images/HeartMonitoring.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Notifiche ipertensione,&#10;ECG&#10; frequenza e ritmo cardiaco&#10;" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="121.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../it/uid/unitech/Images/SleepMonitoring.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label text="Analisi della qualità del sonno&#10;con&#10;notifiche apnea" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="136.0" fitWidth="193.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../it/uid/unitech/Images/VitalsMonitoring.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Sensore di rilevazione &#10;ossigeno e frequenza respiratoria" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="111.0" fitWidth="187.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../it/uid/unitech/Images/TemperatureMonitoring.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Sensore di temperatura" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="120.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../it/uid/unitech/Images/WaterResistant.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Resistente all’acqua fino a 100 metri" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        
+                        <VBox alignment="TOP_CENTER" prefWidth="324.0" spacing="30.0">
+                           <children>
+                              <ImageView fitHeight="112.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../it/uid/unitech/Images/DoubleCase.png" />
+                                 </image>
+                              </ImageView>
+                              <Label minHeight="50.0" text="Cassa da 46 mm o 42 mm&#10;in alluminio o titanio&#10;" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="112.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../it/uid/unitech/Images/HeartMonitoring.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Notifiche &#10; frequenza e ritmo cardiaco&#10;" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="121.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../it/uid/unitech/Images/SleepMonitoring.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label text="Analisi della qualità del sonno&#10;con&#10;notifiche Apnea" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="136.0" fitWidth="193.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../it/uid/unitech/Images/VitalsMonitoring.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Sensore di rilevazione &#10;ossigeno e frequenza respiratoria" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="111.0" fitWidth="187.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../it/uid/unitech/Images/TemperatureMonitoring.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Sensore di temperatura" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="120.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../it/uid/unitech/Images/WaterResistant.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Resistente all’acqua fino a 100 metri" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        
+                        <VBox alignment="TOP_CENTER" prefWidth="324.0" spacing="30.0">
+                           <children>
+                              <ImageView fitHeight="112.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../it/uid/unitech/Images/DoubleCase.png" />
+                                 </image>
+                              </ImageView>
+                              <Label minHeight="50.0" text="Cassa da 46 mm o 42 mm&#10;in alluminio o titanio" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="112.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../it/uid/unitech/Images/HeartMonitoring.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Notifiche &#10; frequenza e ritmo cardiaco&#10;" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="121.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../it/uid/unitech/Images/SleepMonitoring.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label text="Analisi della qualità del sonno&#10;con&#10;notifiche Apnea" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="136.0" fitWidth="193.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../it/uid/unitech/Images/VitalsMonitoring.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Sensore di rilevazione &#10;ossigeno e frequenza respiratoria" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="111.0" fitWidth="187.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../it/uid/unitech/Images/TemperatureMonitoring.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Sensore di temperatura" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="120.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../it/uid/unitech/Images/WaterResistant.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Resistente all’acqua fino a 100 metri" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>
