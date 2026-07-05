@@ -3,24 +3,23 @@ package Controller;
 import Model.Utente;
 import Model.UtenteDAO;
 import Util.SessioneUtente;
-import javafx.animation.FadeTransition;
-import javafx.animation.ScaleTransition;
+import javafx.animation.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.CornerRadii;
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
 public class ProfileController {
@@ -75,6 +74,14 @@ public class ProfileController {
     private Label emailError;
     @FXML
     private Label tornaHome;
+    @FXML
+    private Button eliminaAccount;
+    @FXML
+    private StackPane overlayPane;
+    @FXML
+    private Button confermaElimina;
+    @FXML
+    private Button annullaElimina;
 
     private static final String SOLO_LETTERE="^[a-zA-ZÀ-ù\\s]+$";
     private  static final String LETTERE_NUMERI="^[a-zA-ZÀ-ù0-9\\s]+$";
@@ -324,8 +331,89 @@ public class ProfileController {
             fadeOut.play();
         });
 
+
+        eliminaAccount.setOnMouseEntered(event -> {
+            ScaleTransition scaleIn= new ScaleTransition(Duration.millis(150), eliminaAccount);
+            scaleIn.setToX(0.9);
+            scaleIn.setToY(0.9);
+            scaleIn.play();
+        });
+
+        eliminaAccount.setOnMouseExited(event -> {
+            ScaleTransition scaleOut= new ScaleTransition(Duration.millis(150), eliminaAccount);
+            scaleOut.setToX(1);
+            scaleOut.setToY(1);
+            scaleOut.play();
+        });
+
+        eliminaAccount.setOnMouseClicked(event -> {
+            overlayPane.setVisible(true);
+            overlayPane.setOpacity(0.0);
+            overlayPane.setTranslateY(-200);
+
+            TranslateTransition slideDown= new TranslateTransition(Duration.millis(400), overlayPane);
+            slideDown.setFromY(-200);
+            slideDown.setToY(0);
+            slideDown.setInterpolator(Interpolator.EASE_OUT);
+
+            FadeTransition fadeIn= new FadeTransition(Duration.millis(400),overlayPane);
+            fadeIn.setFromValue(0.0);
+            fadeIn.setToValue(1.0);
+
+            new ParallelTransition(fadeIn,slideDown).play();
+        });
+
+        annullaElimina.setOnMouseClicked(event -> {
+            TranslateTransition slideUp= new TranslateTransition(Duration.millis(300), overlayPane);
+            slideUp.setFromY(0);
+            slideUp.setToY(-200);
+            slideUp.setInterpolator(Interpolator.EASE_IN);
+
+            FadeTransition fadeOut = new FadeTransition(Duration.millis(300), overlayPane);
+            fadeOut.setFromValue(1.0);
+            fadeOut.setToValue(0.0);
+
+            ParallelTransition chiudi = new ParallelTransition(slideUp, fadeOut);
+            chiudi.setOnFinished(e -> overlayPane.setVisible(false));
+            chiudi.play();
+        });
+
+        confermaElimina.setOnMouseClicked(event -> {
+            Utente uCorrente= SessioneUtente.getUtente();
+            if(uCorrente==null){return;}
+            try {
+                boolean successo=UtenteDAO.eliminaAccount(uCorrente.getId());
+                if(successo){
+                    SessioneUtente.setUtente(null);
+                    Node root= confermaElimina.getScene().getRoot();
+                    FadeTransition fadeOut= new FadeTransition(Duration.millis(600), root);
+                    fadeOut.setFromValue(1.0);
+                    fadeOut.setToValue(0.0);
+                    fadeOut.setOnFinished(event1 -> {
+                        try {
+                            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Login.fxml"));
+                            Parent newRoot=loader.load();
+                            newRoot.setOpacity(0.0);
+                            Stage stage = (Stage) confermaElimina.getScene().getWindow();
+                            stage.setScene(new Scene(newRoot,stage.getWidth(),stage.getHeight()));
+                            stage.setMaximized(true);
+                            FadeTransition fadeIn= new FadeTransition(Duration.millis(600), newRoot);
+                            fadeIn.setFromValue(0.0);
+                            fadeIn.setToValue(1.0);
+                            fadeIn.play();
+                        }catch (Exception e){
+                            e.printStackTrace();
+                        }
+                    });
+                    fadeOut.play();
+                }
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        });
+
+
+
     }
-
-
 
 }

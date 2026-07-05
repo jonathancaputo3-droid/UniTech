@@ -14,13 +14,22 @@ public class UtenteDAO {
         String passwordCriptata= BCrypt.hashpw(u.getPassword(),BCrypt.gensalt(12));
         Connection conn= DatabaseConnection.getConnessione();
         PreparedStatement st= conn.prepareStatement(
-                "INSERT INTO utenti (nome,cognome,email,password) VALUES (?,?,?,?) "
+                "INSERT INTO utenti (nome,cognome,email,password) VALUES (?,?,?,?) ",
+                    PreparedStatement.RETURN_GENERATED_KEYS
         );
         st.setString(1, u.getNome());
         st.setString(2, u.getCognome());
         st.setString(3, u.getEmail());
         st.setString(4, passwordCriptata);
-        return st.executeUpdate()>0;
+        int righe=st.executeUpdate();
+
+        if(righe>0){
+            ResultSet keys= st.getGeneratedKeys();
+            if(keys.next()){
+                u.setId(keys.getInt(1));
+            }
+        }
+        return righe>0;
     }
 
     public static Utente login(String email, String password) throws SQLException {
@@ -91,5 +100,14 @@ public class UtenteDAO {
         st.setString(1, email);
         ResultSet rs = st.executeQuery();
         return rs.next() && rs.getInt(1)>0;
+    }
+
+    public static boolean eliminaAccount(int id) throws SQLException{
+        Connection conn = DatabaseConnection.getConnessione();
+        PreparedStatement st = conn.prepareStatement("""
+            DELETE FROM utenti WHERE id = ?
+        """);
+        st.setInt(1, id);
+        return st.executeUpdate()>0;
     }
 }
