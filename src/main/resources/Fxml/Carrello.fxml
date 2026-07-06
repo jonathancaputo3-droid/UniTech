@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<?import javafx.scene.control.Button?>
+<ScrollPane xmlns="http://javafx.com/javafx/26"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controller.CarrelloController"
+            fitToWidth="true"
+            style="-fx-background-color: white;">
+
+    <content>
+
+        <VBox spacing="20"
+              style="-fx-padding: 30; -fx-background-color: #F5F5F5;">
+
+            <!-- TITOLO -->
+            <Label text="Il tuo carrello"
+                   style="-fx-font-size: 28px; -fx-font-weight: bold;"/>
+
+            <!-- CARRELLO VUOTO -->
+            <Label fx:id="lblCarrelloVuoto"
+                   text="Carrello vuoto"
+                   style="-fx-font-size: 18px; -fx-text-fill: gray;"/>
+
+            <!-- PRODOTTI -->
+            <VBox fx:id="boxProdotti"
+                  spacing="15"/>
+
+            <!-- LINEA -->
+            <Separator />
+
+            <Button text="← Esci dal carrello"
+                    onAction="#esciDalCarrello"
+                    style="-fx-background-color: transparent;
+                    -fx-text-fill: #007aff;
+                    -fx-font-size: 16;
+                    -fx-font-weight: bold;
+                    -fx-cursor: hand;" />
+
+            <!-- TOTALE -->
+            <HBox alignment="CENTER_RIGHT"
+                  spacing="10"
+                  style="-fx-padding: 15;">
+
+                <Label text="Totale carrello:"
+                       style="-fx-font-size: 18;" />
+
+                <Label fx:id="lblTotale"
+                       text="€ 0.00"
+                       style="-fx-font-size: 18; -fx-font-weight: bold;" />
+
+            </HBox>
+
+        </VBox>
+
+    </content>
+</ScrollPane>

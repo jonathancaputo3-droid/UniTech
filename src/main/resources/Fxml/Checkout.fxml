@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
-<?import org.kordamp.ikonli.javafx.*?>
+        <?import java.lang.*?>
+        <?import javafx.geometry.*?>
+        <?import javafx.scene.control.*?>
+        <?import javafx.scene.layout.*?>
+        <?import javafx.scene.text.*?>
+        <?import org.kordamp.ikonli.javafx.*?>
 
 <AnchorPane prefHeight="542.0" prefWidth="600.0" style="-fx-background-color: #f5f5f7;" stylesheets="@../Style/cupertino-light.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CheckoutController">
 
@@ -68,8 +68,8 @@
                                 <!-- (FontIcon eliminati perché rompevano Scene Builder) -->
 
                                 <TextField fx:id="cardField" prefHeight="35.0" prefWidth="358.0" promptText="Numero Carta" style="-fx-background-color: #f2f2f7; -fx-background-radius: 10; -fx-border-color: transparent; -fx-padding: 8 10 8 10;" />
-                        <FontIcon fx:id="mastercardIcon" iconLiteral="fab-cc-mastercard" translateX="-10.0" StackPane.alignment="CENTER_RIGHT" />
-                        <FontIcon fx:id="visaIcon" iconLiteral="fab-cc-visa" text="" translateX="-10.0" StackPane.alignment="CENTER_RIGHT" />
+                                <FontIcon fx:id="mastercardIcon" iconLiteral="fab-cc-mastercard" translateX="-10.0" StackPane.alignment="CENTER_RIGHT" />
+                                <FontIcon fx:id="visaIcon" iconLiteral="fab-cc-visa" text="" translateX="-10.0" StackPane.alignment="CENTER_RIGHT" />
 
                             </children>
                         </StackPane>

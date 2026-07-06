@@ -12,17 +12,24 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<ScrollPane fitToWidth="true" hbarPolicy="ALWAYS" style="-fx-background-color: white;" stylesheets="@../Style/cupertino-light.css" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+<ScrollPane fitToWidth="true" hbarPolicy="ALWAYS" style="-fx-background-color: white;" stylesheets="@../Style/cupertino-light.css" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AirPodsProductController">
    <content>
       <VBox alignment="TOP_CENTER" style="-fx-background-color: #C4DEFF;">
          <children>
             <VBox alignment="TOP_CENTER" spacing="40.0" style="-fx-padding: 40 20 60 20; -fx-background-color: #EEF2FB; -fx-background-radius: 20; -fx-border-radius: 20;">
                <children>
-                  
-                  <HBox alignment="CENTER_LEFT" fillHeight="false" maxWidth="1230.0" minHeight="54.0" prefHeight="54.0" style="-fx-border-radius: 10; -fx-border-color: black; -fx-background-radius: 10;">
+
+                  <HBox alignment="CENTER_LEFT" maxWidth="880.0" minHeight="54.0" prefHeight="54.0" style="-fx-border-radius: 10; -fx-border-color: black; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
+                     <styleClass>
+                        <String fx:value="bg-default" />
+                        <String fx:value="border-default" />
+                        <String fx:value="elevated-1" />
+                     </styleClass>
                      <children>
                         <ImageView cache="true" cacheHint="QUALITY" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -32,134 +39,107 @@
                               <Insets left="30.0" />
                            </HBox.margin>
                         </ImageView>
+
                         <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPhone">
                            <items>
-                              <MenuItem mnemonicParsing="false" text="iPhone 17 Pro" />
-                              <MenuItem mnemonicParsing="false" text="iPhone Air" />
                               <MenuItem mnemonicParsing="false" text="iPhone 17" />
+                              <MenuItem mnemonicParsing="false" text="iPhone SE" />
                            </items>
-                           <font>
-                              <Font name="Segoe UI" size="18.0" />
-                           </font>
+                           <font><Font name="Segoe UI" size="18.0" /></font>
                            <styleClass>
                               <String fx:value="button-outlined" />
-                              <String fx:value="flat" />
                               <String fx:value="barra-items" />
+                              <String fx:value="flat" />
                            </styleClass>
-                           <HBox.margin>
-                              <Insets left="30.0" />
-                           </HBox.margin>
+                           <HBox.margin><Insets left="30.0" /></HBox.margin>
                         </MenuButton>
+
                         <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPad">
                            <items>
                               <MenuItem mnemonicParsing="false" text="iPad Pro" />
                               <MenuItem mnemonicParsing="false" text="iPad Air" />
-                              <MenuItem mnemonicParsing="false" text="iPad " />
                            </items>
-                           <font>
-                              <Font name="Segoe UI" size="18.0" />
-                           </font>
+                           <font><Font name="Segoe UI" size="18.0" /></font>
                            <styleClass>
                               <String fx:value="button-outlined" />
                               <String fx:value="barra-items" />
                               <String fx:value="flat" />
                            </styleClass>
-                           <HBox.margin>
-                              <Insets left="20.0" />
-                           </HBox.margin>
+                           <HBox.margin><Insets left="20.0" /></HBox.margin>
                         </MenuButton>
+
                         <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iMac">
                            <items>
-                              <MenuItem mnemonicParsing="false" text="iMac" />
                               <MenuItem mnemonicParsing="false" text="Mac Mini" />
-                              <MenuItem mnemonicParsing="false" text="Mac Studio" />
+                              <MenuItem mnemonicParsing="false" text="iMac" />
                            </items>
-                           <font>
-                              <Font name="Segoe UI" size="18.0" />
-                           </font>
+                           <font><Font name="Segoe UI" size="18.0" /></font>
                            <styleClass>
                               <String fx:value="button-outlined" />
                               <String fx:value="barra-items" />
                               <String fx:value="flat" />
                            </styleClass>
-                           <HBox.margin>
-                              <Insets left="20.0" />
-                           </HBox.margin>
+                           <HBox.margin><Insets left="20.0" /></HBox.margin>
                         </MenuButton>
+
                         <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="MacBook">
                            <items>
-                              <MenuItem mnemonicParsing="false" text="MacBook Neo" />
-                              <MenuItem mnemonicParsing="false" text="MacBook Air" />
                               <MenuItem mnemonicParsing="false" text="MacBook Pro" />
+                              <MenuItem mnemonicParsing="false" text="MacBook Air" />
                            </items>
-                           <font>
-                              <Font name="Segoe UI" size="18.0" />
-                           </font>
+                           <font><Font name="Segoe UI" size="18.0" /></font>
                            <styleClass>
                               <String fx:value="button-outlined" />
                               <String fx:value="barra-items" />
                               <String fx:value="flat" />
                            </styleClass>
-                           <HBox.margin>
-                              <Insets left="20.0" />
-                           </HBox.margin>
+                           <HBox.margin><Insets left="20.0" /></HBox.margin>
                         </MenuButton>
+
                         <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Watch">
                            <items>
-                              <MenuItem mnemonicParsing="false" text="Apple Watch Series 11" />
-                              <MenuItem mnemonicParsing="false" text="Apple Watch SE 3" />
-                              <MenuItem mnemonicParsing="false" text="Apple Watch Ultra 3" />
+                              <MenuItem mnemonicParsing="false" text="Apple Watch Pro" />
+                              <MenuItem mnemonicParsing="false" text="Apple Watch SE" />
                            </items>
-                           <font>
-                              <Font name="Segoe UI" size="18.0" />
-                           </font>
+                           <font><Font name="Segoe UI" size="18.0" /></font>
                            <styleClass>
                               <String fx:value="button-outlined" />
                               <String fx:value="barra-items" />
                               <String fx:value="flat" />
                            </styleClass>
-                           <HBox.margin>
-                              <Insets left="20.0" />
-                           </HBox.margin>
+                           <HBox.margin><Insets left="20.0" /></HBox.margin>
                         </MenuButton>
-                        <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="AirPods" HBox.hgrow="ALWAYS">
+
+                        <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="AirPods">
                            <items>
+                              <MenuItem mnemonicParsing="false" text="AirPods Max" />
                               <MenuItem mnemonicParsing="false" text="AirPods 4" />
-                              <MenuItem mnemonicParsing="false" text="AirPods Pro 3" />
-                              <MenuItem mnemonicParsing="false" text="AirPods Max 2" />
                            </items>
-                           <font>
-                              <Font name="Segoe UI" size="18.0" />
-                           </font>
+                           <font><Font name="Segoe UI" size="18.0" /></font>
                            <styleClass>
                               <String fx:value="button-outlined" />
                               <String fx:value="barra-items" />
                               <String fx:value="flat" />
                            </styleClass>
-                           <HBox.margin>
-                              <Insets left="20.0" />
-                           </HBox.margin>
+                           <HBox.margin><Insets left="20.0" /></HBox.margin>
                         </MenuButton>
-                        <TextField prefHeight="32.0" prefWidth="260.0" promptText="Cerca">
-                           <HBox.margin>
-                              <Insets left="25.0" />
-                           </HBox.margin>
-                        </TextField>
-                        <HBox alignment="CENTER" prefWidth="30.0"><HBox.margin><Insets left="10.0" /></HBox.margin></HBox>
-                        <HBox alignment="CENTER" prefWidth="30.0"><HBox.margin><Insets left="20.0" /></HBox.margin></HBox>
-                        <HBox alignment="CENTER" prefWidth="30.0"><HBox.margin><Insets left="30.0" /></HBox.margin></HBox>
+
+                        <Region HBox.hgrow="ALWAYS">
+                           <HBox.margin><Insets left="30.0" /></HBox.margin>
+                        </Region>
+
+                        <FontIcon iconColor="#1d1d1f" iconLiteral="fas-shopping-bag" iconSize="22" onMouseClicked="#apriCarrello">
+                           <HBox.margin><Insets right="24.0" /></HBox.margin>
+                        </FontIcon>
+
+                        <FontIcon fx:id="loginIcon" iconColor="#1d1d1f" iconLiteral="fas-user-alt" iconSize="22" />
                      </children>
-                     <styleClass>
-                        <String fx:value="bg-default" />
-                        <String fx:value="border-default" />
-                        <String fx:value="elevated-1" />
-                     </styleClass>
                      <padding>
                         <Insets left="2.0" right="20.0" />
                      </padding>
                   </HBox>
 
-                  <Label text="Scegli il tuo modello di Watch" textAlignment="CENTER">
+                  <Label text="Scegli il tuo modello di AirPods" textAlignment="CENTER">
                      <font>
                         <Font name="System Bold" size="58.0" />
                      </font>
@@ -182,15 +162,20 @@
                                     <Font name="System Bold" size="24.0" />
                                  </font>
                               </Label>
+                              <Label text="€ 579" textFill="#6e6e73">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
                               <Separator prefWidth="319.0" />
-                              <Button mnemonicParsing="false" styleClass="accent" text="Aggiungi al carrello">
+                              <Button mnemonicParsing="false" styleClass="accent" text="Aggiungi al carrello" onMouseClicked="#aggiungiAirPodsMax2">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
                               </Button>
                            </children>
                         </VBox>
-                        
+
                         <VBox alignment="TOP_CENTER" prefWidth="350.0" spacing="15.0">
                            <children>
                               <ImageView fitHeight="320.0" fitWidth="430.0" pickOnBounds="true" preserveRatio="true">
@@ -203,8 +188,13 @@
                                     <Font name="System Bold" size="24.0" />
                                  </font>
                               </Label>
+                              <Label text="€ 249" textFill="#6e6e73">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
                               <Separator prefWidth="319.0" />
-                              <Button mnemonicParsing="false" styleClass="accent" text="Aggiungi al carrello">
+                              <Button mnemonicParsing="false" styleClass="accent" text="Aggiungi al carrello" onMouseClicked="#aggiungiAirPodsPro3">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
@@ -224,8 +214,13 @@
                                     <Font name="System Bold" size="24.0" />
                                  </font>
                               </Label>
+                              <Label text="€ 129" textFill="#6e6e73">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
                               <Separator prefWidth="319.0" />
-                              <Button mnemonicParsing="false" styleClass="accent" text="Aggiungi al carrello">
+                              <Button mnemonicParsing="false" styleClass="accent" text="Aggiungi al carrello" onMouseClicked="#aggiungiAirPods4">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
@@ -285,7 +280,7 @@
                               </Label>
                            </children>
                         </VBox>
-                        
+
                         <VBox alignment="TOP_CENTER" prefWidth="350.0" spacing="25.0">
                            <children>
                               <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
