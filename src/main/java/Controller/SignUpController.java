@@ -2,6 +2,7 @@ package Controller;
 
 import Model.Utente;
 import Model.UtenteDAO;
+import Util.AnimazioneUtil;
 import Util.DatabaseConnection;
 import Util.SessioneUtente;
 import javafx.animation.FadeTransition;
@@ -15,6 +16,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -88,8 +90,7 @@ public class SignUpController {
             }else{
                 try{
                     if (UtenteDAO.emailEsistente((newValue))) {
-                        emailErrorLabel.setText("Email già registrata! Accedi!");
-                        emailErrorLabel.setVisible(true);
+                        AnimazioneUtil.mostraErrore(emailErrorLabel,"Email già registrata! Accedi!", Color.RED);
                     }else{
                         emailErrorLabel.setVisible(false);
                     }
@@ -110,27 +111,18 @@ public class SignUpController {
                 passwordErrorLabel.setVisible(false);
             }
         });
-        confermaButton.setOnMouseEntered(event -> {
-            ScaleTransition scaleIn= new ScaleTransition(Duration.millis(150), confermaButton);
-            scaleIn.setToX(0.9);
-            scaleIn.setToY(0.9);
-            scaleIn.play();
-        });
-        confermaButton.setOnMouseExited(event -> {
-            ScaleTransition scaleout = new ScaleTransition(Duration.millis(150), confermaButton);
-            scaleout.setToX(1);
-            scaleout.setToY(1);
-            scaleout.play();
-        });
+
+        AnimazioneUtil.aggiungiAnimazioneScale(confermaButton);
+
         confermaErrorLabelEmpty.setVisible(false);
+
         confermaButton.setOnMouseClicked(event -> {
             if (nomeField.getText().isEmpty() || cognomeField.getText().isEmpty() || emailField.getText().isEmpty() || passwordField.getText().isEmpty()){
                 confermaErrorLabelEmpty.setVisible(true);
             }else if(nomeErrorLabel.isVisible() ||  cognomeErrorLabel.isVisible() ||  emailErrorLabel.isVisible() || passwordErrorLabel.isVisible()){
-                confermaErrorLabelEmpty.setText("Correggi i campi Errati!");
-                confermaErrorLabelEmpty.setVisible(true);
+                AnimazioneUtil.mostraErrore(confermaErrorLabelEmpty,"Correggi i campi Errati!",Color.RED);
             }
-            else{
+            else {
                 confermaErrorLabelEmpty.setVisible(false);
                 try {
                     Utente u = new Utente(
@@ -142,10 +134,10 @@ public class SignUpController {
                     boolean successo = UtenteDAO.registra(u);
 
                     if (!successo) {
-                        confermaErrorLabelEmpty.setText("Errore durante la registrazione.");
-                        confermaErrorLabelEmpty.setVisible(true);
+                        AnimazioneUtil.mostraErrore(confermaErrorLabelEmpty,"Errore durante la registrazione.",Color.RED);
                         return;
                     }
+                    AnimazioneUtil.cambiaScena(confermaButton,"/Fxml/Home.fxml");
                     SessioneUtente.setUtente(u);
                 } catch (SQLException e) {
                     if (e.getMessage().contains("UNIQUE")) {
@@ -155,66 +147,14 @@ public class SignUpController {
                         e.printStackTrace();
                     }
                     confermaErrorLabelEmpty.setVisible(true);
-                    return;
                 }
-                Node root=confermaButton.getScene().getRoot();
-                FadeTransition fadeOut= new FadeTransition(Duration.millis(600), root);
-                fadeOut.setFromValue(1.0);
-                fadeOut.setToValue(0.0);
-                fadeOut.setOnFinished(event1 -> {
-                    try{
-                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Home.fxml"));
-                        Parent newRoot= loader.load();
-                        newRoot.setOpacity(0.0);
-                        Stage stage=(Stage) confermaButton.getScene().getWindow();
-                        stage.setScene(new Scene(newRoot,stage.getWidth(),stage.getHeight()));
-                        stage.setMaximized(true);
-                        FadeTransition fadeIn = new FadeTransition(Duration.millis(600), newRoot);
-                        fadeIn.setFromValue(0);
-                        fadeIn.setToValue(1);
-                        fadeIn.play();
-                    } catch (Exception e) {
-                        throw new RuntimeException(e);
-                    }
-                });
-                fadeOut.play();
             }
         });
-        accediQui.setOnMouseEntered(event -> {
-            ScaleTransition scaleIn= new ScaleTransition(Duration.millis(150), accediQui);
-            scaleIn.setToX(0.9);
-            scaleIn.setToY(0.9);
-            scaleIn.play();
-        });
-        accediQui.setOnMouseExited(event -> {
-            ScaleTransition scaleout = new ScaleTransition(Duration.millis(150), accediQui);
-            scaleout.setToX(1);
-            scaleout.setToY(1);
-            scaleout.play();
-        });
-        accediQui.setOnMouseClicked(event -> {
-            Node root= accediQui.getScene().getRoot();
-            FadeTransition fadeOut= new FadeTransition(Duration.millis(600), root);
-            fadeOut.setFromValue(1);
-            fadeOut.setToValue(0);
-            fadeOut.setOnFinished(event1 -> {
-                try{
-                    FXMLLoader loader= new FXMLLoader(getClass().getResource("/Fxml/Login.fxml"));
-                    Parent newRoot=loader.load();
-                    newRoot.setOpacity(0);
-                    Stage stage=(Stage) accediQui.getScene().getWindow();
-                    stage.setScene(new Scene(newRoot,stage.getWidth(),stage.getHeight()));
-                    stage.setMaximized(true);
-                    FadeTransition fadeIn = new FadeTransition(Duration.millis(600),newRoot);
-                    fadeIn.setFromValue(0);
-                    fadeIn.setToValue(1);
-                    fadeIn.play();
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-            });
-            fadeOut.play();
-        });
 
+        AnimazioneUtil.aggiungiAnimazioneScale(accediQui);
+
+        accediQui.setOnMouseClicked(event -> {
+            AnimazioneUtil.cambiaScena(accediQui, "/Fxml/Login.fxml");
+        });
     }
 }
