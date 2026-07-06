@@ -689,3 +689,23 @@
   -fx-cursor: hand;
 
 }
+/*================ PAGINA PRODOTTO ===============*/
+
+.memory-btn {
+  -fx-background-color: #f0f0f0;
+  -fx-border-color: #cccccc;
+  -fx-border-width: 1.5;
+  -fx-border-radius: 8;
+  -fx-background-radius: 8;
+  -fx-font-weight: 700;
+  -fx-cursor: hand;
+  -fx-pref-width: 90;
+  -fx-pref-height: 38;
+}
+
+.memory-btn:selected {
+  -fx-background-color: #EEF2FB;
+  -fx-border-color: #3A7BD5;
+  -fx-border-width: 2;
+  -fx-text-fill: #3A7BD5;
+}

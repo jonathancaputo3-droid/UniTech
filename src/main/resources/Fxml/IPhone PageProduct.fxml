@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1280.0" style="-fx-background-color: #C4DEFF;" stylesheets="@../Style/cupertino-light.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+
+      <!-- SINISTRA -->
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="550.0" style="-fx-background-color: #EEF2FB; -fx-background-radius: 20; -fx-border-radius: 20;">
+         <HBox.margin>
+            <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+         </HBox.margin>
+         <padding>
+            <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+         </padding>
+         <children>
+            <ImageView fx:id="immagineProdotto" cache="true" cacheHint="QUALITY" fitHeight="400.0" fitWidth="481.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../it/uid/unitech/Images/IPhone17 Black.png" />
+               </image>
+            </ImageView>
+
+            <!-- Badge caratteristiche -->
+            <HBox alignment="CENTER" spacing="10">
+               <VBox.margin><Insets top="25" /></VBox.margin>
+               <children>
+                  <VBox alignment="CENTER" spacing="5" style="-fx-background-color: #EEF2FB; -fx-background-radius: 12;                                -fx-border-color: #C4DEFF; -fx-border-width: 1.5;                                -fx-border-radius: 12; -fx-padding: 10 14 10 14;">
+                     <FontIcon iconColor="#3A7BD5" iconLiteral="fas-battery-full" iconSize="22" />
+                     <Label style="-fx-font-size: 12; -fx-font-weight: 700; -fx-text-fill: #1a1a1a;" text="26 ore" />
+                     <Label style="-fx-font-size: 10; -fx-text-fill: #888;" text="Batteria" />
+                  </VBox>
+                  <VBox alignment="CENTER" spacing="5" style="-fx-background-color: #EEF2FB; -fx-background-radius: 12;                                -fx-border-color: #C4DEFF; -fx-border-width: 1.5;                                -fx-border-radius: 12; -fx-padding: 10 14 10 14;">
+                     <FontIcon iconColor="#3A7BD5" iconLiteral="fas-camera" iconSize="22" />
+                     <Label style="-fx-font-size: 12; -fx-font-weight: 700; -fx-text-fill: #1a1a1a;" text="48 MP" />
+                     <Label style="-fx-font-size: 10; -fx-text-fill: #888;" text="Fotocamera" />
+                  </VBox>
+                  <VBox alignment="CENTER" spacing="5" style="-fx-background-color: #EEF2FB; -fx-background-radius: 12;                                -fx-border-color: #C4DEFF; -fx-border-width: 1.5;                                -fx-border-radius: 12; -fx-padding: 10 14 10 14;">
+                     <FontIcon iconColor="#3A7BD5" iconLiteral="fas-bolt" iconSize="22" />
+                     <Label style="-fx-font-size: 12; -fx-font-weight: 700; -fx-text-fill: #1a1a1a;" text="A19" />
+                     <Label style="-fx-font-size: 10; -fx-text-fill: #888;" text="Chip" />
+                  </VBox>
+                  <VBox alignment="CENTER" spacing="5" style="-fx-background-color: #EEF2FB; -fx-background-radius: 12;                                -fx-border-color: #C4DEFF; -fx-border-width: 1.5;                                -fx-border-radius: 12; -fx-padding: 10 14 10 14;">
+                     <FontIcon iconColor="#3A7BD5" iconLiteral="fas-tint" iconSize="22" />
+                     <Label style="-fx-font-size: 12; -fx-font-weight: 700; -fx-text-fill: #1a1a1a;" text="IP68" />
+                     <Label style="-fx-font-size: 10; -fx-text-fill: #888;" text="Resistenza" />
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+
+      <!-- DESTRA -->
+      <VBox alignment="CENTER_LEFT" maxHeight="-Infinity" prefHeight="660.0" prefWidth="730.0" spacing="18.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20;" HBox.hgrow="ALWAYS">
+         <padding>
+            <Insets bottom="40.0" left="50.0" right="50.0" top="50.0" />
+         </padding>
+         <HBox.margin>
+            <Insets bottom="20.0" left="20.0" right="50.0" top="20.0" />
+         </HBox.margin>
+         <children>
+            <Label style="-fx-font-size: 36; -fx-font-weight: bold; -fx-text-fill: #1a1a1a;" text="iPhone 17" />
+            <Label style="-fx-font-size: 15; -fx-text-fill: #888888;" text="Il nostro iPhone più bello di sempre" />
+            <Separator maxWidth="1.7976931348623157E308" minWidth="-Infinity" VBox.vgrow="ALWAYS" />
+            <Label fx:id="prezzoLabel" style="-fx-font-size: 28; -fx-font-weight: bold; -fx-text-fill: #1a1a1a;" text="Da 999€" />
+            <Label fx:id="coloreLabel" style="-fx-font-size: 14; -fx-text-fill: #555;" text="Colore: Nero" />
+
+            <!-- Cerchi colore -->
+            <HBox alignment="CENTER_LEFT" spacing="15.0">
+               <children>
+                  <Circle fx:id="circleNero" fill="black" radius="20.0" style="-fx-cursor: hand;" />
+                  <Circle fx:id="circleBianco" fill="white" radius="20.0" stroke="#cccccc" strokeWidth="2.0" style="-fx-cursor: hand;" />
+                  <Circle fx:id="circleArancione" fill="#ff6b2c" radius="20.0" style="-fx-cursor: hand;" />
+                  <Circle fx:id="circleBlu" fill="#3a7bd5" radius="20.0" style="-fx-cursor: hand;" />
+               </children>
+            </HBox>
+
+            <!-- Memoria -->
+            <Label style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: #333;" text="Memoria:" />
+            <HBox alignment="CENTER_LEFT" spacing="12.0">
+               <children>
+                  <Button fx:id="btn128" mnemonicParsing="false" styleClass="memory-btn" text="128 GB" />
+                  <Button fx:id="btn256" mnemonicParsing="false" styleClass="memory-btn" text="256 GB" />
+                  <Button fx:id="btn512" mnemonicParsing="false" styleClass="memory-btn" text="512 GB" />
+               </children>
+            </HBox>
+
+            <Separator prefWidth="200.0" />
+
+            <!-- Spedizione e garanzia -->
+            <VBox spacing="10">
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="10">
+                     <FontIcon iconColor="#3A7BD5" iconLiteral="fas-box" iconSize="16" />
+                     <Label style="-fx-font-size: 13; -fx-text-fill: #555;" text="Spedizione gratuita in 2-3 giorni" />
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="10">
+                     <FontIcon iconColor="#3A7BD5" iconLiteral="fas-redo" iconSize="16" />
+                     <Label style="-fx-font-size: 13; -fx-text-fill: #555;" text="Reso gratuito entro 14 giorni" />
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="10">
+                     <FontIcon iconColor="#3A7BD5" iconLiteral="fas-shield-alt" iconSize="16" />
+                     <Label style="-fx-font-size: 13; -fx-text-fill: #555;" text="Garanzia Apple 1 anno inclusa" />
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="10">
+                     <FontIcon iconColor="green" iconLiteral="fas-check-circle" iconSize="16" />
+                     <Label style="-fx-font-size: 13; -fx-text-fill: green; -fx-font-weight: 700;" text="Certificato" />
+                  </HBox>
+               </children>
+            </VBox>
+
+            <Separator prefWidth="200.0" />
+
+            <!-- Bottoni -->
+            <HBox spacing="15.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="200.0" styleClass="accent" text="Aggiungi al Carrello" />
+                  <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="140.0" styleClass="button-outlined" text="Acquista" />
+               </children>
+            </HBox>
+
+         </children>
+      </VBox>
+
+   </children>
+</HBox>
