@@ -15,7 +15,7 @@ public class UniTech extends Application {
     public void start(Stage stage) throws Exception {
 
         FXMLLoader loader = new FXMLLoader(
-                getClass().getResource("/Fxml/IPhone PageProduct.fxml")
+                getClass().getResource("/Fxml/iPhone PageProduct.fxml")
         );
 
         Parent root = loader.load();
