@@ -2,6 +2,7 @@ package Controller;
 
 import Model.Carrello;
 import Model.ElementoCarrello;
+import Util.AnimazioneUtil;
 import javafx.animation.FadeTransition;
 import javafx.animation.ScaleTransition;
 import javafx.fxml.FXML;
@@ -162,84 +163,17 @@ public class iPhoneProductController {
             selezionaMemoria(btn512,"1299€");
         });
 
-        loginIcon.setOnMouseEntered(event -> {
-            ScaleTransition scaleIn= new ScaleTransition(Duration.millis(150),loginIcon);
-            scaleIn.setToX(0.9);
-            scaleIn.setToY(0.9);
-            scaleIn.play();
-        });
-
-        loginIcon.setOnMouseExited(event -> {
-            ScaleTransition scaleOut = new ScaleTransition(Duration.millis(150),loginIcon);
-            scaleOut.setToX(1);
-            scaleOut.setToY(1);
-            scaleOut.play();
-        });
+        AnimazioneUtil.aggiungiAnimazioneScale(loginIcon);
 
         loginIcon.setOnMouseClicked(event -> {
-            Node root= loginIcon.getScene().getRoot();
-            FadeTransition fadeOut = new FadeTransition(Duration.millis(600), root);
-            fadeOut.setFromValue(1.0);
-            fadeOut.setToValue(0.0);
-            fadeOut.setOnFinished(event1 -> {
-                try {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/ProfileOption.fxml"));
-                    Parent newRoot = loader.load();
-                    newRoot.setOpacity(0.0);
-                    Stage stage = (Stage) loginIcon.getScene().getWindow();
-                    stage.setScene(new Scene(newRoot,stage.getWidth(),stage.getHeight()));
-                    stage.setMaximized(true);
-                    FadeTransition fadeIn = new FadeTransition(Duration.millis(600), newRoot);
-                    fadeIn.setFromValue(0.0);
-                    fadeIn.setToValue(1.0);
-                    fadeIn.play();
-                }catch (Exception ex){
-                    ex.printStackTrace();
-                }
-            });
-            fadeOut.play();
+            AnimazioneUtil.cambiaScena(loginIcon, "/Fxml/ProfileOption.fxml");
         });
 
-        logoIcon.setOnMouseEntered(event -> {
-            ScaleTransition scaleIn= new ScaleTransition(Duration.millis(150),logoIcon);
-            scaleIn.setToX(0.9);
-            scaleIn.setToY(0.9);
-            scaleIn.play();
-        });
-
-        logoIcon.setOnMouseExited(event -> {
-            ScaleTransition scaleOut = new ScaleTransition(Duration.millis(150),logoIcon);
-            scaleOut.setToX(1);
-            scaleOut.setToY(1);
-            scaleOut.play();
-        });
+        AnimazioneUtil.aggiungiAnimazioneScale(logoIcon);
 
         logoIcon.setOnMouseClicked(event -> {
-            Node root= logoIcon.getScene().getRoot();
-            FadeTransition fadeOut = new FadeTransition(Duration.millis(600), root);
-            fadeOut.setFromValue(1.0);
-            fadeOut.setToValue(0.0);
-            fadeOut.setOnFinished(event1 -> {
-                try {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Home.fxml"));
-                    Parent newRoot = loader.load();
-                    newRoot.setOpacity(0.0);
-                    Stage stage = (Stage) logoIcon.getScene().getWindow();
-                    stage.setScene(new Scene(newRoot,stage.getWidth(),stage.getHeight()));
-                    stage.setMaximized(true);
-                    FadeTransition fadeIn = new FadeTransition(Duration.millis(600), newRoot);
-                    fadeIn.setFromValue(0.0);
-                    fadeIn.setToValue(1.0);
-                    fadeIn.play();
-                }catch (Exception ex){
-                    ex.printStackTrace();
-                }
-            });
-            fadeOut.play();
+            AnimazioneUtil.cambiaScena(logoIcon, "/Fxml/Home.fxml");
         });
-
-
-
     }
 
     private Circle cerchioSelezionato;
@@ -281,6 +215,4 @@ public class iPhoneProductController {
         memoriaSelezionata=bottone;
         prezzoLabel.setText(prezzo);
     }
-
-
 }

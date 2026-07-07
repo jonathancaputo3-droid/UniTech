@@ -5,22 +5,12 @@ import Model.UtenteDAO;
 import Util.AnimazioneUtil;
 import Util.DatabaseConnection;
 import Util.SessioneUtente;
-import javafx.animation.FadeTransition;
-import javafx.animation.ScaleTransition;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
-import javafx.stage.Stage;
-import javafx.util.Duration;
-
-import java.io.IOException;
 import java.sql.SQLException;
 
 public class SignUpController {
