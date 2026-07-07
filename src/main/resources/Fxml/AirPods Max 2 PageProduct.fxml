@@ -122,6 +122,7 @@
                <items>
                   <MenuItem mnemonicParsing="false" text="AirPods Max" />
                   <MenuItem mnemonicParsing="false" text="AirPods 4" />
+                  <MenuItem mnemonicParsing="false" text="AirPods Pro 3" />
                </items>
                <font>
                   <Font name="Segoe UI" size="18.0" />

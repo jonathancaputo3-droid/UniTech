@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.net.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
-<?import org.kordamp.ikonli.javafx.*?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<ScrollPane fitToHeight="true" fitToWidth="true" style="-fx-background-color: #C4DEFF;" styleClass="background-Home" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HomeController">
+<ScrollPane fitToHeight="true" fitToWidth="true" style="-fx-background-color: #C4DEFF;" styleClass="background-Home" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HomeController">
     <stylesheets>
         <URL value="@../Style/cupertino-light.css" />
     </stylesheets>
@@ -38,7 +45,7 @@
 
                         <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPhone">
                             <items>
-                                <MenuItem mnemonicParsing="false" text="iPhone 17" />
+                                <MenuItem fx:id="iPhone17" mnemonicParsing="false" text="iPhone 17" />
                                 <MenuItem mnemonicParsing="false" text="iPhone SE" />
                             </items>
                             <font><Font name="Segoe UI" size="18.0" /></font>
@@ -110,6 +117,7 @@
                             <items>
                                 <MenuItem mnemonicParsing="false" text="AirPods Max" />
                                 <MenuItem mnemonicParsing="false" text="AirPods 4" />
+                        <MenuItem mnemonicParsing="false" text="AirPods Pro 3" />
                             </items>
                             <font><Font name="Segoe UI" size="18.0" /></font>
                             <styleClass>

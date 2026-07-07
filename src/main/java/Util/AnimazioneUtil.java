@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Background;
@@ -148,5 +149,63 @@ public class AnimazioneUtil {
         prezzoLabel.setText(prezzo);
     }
 
+    public static void aggiungiClickColore(Circle cerchio, String nome, String immagine, Label label, ImageView imageView){
+        if(cerchio != null){
+            cerchio.setOnMouseClicked(e ->
+                    selezionaColore(cerchio,nome,immagine,label,imageView)
+            );
+        }
+    }
 
+    public static void aggiungiClickBottone(Button bottone, String prezzo, Label label) {
+        if (bottone != null) {
+            bottone.setOnMouseClicked(event -> {
+                selezionaVariante(bottone, prezzo, label);
+            });
+        }
+    }
+
+    public static void aggiungiAnimazione(Node nodo){
+        if(nodo != null){
+            aggiungiAnimazioneScale(nodo);
+        }
+    }
+    public static void verificaCambiaScena(Node nodo,String path){
+        if(nodo != null){
+            nodo.setOnMouseClicked(event -> {
+                cambiaScena(nodo,path);
+            });
+        }
+    }
+    public static void verificaCambiaScenaItem(MenuItem item,String path){
+        if(item != null){
+            item.setOnAction(event -> {
+                cambiaScenaItem(item,path);
+            });
+        }
+    }
+
+    public static void cambiaScenaItem(MenuItem item,String path){
+        Stage stage=(Stage) item.getParentPopup().getOwnerWindow();
+        Node root=stage.getScene().getRoot();
+        FadeTransition fadeOut = new FadeTransition(Duration.millis(600), root);
+        fadeOut.setFromValue(1);
+        fadeOut.setToValue(0);
+        fadeOut.setOnFinished(e -> {
+            try {
+                FXMLLoader loader = new FXMLLoader(AnimazioneUtil.class.getResource(path));
+                Parent newRoot = loader.load();
+                newRoot.setOpacity(0);
+                stage.setScene(new Scene(newRoot,stage.getWidth(),stage.getHeight()));
+                stage.setMaximized(true);
+                FadeTransition fadeIn = new FadeTransition(Duration.millis(600), newRoot);
+                fadeIn.setFromValue(0);
+                fadeIn.setToValue(1);
+                fadeIn.play();
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        });
+        fadeOut.play();
+    }
 }
