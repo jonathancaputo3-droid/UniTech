@@ -148,5 +148,34 @@ public class AnimazioneUtil {
         prezzoLabel.setText(prezzo);
     }
 
+    public static void aggiungiClickColore(Circle cerchio, String nome, String immagine, Label label, ImageView imageView){
+        if(cerchio != null){
+            cerchio.setOnMouseClicked(e ->
+                    selezionaColore(cerchio,nome,immagine,label,imageView)
+            );
+        }
+    }
+
+    public static void aggiungiClickBottone(Button bottone, String prezzo, Label label) {
+        if (bottone != null) {
+            bottone.setOnMouseClicked(event -> {
+                selezionaVariante(bottone, prezzo, label);
+            });
+        }
+    }
+
+    public static void aggiungiAnimazione(Node nodo){
+        if(nodo != null){
+            aggiungiAnimazioneScale(nodo);
+        }
+    }
+    public static void verificaCambiaScena(Node nodo,String path){
+        if(nodo != null){
+            nodo.setOnMouseClicked(event -> {
+                cambiaScena(nodo,path);
+            });
+        }
+    }
+
 
 }

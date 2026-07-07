@@ -19,6 +19,8 @@ import javafx.util.Duration;
 import Util.Navigation;
 import org.kordamp.ikonli.javafx.FontIcon;
 
+import static Util.AnimazioneUtil.*;
+
 public class AirPodsProductController {
 
     // =========================
@@ -129,43 +131,91 @@ public class AirPodsProductController {
     private FontIcon loginIcon;
     @FXML
     private ImageView logoIcon;
+    @FXML
+    private Label prezzoLabel4;
+    @FXML
+    private Label coloreLabel4;
+    @FXML
+    private Circle circleBianco4;
+    @FXML
+    private Button btnNo4;
+    @FXML
+    private Button btnSi4;
+    @FXML
+    private FontIcon loginIcon4;
+    @FXML
+    private ImageView logoIcon4;
+    @FXML
+    private ImageView immagineProdotto4;
+    @FXML
+    private Label prezzoLabel3;
+    @FXML
+    private Label coloreLabel3;
+    @FXML
+    private Circle circleBianco3;
+    @FXML
+    private Button btnNo3;
+    @FXML
+    private Button btnSi3;
+    @FXML
+    private FontIcon loginIcon3;
+    @FXML
+    private ImageView logoIcon3;
+    @FXML
+    private ImageView immagineProdotto3;
+
+
 
     public void initialize(){
 
-        AnimazioneUtil.selezionaColore(circleNero,"Mezzanotte","/it/uid/unitech/Images/AirPods Max 2 Nere.png",coloreLabel,immagineProdotto);
-        AnimazioneUtil.selezionaVariante(btnNo,"579€",prezzoLabel);
-        coloreLabel.setText("Mezzanotte");
 
-        circleNero.setOnMouseClicked(event -> {
-            AnimazioneUtil.selezionaColore(circleNero,"Mezzanotte","/it/uid/unitech/Images/AirPods Max 2 Nere.png",coloreLabel,immagineProdotto);
-        });
-        circleBianco.setOnMouseClicked(event -> {
-            AnimazioneUtil.selezionaColore(circleBianco,"Baige","/it/uid/unitech/Images/AirPods Max 2 Bianche.png",coloreLabel,immagineProdotto);
-        });
-        circleArancione.setOnMouseClicked(event -> {
-            AnimazioneUtil.selezionaColore(circleArancione,"Arancione","/it/uid/unitech/Images/AirPods Max 2 Arancioni.png",coloreLabel,immagineProdotto);
-        });
-        circleBlu.setOnMouseClicked(event -> {
-            AnimazioneUtil.selezionaColore(circleBlu,"Azzurro","/it/uid/unitech/Images/AirPods Max 2 Blu.png",coloreLabel,immagineProdotto);
-        });
+        aggiungiClickColore(circleNero, "Mezzanotte", "/it/uid/unitech/Images/AirPods Max 2 Nere.png", coloreLabel, immagineProdotto);
+        aggiungiClickBottone(btnNo, "579€", prezzoLabel);
 
-        btnNo.setOnMouseClicked(event -> {
-            AnimazioneUtil.selezionaVariante(btnNo,"579€",prezzoLabel);
-        });
-        btnSi.setOnMouseClicked(event -> {
-            AnimazioneUtil.selezionaVariante(btnSi,"679€",prezzoLabel);
-        });
+        aggiungiClickColore(circleBianco4, "Bianco", "/it/uid/unitech/Images/AirPods 4.png", coloreLabel4, immagineProdotto4);
+        aggiungiClickBottone(btnNo4, "149€", prezzoLabel4);
 
-        AnimazioneUtil.aggiungiAnimazioneScale(loginIcon);
+        aggiungiClickColore(circleBianco3, "Bianco", "/it/uid/unitech/Images/AirPods Pro 3.png", coloreLabel3, immagineProdotto3);
+        aggiungiClickBottone(btnNo3, "249€", prezzoLabel3);
 
-        loginIcon.setOnMouseClicked(event -> {
-            AnimazioneUtil.cambiaScena(loginIcon, "/Fxml/ProfileOption.fxml");
-        });
+        aggiungiClickColore(circleBianco,"Baige","/it/uid/unitech/Images/AirPods Max 2 Bianche.png",coloreLabel,immagineProdotto);
 
-        AnimazioneUtil.aggiungiAnimazioneScale(logoIcon);
+        aggiungiClickColore(circleArancione,"Arancione","/it/uid/unitech/Images/AirPods Max 2 Arancioni.png",coloreLabel,immagineProdotto);
 
-        logoIcon.setOnMouseClicked(event -> {
-            AnimazioneUtil.cambiaScena(logoIcon, "/Fxml/Home.fxml");
-        });
+        aggiungiClickColore(circleBlu,"Azzurro","/it/uid/unitech/Images/AirPods Max 2 Blu.png",coloreLabel,immagineProdotto);
+
+        aggiungiClickBottone(btnNo,"579€",prezzoLabel);
+
+        aggiungiClickBottone(btnSi,"679€",prezzoLabel);
+
+        aggiungiClickBottone(btnNo4,"149€",prezzoLabel4);
+
+        aggiungiClickBottone(btnSi4,"249€",prezzoLabel4);
+
+        aggiungiClickBottone(btnNo3,"249€",prezzoLabel3);
+
+        aggiungiClickBottone(btnSi3,"349€",prezzoLabel3);
+
+
+        aggiungiAnimazione(loginIcon);
+        aggiungiAnimazione(loginIcon4);
+        aggiungiAnimazione(loginIcon3);
+
+        verificaCambiaScena(loginIcon, "/Fxml/ProfileOption.fxml");
+
+        verificaCambiaScena(loginIcon4, "/Fxml/ProfileOption.fxml");
+
+        verificaCambiaScena(loginIcon3, "/Fxml/ProfileOption.fxml");
+
+
+        aggiungiAnimazione(logoIcon);
+        aggiungiAnimazione(logoIcon4);
+        aggiungiAnimazione(logoIcon3);
+
+        verificaCambiaScena(logoIcon, "/Fxml/Home.fxml");
+
+        verificaCambiaScena(logoIcon4, "/Fxml/Home.fxml");
+
+        verificaCambiaScena(logoIcon3, "/Fxml/Home.fxml");
     }
 }
