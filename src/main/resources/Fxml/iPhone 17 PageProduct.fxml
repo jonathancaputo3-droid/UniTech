@@ -253,7 +253,7 @@
                         <HBox alignment="CENTER_LEFT" spacing="10">
                            <children>
                               <FontIcon iconColor="#3A7BD5" iconLiteral="fas-shield-alt" iconSize="16" />
-                              <Label style="-fx-font-size: 13; -fx-text-fill: #555;" text="Garanzia 2 anni inclusa" />
+                              <Label style="-fx-font-size: 13; -fx-text-fill: #555;" text="Garanzia Apple 1 anno inclusa" />
                            </children>
                         </HBox>
                         <HBox alignment="CENTER_LEFT" spacing="10">

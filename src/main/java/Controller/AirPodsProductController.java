@@ -2,16 +2,22 @@ package Controller;
 
 import Model.Carrello;
 import Model.ElementoCarrello;
+import Util.AnimazioneUtil;
 import javafx.animation.FadeTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.shape.Circle;
 import javafx.util.Duration;
 import Util.Navigation;
+import org.kordamp.ikonli.javafx.FontIcon;
 
 public class AirPodsProductController {
 
@@ -99,5 +105,67 @@ public class AirPodsProductController {
         });
 
         fadeOut.play();
+    }
+
+    @FXML
+    private ImageView immagineProdotto;
+    @FXML
+    private Label prezzoLabel;
+    @FXML
+    private Label coloreLabel;
+    @FXML
+    private Circle circleNero;
+    @FXML
+    private Circle circleBlu;
+    @FXML
+    private Circle circleBianco;
+    @FXML
+    private Circle circleArancione;
+    @FXML
+    private Button btnNo;
+    @FXML
+    private Button btnSi;
+    @FXML
+    private FontIcon loginIcon;
+    @FXML
+    private ImageView logoIcon;
+
+    public void initialize(){
+
+        AnimazioneUtil.selezionaColore(circleNero,"Mezzanotte","/it/uid/unitech/Images/AirPods Max 2 Nere.png",coloreLabel,immagineProdotto);
+        AnimazioneUtil.selezionaVariante(btnNo,"579€",prezzoLabel);
+        coloreLabel.setText("Mezzanotte");
+
+        circleNero.setOnMouseClicked(event -> {
+            AnimazioneUtil.selezionaColore(circleNero,"Mezzanotte","/it/uid/unitech/Images/AirPods Max 2 Nere.png",coloreLabel,immagineProdotto);
+        });
+        circleBianco.setOnMouseClicked(event -> {
+            AnimazioneUtil.selezionaColore(circleBianco,"Baige","/it/uid/unitech/Images/AirPods Max 2 Bianche.png",coloreLabel,immagineProdotto);
+        });
+        circleArancione.setOnMouseClicked(event -> {
+            AnimazioneUtil.selezionaColore(circleArancione,"Arancione","/it/uid/unitech/Images/AirPods Max 2 Arancioni.png",coloreLabel,immagineProdotto);
+        });
+        circleBlu.setOnMouseClicked(event -> {
+            AnimazioneUtil.selezionaColore(circleBlu,"Azzurro","/it/uid/unitech/Images/AirPods Max 2 Blu.png",coloreLabel,immagineProdotto);
+        });
+
+        btnNo.setOnMouseClicked(event -> {
+            AnimazioneUtil.selezionaVariante(btnNo,"579€",prezzoLabel);
+        });
+        btnSi.setOnMouseClicked(event -> {
+            AnimazioneUtil.selezionaVariante(btnSi,"679€",prezzoLabel);
+        });
+
+        AnimazioneUtil.aggiungiAnimazioneScale(loginIcon);
+
+        loginIcon.setOnMouseClicked(event -> {
+            AnimazioneUtil.cambiaScena(loginIcon, "/Fxml/ProfileOption.fxml");
+        });
+
+        AnimazioneUtil.aggiungiAnimazioneScale(logoIcon);
+
+        logoIcon.setOnMouseClicked(event -> {
+            AnimazioneUtil.cambiaScena(logoIcon, "/Fxml/Home.fxml");
+        });
     }
 }

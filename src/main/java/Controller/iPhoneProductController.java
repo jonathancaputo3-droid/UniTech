@@ -136,31 +136,31 @@ public class iPhoneProductController {
 
     public void initialize(){
 
-        selezionaColore(circleNero,"Nero","/it/uid/unitech/Images/IPhone 17 Black.png");
-        selezionaMemoria(btn128,"999€");
+        AnimazioneUtil.selezionaColore(circleNero,"Nero","/it/uid/unitech/Images/IPhone 17 Black.png",coloreLabel,immagineProdotto);
+        AnimazioneUtil.selezionaVariante(btn128,"999€",prezzoLabel);
         coloreLabel.setText("Nero");
 
         circleNero.setOnMouseClicked(event -> {
-            selezionaColore(circleNero,"Nero","/it/uid/unitech/Images/IPhone 17 Black.png");
+            AnimazioneUtil.selezionaColore(circleNero,"Nero","/it/uid/unitech/Images/IPhone 17 Black.png",coloreLabel,immagineProdotto);
         });
         circleBianco.setOnMouseClicked(event -> {
-            selezionaColore(circleBianco,"Bianco","/it/uid/unitech/Images/IPhone 17 Bianco.png");
+            AnimazioneUtil.selezionaColore(circleBianco,"Bianco","/it/uid/unitech/Images/IPhone 17 Bianco.png",coloreLabel,immagineProdotto);
         });
         circleVerde.setOnMouseClicked(event -> {
-            selezionaColore(circleVerde,"Salvia","/it/uid/unitech/Images/iPhone 17 Verde.png");
+            AnimazioneUtil.selezionaColore(circleVerde,"Salvia","/it/uid/unitech/Images/iPhone 17 Verde.png",coloreLabel,immagineProdotto);
         });
         circleBlu.setOnMouseClicked(event -> {
-            selezionaColore(circleBlu,"Azzurro","/it/uid/unitech/Images/iPhone 17 Blu.png");
+            AnimazioneUtil.selezionaColore(circleBlu,"Azzurro","/it/uid/unitech/Images/iPhone 17 Blu.png",coloreLabel,immagineProdotto);
         });
 
         btn128.setOnMouseClicked(event -> {
-            selezionaMemoria(btn128,"999€");
+            AnimazioneUtil.selezionaVariante(btn128,"999€",prezzoLabel);
         });
         btn256.setOnMouseClicked(event -> {
-            selezionaMemoria(btn256,"1099€");
+            AnimazioneUtil.selezionaVariante(btn256,"1099€",prezzoLabel);
         });
         btn512.setOnMouseClicked(event -> {
-            selezionaMemoria(btn512,"1299€");
+            AnimazioneUtil.selezionaVariante(btn512,"1299€",prezzoLabel);
         });
 
         AnimazioneUtil.aggiungiAnimazioneScale(loginIcon);
@@ -174,45 +174,5 @@ public class iPhoneProductController {
         logoIcon.setOnMouseClicked(event -> {
             AnimazioneUtil.cambiaScena(logoIcon, "/Fxml/Home.fxml");
         });
-    }
-
-    private Circle cerchioSelezionato;
-    private Button memoriaSelezionata;
-
-    private void selezionaColore(Circle cerchio, String nomeColore, String pathImmagine){
-        if(cerchioSelezionato!=null && cerchioSelezionato!=circleBianco){
-            cerchioSelezionato.setStroke(null);
-            cerchioSelezionato.setStrokeWidth(0);
-        }
-        if (cerchioSelezionato==circleBianco){
-            cerchioSelezionato.setStroke(javafx.scene.paint.Color.web("#cccccc"));
-            cerchioSelezionato.setStrokeWidth(2);
-        }
-        cerchio.setStroke(javafx.scene.paint.Color.web("#3A7BD5"));
-        cerchio.setStrokeWidth(3);
-        cerchioSelezionato=cerchio;
-        coloreLabel.setText(nomeColore);
-
-        FadeTransition fadeOut = new FadeTransition(Duration.millis(150), immagineProdotto);
-        fadeOut.setFromValue(1);
-        fadeOut.setToValue(0);
-        fadeOut.setOnFinished(e -> {
-            immagineProdotto.setImage(new Image(getClass().getResourceAsStream(pathImmagine)));
-            FadeTransition fadeIn= new FadeTransition(Duration.millis(150), immagineProdotto);
-            fadeIn.setFromValue(0.0);
-            fadeIn.setToValue(1.0);
-            fadeIn.play();
-        });
-        fadeOut.play();
-    }
-
-    private void selezionaMemoria(Button bottone,String prezzo){
-        if(memoriaSelezionata!=null){
-            memoriaSelezionata.setStyle("");
-            memoriaSelezionata.getStyleClass().remove("memory-btn-selected");
-        }
-        bottone.setStyle("-fx-background-color: #EEF2FB; -fx-border-color: #3A7BD5; -fx-border-width: 2; -fx-text-fill: #3A7BD5;");
-        memoriaSelezionata=bottone;
-        prezzoLabel.setText(prezzo);
     }
 }

@@ -5,11 +5,15 @@ import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -101,4 +105,48 @@ public class AnimazioneUtil {
         label.setTextFill(colore);
         label.setVisible(true);
     }
+
+    private static Circle cerchioSelezionato;
+    private static Button varianteSelezionata;
+
+    public static void selezionaColore(Circle cerchio, String nomeColore, String pathImmagine, Label coloreLabel, ImageView immagineProdotto){
+        if(cerchioSelezionato!=null){
+            if (Color.WHITE.equals(cerchioSelezionato.getFill())){
+                cerchioSelezionato.setStroke(javafx.scene.paint.Color.web("#cccccc"));
+                cerchioSelezionato.setStrokeWidth(2);
+            }else{
+                cerchioSelezionato.setStroke(null);
+                cerchioSelezionato.setStrokeWidth(0);
+            }
+        }
+
+        cerchio.setStroke(javafx.scene.paint.Color.web("#3A7BD5"));
+        cerchio.setStrokeWidth(3);
+        cerchioSelezionato=cerchio;
+        coloreLabel.setText(nomeColore);
+
+        FadeTransition fadeOut = new FadeTransition(Duration.millis(150), immagineProdotto);
+        fadeOut.setFromValue(1);
+        fadeOut.setToValue(0);
+        fadeOut.setOnFinished(e -> {
+            immagineProdotto.setImage(new Image(AnimazioneUtil.class.getResourceAsStream(pathImmagine)));
+            FadeTransition fadeIn= new FadeTransition(Duration.millis(150), immagineProdotto);
+            fadeIn.setFromValue(0.0);
+            fadeIn.setToValue(1.0);
+            fadeIn.play();
+        });
+        fadeOut.play();
+    }
+
+    public static void selezionaVariante(Button bottone, String prezzo, Label prezzoLabel){
+        if(varianteSelezionata!=null){
+            varianteSelezionata.setStyle("");
+            varianteSelezionata.getStyleClass().remove("memory-btn-selected");
+        }
+        bottone.setStyle("-fx-background-color: #EEF2FB; -fx-border-color: #3A7BD5; -fx-border-width: 2; -fx-text-fill: #3A7BD5;");
+        varianteSelezionata=bottone;
+        prezzoLabel.setText(prezzo);
+    }
+
+
 }

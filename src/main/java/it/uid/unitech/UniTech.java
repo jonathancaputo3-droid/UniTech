@@ -15,7 +15,7 @@ public class UniTech extends Application {
     public void start(Stage stage) throws Exception {
 
         FXMLLoader loader = new FXMLLoader(
-                getClass().getResource("/Fxml/iPhone PageProduct.fxml")
+                getClass().getResource("/Fxml/AirPods Max 2 PageProduct.fxml")
         );
 
         Parent root = loader.load();
