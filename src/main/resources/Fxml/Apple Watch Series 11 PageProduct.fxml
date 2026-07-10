@@ -12,6 +12,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
@@ -25,7 +28,7 @@
             <String fx:value="elevated-1" />
          </styleClass>
          <children>
-            <ImageView fx:id="logoIconUltra" cache="true" cacheHint="QUALITY" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="logoIcon11" cache="true" cacheHint="QUALITY" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../it/uid/unitech/Images/UnitechLogo.png" />
                </image>
@@ -103,9 +106,8 @@
             </MenuButton>
             <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Watch">
                <items>
-                  <MenuItem mnemonicParsing="false" text="Apple Watch Ultra 3" />
-                  <MenuItem mnemonicParsing="false" text="Apple Watch SE 3" />
-                  <MenuItem mnemonicParsing="false" text="Apple Watch Series 11" />
+                  <MenuItem mnemonicParsing="false" text="Apple Watch Pro" />
+                  <MenuItem mnemonicParsing="false" text="Apple Watch SE" />
                </items>
                <font>
                   <Font name="Segoe UI" size="18.0" />
@@ -147,7 +149,7 @@
                   <Insets right="24.0" />
                </HBox.margin>
             </FontIcon>
-            <FontIcon fx:id="loginIconUltra" iconColor="#1d1d1f" iconLiteral="fas-user-alt" iconSize="22" />
+            <FontIcon fx:id="loginIcon11" iconColor="#1d1d1f" iconLiteral="fas-user-alt" iconSize="22" />
          </children>
          <VBox.margin>
             <Insets top="30.0" />
@@ -166,9 +168,9 @@
                   <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
                </padding>
                <children>
-                  <ImageView fx:id="immagineProdottoUltra" cache="true" cacheHint="QUALITY" fitHeight="365.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="immagineProdotto11" cache="true" cacheHint="QUALITY" fitHeight="385.0" fitWidth="394.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../it/uid/unitech/Images/Apple Watch Ultra 3 Black.png" />
+                        <Image url="@../it/uid/unitech/Images/Apple%20Watch%20Series%2011%20Naturale.png" />
                      </image>
                   </ImageView>
                   <HBox alignment="CENTER" spacing="10">
@@ -179,29 +181,29 @@
                         <VBox alignment="CENTER" spacing="5" style="-fx-background-color: #EEF2FB; -fx-background-radius: 12;                                -fx-border-color: #C4DEFF; -fx-border-width: 1.5;                                -fx-border-radius: 12; -fx-padding: 10 14 10 14;">
                            <children>
                               <FontIcon iconColor="#3A7BD5" iconLiteral="fas-battery-full" iconSize="22" />
-                              <Label style="-fx-font-size: 12; -fx-font-weight: 700; -fx-text-fill: #1a1a1a;" text="60 ore" />
+                              <Label style="-fx-font-size: 12; -fx-font-weight: 700; -fx-text-fill: #1a1a1a;" text="28 ore" />
                               <Label style="-fx-font-size: 10; -fx-text-fill: #888;" text="Batteria" />
                            </children>
                         </VBox>
                         <VBox alignment="CENTER" spacing="5" style="-fx-background-color: #EEF2FB; -fx-background-radius: 12;                                -fx-border-color: #C4DEFF; -fx-border-width: 1.5;                                -fx-border-radius: 12; -fx-padding: 10 14 10 14;">
                            <children>
-                              <FontIcon iconColor="#3A7BD5" iconLiteral="fas-heartbeat" iconSize="22" />
-                              <Label style="-fx-font-size: 12; -fx-font-weight: 700; -fx-text-fill: #1a1a1a;" text="ECG" />
-                              <Label style="-fx-font-size: 10; -fx-text-fill: #888;" text="Salute" />
+                              <FontIcon iconColor="#3A7BD5" iconLiteral="fas-moon" iconSize="22" />
+                              <Label style="-fx-font-size: 12; -fx-font-weight: 700; -fx-text-fill: #1a1a1a;" text="Sonno" />
+                              <Label style="-fx-font-size: 10; -fx-text-fill: #888;" text="Monitoraggio" />
                            </children>
                         </VBox>
                         <VBox alignment="CENTER" spacing="5" style="-fx-background-color: #EEF2FB; -fx-background-radius: 12;                                -fx-border-color: #C4DEFF; -fx-border-width: 1.5;                                -fx-border-radius: 12; -fx-padding: 10 14 10 14;">
                            <children>
-                              <FontIcon iconColor="#3A7BD5" iconLiteral="fas-tint" iconSize="22" />
-                              <Label style="-fx-font-size: 12; -fx-font-weight: 700; -fx-text-fill: #1a1a1a;" text="100m" />
-                              <Label style="-fx-font-size: 10; -fx-text-fill: #888;" text="Impermeabile" />
+                              <FontIcon iconColor="#3A7BD5" iconLiteral="fas-exclamation-triangle" iconSize="22" />
+                              <Label style="-fx-font-size: 12; -fx-font-weight: 700; -fx-text-fill: #1a1a1a;" text="SOS" />
+                              <Label style="-fx-font-size: 10; -fx-text-fill: #888;" text="Sicurezza" />
                            </children>
                         </VBox>
                         <VBox alignment="CENTER" spacing="5" style="-fx-background-color: #EEF2FB; -fx-background-radius: 12;                                -fx-border-color: #C4DEFF; -fx-border-width: 1.5;                                -fx-border-radius: 12; -fx-padding: 10 14 10 14;">
                            <children>
-                              <FontIcon iconColor="#3A7BD5" iconLiteral="fas-mountain" iconSize="22" />
-                              <Label style="-fx-font-size: 12; -fx-font-weight: 700; -fx-text-fill: #1a1a1a;" text="Ultra" />
-                              <Label style="-fx-font-size: 10; -fx-text-fill: #888;" text="Resistenza" />
+                              <FontIcon iconColor="#3A7BD5" iconLiteral="fas-map-marker-alt" iconSize="22" />
+                              <Label style="-fx-font-size: 12; -fx-font-weight: 700; -fx-text-fill: #1a1a1a;" text="GPS" />
+                              <Label style="-fx-font-size: 10; -fx-text-fill: #888;" text="Precisione" />
                            </children>
                         </VBox>
                      </children>
@@ -216,23 +218,74 @@
                   <Insets bottom="20.0" left="20.0" right="50.0" top="20.0" />
                </HBox.margin>
                <children>
-                  <Label style="-fx-font-size: 36; -fx-font-weight: bold; -fx-text-fill: #1a1a1a;" text="Apple Watch Ultra 3" />
-                  <Label style="-fx-font-size: 15; -fx-text-fill: #888888;" text="Una forza della natura" />
+                  <Label style="-fx-font-size: 36; -fx-font-weight: bold; -fx-text-fill: #1a1a1a;" text="Apple Watch Series 11" />
+                  <Label style="-fx-font-size: 15; -fx-text-fill: #888888;" text="Il meglio per tenere d'occhio la tua salute" />
                   <Separator maxWidth="1.7976931348623157E308" minWidth="-Infinity" VBox.vgrow="ALWAYS" />
-                  <Label fx:id="prezzoLabelUltra" style="-fx-font-size: 28; -fx-font-weight: bold; -fx-text-fill: #1a1a1a;" text="Da 759€" />
-                  <Label fx:id="coloreLabelUltra" style="-fx-font-size: 14; -fx-text-fill: #555;" text="Colore: Nero" />
+                  <Label fx:id="prezzoLabel11" style="-fx-font-size: 28; -fx-font-weight: bold; -fx-text-fill: #1a1a1a;" text="Da 759€" />
+                  <Label fx:id="coloreLabel11" style="-fx-font-size: 14; -fx-text-fill: #555;" text="Colore: Naturale" />
                   <HBox alignment="CENTER_LEFT" spacing="15.0">
                      <children>
-                        <Circle fx:id="circleNeroUltra" radius="20.0" stroke="#cccccc" strokeWidth="2.0" style="-fx-cursor: hand;" />
-                        <Circle fx:id="circleVerdeUltra" fill="#b6e6a8" radius="20.0" stroke="#cccccc" strokeWidth="2.0" style="-fx-cursor: hand;" />
-                        <Circle fx:id="circleBluUltra" fill="#4b535f" radius="20.0" stroke="#cccccc" strokeWidth="2.0" style="-fx-cursor: hand;" />
+                        <Circle fx:id="circleGrigio11" radius="20.0" stroke="#cccccc" strokeWidth="2.0" style="-fx-cursor: hand;">
+                           <fill>
+                              <LinearGradient endX="0.38257575035095215" endY="1.0" startY="0.14393936594327283">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.5764706134796143" green="0.545098066329956" blue="0.49803921580314636" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </fill>
+                        </Circle>
+                        <Circle fx:id="circleOro11" radius="20.0" stroke="#cccccc" strokeWidth="2.0" style="-fx-cursor: hand;">
+                           <fill>
+                              <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="0.855555534362793" blue="0.7111111283302307" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </fill>
+                        </Circle>
+                        <Circle fx:id="circleNero11" radius="20.0" stroke="#cccccc" strokeWidth="2.0" style="-fx-cursor: hand;">
+                           <fill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </fill>
+                        </Circle>
                      </children>
                   </HBox>
                   <Label style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: #333;" text="Connettività:" />
                   <HBox alignment="CENTER_LEFT" spacing="12.0">
                      <children>
-                        <Button fx:id="btnGPSUltra" mnemonicParsing="false" styleClass="memory-btn" text="GPS" />
-                        <Button fx:id="btnGPSCellularUltra" minWidth="-Infinity" mnemonicParsing="false" style="-fx-pref-width: 100;" styleClass="memory-btn" text="GPS+Cellular" />
+                        <Button fx:id="btnGPS11" mnemonicParsing="false" styleClass="memory-btn" text="GPS" />
+                        <Button fx:id="btnGPSCellular11" mnemonicParsing="false" styleClass="memory-btn" text="GPS+Cellular" />
                      </children>
                   </HBox>
                   <Separator prefWidth="200.0" />
