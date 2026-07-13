@@ -8,7 +8,6 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
@@ -44,8 +43,9 @@
 
                         <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPhone">
                            <items>
+                              <MenuItem mnemonicParsing="false" text="iPhone 17 Pro" />
                               <MenuItem mnemonicParsing="false" text="iPhone 17" />
-                              <MenuItem mnemonicParsing="false" text="iPhone SE" />
+                              <MenuItem mnemonicParsing="false" text="iPhone Air" />
                            </items>
                            <font><Font name="Segoe UI" size="18.0" /></font>
                            <styleClass>
@@ -60,6 +60,7 @@
                            <items>
                               <MenuItem mnemonicParsing="false" text="iPad Pro" />
                               <MenuItem mnemonicParsing="false" text="iPad Air" />
+                              <MenuItem mnemonicParsing="false" text="iPad" />
                            </items>
                            <font><Font name="Segoe UI" size="18.0" /></font>
                            <styleClass>
@@ -70,10 +71,11 @@
                            <HBox.margin><Insets left="20.0" /></HBox.margin>
                         </MenuButton>
 
-                        <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iMac">
+                        <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Mac">
                            <items>
-                              <MenuItem mnemonicParsing="false" text="Mac Mini" />
                               <MenuItem mnemonicParsing="false" text="iMac" />
+                              <MenuItem mnemonicParsing="false" text="Mac Studio" />
+                              <MenuItem mnemonicParsing="false" text="Mac Mini" />
                            </items>
                            <font><Font name="Segoe UI" size="18.0" /></font>
                            <styleClass>
@@ -88,6 +90,7 @@
                            <items>
                               <MenuItem mnemonicParsing="false" text="MacBook Pro" />
                               <MenuItem mnemonicParsing="false" text="MacBook Air" />
+                              <MenuItem mnemonicParsing="false" text="MacBook Neo" />
                            </items>
                            <font><Font name="Segoe UI" size="18.0" /></font>
                            <styleClass>
@@ -100,8 +103,9 @@
 
                         <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Watch">
                            <items>
-                              <MenuItem mnemonicParsing="false" text="Apple Watch Pro" />
-                              <MenuItem mnemonicParsing="false" text="Apple Watch SE" />
+                              <MenuItem mnemonicParsing="false" text="Apple Watch Pro 3" />
+                              <MenuItem mnemonicParsing="false" text="Apple Watch Series 11" />
+                              <MenuItem mnemonicParsing="false" text="Apple Watch SE 3" />
                            </items>
                            <font><Font name="Segoe UI" size="18.0" /></font>
                            <styleClass>
@@ -114,7 +118,8 @@
 
                         <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="AirPods">
                            <items>
-                              <MenuItem mnemonicParsing="false" text="AirPods Max" />
+                              <MenuItem mnemonicParsing="false" text="AirPods Max 2" />
+                              <MenuItem mnemonicParsing="false" text="AirPods Pro 3" />
                               <MenuItem mnemonicParsing="false" text="AirPods 4" />
                            </items>
                            <font><Font name="Segoe UI" size="18.0" /></font>
@@ -151,7 +156,7 @@
                            <children>
                               <ImageView fitHeight="488.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../it/uid/unitech/Images/iPhone%2017%20Pro_ipProduct.png" />
+                                    <Image url="@../it/uid/unitech/Images/iPhone%2017%20Pro%20Arancione.png" />
                                  </image>
                               </ImageView>
                               <Label text="iPhone 17 Pro">
@@ -165,7 +170,7 @@
                                  </font>
                               </Label>
                               <Separator prefWidth="319.0" />
-                              <Button mnemonicParsing="false" styleClass="accent" text="Aggiungi al carrello" onMouseClicked="#aggiungiIPhone17Pro">
+                              <Button mnemonicParsing="false" onMouseClicked="#aggiungiIPhone17Pro" styleClass="accent" text="Aggiungi al carrello">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
@@ -176,7 +181,7 @@
                            <children>
                               <ImageView fitHeight="488.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../it/uid/unitech/Images/iPhone%20Air_ipProduct.png" />
+                                    <Image url="@../it/uid/unitech/Images/iPhone%20Air%20Celeste.png" />
                                  </image>
                               </ImageView>
                               <Label text="iPhone Air">
@@ -190,7 +195,7 @@
                                  </font>
                               </Label>
                               <Separator prefWidth="319.0" />
-                              <Button mnemonicParsing="false" styleClass="accent" text="Aggiungi al carrello" onMouseClicked="#aggiungiIPhoneAir">
+                              <Button mnemonicParsing="false" onMouseClicked="#aggiungiIPhoneAir" styleClass="accent" text="Aggiungi al carrello">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
@@ -201,7 +206,7 @@
                            <children>
                               <ImageView fitHeight="488.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../it/uid/unitech/Images/iPhone%2017_ipProduct.png" />
+                                    <Image url="@../it/uid/unitech/Images/iPhone%2017%20Rosa.png" />
                                  </image>
                               </ImageView>
                               <Label text="iPhone 17">
@@ -215,7 +220,7 @@
                                  </font>
                               </Label>
                               <Separator prefWidth="319.0" />
-                              <Button mnemonicParsing="false" styleClass="accent" text="Aggiungi al carrello" onMouseClicked="#aggiungiIPhone17">
+                              <Button mnemonicParsing="false" onMouseClicked="#aggiungiIPhone17" styleClass="accent" text="Aggiungi al carrello">
                                  <font>
                                     <Font size="18.0" />
                                  </font>

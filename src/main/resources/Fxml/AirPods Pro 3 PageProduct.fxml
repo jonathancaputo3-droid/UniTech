@@ -35,8 +35,9 @@
             </ImageView>
             <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPhone">
                <items>
-                  <MenuItem mnemonicParsing="false" text="iPhone 17" />
-                  <MenuItem mnemonicParsing="false" text="iPhone SE" />
+                  <MenuItem mnemonicParsing="false" text="iPhone 17 Pro" />
+                  <MenuItem mnemonicParsing="false" text="iPhone 17 " />
+                  <MenuItem mnemonicParsing="false" text="iPhone Air" />
                </items>
                <font>
                   <Font name="Segoe UI" size="18.0" />
@@ -54,6 +55,7 @@
                <items>
                   <MenuItem mnemonicParsing="false" text="iPad Pro" />
                   <MenuItem mnemonicParsing="false" text="iPad Air" />
+                  <MenuItem mnemonicParsing="false" text="iPad " />
                </items>
                <font>
                   <Font name="Segoe UI" size="18.0" />
@@ -69,8 +71,9 @@
             </MenuButton>
             <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iMac">
                <items>
-                  <MenuItem mnemonicParsing="false" text="Mac Mini" />
                   <MenuItem mnemonicParsing="false" text="iMac" />
+                  <MenuItem mnemonicParsing="false" text="Mac Studio" />
+                  <MenuItem mnemonicParsing="false" text="Mac Mini" />
                </items>
                <font>
                   <Font name="Segoe UI" size="18.0" />
@@ -88,6 +91,7 @@
                <items>
                   <MenuItem mnemonicParsing="false" text="MacBook Pro" />
                   <MenuItem mnemonicParsing="false" text="MacBook Air" />
+                  <MenuItem mnemonicParsing="false" text="MacBook Neo" />
                </items>
                <font>
                   <Font name="Segoe UI" size="18.0" />
@@ -103,8 +107,9 @@
             </MenuButton>
             <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Watch">
                <items>
-                  <MenuItem mnemonicParsing="false" text="Apple Watch Pro" />
-                  <MenuItem mnemonicParsing="false" text="Apple Watch SE" />
+                  <MenuItem mnemonicParsing="false" text="Apple Watch Ultra 3" />
+                  <MenuItem mnemonicParsing="false" text="Apple Watch Series 11" />
+                  <MenuItem mnemonicParsing="false" text="Apple Watch SE 3" />
                </items>
                <font>
                   <Font name="Segoe UI" size="18.0" />
@@ -121,8 +126,8 @@
             <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="AirPods">
                <items>
                   <MenuItem mnemonicParsing="false" text="AirPods Max" />
-                  <MenuItem mnemonicParsing="false" text="AirPods 4" />
                   <MenuItem mnemonicParsing="false" text="AirPods Pro 3" />
+                  <MenuItem mnemonicParsing="false" text="AirPods 4" />
                </items>
                <font>
                   <Font name="Segoe UI" size="18.0" />

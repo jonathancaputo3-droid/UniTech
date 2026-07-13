@@ -8,7 +8,6 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
@@ -17,7 +16,7 @@
 <?import javafx.scene.text.Font?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<ScrollPane fitToWidth="true" hbarPolicy="ALWAYS" style="-fx-background-color: white;" stylesheets="@../Style/cupertino-light.css" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.iPadProductController" >
+<ScrollPane fitToWidth="true" hbarPolicy="ALWAYS" style="-fx-background-color: white;" stylesheets="@../Style/cupertino-light.css" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.iPadProductController">
    <content>
       <VBox style="-fx-background-color: #C4DEFF;">
          <children>
@@ -41,8 +40,9 @@
 
                         <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPhone">
                            <items>
+                              <MenuItem mnemonicParsing="false" text="iPhone 17 Pro" />
                               <MenuItem mnemonicParsing="false" text="iPhone 17" />
-                              <MenuItem mnemonicParsing="false" text="iPhone SE" />
+                              <MenuItem mnemonicParsing="false" text="iPhone Air" />
                            </items>
                            <font><Font name="Segoe UI" size="18.0" /></font>
                            <styleClass>
@@ -57,6 +57,7 @@
                            <items>
                               <MenuItem mnemonicParsing="false" text="iPad Pro" />
                               <MenuItem mnemonicParsing="false" text="iPad Air" />
+                              <MenuItem mnemonicParsing="false" text="iPad" />
                            </items>
                            <font><Font name="Segoe UI" size="18.0" /></font>
                            <styleClass>
@@ -67,10 +68,11 @@
                            <HBox.margin><Insets left="20.0" /></HBox.margin>
                         </MenuButton>
 
-                        <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iMac">
+                        <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Mac">
                            <items>
-                              <MenuItem mnemonicParsing="false" text="Mac Mini" />
                               <MenuItem mnemonicParsing="false" text="iMac" />
+                              <MenuItem mnemonicParsing="false" text="Mac Studio" />
+                              <MenuItem mnemonicParsing="false" text="Mac Mini" />
                            </items>
                            <font><Font name="Segoe UI" size="18.0" /></font>
                            <styleClass>
@@ -85,6 +87,7 @@
                            <items>
                               <MenuItem mnemonicParsing="false" text="MacBook Pro" />
                               <MenuItem mnemonicParsing="false" text="MacBook Air" />
+                              <MenuItem mnemonicParsing="false" text="MacBook Neo" />
                            </items>
                            <font><Font name="Segoe UI" size="18.0" /></font>
                            <styleClass>
@@ -97,8 +100,9 @@
 
                         <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Watch">
                            <items>
-                              <MenuItem mnemonicParsing="false" text="Apple Watch Pro" />
-                              <MenuItem mnemonicParsing="false" text="Apple Watch SE" />
+                              <MenuItem mnemonicParsing="false" text="Apple Watch Pro 3" />
+                              <MenuItem mnemonicParsing="false" text="Apple Watch Series 11" />
+                              <MenuItem mnemonicParsing="false" text="Apple Watch SE 3" />
                            </items>
                            <font><Font name="Segoe UI" size="18.0" /></font>
                            <styleClass>
@@ -111,7 +115,8 @@
 
                         <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="AirPods">
                            <items>
-                              <MenuItem mnemonicParsing="false" text="AirPods Max" />
+                              <MenuItem mnemonicParsing="false" text="AirPods Max 2" />
+                              <MenuItem mnemonicParsing="false" text="AirPods Pro 3" />
                               <MenuItem mnemonicParsing="false" text="AirPods 4" />
                            </items>
                            <font><Font name="Segoe UI" size="18.0" /></font>
@@ -151,7 +156,7 @@
                            <children>
                               <ImageView fitHeight="488.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../it/uid/unitech/Images/iPad%20Pro_ipdProcuct.png" />
+                                    <Image url="@../it/uid/unitech/Images/iPad%20Pro%20Nero.png" />
                                  </image>
                               </ImageView>
                               <Label text="iPad Pro">
@@ -165,7 +170,7 @@
                                  </font>
                               </Label>
                               <Separator prefWidth="319.0" />
-                              <Button maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" styleClass="accent" text="Aggiungi al carrello" onMouseClicked="#aggiungiIPadPro">
+                              <Button maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onMouseClicked="#aggiungiIPadPro" styleClass="accent" text="Aggiungi al carrello">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
@@ -176,7 +181,7 @@
                            <children>
                               <ImageView fitHeight="488.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../it/uid/unitech/Images/iPad%20Air_ipdProcuct.png" />
+                                    <Image url="@../it/uid/unitech/Images/iPad%20Air%20Azzurro.png" />
                                  </image>
                               </ImageView>
                               <Label text="iPad Air">
@@ -190,7 +195,7 @@
                                  </font>
                               </Label>
                               <Separator prefWidth="319.0" />
-                              <Button mnemonicParsing="false" styleClass="accent" text="Aggiungi al carrello"  onMouseClicked="#aggiungiIPadAir">
+                              <Button mnemonicParsing="false" onMouseClicked="#aggiungiIPadAir" styleClass="accent" text="Aggiungi al carrello">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
@@ -204,7 +209,7 @@
                            <children>
                               <ImageView fitHeight="488.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../it/uid/unitech/Images/iPad_ipdProcuct.png" />
+                                    <Image url="@../it/uid/unitech/Images/iPad%20Argento.png" />
                                  </image>
                               </ImageView>
                               <Label text="iPad">
@@ -218,7 +223,7 @@
                                  </font>
                               </Label>
                               <Separator prefWidth="319.0" />
-                              <Button mnemonicParsing="false" styleClass="accent" text="Aggiungi al carrello" onMouseClicked="#aggiungiIPadBase">
+                              <Button mnemonicParsing="false" onMouseClicked="#aggiungiIPadBase" styleClass="accent" text="Aggiungi al carrello">
                                  <font>
                                     <Font size="18.0" />
                                  </font>

@@ -8,7 +8,6 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
@@ -41,8 +40,9 @@
 
                         <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPhone">
                            <items>
+                              <MenuItem mnemonicParsing="false" text="iPhone 17 Pro" />
                               <MenuItem mnemonicParsing="false" text="iPhone 17" />
-                              <MenuItem mnemonicParsing="false" text="iPhone SE" />
+                              <MenuItem mnemonicParsing="false" text="iPhone Air" />
                            </items>
                            <font><Font name="Segoe UI" size="18.0" /></font>
                            <styleClass>
@@ -57,6 +57,7 @@
                            <items>
                               <MenuItem mnemonicParsing="false" text="iPad Pro" />
                               <MenuItem mnemonicParsing="false" text="iPad Air" />
+                              <MenuItem mnemonicParsing="false" text="iPad" />
                            </items>
                            <font><Font name="Segoe UI" size="18.0" /></font>
                            <styleClass>
@@ -67,10 +68,11 @@
                            <HBox.margin><Insets left="20.0" /></HBox.margin>
                         </MenuButton>
 
-                        <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iMac">
+                        <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Mac">
                            <items>
-                              <MenuItem mnemonicParsing="false" text="Mac Mini" />
                               <MenuItem mnemonicParsing="false" text="iMac" />
+                              <MenuItem mnemonicParsing="false" text="Mac Studio" />
+                              <MenuItem mnemonicParsing="false" text="Mac Mini" />
                            </items>
                            <font><Font name="Segoe UI" size="18.0" /></font>
                            <styleClass>
@@ -85,6 +87,7 @@
                            <items>
                               <MenuItem mnemonicParsing="false" text="MacBook Pro" />
                               <MenuItem mnemonicParsing="false" text="MacBook Air" />
+                              <MenuItem mnemonicParsing="false" text="MacBook Neo" />
                            </items>
                            <font><Font name="Segoe UI" size="18.0" /></font>
                            <styleClass>
@@ -97,8 +100,9 @@
 
                         <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Watch">
                            <items>
-                              <MenuItem mnemonicParsing="false" text="Apple Watch Pro" />
-                              <MenuItem mnemonicParsing="false" text="Apple Watch SE" />
+                              <MenuItem mnemonicParsing="false" text="Apple Watch Pro 3" />
+                              <MenuItem mnemonicParsing="false" text="Apple Watch Series 11" />
+                              <MenuItem mnemonicParsing="false" text="Apple Watch SE 3" />
                            </items>
                            <font><Font name="Segoe UI" size="18.0" /></font>
                            <styleClass>
@@ -111,7 +115,8 @@
 
                         <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="AirPods">
                            <items>
-                              <MenuItem mnemonicParsing="false" text="AirPods Max" />
+                              <MenuItem mnemonicParsing="false" text="AirPods Max 2" />
+                              <MenuItem mnemonicParsing="false" text="AirPods Pro 3" />
                               <MenuItem mnemonicParsing="false" text="AirPods 4" />
                            </items>
                            <font><Font name="Segoe UI" size="18.0" /></font>
@@ -153,7 +158,7 @@
                            <children>
                               <ImageView fitHeight="488.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../it/uid/unitech/Images/WatchUltra3_AWHome.png" />
+                                    <Image url="@../it/uid/unitech/Images/Apple%20Watch%20Ultra%203%20Green.png" />
                                  </image>
                               </ImageView>
                               <Label text="Apple Watch Ultra 3">
@@ -167,7 +172,7 @@
                                  </font>
                               </Label>
                               <Separator prefWidth="319.0" />
-                              <Button maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" styleClass="accent" text="Aggiungi al carrello" onMouseClicked="#aggiungiWatchUltra3">
+                              <Button maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onMouseClicked="#aggiungiWatchUltra3" styleClass="accent" text="Aggiungi al carrello">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
@@ -179,7 +184,7 @@
                            <children>
                               <ImageView fitHeight="488.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../it/uid/unitech/Images/WatchSeries11_AWHome.png" />
+                                    <Image url="@../it/uid/unitech/Images/Apple%20Watch%20Series%2011%20Naturale.png" />
                                  </image>
                               </ImageView>
                               <Label text="Apple Watch Series 11">
@@ -193,7 +198,7 @@
                                  </font>
                               </Label>
                               <Separator prefWidth="319.0" />
-                              <Button mnemonicParsing="false" styleClass="accent" text="Aggiungi al carrello" onMouseClicked="#aggiungiWatchSeries11">
+                              <Button mnemonicParsing="false" onMouseClicked="#aggiungiWatchSeries11" styleClass="accent" text="Aggiungi al carrello">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
@@ -205,7 +210,7 @@
                            <children>
                               <ImageView fitHeight="488.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../it/uid/unitech/Images/WatchSE3_AWHome.png" />
+                                    <Image url="@../it/uid/unitech/Images/Apple%20Watch%20SE%203%20Blu.png" />
                                  </image>
                               </ImageView>
                               <Label text="Apple Watch SE 3">
@@ -219,7 +224,7 @@
                                  </font>
                               </Label>
                               <Separator prefWidth="319.0" />
-                              <Button mnemonicParsing="false" styleClass="accent" text="Aggiungi al carrello" onMouseClicked="#aggiungiWatchSE3">
+                              <Button mnemonicParsing="false" onMouseClicked="#aggiungiWatchSE3" styleClass="accent" text="Aggiungi al carrello">
                                  <font>
                                     <Font size="18.0" />
                                  </font>
@@ -262,7 +267,7 @@
                                     <Image url="@../it/uid/unitech/Images/HeartMonitoring.png" />
                                  </image>
                               </ImageView>
-                              <Label text="Notifiche ipertensione,&#10;ECG&#10; frequenza e ritmo cardiaco&#10;" textAlignment="CENTER">
+                              <Label text="Notifiche ipertensione,&#10; frequenza e ritmo cardiaco&#10;" textAlignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>
@@ -330,7 +335,7 @@
                                     <Image url="@../it/uid/unitech/Images/HeartMonitoring.png" />
                                  </image>
                               </ImageView>
-                              <Label text="Notifiche &#10; frequenza e ritmo cardiaco&#10;" textAlignment="CENTER">
+                              <Label text="Notifiche ipertensione,&#10; frequenza e ritmo cardiaco&#10;" textAlignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>
@@ -373,7 +378,7 @@
                                     <Image url="@../it/uid/unitech/Images/WaterResistant.png" />
                                  </image>
                               </ImageView>
-                              <Label text="Resistente all’acqua fino a 100 metri" textAlignment="CENTER" wrapText="true">
+                              <Label text="Resistente all’acqua fino a 50 metri" textAlignment="CENTER" wrapText="true">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>
@@ -388,7 +393,7 @@
                                     <Image url="@../it/uid/unitech/Images/DoubleCase.png" />
                                  </image>
                               </ImageView>
-                              <Label minHeight="50.0" text="Cassa da 46 mm o 42 mm&#10;in alluminio o titanio" textAlignment="CENTER" wrapText="true">
+                              <Label minHeight="50.0" text="Cassa da 44 mm o 40 mm&#10;in alluminio" textAlignment="CENTER" wrapText="true">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>
@@ -398,7 +403,7 @@
                                     <Image url="@../it/uid/unitech/Images/HeartMonitoring.png" />
                                  </image>
                               </ImageView>
-                              <Label text="Notifiche &#10; frequenza e ritmo cardiaco&#10;" textAlignment="CENTER">
+                              <Label text="Notifiche ipertensione,&#10; frequenza e ritmo cardiaco&#10;" textAlignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>
@@ -441,7 +446,7 @@
                                     <Image url="@../it/uid/unitech/Images/WaterResistant.png" />
                                  </image>
                               </ImageView>
-                              <Label text="Resistente all’acqua fino a 100 metri" textAlignment="CENTER" wrapText="true">
+                              <Label text="Resistente all’acqua fino a 50metri" textAlignment="CENTER" wrapText="true">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>
