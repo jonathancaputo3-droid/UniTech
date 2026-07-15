@@ -172,7 +172,7 @@
                <children>
                   <ImageView fx:id="immagineProdotto17" cache="true" cacheHint="QUALITY" fitHeight="400.0" fitWidth="481.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../it/uid/unitech/Images/iPhone%2017%20Pro%20Nero.png" />
+                        <Image url="@../it/uid/unitech/Images/iPhone 17 Pro Nero.png" />
                      </image>
                   </ImageView>
                   <HBox alignment="CENTER" spacing="10">
