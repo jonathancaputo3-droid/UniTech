@@ -453,6 +453,31 @@
 
    ========================================================================== */
 
+/* 1. Il contenitore principale rimane sempre trasparente */
+.split-menu-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+/* 2. Di base, sia il testo che la freccia sono trasparenti e senza bordi */
+.split-menu-button > .label,
+.split-menu-button > .arrow-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+}
+
+/* 3. Hover SOLO sulla scritta (Label a sinistra) */
+.split-menu-button > .label:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.05); /* Grigio chiaro */
+    -fx-background-radius: 5px 0 0 5px;        /* Arrotonda solo gli angoli esterni di sinistra */
+}
+
+/* 4. Hover SOLO sulla freccia (Arrow Button a destra) */
+.split-menu-button > .arrow-button:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.05); /* Grigio chiaro */
+    -fx-background-radius: 0 5px 5px 0;        /* Arrotonda solo gli angoli esterni di destra */
+}
 
 
 /* Base comune per Button e MenuButton */
@@ -627,36 +652,6 @@
    ALTRI CONTROLLI (TextField, ScrollPane e Icone)
 
    ========================================================================== */
-
-
-
-/* Casella di testo (Cerca) */
-
-.text-field {
-
-  -fx-background-color: -color-base-0;
-
-  -fx-background-radius: 6px;
-
-  -fx-padding: 6px 12px;
-
-  -fx-text-fill: -color-dark;
-
-}
-
-.text-field:focused {
-
-  -fx-background-color: -color-light;
-
-  -fx-border-color: -color-accent-5;
-
-  -fx-border-width: 1px;
-
-  -fx-border-radius: 6px;
-
-}
-
-
 
 /* Pannello di scorrimento principale */
 
