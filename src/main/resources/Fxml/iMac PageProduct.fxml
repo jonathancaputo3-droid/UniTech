@@ -1,158 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
-<?import org.kordamp.ikonli.javafx.*?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #C4DEFF;" stylesheets="@../Style/cupertino-light.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MacProductController">
+<VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #C4DEFF;" stylesheets="@../Style/cupertino-light.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MacProductController">
     <children>
-        <HBox alignment="CENTER" maxWidth="880.0" minHeight="54.0" prefHeight="54.0" style="-fx-border-radius: 10; -fx-border-color: black; -fx-background-radius: 10;" VBox.vgrow="NEVER">
-            <styleClass>
-                <String fx:value="bg-default" />
-                <String fx:value="border-default" />
-                <String fx:value="elevated-1" />
-            </styleClass>
-            <children>
-                <ImageView fx:id="logoIconiM" cache="true" cacheHint="QUALITY" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../it/uid/unitech/Images/UnitechLogo.png" />
-                    </image>
-                    <HBox.margin>
-                        <Insets left="30.0" />
-                    </HBox.margin>
-                </ImageView>
-                <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPhone">
-                    <items>
-                        <MenuItem mnemonicParsing="false" text="iPhone 17 Pro" />
-                        <MenuItem mnemonicParsing="false" text="iPhone 17" />
-                        <MenuItem mnemonicParsing="false" text="iPhone Air" />
-                    </items>
-                    <font>
-                        <Font name="Segoe UI" size="18.0" />
-                    </font>
-                    <styleClass>
-                        <String fx:value="button-outlined" />
-                        <String fx:value="barra-items" />
-                        <String fx:value="flat" />
-                    </styleClass>
-                    <HBox.margin>
-                        <Insets left="30.0" />
-                    </HBox.margin>
-                </MenuButton>
-                <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPad">
-                    <items>
-                        <MenuItem mnemonicParsing="false" text="iPad Pro" />
-                        <MenuItem mnemonicParsing="false" text="iPad Air" />
-                        <MenuItem mnemonicParsing="false" text="iPad" />
-                    </items>
-                    <font>
-                        <Font name="Segoe UI" size="18.0" />
-                    </font>
-                    <styleClass>
-                        <String fx:value="button-outlined" />
-                        <String fx:value="barra-items" />
-                        <String fx:value="flat" />
-                    </styleClass>
-                    <HBox.margin>
-                        <Insets left="20.0" />
-                    </HBox.margin>
-                </MenuButton>
-                <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Mac">
-                    <items>
-                        <MenuItem mnemonicParsing="false" text="iMac" />
-                        <MenuItem mnemonicParsing="false" text="Mac Studio" />
-                        <MenuItem mnemonicParsing="false" text="Mac Mini" />
-                    </items>
-                    <font>
-                        <Font name="Segoe UI" size="18.0" />
-                    </font>
-                    <styleClass>
-                        <String fx:value="button-outlined" />
-                        <String fx:value="barra-items" />
-                        <String fx:value="flat" />
-                    </styleClass>
-                    <HBox.margin>
-                        <Insets left="20.0" />
-                    </HBox.margin>
-                </MenuButton>
-                <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="MacBook">
-                    <items>
-                        <MenuItem mnemonicParsing="false" text="MacBook Pro" />
-                        <MenuItem mnemonicParsing="false" text="MacBook Air" />
-                        <MenuItem mnemonicParsing="false" text="MacBook Neo" />
-                    </items>
-                    <font>
-                        <Font name="Segoe UI" size="18.0" />
-                    </font>
-                    <styleClass>
-                        <String fx:value="button-outlined" />
-                        <String fx:value="barra-items" />
-                        <String fx:value="flat" />
-                    </styleClass>
-                    <HBox.margin>
-                        <Insets left="20.0" />
-                    </HBox.margin>
-                </MenuButton>
-                <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Watch">
-                    <items>
-                        <MenuItem mnemonicParsing="false" text="Apple Watch Ultra 3" />
-                        <MenuItem mnemonicParsing="false" text="Apple Watch Series 11" />
-                        <MenuItem mnemonicParsing="false" text="Apple Watch SE 3" />
-                    </items>
-                    <font>
-                        <Font name="Segoe UI" size="18.0" />
-                    </font>
-                    <styleClass>
-                        <String fx:value="button-outlined" />
-                        <String fx:value="barra-items" />
-                        <String fx:value="flat" />
-                    </styleClass>
-                    <HBox.margin>
-                        <Insets left="20.0" />
-                    </HBox.margin>
-                </MenuButton>
-                <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="AirPods">
-                    <items>
-                        <MenuItem mnemonicParsing="false" text="AirPods Max" />
-                        <MenuItem mnemonicParsing="false" text="AirPods Pro 3" />
-                        <MenuItem mnemonicParsing="false" text="AirPods 4" />
-                    </items>
-                    <font>
-                        <Font name="Segoe UI" size="18.0" />
-                    </font>
-                    <styleClass>
-                        <String fx:value="button-outlined" />
-                        <String fx:value="barra-items" />
-                        <String fx:value="flat" />
-                    </styleClass>
-                    <HBox.margin>
-                        <Insets />
-                    </HBox.margin>
-                </MenuButton>
-                <Region HBox.hgrow="ALWAYS">
-                    <HBox.margin>
-                        <Insets left="30.0" />
-                    </HBox.margin>
-                </Region>
-                <FontIcon iconColor="#1d1d1f" iconLiteral="fas-shopping-bag" iconSize="22" onMouseClicked="#apriCarrello">
-                    <HBox.margin>
-                        <Insets right="24.0" />
-                    </HBox.margin>
-                </FontIcon>
-                <FontIcon fx:id="loginIconiM" iconColor="#1d1d1f" iconLiteral="fas-user-alt" iconSize="22" />
-            </children>
-            <VBox.margin>
-                <Insets top="30.0" />
-            </VBox.margin>
-            <padding>
-                <Insets left="2.0" right="20.0" />
-            </padding>
-        </HBox>
+      <HBox alignment="CENTER_LEFT" maxWidth="880.0" minHeight="54.0" prefHeight="54.0" style="-fx-border-radius: 10; -fx-border-color: black; -fx-background-radius: 10;">
+         <styleClass>
+            <String fx:value="bg-default" />
+            <String fx:value="border-default" />
+            <String fx:value="elevated-1" />
+         </styleClass>
+         <children>
+            <ImageView fx:id="logoIconiM" cache="true" cacheHint="QUALITY" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../it/uid/unitech/Images/UnitechLogo.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </ImageView>
+            <SplitMenuButton fx:id="iPhoneHomeiMac" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPhone">
+               <items>
+                  <MenuItem fx:id="iPhone17ProHomeiMac" mnemonicParsing="false" text="iPhone 17 Pro" />
+                  <MenuItem fx:id="iPhone17HomeiMac" mnemonicParsing="false" text="iPhone 17" />
+                  <MenuItem fx:id="iPhoneAirHomeiMac" mnemonicParsing="false" text="iPhone Air" />
+               </items>
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="button-outlined" />
+                  <String fx:value="barra-items" />
+                  <String fx:value="flat" />
+               </styleClass>
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </SplitMenuButton>
+            <SplitMenuButton fx:id="iPadHomeiMac" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPad">
+               <items>
+                  <MenuItem fx:id="iPadProHomeiMac" mnemonicParsing="false" text="iPad Pro" />
+                  <MenuItem fx:id="iPadAirHomeiMac" mnemonicParsing="false" text="iPad Air" />
+                  <MenuItem fx:id="iPadBaseHomeiMac" mnemonicParsing="false" text="iPad" />
+               </items>
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="button-outlined" />
+                  <String fx:value="barra-items" />
+                  <String fx:value="flat" />
+               </styleClass>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </SplitMenuButton>
+            <SplitMenuButton fx:id="MacHomeiMac" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Mac">
+               <items>
+                  <MenuItem fx:id="iMacHomeiMac" mnemonicParsing="false" text="iMac" />
+                  <MenuItem fx:id="MacStudioHomeiMac" mnemonicParsing="false" text="Mac Studio" />
+                  <MenuItem fx:id="MacMiniHomeiMac" mnemonicParsing="false" text="Mac Mini" />
+               </items>
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="button-outlined" />
+                  <String fx:value="barra-items" />
+                  <String fx:value="flat" />
+               </styleClass>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </SplitMenuButton>
+            <SplitMenuButton fx:id="MacBookHomeiMac" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="MacBook">
+               <items>
+                  <MenuItem fx:id="MacBookProHomeiMac" mnemonicParsing="false" text="MacBook Pro" />
+                  <MenuItem fx:id="MacBookAirHomeiMac" mnemonicParsing="false" text="MacBook Air" />
+                  <MenuItem fx:id="MacBookNeoHomeiMac" mnemonicParsing="false" text="MacBook Neo" />
+               </items>
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="button-outlined" />
+                  <String fx:value="barra-items" />
+                  <String fx:value="flat" />
+               </styleClass>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </SplitMenuButton>
+            <SplitMenuButton fx:id="WatchHomeiMac" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Watch">
+               <items>
+                  <MenuItem fx:id="WatchUltra3HomeiMac" mnemonicParsing="false" text="Apple Watch Ultra 3" />
+                  <MenuItem fx:id="WatchSeries11HomeiMac" mnemonicParsing="false" text="Apple Watch Series 11" />
+                  <MenuItem fx:id="WatchSE3HomeiMac" mnemonicParsing="false" text="Apple Watch SE 3" />
+               </items>
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="button-outlined" />
+                  <String fx:value="barra-items" />
+                  <String fx:value="flat" />
+               </styleClass>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </SplitMenuButton>
+            <SplitMenuButton fx:id="AirPodsHomeiMac" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="AirPods">
+               <items>
+                  <MenuItem fx:id="AirPodsMax2HomeiMac" mnemonicParsing="false" text="AirPods Max 2" />
+                  <MenuItem fx:id="AirPodsPro3HomeiMac" mnemonicParsing="false" text="AirPods Pro 3" />
+                  <MenuItem fx:id="AirPods4HomeiMac" mnemonicParsing="false" text="AirPods 4" />
+               </items>
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="button-outlined" />
+                  <String fx:value="barra-items" />
+                  <String fx:value="flat" />
+               </styleClass>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </SplitMenuButton>
+            <Region HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </Region>
+            <FontIcon iconColor="#1d1d1f" iconLiteral="fas-shopping-bag" iconSize="22">
+               <HBox.margin>
+                  <Insets right="24.0" />
+               </HBox.margin>
+            </FontIcon>
+            <FontIcon fx:id="loginIconiM" iconColor="#1d1d1f" iconLiteral="fas-user-alt" iconSize="22" />
+         </children>
+         <padding>
+            <Insets left="2.0" right="20.0" />
+         </padding>
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin>
+      </HBox>
         <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1280.0" style="-fx-background-color: #C4DEFF;" stylesheets="@../Style/cupertino-light.css" VBox.vgrow="ALWAYS">
             <children>
                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="550.0" style="-fx-background-color: #EEF2FB; -fx-background-radius: 20; -fx-border-radius: 20;">

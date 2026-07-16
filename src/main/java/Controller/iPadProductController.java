@@ -18,6 +18,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Circle;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import Util.AnimazioneUtil;
@@ -91,7 +92,7 @@ public class iPadProductController {
         fadeOut.setOnFinished(e -> {
             try {
                 FXMLLoader loader = new FXMLLoader(
-                        getClass().getResource("/Fxml/Carrello.fxml")
+                        getClass().getResource("/fxml/Carrello.fxml")
                 );
 
                 Parent newRoot = loader.load();
@@ -133,6 +134,7 @@ public class iPadProductController {
     private Button btn256_iPad;
     @FXML
     private Button btn512_iPad;
+
         // Navigazione (sezione iPad)
     @FXML private SplitMenuButton iPhoneHomeiPad;
     @FXML private SplitMenuButton iPadHomeiPad;
@@ -140,6 +142,9 @@ public class iPadProductController {
     @FXML private SplitMenuButton MacBookHomeiPad;
     @FXML private SplitMenuButton WatchHomeiPad;
     @FXML private SplitMenuButton AirPodsHomeiPad;
+    @FXML private ImageView logoIconiPad;
+    @FXML private FontIcon loginIconiPad;
+
 
     @FXML private MenuItem iPhone17ProHomeiPad;
     @FXML private MenuItem iPhone17HomeiPad;
@@ -159,6 +164,7 @@ public class iPadProductController {
     @FXML private MenuItem AirPodsMax2HomeiPad;
     @FXML private MenuItem AirPodsPro3HomeiPad;
     @FXML private MenuItem AirPods4HomeiPad;
+    
 
 
     //Dati iPad Air
@@ -192,6 +198,8 @@ public class iPadProductController {
     @FXML private SplitMenuButton MacBookHomeiPadAir;
     @FXML private SplitMenuButton WatchHomeiPadAir;
     @FXML private SplitMenuButton AirPodsHomeiPadAir;
+    @FXML private ImageView logoIconiPadAir;
+    @FXML private FontIcon loginIconiPadAir;
 
     @FXML private MenuItem iPhone17ProHomeiPadAir;
     @FXML private MenuItem iPhone17HomeiPadAir;
@@ -240,6 +248,8 @@ public class iPadProductController {
     @FXML private SplitMenuButton MacBookHomeiPadPro;
     @FXML private SplitMenuButton WatchHomeiPadPro;
     @FXML private SplitMenuButton AirPodsHomeiPadPro;
+    @FXML private ImageView logoIconiPadPro;
+    @FXML private FontIcon loginIconiPadPro;
 
     @FXML private MenuItem iPhone17ProHomeiPadPro;
     @FXML private MenuItem iPhone17HomeiPadPro;
@@ -261,6 +271,7 @@ public class iPadProductController {
     @FXML private MenuItem AirPods4HomeiPadPro;
 
 
+
     public void initialize() {
         //Prodotto iPad
         AnimazioneUtil.aggiungiClickColore(circleArgentoiPad, "Argento", "/it/uid/unitech/Images/iPad Argento.png", coloreLabeliPad, immagineProdottoiPad);
@@ -277,6 +288,10 @@ public class iPadProductController {
         AnimazioneUtil.verificaCambiaScena(MacBookHomeiPad, "/fxml/MacBook Product.fxml");
         AnimazioneUtil.verificaCambiaScena(WatchHomeiPad, "/fxml/Watch Product.fxml");
         AnimazioneUtil.verificaCambiaScena(AirPodsHomeiPad, "/fxml/AirPods Product.fxml");
+        AnimazioneUtil.verificaCambiaScena(logoIconiPad, "/fxml/Home.fxml");
+        AnimazioneUtil.verificaCambiaScena(loginIconiPad, "/fxml/ProfileOption.fxml");
+        AnimazioneUtil.aggiungiAnimazione(logoIconiPad);
+        AnimazioneUtil.aggiungiAnimazione(loginIconiPad);
 
         AnimazioneUtil.verificaCambiaScenaItem(iPhone17ProHomeiPad, "/fxml/iPhone 17 Pro PageProduct.fxml");
         AnimazioneUtil.verificaCambiaScenaItem(iPhone17HomeiPad, "/fxml/iPhone 17 PageProduct.fxml");
@@ -312,6 +327,10 @@ public class iPadProductController {
         AnimazioneUtil.verificaCambiaScena(MacBookHomeiPadAir, "/fxml/MacBook Product.fxml");
         AnimazioneUtil.verificaCambiaScena(WatchHomeiPadAir, "/fxml/Watch Product.fxml");
         AnimazioneUtil.verificaCambiaScena(AirPodsHomeiPadAir, "/fxml/AirPods Product.fxml");
+        AnimazioneUtil.verificaCambiaScena(logoIconiPadAir, "/fxml/Home.fxml");
+        AnimazioneUtil.verificaCambiaScena(loginIconiPadAir, "/fxml/ProfileOption.fxml");
+        AnimazioneUtil.aggiungiAnimazione(logoIconiPadAir);
+        AnimazioneUtil.aggiungiAnimazione(loginIconiPadAir);
 
         AnimazioneUtil.verificaCambiaScenaItem(iPhone17ProHomeiPadAir, "/fxml/iPhone 17 Pro PageProduct.fxml");
         AnimazioneUtil.verificaCambiaScenaItem(iPhone17HomeiPadAir, "/fxml/iPhone 17 PageProduct.fxml");
@@ -346,6 +365,10 @@ public class iPadProductController {
         AnimazioneUtil.verificaCambiaScena(MacBookHomeiPadPro, "/fxml/MacBook Product.fxml");
         AnimazioneUtil.verificaCambiaScena(WatchHomeiPadPro, "/fxml/Watch Product.fxml");
         AnimazioneUtil.verificaCambiaScena(AirPodsHomeiPadPro, "/fxml/AirPods Product.fxml");
+        AnimazioneUtil.verificaCambiaScena(logoIconiPadPro, "/fxml/Home.fxml");
+        AnimazioneUtil.verificaCambiaScena(loginIconiPadPro, "/fxml/ProfileOption.fxml");
+        AnimazioneUtil.aggiungiAnimazione(logoIconiPadPro);
+        AnimazioneUtil.aggiungiAnimazione(loginIconiPadPro);
 
         AnimazioneUtil.verificaCambiaScenaItem(iPhone17ProHomeiPadPro, "/fxml/iPhone 17 Pro PageProduct.fxml");
         AnimazioneUtil.verificaCambiaScenaItem(iPhone17HomeiPadPro, "/fxml/iPhone 17 PageProduct.fxml");
@@ -365,5 +388,7 @@ public class iPadProductController {
         AnimazioneUtil.verificaCambiaScenaItem(AirPodsMax2HomeiPadPro, "/fxml/AirPods Max 2 PageProduct.fxml");
         AnimazioneUtil.verificaCambiaScenaItem(AirPodsPro3HomeiPadPro, "/fxml/AirPods Pro 3 PageProduct.fxml");
         AnimazioneUtil.verificaCambiaScenaItem(AirPods4HomeiPadPro, "/fxml/AirPods 4 PageProduct.fxml");
+
+
     }
 }

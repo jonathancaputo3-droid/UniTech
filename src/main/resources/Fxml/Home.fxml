@@ -5,9 +5,9 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitMenuButton?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
@@ -34,7 +34,7 @@
                         <String fx:value="elevated-1" />
                     </styleClass>
                     <children>
-                        <ImageView cache="true" cacheHint="QUALITY" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="logoicon" cache="true" cacheHint="QUALITY" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../it/uid/unitech/Images/UnitechLogo.png" />
                             </image>
@@ -43,11 +43,11 @@
                             </HBox.margin>
                         </ImageView>
 
-                        <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPhone">
+                        <SplitMenuButton fx:id="iPhoneHome" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPhone">
                             <items>
-                                <MenuItem fx:id="iPhone17" mnemonicParsing="false" text="iPhone 17 Pro" />
-                                <MenuItem mnemonicParsing="false" text="iPhone 17" />
-                        <MenuItem mnemonicParsing="false" text="iPhone Air" />
+                                <MenuItem fx:id="iPhone17ProHome" mnemonicParsing="false" text="iPhone 17 Pro" />
+                                <MenuItem fx:id="iPhone17Home" mnemonicParsing="false" text="iPhone 17" />
+                        <MenuItem fx:id="iPhoneAirHome" mnemonicParsing="false" text="iPhone Air" />
                             </items>
                             <font><Font name="Segoe UI" size="18.0" /></font>
                             <styleClass>
@@ -56,13 +56,13 @@
                                 <String fx:value="flat" />
                             </styleClass>
                             <HBox.margin><Insets left="30.0" /></HBox.margin>
-                        </MenuButton>
+                        </SplitMenuButton>
 
-                        <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPad">
+                        <SplitMenuButton fx:id="iPadHome" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPad">
                             <items>
-                                <MenuItem mnemonicParsing="false" text="iPad Pro" />
-                                <MenuItem mnemonicParsing="false" text="iPad Air" />
-                        <MenuItem mnemonicParsing="false" text="iPad" />
+                                <MenuItem fx:id="iPadProHome" mnemonicParsing="false" text="iPad Pro" />
+                                <MenuItem fx:id="iPadAirHome" mnemonicParsing="false" text="iPad Air" />
+                        <MenuItem fx:id="iPadBaseHome" mnemonicParsing="false" text="iPad" />
                             </items>
                             <font><Font name="Segoe UI" size="18.0" /></font>
                             <styleClass>
@@ -71,13 +71,13 @@
                                 <String fx:value="flat" />
                             </styleClass>
                             <HBox.margin><Insets left="20.0" /></HBox.margin>
-                        </MenuButton>
+                        </SplitMenuButton>
 
-                        <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Mac">
+                        <SplitMenuButton fx:id="MacHome" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Mac">
                             <items>
-                                <MenuItem mnemonicParsing="false" text="iMac" />
-                        <MenuItem mnemonicParsing="false" text="Mac Studio" />
-                                <MenuItem mnemonicParsing="false" text="Mac Mini" />
+                                <MenuItem fx:id="iMacHome" mnemonicParsing="false" text="iMac" />
+                        <MenuItem fx:id="MacStudioHome" mnemonicParsing="false" text="Mac Studio" />
+                                <MenuItem fx:id="MacMiniHome" mnemonicParsing="false" text="Mac Mini" />
                             </items>
                             <font><Font name="Segoe UI" size="18.0" /></font>
                             <styleClass>
@@ -86,13 +86,13 @@
                                 <String fx:value="flat" />
                             </styleClass>
                             <HBox.margin><Insets left="20.0" /></HBox.margin>
-                        </MenuButton>
+                        </SplitMenuButton>
 
-                        <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="MacBook">
+                        <SplitMenuButton fx:id="MacBookHome" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="MacBook">
                             <items>
-                                <MenuItem mnemonicParsing="false" text="MacBook Pro" />
-                                <MenuItem mnemonicParsing="false" text="MacBook Air" />
-                        <MenuItem mnemonicParsing="false" text="MacBook Neo" />
+                                <MenuItem fx:id="MacBookProHome" mnemonicParsing="false" text="MacBook Pro" />
+                                <MenuItem fx:id="MacBookAirHome" mnemonicParsing="false" text="MacBook Air" />
+                        <MenuItem fx:id="MacBookNeoHome" mnemonicParsing="false" text="MacBook Neo" />
                             </items>
                             <font><Font name="Segoe UI" size="18.0" /></font>
                             <styleClass>
@@ -101,13 +101,13 @@
                                 <String fx:value="flat" />
                             </styleClass>
                             <HBox.margin><Insets left="20.0" /></HBox.margin>
-                        </MenuButton>
+                        </SplitMenuButton>
 
-                        <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Watch">
+                        <SplitMenuButton fx:id="WatchHome" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Watch">
                             <items>
-                                <MenuItem mnemonicParsing="false" text="Apple Watch Ultra 3" />
-                        <MenuItem mnemonicParsing="false" text="Apple Watch Series 11" />
-                                <MenuItem mnemonicParsing="false" text="Apple Watch SE 3" />
+                                <MenuItem fx:id="WatchUltra3Home" mnemonicParsing="false" text="Apple Watch Ultra 3" />
+                        <MenuItem fx:id="WatchSeries11Home" mnemonicParsing="false" text="Apple Watch Series 11" />
+                                <MenuItem fx:id="WatchSE3Home" mnemonicParsing="false" text="Apple Watch SE 3" />
                             </items>
                             <font><Font name="Segoe UI" size="18.0" /></font>
                             <styleClass>
@@ -116,13 +116,13 @@
                                 <String fx:value="flat" />
                             </styleClass>
                             <HBox.margin><Insets left="20.0" /></HBox.margin>
-                        </MenuButton>
+                        </SplitMenuButton>
 
-                        <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="AirPods">
+                        <SplitMenuButton fx:id="AirPodsHome" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="AirPods">
                             <items>
-                                <MenuItem mnemonicParsing="false" text="AirPods Max 2" />
-                        <MenuItem mnemonicParsing="false" text="AirPods Pro 3" />
-                                <MenuItem mnemonicParsing="false" text="AirPods 4" />
+                                <MenuItem fx:id="AirPodsMax2Home" mnemonicParsing="false" text="AirPods Max 2" />
+                        <MenuItem fx:id="AirPodsPro3Home" mnemonicParsing="false" text="AirPods Pro 3" />
+                                <MenuItem fx:id="AirPods4Home" mnemonicParsing="false" text="AirPods 4" />
                             </items>
                             <font><Font name="Segoe UI" size="18.0" /></font>
                             <styleClass>
@@ -131,7 +131,7 @@
                                 <String fx:value="flat" />
                             </styleClass>
                             <HBox.margin><Insets left="20.0" /></HBox.margin>
-                        </MenuButton>
+                        </SplitMenuButton>
 
                         <Region HBox.hgrow="ALWAYS">
                             <HBox.margin><Insets left="30.0" /></HBox.margin>
@@ -159,19 +159,12 @@
                         </Label>
                         <HBox alignment="CENTER" spacing="20.0">
                             <children>
-                                <Button minHeight="40.0" minWidth="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Scopri di più" textFill="WHITE">
+                                <Button fx:id="DiscoveriPhone17Home" minHeight="40.0" minWidth="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Scopri di più" textFill="WHITE">
                                     <styleClass>
                                         <String fx:value="button" />
                                         <String fx:value="accent" />
                                     </styleClass>
                                     <font><Font name="System Bold" size="18.0" /></font>
-                                </Button>
-                                <Button minHeight="40.0" minWidth="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Acquista" textFill="#0039e3">
-                                    <styleClass>
-                                        <String fx:value="accent" />
-                                        <String fx:value="button-outlined" />
-                                    </styleClass>
-                                    <font><Font size="18.0" /></font>
                                 </Button>
                             </children>
                             <VBox.margin><Insets bottom="20.0" top="10.0" /></VBox.margin>
@@ -204,7 +197,7 @@
                         </Label>
                         <HBox alignment="CENTER" spacing="20.0">
                             <children>
-                                <Button minHeight="40.0" minWidth="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Scopri di più" textFill="WHITE">
+                                <Button fx:id="DiscoveriPadAirHome" minHeight="40.0" minWidth="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Scopri di più" textFill="WHITE">
                                     <styleClass>
                                         <String fx:value="button" />
                                         <String fx:value="accent" />
@@ -212,13 +205,6 @@
                                     <font>
                                         <Font name="System Bold" size="18.0" />
                                     </font>
-                                </Button>
-                                <Button minHeight="40.0" minWidth="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Acquista" textFill="#0039e3">
-                                    <styleClass>
-                                        <String fx:value="accent" />
-                                        <String fx:value="button-outlined" />
-                                    </styleClass>
-                                    <font><Font size="18.0" /></font>
                                 </Button>
                             </children>
                             <VBox.margin><Insets bottom="20.0" top="10.0" /></VBox.margin>
@@ -250,19 +236,12 @@
                                 </Label>
                                 <HBox alignment="CENTER" spacing="20.0">
                                     <children>
-                                        <Button minHeight="40.0" minWidth="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Scopri di più" textFill="WHITE">
+                                        <Button fx:id="DiscoverAirPods4Home" minHeight="40.0" minWidth="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Scopri di più" textFill="WHITE">
                                             <styleClass>
                                                 <String fx:value="button" />
                                                 <String fx:value="accent" />
                                             </styleClass>
                                             <font><Font name="System Bold" size="18.0" /></font>
-                                        </Button>
-                                        <Button minHeight="40.0" minWidth="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Acquista" textFill="#0039e3">
-                                            <styleClass>
-                                                <String fx:value="accent" />
-                                                <String fx:value="button-outlined" />
-                                            </styleClass>
-                                            <font><Font size="18.0" /></font>
                                         </Button>
                                     </children>
                                     <VBox.margin><Insets bottom="15.0" top="5.0" /></VBox.margin>
@@ -284,7 +263,7 @@
                                 <Insets bottom="20.0" left="20.0" right="20.0" top="50.0" />
                             </padding>
                             <children>
-                                <Label text="Apple Watch">
+                                <Label text="Apple Watch Series 11">
                                     <font><Font name="Segoe UI Bold" size="56.0" /></font>
                                 </Label>
                                 <Label text="Il meglio per monitorare la tua salute">
@@ -292,19 +271,12 @@
                                 </Label>
                                 <HBox alignment="CENTER" spacing="20.0">
                                     <children>
-                                        <Button minHeight="40.0" minWidth="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Scopri di più" textFill="WHITE">
+                                        <Button fx:id="DiscoverAppleWatchSeries11Home" minHeight="40.0" minWidth="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Scopri di più" textFill="WHITE">
                                             <styleClass>
                                                 <String fx:value="button" />
                                                 <String fx:value="accent" />
                                             </styleClass>
                                             <font><Font name="System Bold" size="18.0" /></font>
-                                        </Button>
-                                        <Button minHeight="40.0" minWidth="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Acquista" textFill="#0039e3">
-                                            <styleClass>
-                                                <String fx:value="accent" />
-                                                <String fx:value="button-outlined" />
-                                            </styleClass>
-                                            <font><Font size="18.0" /></font>
                                         </Button>
                                     </children>
                                     <VBox.margin><Insets bottom="15.0" top="5.0" /></VBox.margin>
@@ -336,19 +308,12 @@
                         </Label>
                         <HBox alignment="CENTER" spacing="20.0">
                             <children>
-                                <Button minHeight="40.0" minWidth="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Scopri di più" textFill="WHITE">
+                                <Button fx:id="DiscoverMacBookAirHome" minHeight="40.0" minWidth="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Scopri di più" textFill="WHITE">
                                     <styleClass>
                                         <String fx:value="button" />
                                         <String fx:value="accent" />
                                     </styleClass>
                                     <font><Font name="System Bold" size="18.0" /></font>
-                                </Button>
-                                <Button minHeight="40.0" minWidth="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Acquista" textFill="#0039e3">
-                                    <styleClass>
-                                        <String fx:value="accent" />
-                                        <String fx:value="button-outlined" />
-                                    </styleClass>
-                                    <font><Font size="18.0" /></font>
                                 </Button>
                             </children>
                             <VBox.margin><Insets bottom="20.0" top="10.0" /></VBox.margin>
@@ -378,19 +343,12 @@
                         </Label>
                         <HBox alignment="CENTER" spacing="20.0">
                             <children>
-                                <Button minHeight="40.0" minWidth="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Scopri di più" textFill="WHITE">
+                                <Button fx:id="DiscoveriMacHome" minHeight="40.0" minWidth="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Scopri di più" textFill="WHITE">
                                     <styleClass>
                                         <String fx:value="button" />
                                         <String fx:value="accent" />
                                     </styleClass>
                                     <font><Font name="System Bold" size="18.0" /></font>
-                                </Button>
-                                <Button minHeight="40.0" minWidth="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="160.0" text="Acquista" textFill="#0039e3">
-                                    <styleClass>
-                                        <String fx:value="accent" />
-                                        <String fx:value="button-outlined" />
-                                    </styleClass>
-                                    <font><Font size="18.0" /></font>
                                 </Button>
                             </children>
                             <VBox.margin><Insets bottom="20.0" top="10.0" /></VBox.margin>

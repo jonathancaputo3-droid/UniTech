@@ -74,7 +74,7 @@ public class MacBookController {
 
         fadeOut.setOnFinished(e -> {
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Carrello.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Carrello.fxml"));
                 Parent newRoot = loader.load();
                 newRoot.setOpacity(0.0);
                 scene.setRoot(newRoot);
@@ -260,6 +260,8 @@ public class MacBookController {
 
         AnimazioneUtil.verificaCambiaScena(loginIconMacBookPro14, "/fxml/ProfileOption.fxml");
         AnimazioneUtil.verificaCambiaScena(logoiconMacBookPro14, "/fxml/Home.fxml");
+        AnimazioneUtil.aggiungiAnimazione(logoiconMacBookPro14);
+        AnimazioneUtil.aggiungiAnimazione(loginIconMacBookPro14);
 
 
         // ==========================================
@@ -302,6 +304,8 @@ public class MacBookController {
 
         AnimazioneUtil.verificaCambiaScena(loginIconMacBookAir13, "/fxml/ProfileOption.fxml");
         AnimazioneUtil.verificaCambiaScena(logoiconMacBookAir13, "/fxml/Home.fxml");
+        AnimazioneUtil.aggiungiAnimazione(logoiconMacBookAir13);
+        AnimazioneUtil.aggiungiAnimazione(loginIconMacBookAir13);
 
 
         // ==========================================
@@ -343,5 +347,7 @@ public class MacBookController {
 
         AnimazioneUtil.verificaCambiaScena(loginIconMacBookNeo, "/fxml/ProfileOption.fxml");
         AnimazioneUtil.verificaCambiaScena(logoiconMacBookNeo, "/fxml/Home.fxml");
+        AnimazioneUtil.aggiungiAnimazione(logoiconMacBookNeo);
+        AnimazioneUtil.aggiungiAnimazione(loginIconMacBookNeo);
     }
 }

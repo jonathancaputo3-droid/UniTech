@@ -4,10 +4,10 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitMenuButton?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
@@ -16,129 +16,148 @@
 <?import javafx.scene.text.Font?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<ScrollPane fitToWidth="true" hbarPolicy="ALWAYS" style="-fx-background-color: white;" stylesheets="@../Style/cupertino-light.css" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.iPadProductController">
+<ScrollPane fitToWidth="true" hbarPolicy="ALWAYS" style="-fx-background-color: white;" stylesheets="@../Style/cupertino-light.css" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GenericProductController">
    <content>
       <VBox style="-fx-background-color: #C4DEFF;">
          <children>
             <VBox alignment="TOP_CENTER" spacing="60.0" style="-fx-padding: 40 20 60 20; -fx-background-color: #EEF2FB; -fx-background-radius: 20; -fx-border-radius: 20;">
                <children>
-                  <HBox alignment="CENTER_LEFT" maxWidth="880.0" minHeight="54.0" prefHeight="54.0" style="-fx-border-radius: 10; -fx-border-color: black; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
-                     <styleClass>
+                  <HBox alignment="CENTER_LEFT" maxWidth="880.0" minHeight="54.0" prefHeight="54.0" style="-fx-border-radius: 10; -fx-border-color: black; -fx-background-radius: 10;">
+                      <styleClass>
                         <String fx:value="bg-default" />
                         <String fx:value="border-default" />
                         <String fx:value="elevated-1" />
-                     </styleClass>
+                      </styleClass>
                      <children>
-                        <ImageView cache="true" cacheHint="QUALITY" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="logoIconiPadProduct" cache="true" cacheHint="QUALITY" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../it/uid/unitech/Images/UnitechLogo.png" />
+                               <Image url="@../it/uid/unitech/Images/UnitechLogo.png" />
                            </image>
                            <HBox.margin>
-                              <Insets left="30.0" />
+                               <Insets left="30.0" />
                            </HBox.margin>
                         </ImageView>
-
-                        <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPhone">
+                        <SplitMenuButton fx:id="iPhoneHomeiPadProduct" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPhone">
                            <items>
-                              <MenuItem mnemonicParsing="false" text="iPhone 17 Pro" />
-                              <MenuItem mnemonicParsing="false" text="iPhone 17" />
-                              <MenuItem mnemonicParsing="false" text="iPhone Air" />
+                              <MenuItem fx:id="iPhone17ProHomeiPadProduct" mnemonicParsing="false" text="iPhone 17 Pro" />
+                              <MenuItem fx:id="iPhone17HomeiPadProduct" mnemonicParsing="false" text="iPhone 17" />
+                              <MenuItem fx:id="iPhoneAirHomeiPadProduct" mnemonicParsing="false" text="iPhone Air" />
                            </items>
-                           <font><Font name="Segoe UI" size="18.0" /></font>
+                           <font>
+                               <Font name="Segoe UI" size="18.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="button-outlined" />
+                               <String fx:value="barra-items" />
+                              <String fx:value="flat" />
+                           </styleClass>
+                            <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </SplitMenuButton>
+                         <SplitMenuButton fx:id="iPadHomeiPadProduct" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPad">
+                           <items>
+                              <MenuItem fx:id="iPadProHomeiPadProduct" mnemonicParsing="false" text="iPad Pro" />
+                              <MenuItem fx:id="iPadAirHomeiPadProduct" mnemonicParsing="false" text="iPad Air" />
+                              <MenuItem fx:id="iPadBaseHomeiPadProduct" mnemonicParsing="false" text="iPad" />
+                           </items>
+                            <font>
+                              <Font name="Segoe UI" size="18.0" />
+                           </font>
+                           <styleClass>
+                               <String fx:value="button-outlined" />
+                              <String fx:value="barra-items" />
+                              <String fx:value="flat" />
+                            </styleClass>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                            </HBox.margin>
+                        </SplitMenuButton>
+                        <SplitMenuButton fx:id="MacHomeiPadProduct" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Mac">
+                           <items>
+                              <MenuItem fx:id="iMacHomeiPadProduct" mnemonicParsing="false" text="iMac" />
+                              <MenuItem fx:id="MacStudioHomeiPadProduct" mnemonicParsing="false" text="Mac Studio" />
+                              <MenuItem fx:id="MacMiniHomeiPadProduct" mnemonicParsing="false" text="Mac Mini" />
+                            </items>
+                           <font>
+                              <Font name="Segoe UI" size="18.0" />
+                            </font>
                            <styleClass>
                               <String fx:value="button-outlined" />
                               <String fx:value="barra-items" />
+                               <String fx:value="flat" />
+                           </styleClass>
+                           <HBox.margin>
+                               <Insets left="20.0" />
+                           </HBox.margin>
+                        </SplitMenuButton>
+                        <SplitMenuButton fx:id="MacBookHomeiPadProduct" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="MacBook">
+                            <items>
+                              <MenuItem fx:id="MacBookProHomeiPadProduct" mnemonicParsing="false" text="MacBook Pro" />
+                              <MenuItem fx:id="MacBookAirHomeiPadProduct" mnemonicParsing="false" text="MacBook Air" />
+                              <MenuItem fx:id="MacBookNeoHomeiPadProduct" mnemonicParsing="false" text="MacBook Neo" />
+                           </items>
+                           <font>
+                               <Font name="Segoe UI" size="18.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="button-outlined" />
+                               <String fx:value="barra-items" />
                               <String fx:value="flat" />
                            </styleClass>
-                           <HBox.margin><Insets left="30.0" /></HBox.margin>
-                        </MenuButton>
-
-                        <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPad">
+                            <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </SplitMenuButton>
+                         <SplitMenuButton fx:id="WatchHomeiPadProduct" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Watch">
                            <items>
-                              <MenuItem mnemonicParsing="false" text="iPad Pro" />
-                              <MenuItem mnemonicParsing="false" text="iPad Air" />
-                              <MenuItem mnemonicParsing="false" text="iPad" />
+                              <MenuItem fx:id="WatchUltra3HomeiPadProduct" mnemonicParsing="false" text="Apple Watch Ultra 3" />
+                               <MenuItem fx:id="WatchSeries11HomeiPadProduct" mnemonicParsing="false" text="Apple Watch Series 11" />
+                              <MenuItem fx:id="WatchSE3HomeiPadProduct" mnemonicParsing="false" text="Apple Watch SE 3" />
                            </items>
-                           <font><Font name="Segoe UI" size="18.0" /></font>
-                           <styleClass>
+                            <font>
+                              <Font name="Segoe UI" size="18.0" />
+                           </font>
+                            <styleClass>
                               <String fx:value="button-outlined" />
                               <String fx:value="barra-items" />
                               <String fx:value="flat" />
-                           </styleClass>
-                           <HBox.margin><Insets left="20.0" /></HBox.margin>
-                        </MenuButton>
-
-                        <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Mac">
+                            </styleClass>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                             </HBox.margin>
+                        </SplitMenuButton>
+                        <SplitMenuButton fx:id="AirPodsHomeiPadProduct" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="AirPods">
                            <items>
-                              <MenuItem mnemonicParsing="false" text="iMac" />
-                              <MenuItem mnemonicParsing="false" text="Mac Studio" />
-                              <MenuItem mnemonicParsing="false" text="Mac Mini" />
-                           </items>
-                           <font><Font name="Segoe UI" size="18.0" /></font>
+                               <MenuItem fx:id="AirPodsMax2HomeiPadProduct" mnemonicParsing="false" text="AirPods Max 2" />
+                              <MenuItem fx:id="AirPodsPro3HomeiPadProduct" mnemonicParsing="false" text="AirPods Pro 3" />
+                              <MenuItem fx:id="AirPods4HomeiPadProduct" mnemonicParsing="false" text="AirPods 4" />
+                            </items>
+                           <font>
+                              <Font name="Segoe UI" size="18.0" />
+                            </font>
                            <styleClass>
                               <String fx:value="button-outlined" />
-                              <String fx:value="barra-items" />
+                               <String fx:value="barra-items" />
                               <String fx:value="flat" />
                            </styleClass>
-                           <HBox.margin><Insets left="20.0" /></HBox.margin>
-                        </MenuButton>
-
-                        <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="MacBook">
-                           <items>
-                              <MenuItem mnemonicParsing="false" text="MacBook Pro" />
-                              <MenuItem mnemonicParsing="false" text="MacBook Air" />
-                              <MenuItem mnemonicParsing="false" text="MacBook Neo" />
-                           </items>
-                           <font><Font name="Segoe UI" size="18.0" /></font>
-                           <styleClass>
-                              <String fx:value="button-outlined" />
-                              <String fx:value="barra-items" />
-                              <String fx:value="flat" />
-                           </styleClass>
-                           <HBox.margin><Insets left="20.0" /></HBox.margin>
-                        </MenuButton>
-
-                        <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Watch">
-                           <items>
-                              <MenuItem mnemonicParsing="false" text="Apple Watch Pro 3" />
-                              <MenuItem mnemonicParsing="false" text="Apple Watch Series 11" />
-                              <MenuItem mnemonicParsing="false" text="Apple Watch SE 3" />
-                           </items>
-                           <font><Font name="Segoe UI" size="18.0" /></font>
-                           <styleClass>
-                              <String fx:value="button-outlined" />
-                              <String fx:value="barra-items" />
-                              <String fx:value="flat" />
-                           </styleClass>
-                           <HBox.margin><Insets left="20.0" /></HBox.margin>
-                        </MenuButton>
-
-                        <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="AirPods">
-                           <items>
-                              <MenuItem mnemonicParsing="false" text="AirPods Max 2" />
-                              <MenuItem mnemonicParsing="false" text="AirPods Pro 3" />
-                              <MenuItem mnemonicParsing="false" text="AirPods 4" />
-                           </items>
-                           <font><Font name="Segoe UI" size="18.0" /></font>
-                           <styleClass>
-                              <String fx:value="button-outlined" />
-                              <String fx:value="barra-items" />
-                              <String fx:value="flat" />
-                           </styleClass>
-                           <HBox.margin><Insets left="20.0" /></HBox.margin>
-                        </MenuButton>
-
+                           <HBox.margin>
+                               <Insets left="20.0" />
+                           </HBox.margin>
+                        </SplitMenuButton>
                         <Region HBox.hgrow="ALWAYS">
-                           <HBox.margin><Insets left="30.0" /></HBox.margin>
-                        </Region>
-
-                        <FontIcon iconColor="#1d1d1f" iconLiteral="fas-shopping-bag" iconSize="22" onMouseClicked="#apriCarrello">
-                           <HBox.margin><Insets right="24.0" /></HBox.margin>
+                            <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                         </Region>
+                        <FontIcon iconColor="#1d1d1f" iconLiteral="fas-shopping-bag" iconSize="22">
+                           <HBox.margin>
+                               <Insets right="24.0" />
+                           </HBox.margin>
                         </FontIcon>
-
-                        <FontIcon fx:id="loginIcon" iconColor="#1d1d1f" iconLiteral="fas-user-alt" iconSize="22" />
+                        <FontIcon fx:id="loginIconiPadProduct" iconColor="#1d1d1f" iconLiteral="fas-user-alt" iconSize="22" />
                      </children>
-                     <padding>
+                      <padding>
                         <Insets left="2.0" right="20.0" />
                      </padding>
                   </HBox>
@@ -147,162 +166,162 @@
                         <Font name="System Bold" size="58.0" />
                      </font>
                      <VBox.margin>
-                        <Insets bottom="20.0" top="20.0" />
+                         <Insets bottom="20.0" top="20.0" />
                      </VBox.margin>
                   </Label>
                   <HBox alignment="CENTER" maxWidth="1200.0" spacing="100.0">
-                     <children>
+                      <children>
                         <VBox alignment="CENTER" prefWidth="324.0" spacing="15.0">
                            <children>
                               <ImageView fitHeight="488.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
+                                  <image>
                                     <Image url="@../it/uid/unitech/Images/iPad%20Pro%20Nero.png" />
                                  </image>
-                              </ImageView>
+                               </ImageView>
                               <Label text="iPad Pro">
                                  <font>
-                                    <Font name="System Bold" size="24.0" />
+                                     <Font name="System Bold" size="24.0" />
                                  </font>
                               </Label>
-                              <Label text="€ 1.299" textFill="#6e6e73">
+                               <Label text="€ 1.299" textFill="#6e6e73">
                                  <font>
                                     <Font name="System Bold" size="16.0" />
                                  </font>
                               </Label>
                               <Separator prefWidth="319.0" />
-                              <Button maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onMouseClicked="#aggiungiIPadPro" styleClass="accent" text="Aggiungi al carrello">
+                               <Button fx:id="discoveriPadProProduct" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" styleClass="accent" text="Scopri di più">
                                  <font>
-                                    <Font size="18.0" />
+                                     <Font size="18.0" />
                                  </font>
                               </Button>
                            </children>
-                        </VBox>
+                       </VBox>
                         <VBox alignment="CENTER" prefWidth="324.0" spacing="15.0">
                            <children>
-                              <ImageView fitHeight="488.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
+                               <ImageView fitHeight="488.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../it/uid/unitech/Images/iPad%20Air%20Azzurro.png" />
-                                 </image>
+                                  </image>
                               </ImageView>
                               <Label text="iPad Air">
-                                 <font>
+                                  <font>
                                     <Font name="System Bold" size="24.0" />
                                  </font>
-                              </Label>
+                               </Label>
                               <Label text="€ 799" textFill="#6e6e73">
                                  <font>
-                                    <Font name="System Bold" size="16.0" />
+                                     <Font name="System Bold" size="16.0" />
                                  </font>
                               </Label>
-                              <Separator prefWidth="319.0" />
-                              <Button mnemonicParsing="false" onMouseClicked="#aggiungiIPadAir" styleClass="accent" text="Aggiungi al carrello">
+                               <Separator prefWidth="319.0" />
+                              <Button fx:id="discoveriPadAirProduct" mnemonicParsing="false" styleClass="accent" text="Scopri di più">
                                  <font>
-                                    <Font size="18.0" />
+                                     <Font size="18.0" />
                                  </font>
                                  <VBox.margin>
-                                    <Insets />
+                                     <Insets />
                                  </VBox.margin>
                               </Button>
-                           </children>
+                            </children>
                         </VBox>
                         <VBox alignment="CENTER" prefWidth="324.0" spacing="15.0">
                            <children>
-                              <ImageView fitHeight="488.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
+                               <ImageView fitHeight="488.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../it/uid/unitech/Images/iPad%20Argento.png" />
-                                 </image>
+                                  </image>
                               </ImageView>
                               <Label text="iPad">
-                                 <font>
+                                  <font>
                                     <Font name="System Bold" size="24.0" />
                                  </font>
-                              </Label>
+                               </Label>
                               <Label text="€ 449" textFill="#6e6e73">
                                  <font>
-                                    <Font name="System Bold" size="16.0" />
+                                     <Font name="System Bold" size="16.0" />
                                  </font>
                               </Label>
-                              <Separator prefWidth="319.0" />
-                              <Button mnemonicParsing="false" onMouseClicked="#aggiungiIPadBase" styleClass="accent" text="Aggiungi al carrello">
+                               <Separator prefWidth="319.0" />
+                              <Button fx:id="discoveriPadBaseProduct" mnemonicParsing="false" styleClass="accent" text="Scopri di più">
                                  <font>
-                                    <Font size="18.0" />
+                                     <Font size="18.0" />
                                  </font>
                               </Button>
-                           </children>
+                            </children>
                         </VBox>
                      </children>
                   </HBox>
-                  <VBox alignment="CENTER" maxWidth="1241.0" spacing="20.0">
+                   <VBox alignment="CENTER" maxWidth="1241.0" spacing="20.0">
                      <VBox.margin>
                         <Insets top="80.0" />
                      </VBox.margin>
                      <children>
-                        <Label text="Caratteristiche Tecniche">
+                         <Label text="Caratteristiche Tecniche">
                            <font>
                               <Font name="System Bold" size="46.0" />
-                           </font>
+                            </font>
                         </Label>
                         <Separator prefWidth="1241.0" />
                      </children>
                   </VBox>
-                  <HBox alignment="TOP_CENTER" maxWidth="1200.0" spacing="100.0">
+                   <HBox alignment="TOP_CENTER" maxWidth="1200.0" spacing="100.0">
                      <children>
                         <VBox alignment="TOP_CENTER" prefWidth="327.0" spacing="30.0">
                            <children>
-                              <Label text="11&quot;">
+                               <Label text="11&quot;">
                                  <font>
                                     <Font name="System Bold" size="64.0" />
-                                 </font>
+                                  </font>
                               </Label>
                               <Label minHeight="50.0" text="Display Ultra Retina XDR" textAlignment="CENTER" wrapText="true">
-                                 <font>
+                                  <font>
                                     <Font name="System Bold" size="18.0" />
-                                 </font>
+                                  </font>
                               </Label>
                               <ImageView fitHeight="112.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../it/uid/unitech/Images/Chip%20M5.png" />
                                  </image>
-                              </ImageView>
+                               </ImageView>
                               <Label text="Chip M5" textAlignment="CENTER">
                                  <font>
-                                    <Font name="System Bold" size="18.0" />
+                                     <Font name="System Bold" size="18.0" />
                                  </font>
                               </Label>
                               <ImageView fitHeight="121.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../it/uid/unitech/Images/Dual%20Camera%20iPad.png" />
-                                 </image>
+                                  </image>
                               </ImageView>
                               <Label text="Grandangolo da 12MP" textAlignment="CENTER">
-                                 <font>
+                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>
-                              </Label>
+                               </Label>
                               <ImageView fitHeight="136.0" fitWidth="193.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../it/uid/unitech/Images/Single%20Camera%20iPad.png" />
+                                     <Image url="@../it/uid/unitech/Images/Single%20Camera%20iPad.png" />
                                  </image>
                                  <VBox.margin>
-                                    <Insets left="50.0" />
+                                     <Insets left="50.0" />
                                  </VBox.margin>
                               </ImageView>
-                              <Label text="Videocamera orizzontale Center Stage da 12MP" textAlignment="CENTER" wrapText="true">
+                               <Label text="Videocamera orizzontale Center Stage da 12MP" textAlignment="CENTER" wrapText="true">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
-                                 </font>
+                                  </font>
                               </Label>
                               <ImageView fitHeight="111.0" fitWidth="187.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
+                                  <image>
                                     <Image url="@../it/uid/unitech/Images/Apple%20Pencil%20Pro.png" />
                                  </image>
-                              </ImageView>
+                               </ImageView>
                               <Label text="Compatibile con Apple Pencil Pro" textAlignment="CENTER" wrapText="true">
                                  <font>
-                                    <Font name="System Bold" size="18.0" />
+                                     <Font name="System Bold" size="18.0" />
                                  </font>
                               </Label>
-                              <ImageView fitHeight="120.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
+                               <ImageView fitHeight="120.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../it/uid/unitech/Images/Magic%20Keyboard%20Pro.png" />
                                  </image>
@@ -310,141 +329,141 @@
                               <Label text="Compatibile con Magic Keyboard per iPad Pro" textAlignment="CENTER" wrapText="true">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
-                                 </font>
+                                  </font>
                               </Label>
                            </children>
                         </VBox>
-                        <VBox alignment="TOP_CENTER" prefWidth="327.0" spacing="30.0">
+                         <VBox alignment="TOP_CENTER" prefWidth="327.0" spacing="30.0">
                            <children>
                               <Label text="11&quot;">
-                                 <font>
+                                  <font>
                                     <Font name="System Bold" size="64.0" />
                                  </font>
-                              </Label>
+                               </Label>
                               <Label minHeight="50.0" text="Display Liquid Retina" textAlignment="CENTER" wrapText="true">
                                  <font>
-                                    <Font name="System Bold" size="18.0" />
+                                     <Font name="System Bold" size="18.0" />
                                  </font>
                               </Label>
-                              <ImageView fitHeight="102.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+                               <ImageView fitHeight="102.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../it/uid/unitech/Images/Chip%20M4.png" />
-                                 </image>
+                                  </image>
                               </ImageView>
                               <Label text="Chip M4" textAlignment="CENTER">
-                                 <font>
+                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>
-                              </Label>
+                               </Label>
                               <ImageView fitHeight="121.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../it/uid/unitech/Images/Principal%20Camera%20iPad.png" />
+                                     <Image url="@../it/uid/unitech/Images/Principal%20Camera%20iPad.png" />
                                  </image>
                               </ImageView>
-                              <Label text="Grandangolo da 12MP" textAlignment="CENTER">
+                               <Label text="Grandangolo da 12MP" textAlignment="CENTER">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
-                                 </font>
+                                  </font>
                               </Label>
                               <ImageView fitHeight="136.0" fitWidth="193.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
+                                  <image>
                                     <Image url="@../it/uid/unitech/Images/Single%20Camera%20iPad.png" />
                                  </image>
-                                 <VBox.margin>
+                                  <VBox.margin>
                                     <Insets left="50.0" />
                                  </VBox.margin>
-                              </ImageView>
+                               </ImageView>
                               <Label text="Videocamera orizzontale Center Stage da 12MP" textAlignment="CENTER" wrapText="true">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>
-                              </Label>
+                               </Label>
                               <ImageView fitHeight="111.0" fitWidth="187.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../it/uid/unitech/Images/Apple%20Pencil%20Pro.png" />
+                                     <Image url="@../it/uid/unitech/Images/Apple%20Pencil%20Pro.png" />
                                  </image>
                               </ImageView>
-                              <Label text="Compatibile con Apple Pencil Pro" textAlignment="CENTER" wrapText="true">
+                               <Label text="Compatibile con Apple Pencil Pro" textAlignment="CENTER" wrapText="true">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
-                                 </font>
+                                  </font>
                               </Label>
                               <ImageView fitHeight="120.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
+                                  <image>
                                     <Image url="@../it/uid/unitech/Images/Magic%20Keyboard%20Pro.png" />
                                  </image>
-                              </ImageView>
+                               </ImageView>
                               <Label text="Compatibile con Magic Keyboard per iPad Air" textAlignment="CENTER" wrapText="true">
                                  <font>
-                                    <Font name="System Bold" size="18.0" />
+                                     <Font name="System Bold" size="18.0" />
                                  </font>
                               </Label>
-                           </children>
+                             </children>
                         </VBox>
                         <VBox alignment="TOP_CENTER" prefWidth="327.0" spacing="30.0">
                            <children>
-                              <Label text="11&quot;">
+                               <Label text="11&quot;">
                                  <font>
                                     <Font name="System Bold" size="64.0" />
-                                 </font>
+                                  </font>
                               </Label>
                               <Label minHeight="50.0" text="Display Liquid Retina" textAlignment="CENTER" wrapText="true">
-                                 <font>
+                                  <font>
                                     <Font name="System Bold" size="18.0" />
-                                 </font>
+                                  </font>
                               </Label>
                               <ImageView fitHeight="102.0" fitWidth="116.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../it/uid/unitech/Images/Chip%20A16.png" />
+                                     <Image url="@../it/uid/unitech/Images/Chip%20A16.png" />
                                  </image>
                               </ImageView>
-                              <Label text="Chip A16" textAlignment="CENTER">
+                               <Label text="Chip A16" textAlignment="CENTER">
                                  <font>
-                                    <Font name="System Bold" size="18.0" />
+                                     <Font name="System Bold" size="18.0" />
                                  </font>
                               </Label>
                               <ImageView fitHeight="121.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../it/uid/unitech/Images/Principal%20Camera%20iPad.png" />
-                                 </image>
+                                  </image>
                               </ImageView>
                               <Label text="Grandangolo da 12MP" textAlignment="CENTER">
-                                 <font>
+                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>
-                              </Label>
+                               </Label>
                               <ImageView fitHeight="136.0" fitWidth="193.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../it/uid/unitech/Images/Single%20Camera%20iPad.png" />
+                                     <Image url="@../it/uid/unitech/Images/Single%20Camera%20iPad.png" />
                                  </image>
                                  <VBox.margin>
-                                    <Insets left="50.0" />
+                                     <Insets left="50.0" />
                                  </VBox.margin>
                               </ImageView>
-                              <Label text="Videocamera orizzontale Center Stage da 12MP" textAlignment="CENTER" wrapText="true">
+                               <Label text="Videocamera orizzontale Center Stage da 12MP" textAlignment="CENTER" wrapText="true">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
-                                 </font>
+                                  </font>
                               </Label>
                               <ImageView fitHeight="111.0" fitWidth="187.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
+                                  <image>
                                     <Image url="@../it/uid/unitech/Images/Apple%20Penicil%20Basic.png" />
                                  </image>
-                              </ImageView>
+                               </ImageView>
                               <Label text="Compatibile con Apple Pencil (USB-C)" textAlignment="CENTER" wrapText="true">
                                  <font>
-                                    <Font name="System Bold" size="18.0" />
+                                     <Font name="System Bold" size="18.0" />
                                  </font>
                               </Label>
-                              <ImageView fitHeight="120.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
+                               <ImageView fitHeight="120.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../it/uid/unitech/Images/Magic%20Keyboard%20Pro.png" />
-                                 </image>
+                                  </image>
                               </ImageView>
                               <Label text="Compatibile con Magic Keyboard Folio" textAlignment="CENTER" wrapText="true">
-                                 <font>
+                                  <font>
                                     <Font name="System Bold" size="18.0" />
-                                 </font>
+                                  </font>
                               </Label>
                            </children>
                         </VBox>
@@ -454,7 +473,7 @@
                <VBox.margin>
                   <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
                </VBox.margin>
-            </VBox>
+             </VBox>
          </children>
       </VBox>
    </content>

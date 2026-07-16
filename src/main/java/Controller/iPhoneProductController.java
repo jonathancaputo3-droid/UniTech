@@ -90,7 +90,7 @@ public class iPhoneProductController {
         fadeOut.setOnFinished(e -> {
             try {
                 FXMLLoader loader = new FXMLLoader(
-                        getClass().getResource("/Fxml/Carrello.fxml")
+                        getClass().getResource("/fxml/Carrello.fxml")
                 );
 
                 Parent newRoot = loader.load();
@@ -318,6 +318,11 @@ public class iPhoneProductController {
         AnimazioneUtil.verificaCambiaScenaItem(AirPodsPro3Home17, "/fxml/AirPods Pro 3 PageProduct.fxml");
         AnimazioneUtil.verificaCambiaScenaItem(AirPods4Home17, "/fxml/AirPods 4 PageProduct.fxml");
 
+        AnimazioneUtil.verificaCambiaScena(loginIcon17, "/fxml/ProfileOption.fxml");
+        AnimazioneUtil.verificaCambiaScena(logoIcon17, "/fxml/Home.fxml");
+        AnimazioneUtil.aggiungiAnimazione(logoIcon17);
+        AnimazioneUtil.aggiungiAnimazione(loginIcon17);
+
         // ------------------------------------------
         // Prodotto iPhone 17 Pro
         // ------------------------------------------
@@ -353,6 +358,11 @@ public class iPhoneProductController {
         AnimazioneUtil.verificaCambiaScenaItem(AirPodsMax2Home17Pro, "/fxml/AirPods Max 2 PageProduct.fxml");
         AnimazioneUtil.verificaCambiaScenaItem(AirPodsPro3Home17Pro, "/fxml/AirPods Pro 3 PageProduct.fxml");
         AnimazioneUtil.verificaCambiaScenaItem(AirPods4Home17Pro, "/fxml/AirPods 4 PageProduct.fxml");
+
+        AnimazioneUtil.verificaCambiaScena(loginIcon17Pro, "/fxml/ProfileOption.fxml");
+        AnimazioneUtil.verificaCambiaScena(logoIcon17Pro, "/fxml/Home.fxml");
+        AnimazioneUtil.aggiungiAnimazione(logoIcon17Pro);
+        AnimazioneUtil.aggiungiAnimazione(loginIcon17Pro);
 
         // ------------------------------------------
         // Prodotto iPhone Air
@@ -393,5 +403,7 @@ public class iPhoneProductController {
 
         AnimazioneUtil.verificaCambiaScena(loginIconAir, "/fxml/ProfileOption.fxml");
         AnimazioneUtil.verificaCambiaScena(logoIconAir, "/fxml/Home.fxml");
+        AnimazioneUtil.aggiungiAnimazione(logoIconAir);
+        AnimazioneUtil.aggiungiAnimazione(loginIconAir);
     }
 }

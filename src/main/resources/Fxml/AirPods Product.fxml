@@ -4,10 +4,10 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitMenuButton?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
@@ -16,21 +16,20 @@
 <?import javafx.scene.text.Font?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<ScrollPane fitToWidth="true" hbarPolicy="ALWAYS" style="-fx-background-color: white;" stylesheets="@../Style/cupertino-light.css" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AirPodsProductController">
+<ScrollPane fitToWidth="true" hbarPolicy="ALWAYS" style="-fx-background-color: white;" stylesheets="@../Style/cupertino-light.css" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GenericProductController">
    <content>
       <VBox alignment="TOP_CENTER" style="-fx-background-color: #C4DEFF;">
          <children>
             <VBox alignment="TOP_CENTER" spacing="40.0" style="-fx-padding: 40 20 60 20; -fx-background-color: #EEF2FB; -fx-background-radius: 20; -fx-border-radius: 20;">
                <children>
-
-                  <HBox alignment="CENTER_LEFT" maxWidth="880.0" minHeight="54.0" prefHeight="54.0" style="-fx-border-radius: 10; -fx-border-color: black; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
+                  <HBox alignment="CENTER_LEFT" maxWidth="880.0" minHeight="54.0" prefHeight="54.0" style="-fx-border-radius: 10; -fx-border-color: black; -fx-background-radius: 10;">
                      <styleClass>
                         <String fx:value="bg-default" />
                         <String fx:value="border-default" />
                         <String fx:value="elevated-1" />
                      </styleClass>
                      <children>
-                        <ImageView cache="true" cacheHint="QUALITY" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="logoiconAirPodsProduct" cache="true" cacheHint="QUALITY" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../it/uid/unitech/Images/UnitechLogo.png" />
                            </image>
@@ -38,42 +37,11 @@
                               <Insets left="30.0" />
                            </HBox.margin>
                         </ImageView>
-
-                        <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPhone">
+                        <SplitMenuButton fx:id="iPhoneHomeAirPodsProduct" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPhone">
                            <items>
-                              <MenuItem mnemonicParsing="false" text="iPhone 17 Pro" />
-                              <MenuItem mnemonicParsing="false" text="iPhone 17" />
-                              <MenuItem mnemonicParsing="false" text="iPhone Air" />
-                           </items>
-                           <font><Font name="Segoe UI" size="18.0" /></font>
-                           <styleClass>
-                              <String fx:value="button-outlined" />
-                              <String fx:value="barra-items" />
-                              <String fx:value="flat" />
-                           </styleClass>
-                           <HBox.margin><Insets left="30.0" /></HBox.margin>
-                        </MenuButton>
-
-                        <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPad">
-                           <items>
-                              <MenuItem mnemonicParsing="false" text="iPad Pro" />
-                              <MenuItem mnemonicParsing="false" text="iPad Air" />
-                              <MenuItem mnemonicParsing="false" text="iPad" />
-                           </items>
-                           <font><Font name="Segoe UI" size="18.0" /></font>
-                           <styleClass>
-                              <String fx:value="button-outlined" />
-                              <String fx:value="barra-items" />
-                              <String fx:value="flat" />
-                           </styleClass>
-                           <HBox.margin><Insets left="20.0" /></HBox.margin>
-                        </MenuButton>
-
-                              <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Mac">
-                           <items>
-                              <MenuItem mnemonicParsing="false" text="iMac" />
-                              <MenuItem mnemonicParsing="false" text="Mac Studio" />
-                              <MenuItem mnemonicParsing="false" text="Mac Mini" />
+                              <MenuItem fx:id="iPhone17ProHomeAirPodsProduct" mnemonicParsing="false" text="iPhone 17 Pro" />
+                              <MenuItem fx:id="iPhone17HomeAirPodsProduct" mnemonicParsing="false" text="iPhone 17" />
+                              <MenuItem fx:id="iPhoneAirHomeAirPodsProduct" mnemonicParsing="false" text="iPhone Air" />
                            </items>
                            <font>
                               <Font name="Segoe UI" size="18.0" />
@@ -83,65 +51,113 @@
                               <String fx:value="barra-items" />
                               <String fx:value="flat" />
                            </styleClass>
-                           <HBox.margin><Insets left="20.0" /></HBox.margin>
-                        </MenuButton>
-
-                        <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="MacBook">
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </SplitMenuButton>
+                         <SplitMenuButton fx:id="iPadHomeAirPodsProduct" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPad">
                            <items>
-                              <MenuItem mnemonicParsing="false" text="MacBook Pro" />
-                              <MenuItem mnemonicParsing="false" text="MacBook Air" />
-                              <MenuItem mnemonicParsing="false" text="MacBook Neo" />
+                              <MenuItem fx:id="iPadProHomeAirPodsProduct" mnemonicParsing="false" text="iPad Pro" />
+                              <MenuItem fx:id="iPadAirHomeAirPodsProduct" mnemonicParsing="false" text="iPad Air" />
+                              <MenuItem fx:id="iPadBaseHomeAirPodsProduct" mnemonicParsing="false" text="iPad" />
                            </items>
-                           <font><Font name="Segoe UI" size="18.0" /></font>
+                           <font>
+                              <Font name="Segoe UI" size="18.0" />
+                           </font>
+                           <styleClass>
+                               <String fx:value="button-outlined" />
+                              <String fx:value="barra-items" />
+                              <String fx:value="flat" />
+                            </styleClass>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </SplitMenuButton>
+                        <SplitMenuButton fx:id="MacHomeAirPodsProduct" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Mac">
+                           <items>
+                              <MenuItem fx:id="iMacHomeAirPodsProduct" mnemonicParsing="false" text="iMac" />
+                              <MenuItem fx:id="MacStudioHomeAirPodsProduct" mnemonicParsing="false" text="Mac Studio" />
+                              <MenuItem fx:id="MacMiniHomeAirPodsProduct" mnemonicParsing="false" text="Mac Mini" />
+                           </items>
+                           <font>
+                              <Font name="Segoe UI" size="18.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="button-outlined" />
+                              <String fx:value="barra-items" />
+                               <String fx:value="flat" />
+                           </styleClass>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </SplitMenuButton>
+                        <SplitMenuButton fx:id="MacBookHomeAirPodsProduct" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="MacBook">
+                            <items>
+                              <MenuItem fx:id="MacBookProHomeAirPodsProduct" mnemonicParsing="false" text="MacBook Pro" />
+                              <MenuItem fx:id="MacBookAirHomeAirPodsProduct" mnemonicParsing="false" text="MacBook Air" />
+                              <MenuItem fx:id="MacBookNeoHomeAirPodsProduct" mnemonicParsing="false" text="MacBook Neo" />
+                           </items>
+                           <font>
+                              <Font name="Segoe UI" size="18.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="button-outlined" />
+                               <String fx:value="barra-items" />
+                              <String fx:value="flat" />
+                           </styleClass>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </SplitMenuButton>
+                         <SplitMenuButton fx:id="WatchHomeAirPodsProduct" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Watch">
+                           <items>
+                              <MenuItem fx:id="WatchUltra3HomeAirPodsProduct" mnemonicParsing="false" text="Apple Watch Ultra 3" />
+                               <MenuItem fx:id="WatchSeries11HomeAirPodsProduct" mnemonicParsing="false" text="Apple Watch Series 11" />
+                              <MenuItem fx:id="WatchSE3HomeAirPodsProduct" mnemonicParsing="false" text="Apple Watch SE 3" />
+                           </items>
+                            <font>
+                              <Font name="Segoe UI" size="18.0" />
+                           </font>
+                            <styleClass>
+                              <String fx:value="button-outlined" />
+                              <String fx:value="barra-items" />
+                              <String fx:value="flat" />
+                            </styleClass>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                             </HBox.margin>
+                        </SplitMenuButton>
+                        <SplitMenuButton fx:id="AirPodsHomeAirPodsProduct" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="AirPods">
+                           <items>
+                               <MenuItem fx:id="AirPodsMax2HomeAirPodsProduct" mnemonicParsing="false" text="AirPods Max 2" />
+                              <MenuItem fx:id="AirPodsPro3HomeAirPodsProduct" mnemonicParsing="false" text="AirPods Pro 3" />
+                              <MenuItem fx:id="AirPods4HomeAirPodsProduct" mnemonicParsing="false" text="AirPods 4" />
+                            </items>
+                           <font>
+                              <Font name="Segoe UI" size="18.0" />
+                            </font>
                            <styleClass>
                               <String fx:value="button-outlined" />
                               <String fx:value="barra-items" />
                               <String fx:value="flat" />
                            </styleClass>
-                           <HBox.margin><Insets left="20.0" /></HBox.margin>
-                        </MenuButton>
-
-                        <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Watch">
-                           <items>
-                              <MenuItem mnemonicParsing="false" text="Apple Watch Pro 3" />
-                              <MenuItem mnemonicParsing="false" text="Apple Watch Series 11" />
-                              <MenuItem mnemonicParsing="false" text="Apple Watch SE 3" />
-                           </items>
-                           <font><Font name="Segoe UI" size="18.0" /></font>
-                           <styleClass>
-                              <String fx:value="button-outlined" />
-                              <String fx:value="barra-items" />
-                              <String fx:value="flat" />
-                           </styleClass>
-                           <HBox.margin><Insets left="20.0" /></HBox.margin>
-                        </MenuButton>
-
-                        <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="AirPods">
-                           <items>
-                              <MenuItem mnemonicParsing="false" text="AirPods Max 2" />
-                              <MenuItem mnemonicParsing="false" text="AirPods Pro 3" />
-                              <MenuItem mnemonicParsing="false" text="AirPods 4" />
-                           </items>
-                           <font><Font name="Segoe UI" size="18.0" /></font>
-                           <styleClass>
-                              <String fx:value="button-outlined" />
-                              <String fx:value="barra-items" />
-                              <String fx:value="flat" />
-                           </styleClass>
-                           <HBox.margin><Insets left="20.0" /></HBox.margin>
-                        </MenuButton>
-
+                           <HBox.margin>
+                               <Insets left="20.0" />
+                           </HBox.margin>
+                        </SplitMenuButton>
                         <Region HBox.hgrow="ALWAYS">
-                           <HBox.margin><Insets left="30.0" /></HBox.margin>
-                        </Region>
-
-                        <FontIcon iconColor="#1d1d1f" iconLiteral="fas-shopping-bag" iconSize="22" onMouseClicked="#apriCarrello">
-                           <HBox.margin><Insets right="24.0" /></HBox.margin>
+                            <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                         </Region>
+                        <FontIcon iconColor="#1d1d1f" iconLiteral="fas-shopping-bag" iconSize="22">
+                           <HBox.margin>
+                              <Insets right="24.0" />
+                            </HBox.margin>
                         </FontIcon>
-
-                        <FontIcon fx:id="loginIcon" iconColor="#1d1d1f" iconLiteral="fas-user-alt" iconSize="22" />
+                        <FontIcon fx:id="loginIconAirPodsProduct" iconColor="#1d1d1f" iconLiteral="fas-user-alt" iconSize="22" />
                      </children>
-                     <padding>
+                      <padding>
                         <Insets left="2.0" right="20.0" />
                      </padding>
                   </HBox>
@@ -151,88 +167,88 @@
                         <Font name="System Bold" size="58.0" />
                      </font>
                      <VBox.margin>
-                        <Insets bottom="10.0" top="10.0" />
+                          <Insets bottom="10.0" top="10.0" />
                      </VBox.margin>
                   </Label>
 
                   <HBox alignment="CENTER" maxWidth="1200.0" spacing="40.0">
-                     <children>
+                      <children>
                         <VBox alignment="TOP_CENTER" prefWidth="350.0" spacing="15.0">
                            <children>
                               <ImageView fitHeight="320.0" fitWidth="430.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
+                                   <image>
                                     <Image url="@../it/uid/unitech/Images/AirPods%20Max%202%20Nere.png" />
                                  </image>
-                              </ImageView>
+                               </ImageView>
                               <Label text="AirPods Max 2">
                                  <font>
-                                    <Font name="System Bold" size="24.0" />
+                                      <Font name="System Bold" size="24.0" />
                                  </font>
                               </Label>
-                              <Label text="€ 579" textFill="#6e6e73">
+                               <Label text="€ 579" textFill="#6e6e73">
                                  <font>
                                     <Font name="System Bold" size="16.0" />
                                  </font>
                               </Label>
                               <Separator prefWidth="319.0" />
-                              <Button mnemonicParsing="false" onMouseClicked="#aggiungiAirPodsMax2" styleClass="accent" text="Aggiungi al carrello">
+                                <Button fx:id="discoverAirPodsMax2Product" mnemonicParsing="false" styleClass="accent" text="Scopri di più">
                                  <font>
-                                    <Font size="18.0" />
+                                     <Font size="18.0" />
                                  </font>
                               </Button>
                            </children>
-                        </VBox>
+                       </VBox>
 
                         <VBox alignment="TOP_CENTER" prefWidth="350.0" spacing="15.0">
                            <children>
-                              <ImageView fitHeight="320.0" fitWidth="430.0" pickOnBounds="true" preserveRatio="true">
+                               <ImageView fitHeight="320.0" fitWidth="430.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../it/uid/unitech/Images/AirPods%20Pro%203.png" />
-                                 </image>
+                                  </image>
                               </ImageView>
                               <Label text="AirPods Pro 3">
-                                 <font>
+                                  <font>
                                     <Font name="System Bold" size="24.0" />
                                  </font>
-                              </Label>
+                               </Label>
                               <Label text="€ 249" textFill="#6e6e73">
                                  <font>
-                                    <Font name="System Bold" size="16.0" />
+                                     <Font name="System Bold" size="16.0" />
                                  </font>
                               </Label>
-                              <Separator prefWidth="319.0" />
-                              <Button mnemonicParsing="false" onMouseClicked="#aggiungiAirPodsPro3" styleClass="accent" text="Aggiungi al carrello">
+                               <Separator prefWidth="319.0" />
+                              <Button fx:id="discoverAirPodsPro3Product" mnemonicParsing="false" styleClass="accent" text="Scopri di più">
                                  <font>
-                                    <Font size="18.0" />
+                                     <Font size="18.0" />
                                  </font>
                               </Button>
-                           </children>
+                            </children>
                         </VBox>
 
                         <VBox alignment="TOP_CENTER" prefWidth="350.0" spacing="15.0">
                            <children>
-                              <ImageView fitHeight="320.0" fitWidth="430.0" pickOnBounds="true" preserveRatio="true">
+                               <ImageView fitHeight="320.0" fitWidth="430.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../it/uid/unitech/Images/AirPods%204.png" />
-                                 </image>
+                                  </image>
                               </ImageView>
                               <Label text="AirPods 4">
-                                 <font>
+                                  <font>
                                     <Font name="System Bold" size="24.0" />
                                  </font>
-                              </Label>
+                               </Label>
                               <Label text="€ 129" textFill="#6e6e73">
                                  <font>
-                                    <Font name="System Bold" size="16.0" />
+                                     <Font name="System Bold" size="16.0" />
                                  </font>
                               </Label>
-                              <Separator prefWidth="319.0" />
-                              <Button mnemonicParsing="false" onMouseClicked="#aggiungiAirPods4" styleClass="accent" text="Aggiungi al carrello">
+                               <Separator prefWidth="319.0" />
+                              <Button fx:id="discoverAirPods4Product" mnemonicParsing="false" styleClass="accent" text="Scopri di più">
                                  <font>
-                                    <Font size="18.0" />
+                                     <Font size="18.0" />
                                  </font>
                               </Button>
-                           </children>
+                            </children>
                         </VBox>
                      </children>
                   </HBox>
@@ -242,123 +258,123 @@
                         <Insets top="40.0" />
                      </VBox.margin>
                      <children>
-                        <Label text="Caratteristiche Tecniche">
+                          <Label text="Caratteristiche Tecniche">
                            <font>
                               <Font name="System Bold" size="46.0" />
-                           </font>
+                            </font>
                         </Label>
                         <Separator prefWidth="1200.0" />
                      </children>
                   </VBox>
 
-                  <HBox alignment="TOP_CENTER" maxWidth="1200.0" spacing="40.0">
+                   <HBox alignment="TOP_CENTER" maxWidth="1200.0" spacing="40.0">
                      <children>
                         <VBox alignment="TOP_CENTER" prefWidth="350.0" spacing="25.0">
                            <children>
-                              <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                               <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../it/uid/unitech/Images/NoiseReduction.png" />
-                                 </image>
+                                  </image>
                               </ImageView>
                               <Label minHeight="70.0" text="Cancellazione attiva del rumore &#10;fino a 1,5 volte più efficace&#10;rispetto al primo modello" textAlignment="CENTER" wrapText="true">
                                  <font><Font name="System Bold" size="16.0" /></font>
                               </Label>
-                              <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                               <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../it/uid/unitech/Images/Adaptive%20Audio.png" />
-                                 </image>
+                                  </image>
                               </ImageView>
                               <Label minHeight="50.0" text="Audio adattivo e &#10;modalità Trasparenza" textAlignment="CENTER" wrapText="true">
-                                 <font><Font name="System Bold" size="16.0" /></font>
+                                  <font><Font name="System Bold" size="16.0" /></font>
                               </Label>
                               <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
+                                  <image>
                                     <Image url="@../it/uid/unitech/Images/ConversetionRilevation.png" />
                                  </image>
-                              </ImageView>
+                               </ImageView>
                               <Label minHeight="50.0" text="Rilevamento conversazione" textAlignment="CENTER" wrapText="true">
                                  <font><Font name="System Bold" size="16.0" /></font>
-                              </Label>
+                               </Label>
                               <Label text="20 ore" textAlignment="CENTER">
                                  <font><Font name="System Bold" size="54.0" /></font>
-                              </Label>
+                               </Label>
                               <Label text="Fino a 20 ore di ascolto con una sola carica abilitando la cancellazione attiva del rumore" textAlignment="CENTER" wrapText="true">
                                  <font><Font name="System Bold" size="14.0" /></font>
                               </Label>
                            </children>
                         </VBox>
 
-                        <VBox alignment="TOP_CENTER" prefWidth="350.0" spacing="25.0">
+                         <VBox alignment="TOP_CENTER" prefWidth="350.0" spacing="25.0">
                            <children>
                               <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
+                                  <image>
                                     <Image url="@../it/uid/unitech/Images/NoiseReduction.png" />
                                  </image>
-                              </ImageView>
+                               </ImageView>
                               <Label minHeight="70.0" text="Cancellazione attiva del rumore &#10;fino a 4 volte più efficace&#10;rispetto al primo modello" textAlignment="CENTER" wrapText="true">
                                  <font><Font name="System Bold" size="16.0" /></font>
-                              </Label>
+                               </Label>
                               <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../it/uid/unitech/Images/Adaptive%20Audio.png" />
+                                     <Image url="@../it/uid/unitech/Images/Adaptive%20Audio.png" />
                                  </image>
                               </ImageView>
-                              <Label minHeight="50.0" text="Audio adattivo e &#10;modalità Trasparenza" textAlignment="CENTER" wrapText="true">
+                               <Label minHeight="50.0" text="Audio adattivo e &#10;modalità Trasparenza" textAlignment="CENTER" wrapText="true">
                                  <font><Font name="System Bold" size="16.0" /></font>
                               </Label>
-                              <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                               <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../it/uid/unitech/Images/ConversetionRilevation.png" />
-                                 </image>
+                                  </image>
                               </ImageView>
                               <Label minHeight="50.0" text="Rilevamento conversazione" textAlignment="CENTER" wrapText="true">
-                                 <font><Font name="System Bold" size="16.0" /></font>
+                                  <font><Font name="System Bold" size="16.0" /></font>
                               </Label>
                               <Label text="8 ore" textAlignment="CENTER">
-                                 <font><Font name="System Bold" size="54.0" /></font>
+                                  <font><Font name="System Bold" size="54.0" /></font>
                               </Label>
                               <Label text="Fino a 8 ore di ascolto con una sola carica abilitando la cancellazione attiva del rumore" textAlignment="CENTER" wrapText="true">
                                  <font><Font name="System Bold" size="14.0" /></font>
                               </Label>
-                           </children>
+                            </children>
                         </VBox>
 
                         <VBox alignment="TOP_CENTER" prefWidth="350.0" spacing="25.0">
                            <children>
-                              <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                               <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../it/uid/unitech/Images/NoiseReduction.png" />
-                                 </image>
+                                  </image>
                               </ImageView>
                               <Label minHeight="70.0" text="Cancellazione attiva del rumore &#10;fino a 1,5 volte più efficace&#10;rispetto al primo modello" textAlignment="CENTER" wrapText="true">
-                                 <font><Font name="System Bold" size="16.0" /></font>
+                                  <font><Font name="System Bold" size="16.0" /></font>
                               </Label>
                               <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
+                                  <image>
                                     <Image url="@../it/uid/unitech/Images/Adaptive%20Audio.png" />
                                  </image>
-                              </ImageView>
+                               </ImageView>
                               <Label minHeight="50.0" text="Audio adattivo e &#10;modalità Trasparenza" textAlignment="CENTER" wrapText="true">
                                  <font><Font name="System Bold" size="16.0" /></font>
                               </Label>
                               <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
+                                  <image>
                                     <Image url="@../it/uid/unitech/Images/ConversetionRilevation.png" />
                                  </image>
-                              </ImageView>
+                               </ImageView>
                               <Label minHeight="50.0" text="Rilevamento conversazione" textAlignment="CENTER" wrapText="true">
                                  <font><Font name="System Bold" size="16.0" /></font>
-                              </Label>
+                               </Label>
                               <Label text="5 ore" textAlignment="CENTER">
                                  <font><Font name="System Bold" size="54.0" /></font>
-                              </Label>
+                               </Label>
                               <Label text="Fino a 5 ore di ascolto con una sola carica" textAlignment="CENTER" wrapText="true">
                                  <font><Font name="System Bold" size="14.0" /></font>
-                              </Label>
+                               </Label>
                            </children>
                         </VBox>
                      </children>
-                  </HBox>
+                   </HBox>
 
                </children>
                <VBox.margin>
@@ -367,5 +383,5 @@
             </VBox>
          </children>
       </VBox>
-   </content>
+    </content>
 </ScrollPane>

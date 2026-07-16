@@ -4,9 +4,9 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitMenuButton?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
@@ -18,14 +18,14 @@
 
 <VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #C4DEFF;" stylesheets="@../Style/cupertino-light.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.iPadProductController">
    <children>
-      <HBox alignment="CENTER" maxWidth="880.0" minHeight="54.0" prefHeight="54.0" style="-fx-border-radius: 10; -fx-border-color: black; -fx-background-radius: 10;" VBox.vgrow="NEVER">
+      <HBox alignment="CENTER_LEFT" maxWidth="880.0" minHeight="54.0" prefHeight="54.0" style="-fx-border-radius: 10; -fx-border-color: black; -fx-background-radius: 10;">
          <styleClass>
             <String fx:value="bg-default" />
             <String fx:value="border-default" />
             <String fx:value="elevated-1" />
          </styleClass>
          <children>
-            <ImageView fx:id="logoIcon17Pro" cache="true" cacheHint="QUALITY" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="logoIconiPadAir" cache="true" cacheHint="QUALITY" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../it/uid/unitech/Images/UnitechLogo.png" />
                </image>
@@ -33,11 +33,11 @@
                   <Insets left="30.0" />
                </HBox.margin>
             </ImageView>
-            <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPhone">
+            <SplitMenuButton fx:id="iPhoneHomeiPadAir" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPhone">
                <items>
-                  <MenuItem mnemonicParsing="false" text="iPhone 17 Pro" />
-                  <MenuItem mnemonicParsing="false" text="iPhone 17" />
-                  <MenuItem mnemonicParsing="false" text="iPhone Air" />
+                  <MenuItem fx:id="iPhone17ProHomeiPadAir" mnemonicParsing="false" text="iPhone 17 Pro" />
+                  <MenuItem fx:id="iPhone17HomeiPadAir" mnemonicParsing="false" text="iPhone 17" />
+                  <MenuItem fx:id="iPhoneAirHomeiPadAir" mnemonicParsing="false" text="iPhone Air" />
                </items>
                <font>
                   <Font name="Segoe UI" size="18.0" />
@@ -50,12 +50,12 @@
                <HBox.margin>
                   <Insets left="30.0" />
                </HBox.margin>
-            </MenuButton>
-            <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPad">
+            </SplitMenuButton>
+            <SplitMenuButton fx:id="iPadHomeiPadAir" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPad">
                <items>
-                  <MenuItem mnemonicParsing="false" text="iPad Pro" />
-                  <MenuItem mnemonicParsing="false" text="iPad Air" />
-                  <MenuItem mnemonicParsing="false" text="iPad" />
+                  <MenuItem fx:id="iPadProHomeiPadAir" mnemonicParsing="false" text="iPad Pro" />
+                  <MenuItem fx:id="iPadAirHomeiPadAir" mnemonicParsing="false" text="iPad Air" />
+                  <MenuItem fx:id="iPadBaseHomeiPadAir" mnemonicParsing="false" text="iPad" />
                </items>
                <font>
                   <Font name="Segoe UI" size="18.0" />
@@ -68,12 +68,12 @@
                <HBox.margin>
                   <Insets left="20.0" />
                </HBox.margin>
-            </MenuButton>
-            <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Mac">
+            </SplitMenuButton>
+            <SplitMenuButton fx:id="MacHomeiPadAir" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Mac">
                <items>
-                  <MenuItem mnemonicParsing="false" text="iMac" />
-                  <MenuItem mnemonicParsing="false" text="Mac Studio" />
-                  <MenuItem mnemonicParsing="false" text="Mac Mini" />
+                  <MenuItem fx:id="iMacHomeiPadAir" mnemonicParsing="false" text="iMac" />
+                  <MenuItem fx:id="MacStudioHomeiPadAir" mnemonicParsing="false" text="Mac Studio" />
+                  <MenuItem fx:id="MacMiniHomeiPadAir" mnemonicParsing="false" text="Mac Mini" />
                </items>
                <font>
                   <Font name="Segoe UI" size="18.0" />
@@ -86,12 +86,12 @@
                <HBox.margin>
                   <Insets left="20.0" />
                </HBox.margin>
-            </MenuButton>
-            <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="MacBook">
+            </SplitMenuButton>
+            <SplitMenuButton fx:id="MacBookHomeiPadAir" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="MacBook">
                <items>
-                  <MenuItem mnemonicParsing="false" text="MacBook Pro" />
-                  <MenuItem mnemonicParsing="false" text="MacBook Air" />
-                  <MenuItem mnemonicParsing="false" text="MacBook Neo" />
+                  <MenuItem fx:id="MacBookProHomeiPadAir" mnemonicParsing="false" text="MacBook Pro" />
+                  <MenuItem fx:id="MacBookAirHomeiPadAir" mnemonicParsing="false" text="MacBook Air" />
+                  <MenuItem fx:id="MacBookNeoHomeiPadAir" mnemonicParsing="false" text="MacBook Neo" />
                </items>
                <font>
                   <Font name="Segoe UI" size="18.0" />
@@ -104,12 +104,12 @@
                <HBox.margin>
                   <Insets left="20.0" />
                </HBox.margin>
-            </MenuButton>
-            <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Watch">
+            </SplitMenuButton>
+            <SplitMenuButton fx:id="WatchHomeiPadAir" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Watch">
                <items>
-                  <MenuItem mnemonicParsing="false" text="Apple Watch Ultra 3" />
-                  <MenuItem mnemonicParsing="false" text="Apple Watch Series 11" />
-                  <MenuItem mnemonicParsing="false" text="Apple Watch SE 3" />
+                  <MenuItem fx:id="WatchUltra3HomeiPadAir" mnemonicParsing="false" text="Apple Watch Ultra 3" />
+                  <MenuItem fx:id="WatchSeries11HomeiPadAir" mnemonicParsing="false" text="Apple Watch Series 11" />
+                  <MenuItem fx:id="WatchSE3HomeiPadAir" mnemonicParsing="false" text="Apple Watch SE 3" />
                </items>
                <font>
                   <Font name="Segoe UI" size="18.0" />
@@ -122,12 +122,12 @@
                <HBox.margin>
                   <Insets left="20.0" />
                </HBox.margin>
-            </MenuButton>
-            <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="AirPods">
+            </SplitMenuButton>
+            <SplitMenuButton fx:id="AirPodsHomeiPadAir" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="AirPods">
                <items>
-                  <MenuItem mnemonicParsing="false" text="AirPods Max" />
-                  <MenuItem mnemonicParsing="false" text="AirPods Pro 3" />
-                  <MenuItem mnemonicParsing="false" text="AirPods 4" />
+                  <MenuItem fx:id="AirPodsMax2HomeiPadAir" mnemonicParsing="false" text="AirPods Max 2" />
+                  <MenuItem fx:id="AirPodsPro3HomeiPadAir" mnemonicParsing="false" text="AirPods Pro 3" />
+                  <MenuItem fx:id="AirPods4HomeiPadAir" mnemonicParsing="false" text="AirPods 4" />
                </items>
                <font>
                   <Font name="Segoe UI" size="18.0" />
@@ -138,27 +138,27 @@
                   <String fx:value="flat" />
                </styleClass>
                <HBox.margin>
-                  <Insets />
+                  <Insets left="20.0" />
                </HBox.margin>
-            </MenuButton>
+            </SplitMenuButton>
             <Region HBox.hgrow="ALWAYS">
                <HBox.margin>
                   <Insets left="30.0" />
                </HBox.margin>
             </Region>
-            <FontIcon iconColor="#1d1d1f" iconLiteral="fas-shopping-bag" iconSize="22" onMouseClicked="#apriCarrello">
+            <FontIcon iconColor="#1d1d1f" iconLiteral="fas-shopping-bag" iconSize="22">
                <HBox.margin>
                   <Insets right="24.0" />
                </HBox.margin>
             </FontIcon>
-            <FontIcon fx:id="loginIcon17Pro" iconColor="#1d1d1f" iconLiteral="fas-user-alt" iconSize="22" />
+            <FontIcon fx:id="loginIconiPadAir" iconColor="#1d1d1f" iconLiteral="fas-user-alt" iconSize="22" />
          </children>
-         <VBox.margin>
-            <Insets top="30.0" />
-         </VBox.margin>
          <padding>
             <Insets left="2.0" right="20.0" />
          </padding>
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin>
       </HBox>
       <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1280.0" style="-fx-background-color: #C4DEFF;" stylesheets="@../Style/cupertino-light.css" VBox.vgrow="ALWAYS">
          <children>

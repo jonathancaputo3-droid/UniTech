@@ -92,7 +92,7 @@ public class WatchProductController {
         fadeOut.setOnFinished(e -> {
             try {
                 FXMLLoader loader = new FXMLLoader(
-                        getClass().getResource("/Fxml/Carrello.fxml")
+                        getClass().getResource("/fxml/Carrello.fxml")
                 );
 
                 Parent newRoot = loader.load();
@@ -298,11 +298,11 @@ public class WatchProductController {
 
         AnimazioneUtil.aggiungiAnimazione(loginIcon11);
 
-        AnimazioneUtil.verificaCambiaScena(loginIconUltra, "/Fxml/ProfileOption.fxml");
+        AnimazioneUtil.verificaCambiaScena(loginIconUltra, "/fxml/ProfileOption.fxml");
 
-        AnimazioneUtil.verificaCambiaScena(loginIconSE, "/Fxml/ProfileOption.fxml");
+        AnimazioneUtil.verificaCambiaScena(loginIconSE, "/fxml/ProfileOption.fxml");
 
-        AnimazioneUtil.verificaCambiaScena(loginIcon11, "/Fxml/ProfileOption.fxml");
+        AnimazioneUtil.verificaCambiaScena(loginIcon11, "/fxml/ProfileOption.fxml");
 
         AnimazioneUtil.aggiungiAnimazione(logoIconSE);
 
@@ -310,11 +310,11 @@ public class WatchProductController {
 
         AnimazioneUtil.aggiungiAnimazione(logoIcon11);
 
-        AnimazioneUtil.verificaCambiaScena(logoIconSE, "/Fxml/Home.fxml");
+        AnimazioneUtil.verificaCambiaScena(logoIconSE, "/fxml/Home.fxml");
 
-        AnimazioneUtil.verificaCambiaScena(logoIconUltra, "/Fxml/Home.fxml");
+        AnimazioneUtil.verificaCambiaScena(logoIconUltra, "/fxml/Home.fxml");
 
-        AnimazioneUtil.verificaCambiaScena(logoIcon11, "/Fxml/Home.fxml");
+        AnimazioneUtil.verificaCambiaScena(logoIcon11, "/fxml/Home.fxml");
 
         // Navigazione (sezione Apple Watch Ultra 3)
         AnimazioneUtil.verificaCambiaScena(iPhoneHomeWatchUltra3, "/fxml/iPhone Product.fxml");
@@ -323,6 +323,8 @@ public class WatchProductController {
         AnimazioneUtil.verificaCambiaScena(MacBookHomeWatchUltra3, "/fxml/MacBook Product.fxml");
         AnimazioneUtil.verificaCambiaScena(WatchHomeWatchUltra3, "/fxml/Watch Product.fxml");
         AnimazioneUtil.verificaCambiaScena(AirPodsHomeWatchUltra3, "/fxml/AirPods Product.fxml");
+        AnimazioneUtil.verificaCambiaScena(loginIconUltra, "/fxml/ProfileOption.fxml");
+        AnimazioneUtil.verificaCambiaScena(logoIconUltra, "/fxml/Home.fxml");
 
         AnimazioneUtil.verificaCambiaScenaItem(iPhone17ProHomeWatchUltra3, "/fxml/iPhone 17 Pro PageProduct.fxml");
         AnimazioneUtil.verificaCambiaScenaItem(iPhone17HomeWatchUltra3, "/fxml/iPhone 17 PageProduct.fxml");
@@ -342,6 +344,7 @@ public class WatchProductController {
         AnimazioneUtil.verificaCambiaScenaItem(AirPodsMax2HomeWatchUltra3, "/fxml/AirPods Max 2 PageProduct.fxml");
         AnimazioneUtil.verificaCambiaScenaItem(AirPodsPro3HomeWatchUltra3, "/fxml/AirPods Pro 3 PageProduct.fxml");
         AnimazioneUtil.verificaCambiaScenaItem(AirPods4HomeWatchUltra3, "/fxml/AirPods 4 PageProduct.fxml");
+        
 
         // Navigazione (sezione Apple Watch SE 3)
         AnimazioneUtil.verificaCambiaScena(iPhoneHomeWatchSE3, "/fxml/iPhone Product.fxml");
@@ -350,6 +353,8 @@ public class WatchProductController {
         AnimazioneUtil.verificaCambiaScena(MacBookHomeWatchSE3, "/fxml/MacBook Product.fxml");
         AnimazioneUtil.verificaCambiaScena(WatchHomeWatchSE3, "/fxml/Watch Product.fxml");
         AnimazioneUtil.verificaCambiaScena(AirPodsHomeWatchSE3, "/fxml/AirPods Product.fxml");
+        AnimazioneUtil.verificaCambiaScena(loginIconSE, "/fxml/ProfileOption.fxml");
+        AnimazioneUtil.verificaCambiaScena(logoIconSE, "/fxml/Home.fxml");
 
         AnimazioneUtil.verificaCambiaScenaItem(iPhone17ProHomeWatchSE3, "/fxml/iPhone 17 Pro PageProduct.fxml");
         AnimazioneUtil.verificaCambiaScenaItem(iPhone17HomeWatchSE3, "/fxml/iPhone 17 PageProduct.fxml");
@@ -377,6 +382,8 @@ public class WatchProductController {
         AnimazioneUtil.verificaCambiaScena(MacBookHomeWatchSeries11, "/fxml/MacBook Product.fxml");
         AnimazioneUtil.verificaCambiaScena(WatchHomeWatchSeries11, "/fxml/Watch Product.fxml");
         AnimazioneUtil.verificaCambiaScena(AirPodsHomeWatchSeries11, "/fxml/AirPods Product.fxml");
+        AnimazioneUtil.verificaCambiaScena(loginIcon11, "/fxml/ProfileOption.fxml");
+        AnimazioneUtil.verificaCambiaScena(logoIcon11, "/fxml/Home.fxml");
 
         AnimazioneUtil.verificaCambiaScenaItem(iPhone17ProHomeWatchSeries11, "/fxml/iPhone 17 Pro PageProduct.fxml");
         AnimazioneUtil.verificaCambiaScenaItem(iPhone17HomeWatchSeries11, "/fxml/iPhone 17 PageProduct.fxml");

@@ -90,7 +90,7 @@ public class AirPodsProductController {
         fadeOut.setOnFinished(e -> {
             try {
                 FXMLLoader loader = new FXMLLoader(
-                        getClass().getResource("/Fxml/Carrello.fxml")
+                        getClass().getResource("/fxml/Carrello.fxml")
                 );
 
                 Parent newRoot = loader.load();
@@ -131,9 +131,9 @@ public class AirPodsProductController {
     @FXML
     private Button btnSi;
     @FXML
-    private FontIcon loginIcon;
+    private FontIcon loginIconMax2;
     @FXML
-    private ImageView logoIcon;
+    private ImageView logoIconMax2;
 
         // Navigazione (sezione AirPods Max 2)
     @FXML private SplitMenuButton iPhoneHomeAirPodsMax2;
@@ -286,26 +286,26 @@ public class AirPodsProductController {
         aggiungiClickBottone(btnSi3,"349€",prezzoLabel3);
 
 
-        aggiungiAnimazione(loginIcon);
+        aggiungiAnimazione(loginIconMax2);
         aggiungiAnimazione(loginIcon4);
         aggiungiAnimazione(loginIcon3);
 
-        verificaCambiaScena(loginIcon, "/Fxml/ProfileOption.fxml");
+        verificaCambiaScena(loginIconMax2, "/fxml/ProfileOption.fxml");
 
-        verificaCambiaScena(loginIcon4, "/Fxml/ProfileOption.fxml");
+        verificaCambiaScena(loginIcon4, "/fxml/ProfileOption.fxml");
 
-        verificaCambiaScena(loginIcon3, "/Fxml/ProfileOption.fxml");
+        verificaCambiaScena(loginIcon3, "/fxml/ProfileOption.fxml");
 
 
-        aggiungiAnimazione(logoIcon);
+        aggiungiAnimazione(logoIconMax2);
         aggiungiAnimazione(logoIcon4);
         aggiungiAnimazione(logoIcon3);
 
-        verificaCambiaScena(logoIcon, "/Fxml/Home.fxml");
+        verificaCambiaScena(logoIconMax2, "/fxml/Home.fxml");
 
-        verificaCambiaScena(logoIcon4, "/Fxml/Home.fxml");
+        verificaCambiaScena(logoIcon4, "/fxml/Home.fxml");
 
-        verificaCambiaScena(logoIcon3, "/Fxml/Home.fxml");
+        verificaCambiaScena(logoIcon3, "/fxml/Home.fxml");
 
         // Navigazione (sezione AirPods Max 2)
         AnimazioneUtil.verificaCambiaScena(iPhoneHomeAirPodsMax2, "/fxml/iPhone Product.fxml");

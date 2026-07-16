@@ -139,7 +139,7 @@ public class HomeController {
         AnimazioneUtil.verificaCambiaScena(DiscoveriPhone17Home, "/fxml/iPhone 17 PageProduct.fxml");
         AnimazioneUtil.verificaCambiaScena(DiscoveriPadAirHome, "/fxml/iPad Air PageProduct.fxml");
         AnimazioneUtil.verificaCambiaScena(DiscoverAirPods4Home, "/fxml/AirPods 4 PageProduct.fxml");
-        AnimazioneUtil.verificaCambiaScena(DiscoverAppleWatchSeries11Home, "/fxml/Apple Watch Series 11 PageProduct.fxml");
+        AnimazioneUtil.verificaCambiaScena(DiscoverAppleWatchSeries11Home, "/fxml/Apple Watch SE 3 PageProduct.fxml");
         AnimazioneUtil.verificaCambiaScena(DiscoverMacBookAirHome, "/fxml/MacBook Air 13 PageProduct.fxml");
         AnimazioneUtil.verificaCambiaScena(DiscoveriMacHome, "/fxml/iMac PageProduct.fxml");
 

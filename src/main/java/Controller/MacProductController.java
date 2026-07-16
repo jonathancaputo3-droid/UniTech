@@ -88,7 +88,7 @@ public class MacProductController {
         fadeOut.setOnFinished(e -> {
             try {
                 FXMLLoader loader = new FXMLLoader(
-                        getClass().getResource("/Fxml/Carrello.fxml")
+                        getClass().getResource("/fxml/Carrello.fxml")
                 );
 
                 Parent newRoot = loader.load();
@@ -269,6 +269,10 @@ public class MacProductController {
         AnimazioneUtil.verificaCambiaScena(MacBookHomeiMac, "/fxml/MacBook Product.fxml");
         AnimazioneUtil.verificaCambiaScena(WatchHomeiMac, "/fxml/Watch Product.fxml");
         AnimazioneUtil.verificaCambiaScena(AirPodsHomeiMac, "/fxml/AirPods Product.fxml");
+        AnimazioneUtil.verificaCambiaScena(loginIconiM, "/fxml/ProfileOption.fxml");
+        AnimazioneUtil.verificaCambiaScena(logoIconiM, "/fxml/Home.fxml");
+        AnimazioneUtil.aggiungiAnimazione(logoIconiM);
+        AnimazioneUtil.aggiungiAnimazione(loginIconiM);
 
         AnimazioneUtil.verificaCambiaScenaItem(iPhone17ProHomeiMac, "/fxml/iPhone 17 Pro PageProduct.fxml");
         AnimazioneUtil.verificaCambiaScenaItem(iPhone17HomeiMac, "/fxml/iPhone 17 PageProduct.fxml");
@@ -301,6 +305,10 @@ public class MacProductController {
         AnimazioneUtil.verificaCambiaScena(MacBookHomeMacStudio, "/fxml/MacBook Product.fxml");
         AnimazioneUtil.verificaCambiaScena(WatchHomeMacStudio, "/fxml/Watch Product.fxml");
         AnimazioneUtil.verificaCambiaScena(AirPodsHomeMacStudio, "/fxml/AirPods Product.fxml");
+        AnimazioneUtil.verificaCambiaScena(loginIconMS, "/fxml/ProfileOption.fxml");
+        AnimazioneUtil.verificaCambiaScena(logoIconMS, "/fxml/Home.fxml");
+        AnimazioneUtil.aggiungiAnimazione(logoIconMS);
+        AnimazioneUtil.aggiungiAnimazione(loginIconMS);
 
         AnimazioneUtil.verificaCambiaScenaItem(iPhone17ProHomeMacStudio, "/fxml/iPhone 17 Pro PageProduct.fxml");
         AnimazioneUtil.verificaCambiaScenaItem(iPhone17HomeMacStudio, "/fxml/iPhone 17 PageProduct.fxml");
@@ -333,6 +341,10 @@ public class MacProductController {
         AnimazioneUtil.verificaCambiaScena(MacBookHomeMacMini, "/fxml/MacBook Product.fxml");
         AnimazioneUtil.verificaCambiaScena(WatchHomeMacMini, "/fxml/Watch Product.fxml");
         AnimazioneUtil.verificaCambiaScena(AirPodsHomeMacMini, "/fxml/AirPods Product.fxml");
+        AnimazioneUtil.verificaCambiaScena(loginIconMini, "/fxml/ProfileOption.fxml");
+        AnimazioneUtil.verificaCambiaScena(logoIconMini, "/fxml/Home.fxml");
+        AnimazioneUtil.aggiungiAnimazione(logoIconMini);
+        AnimazioneUtil.aggiungiAnimazione(loginIconMini);
 
         AnimazioneUtil.verificaCambiaScenaItem(iPhone17ProHomeMacMini, "/fxml/iPhone 17 Pro PageProduct.fxml");
         AnimazioneUtil.verificaCambiaScenaItem(iPhone17HomeMacMini, "/fxml/iPhone 17 PageProduct.fxml");

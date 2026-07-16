@@ -4,10 +4,10 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitMenuButton?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Font?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<ScrollPane fitToWidth="true" hbarPolicy="NEVER" stylesheets="@../Style/cupertino-light.css" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.iPhoneProductController">
+<ScrollPane fitToWidth="true" hbarPolicy="NEVER" stylesheets="@../Style/cupertino-light.css" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GenericProductController">
     <content>
         <VBox style="-fx-background-color: #C4DEFF;">
             <children>
@@ -25,501 +25,523 @@
                         <Insets bottom="50.0" left="20.0" right="20.0" top="45.0" />
                     </padding>
                     <children>
-                        <HBox alignment="CENTER_LEFT" maxWidth="880.0" minHeight="54.0" prefHeight="54.0" style="-fx-border-radius: 10; -fx-border-color: black; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
-                            <styleClass>
-                                <String fx:value="bg-default" />
-                                <String fx:value="border-default" />
-                                <String fx:value="elevated-1" />
-                            </styleClass>
-                            <children>
-                                <ImageView cache="true" cacheHint="QUALITY" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@../it/uid/unitech/Images/UnitechLogo.png" />
-                                    </image>
-                                    <HBox.margin>
-                                        <Insets left="30.0" />
-                                    </HBox.margin>
-                                </ImageView>
-
-                                <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPhone">
-                                    <items>
-                                        <MenuItem mnemonicParsing="false" text="iPhone 17 Pro" />
-                                        <MenuItem mnemonicParsing="false" text="iPhone 17" />
-                                        <MenuItem mnemonicParsing="false" text="iPhone Air" />
-                                    </items>
-                                    <font><Font name="Segoe UI" size="18.0" /></font>
-                                    <styleClass>
-                                        <String fx:value="button-outlined" />
-                                        <String fx:value="barra-items" />
-                                        <String fx:value="flat" />
-                                    </styleClass>
-                                    <HBox.margin><Insets left="30.0" /></HBox.margin>
-                                </MenuButton>
-
-                                <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPad">
-                                    <items>
-                                        <MenuItem mnemonicParsing="false" text="iPad Pro" />
-                                        <MenuItem mnemonicParsing="false" text="iPad Air" />
-                                        <MenuItem mnemonicParsing="false" text="iPad" />
-                                    </items>
-                                    <font><Font name="Segoe UI" size="18.0" /></font>
-                                    <styleClass>
-                                        <String fx:value="button-outlined" />
-                                        <String fx:value="barra-items" />
-                                        <String fx:value="flat" />
-                                    </styleClass>
-                                    <HBox.margin><Insets left="20.0" /></HBox.margin>
-                                </MenuButton>
-
-                                <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Mac">
-                                    <items>
-                                        <MenuItem mnemonicParsing="false" text="iMac" />
-                                        <MenuItem mnemonicParsing="false" text="Mac Studio" />
-                                        <MenuItem mnemonicParsing="false" text="Mac Mini" />
-                                    </items>
-                                    <font><Font name="Segoe UI" size="18.0" /></font>
-                                    <styleClass>
-                                        <String fx:value="button-outlined" />
-                                        <String fx:value="barra-items" />
-                                        <String fx:value="flat" />
-                                    </styleClass>
-                                    <HBox.margin><Insets left="20.0" /></HBox.margin>
-                                </MenuButton>
-
-                                <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="MacBook">
-                                    <items>
-                                        <MenuItem mnemonicParsing="false" text="MacBook Pro" />
-                                        <MenuItem mnemonicParsing="false" text="MacBook Air" />
-                                        <MenuItem mnemonicParsing="false" text="MacBook Neo" />
-                                    </items>
-                                    <font><Font name="Segoe UI" size="18.0" /></font>
-                                    <styleClass>
-                                        <String fx:value="button-outlined" />
-                                        <String fx:value="barra-items" />
-                                        <String fx:value="flat" />
-                                    </styleClass>
-                                    <HBox.margin><Insets left="20.0" /></HBox.margin>
-                                </MenuButton>
-
-                                <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Watch">
-                                    <items>
-                                        <MenuItem mnemonicParsing="false" text="Apple Watch Pro 3" />
-                                        <MenuItem mnemonicParsing="false" text="Apple Watch Series 11" />
-                                        <MenuItem mnemonicParsing="false" text="Apple Watch SE 3" />
-                                    </items>
-                                    <font><Font name="Segoe UI" size="18.0" /></font>
-                                    <styleClass>
-                                        <String fx:value="button-outlined" />
-                                        <String fx:value="barra-items" />
-                                        <String fx:value="flat" />
-                                    </styleClass>
-                                    <HBox.margin><Insets left="20.0" /></HBox.margin>
-                                </MenuButton>
-
-                                <MenuButton cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="AirPods">
-                                    <items>
-                                        <MenuItem mnemonicParsing="false" text="AirPods Max 2" />
-                                        <MenuItem mnemonicParsing="false" text="AirPods Pro 3" />
-                                        <MenuItem mnemonicParsing="false" text="AirPods 4" />
-                                    </items>
-                                    <font><Font name="Segoe UI" size="18.0" /></font>
-                                    <styleClass>
-                                        <String fx:value="button-outlined" />
-                                        <String fx:value="barra-items" />
-                                        <String fx:value="flat" />
-                                    </styleClass>
-                                    <HBox.margin><Insets left="20.0" /></HBox.margin>
-                                </MenuButton>
-
-                                <Region HBox.hgrow="ALWAYS">
-                                    <HBox.margin><Insets left="30.0" /></HBox.margin>
-                                </Region>
-
-                                <FontIcon iconColor="#1d1d1f" iconLiteral="fas-shopping-bag" iconSize="22" onMouseClicked="#apriCarrello">
-                                    <HBox.margin><Insets right="24.0" /></HBox.margin>
-                                </FontIcon>
-
-                                <FontIcon fx:id="loginIcon" iconColor="#1d1d1f" iconLiteral="fas-user-alt" iconSize="22" />
-                            </children>
-                            <padding>
-                                <Insets left="2.0" right="20.0" />
-                            </padding>
-                        </HBox>
-                        <Label text="Scegli il tuo modello di Mac">
+                   <HBox alignment="CENTER_LEFT" maxWidth="880.0" minHeight="54.0" prefHeight="54.0" style="-fx-border-radius: 10; -fx-border-color: black; -fx-background-radius: 10;">
+                     <styleClass>
+                        <String fx:value="bg-default" />
+                        <String fx:value="border-default" />
+                        <String fx:value="elevated-1" />
+                     </styleClass>
+                     <children>
+                        <ImageView fx:id="logoiconMacProduct" cache="true" cacheHint="QUALITY" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                              <Image url="@../it/uid/unitech/Images/UnitechLogo.png" />
+                           </image>
+                           <HBox.margin>
+                               <Insets left="30.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <SplitMenuButton fx:id="iPhoneHomeMacProduct" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPhone">
+                            <items>
+                              <MenuItem fx:id="iPhone17ProHomeMacProduct" mnemonicParsing="false" text="iPhone 17 Pro" />
+                              <MenuItem fx:id="iPhone17HomeMacProduct" mnemonicParsing="false" text="iPhone 17" />
+                               <MenuItem fx:id="iPhoneAirHomeMacProduct" mnemonicParsing="false" text="iPhone Air" />
+                           </items>
+                           <font>
+                               <Font name="Segoe UI" size="18.0" />
+                           </font>
+                           <styleClass>
+                               <String fx:value="button-outlined" />
+                              <String fx:value="barra-items" />
+                              <String fx:value="flat" />
+                           </styleClass>
+                            <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                         </SplitMenuButton>
+                        <SplitMenuButton fx:id="iPadHomeMacProduct" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPad">
+                           <items>
+                              <MenuItem fx:id="iPadProHomeMacProduct" mnemonicParsing="false" text="iPad Pro" />
+                               <MenuItem fx:id="iPadAirHomeMacProduct" mnemonicParsing="false" text="iPad Air" />
+                              <MenuItem fx:id="iPadBaseHomeMacProduct" mnemonicParsing="false" text="iPad" />
+                           </items>
+                           <font>
+                              <Font name="Segoe UI" size="18.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="button-outlined" />
+                              <String fx:value="barra-items" />
+                              <String fx:value="flat" />
+                           </styleClass>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                            </HBox.margin>
+                        </SplitMenuButton>
+                        <SplitMenuButton fx:id="MacHomeMacProduct" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Mac">
+                           <items>
+                               <MenuItem fx:id="iMacHomeMacProduct" mnemonicParsing="false" text="iMac" />
+                              <MenuItem fx:id="MacStudioHomeMacProduct" mnemonicParsing="false" text="Mac Studio" />
+                              <MenuItem fx:id="MacMiniHomeMacProduct" mnemonicParsing="false" text="Mac Mini" />
+                            </items>
+                           <font>
+                              <Font name="Segoe UI" size="18.0" />
+                            </font>
+                           <styleClass>
+                              <String fx:value="button-outlined" />
+                               <String fx:value="barra-items" />
+                              <String fx:value="flat" />
+                           </styleClass>
+                           <HBox.margin>
+                               <Insets left="20.0" />
+                           </HBox.margin>
+                        </SplitMenuButton>
+                        <SplitMenuButton fx:id="MacBookHomeMacProduct" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="MacBook">
+                           <items>
+                              <MenuItem fx:id="MacBookProHomeMacProduct" mnemonicParsing="false" text="MacBook Pro" />
+                              <MenuItem fx:id="MacBookAirHomeMacProduct" mnemonicParsing="false" text="MacBook Air" />
+                               <MenuItem fx:id="MacBookNeoHomeMacProduct" mnemonicParsing="false" text="MacBook Neo" />
+                           </items>
+                           <font>
+                               <Font name="Segoe UI" size="18.0" />
+                           </font>
+                           <styleClass>
+                               <String fx:value="button-outlined" />
+                              <String fx:value="barra-items" />
+                              <String fx:value="flat" />
+                           </styleClass>
+                            <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                         </SplitMenuButton>
+                        <SplitMenuButton fx:id="WatchHomeMacProduct" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Watch">
+                           <items>
+                              <MenuItem fx:id="WatchUltra3HomeMacProduct" mnemonicParsing="false" text="Apple Watch Ultra 3" />
+                               <MenuItem fx:id="WatchSeries11HomeMacProduct" mnemonicParsing="false" text="Apple Watch Series 11" />
+                              <MenuItem fx:id="WatchSE3HomeMacProduct" mnemonicParsing="false" text="Apple Watch SE 3" />
+                           </items>
                             <font>
+                              <Font name="Segoe UI" size="18.0" />
+                           </font>
+                            <styleClass>
+                              <String fx:value="button-outlined" />
+                              <String fx:value="barra-items" />
+                               <String fx:value="flat" />
+                           </styleClass>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                            </HBox.margin>
+                        </SplitMenuButton>
+                        <SplitMenuButton fx:id="AirPodsHomeMacProduct" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="AirPods">
+                            <items>
+                              <MenuItem fx:id="AirPodsMax2HomeMacProduct" mnemonicParsing="false" text="AirPods Max 2" />
+                              <MenuItem fx:id="AirPodsPro3HomeMacProduct" mnemonicParsing="false" text="AirPods Pro 3" />
+                               <MenuItem fx:id="AirPods4HomeMacProduct" mnemonicParsing="false" text="AirPods 4" />
+                           </items>
+                           <font>
+                              <Font name="Segoe UI" size="18.0" />
+                            </font>
+                           <styleClass>
+                              <String fx:value="button-outlined" />
+                               <String fx:value="barra-items" />
+                              <String fx:value="flat" />
+                           </styleClass>
+                           <HBox.margin>
+                               <Insets left="20.0" />
+                           </HBox.margin>
+                        </SplitMenuButton>
+                         <Region HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                         </Region>
+                        <FontIcon iconColor="#1d1d1f" iconLiteral="fas-shopping-bag" iconSize="22">
+                           <HBox.margin>
+                               <Insets right="24.0" />
+                           </HBox.margin>
+                        </FontIcon>
+                        <FontIcon fx:id="loginIconMacProduct" iconColor="#1d1d1f" iconLiteral="fas-user-alt" iconSize="22" />
+                      </children>
+                     <padding>
+                        <Insets left="2.0" right="20.0" />
+                     </padding>
+                     <VBox.margin>
+                         <Insets />
+                     </VBox.margin>
+                  </HBox>
+                        <Label text="Scegli il tuo modello di Mac">
+                             <font>
                                 <Font name="System Bold" size="58.0" />
                             </font>
-                        </Label>
+                         </Label>
                         <HBox alignment="CENTER" spacing="100.0">
                             <children>
                                 <VBox alignment="TOP_CENTER" spacing="10.0">
-                                    <children>
+                                     <children>
                                         <ImageView fitHeight="488.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
-                                            <image>
+                                             <image>
                                                 <Image url="@../it/uid/unitech/Images/imac_argento.png" />
-                                            </image>
+                                             </image>
                                         </ImageView>
                                         <Label text="iMac">
-                                            <font>
+                                             <font>
                                                 <Font name="System Bold" size="24.0" />
+                                             </font>
+                                        </Label>
+                                         <Label text="A partire da 2.029 € " textFill="#6e6e73">
+                                            <font>
+                                                 <Font name="System Bold" size="16.0" />
                                             </font>
                                         </Label>
-                                        <Label text="A partire da 2.029 € " textFill="#6e6e73">
-                                            <font>
-                                                <Font name="System Bold" size="16.0" />
-                                            </font>
-                                        </Label>
-                                        <Separator prefWidth="319.0" />
-                                        <Button mnemonicParsing="false" onMouseClicked="#aggiungiIPhone17Pro" styleClass="accent" text="Aggiungi al carrello">
-                                            <font>
+                                          <Separator prefWidth="319.0" />
+                                        <Button fx:id="discoverMacBookProProduct" mnemonicParsing="false" styleClass="accent" text="Scopri di più">
+                                             <font>
                                                 <Font size="18.0" />
-                                            </font>
+                                             </font>
                                         </Button>
                                     </children>
-                                </VBox>
+                                 </VBox>
                                 <VBox alignment="TOP_CENTER" spacing="10.0">
-                                    <children>
+                                     <children>
                                         <ImageView fitHeight="488.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
-                                                <Image url="@../it/uid/unitech/Images/mac_studio.png" />
+                                                  <Image url="@../it/uid/unitech/Images/mac_studio.png" />
                                             </image>
-                                        </ImageView>
+                                         </ImageView>
                                         <Label text="Mac Studio">
-                                            <font>
+                                             <font>
                                                 <Font name="System Bold" size="24.0" />
-                                            </font>
+                                             </font>
                                         </Label>
                                         <Label text="A partire da 3.049 € " textFill="#6e6e73">
-                                            <font>
+                                             <font>
                                                 <Font name="System Bold" size="16.0" />
-                                            </font>
+                                             </font>
                                         </Label>
-                                        <Separator prefWidth="319.0" />
-                                        <Button mnemonicParsing="false" onMouseClicked="#aggiungiIPhoneAir" styleClass="accent" text="Aggiungi al carrello">
-                                            <font>
+                                         <Separator prefWidth="319.0" />
+                                        <Button fx:id="discoverMacBookAirProduct" mnemonicParsing="false"  styleClass="accent" text="Scopri di più">
+                                             <font>
                                                 <Font size="18.0" />
                                             </font>
-                                        </Button>
+                                         </Button>
                                     </children>
-                                </VBox>
+                                 </VBox>
                                 <VBox alignment="TOP_CENTER" spacing="10.0">
                                     <children>
-                                        <ImageView fitHeight="488.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
+                                         <ImageView fitHeight="488.0" fitWidth="323.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
-                                                <Image url="@../it/uid/unitech/Images/mac_mini.png" />
+                                                 <Image url="@../it/uid/unitech/Images/mac_mini.png" />
                                             </image>
                                         </ImageView>
-                                        <Label text="Mac Mini">
+                                         <Label text="Mac Mini">
                                             <font>
-                                                <Font name="System Bold" size="24.0" />
+                                                  <Font name="System Bold" size="24.0" />
                                             </font>
-                                        </Label>
+                                         </Label>
                                         <Label text="A partire da 979 € " textFill="#6e6e73">
-                                            <font>
+                                             <font>
                                                 <Font name="System Bold" size="16.0" />
-                                            </font>
+                                             </font>
                                         </Label>
                                         <Separator prefWidth="319.0" />
-                                        <Button mnemonicParsing="false" onMouseClicked="#aggiungiIPhone17" styleClass="accent" text="Aggiungi al carrello">
+                                         <Button fx:id="discoverMacBookNeoProduct" mnemonicParsing="false" styleClass="accent" text="Scopri di più">
                                             <font>
-                                                <Font size="18.0" />
+                                                 <Font size="18.0" />
                                             </font>
-                                        </Button>
+                                         </Button>
                                     </children>
                                 </VBox>
-                            </children>
+                             </children>
                         </HBox>
                         <VBox alignment="CENTER" maxWidth="1241.0" spacing="20.0">
                             <children>
-                                <Label alignment="CENTER" text="Caratteristiche Tecniche">
+                                 <Label alignment="CENTER" text="Caratteristiche Tecniche">
                                     <font>
-                                        <Font name="System Bold" size="46.0" />
+                                         <Font name="System Bold" size="46.0" />
                                     </font>
                                     <VBox.margin>
-                                        <Insets />
+                                         <Insets />
                                     </VBox.margin>
                                 </Label>
-                                <Separator prefWidth="1241.0" />
+                                 <Separator prefWidth="1241.0" />
                                 <HBox alignment="TOP_CENTER" spacing="100.0">
                                     <children>
-                                        <VBox alignment="TOP_CENTER" prefWidth="323.0" spacing="40.0">
+                                         <VBox alignment="TOP_CENTER" prefWidth="323.0" spacing="40.0">
                                             <children>
-                                                <ImageView fitHeight="91.0" fitWidth="142.0" preserveRatio="true">
+                                                 <ImageView fitHeight="91.0" fitWidth="142.0" preserveRatio="true">
                                                     <image>
-                                                        <Image url="@../it/uid/unitech/Images/Chip%20M4.png" />
+                                                         <Image url="@../it/uid/unitech/Images/Chip%20M4.png" />
                                                     </image>
-                                                </ImageView>
+                                                 </ImageView>
                                                 <Label text="Chip Apple M4" textAlignment="CENTER">
-                                                    <font>
+                                                     <font>
                                                         <Font name="System Bold" size="18.0" />
                                                     </font>
-                                                </Label>
+                                                 </Label>
                                                 <VBox alignment="CENTER" spacing="0.0">
-                                                    <children>
+                                                     <children>
                                                         <Label text=" " textAlignment="CENTER">
-                                                            <font>
+                                                             <font>
                                                                 <Font name="System Bold" size="16.0" />
-                                                            </font>
-                                                        </Label>
+                                                             </font>
+                                                         </Label>
                                                         <Label text="8‑core">
-                                                            <font>
+                                                             <font>
                                                                 <Font name="System Bold" size="64.0" />
-                                                            </font>
-                                                        </Label>
+                                                             </font>
+                                                         </Label>
                                                     </children>
-                                                </VBox>
+                                                 </VBox>
                                                 <Label text="di CPU" textAlignment="CENTER">
-                                                    <font>
+                                                     <font>
                                                         <Font name="System Bold" size="18.0" />
-                                                    </font>
+                                                     </font>
                                                 </Label>
-                                                <VBox alignment="CENTER" spacing="0.0">
+                                                 <VBox alignment="CENTER" spacing="0.0">
                                                     <children>
-                                                        <Label text=" " textAlignment="CENTER">
+                                                         <Label text=" " textAlignment="CENTER">
                                                             <font>
-                                                                <Font name="System Bold" size="16.0" />
-                                                            </font>
+                                                                 <Font name="System Bold" size="16.0" />
+                                                             </font>
                                                         </Label>
-                                                        <Label text="8‑core">
+                                                         <Label text="8‑core">
                                                             <font>
-                                                                <Font name="System Bold" size="64.0" />
-                                                            </font>
+                                                                  <Font name="System Bold" size="64.0" />
+                                                             </font>
                                                         </Label>
-                                                    </children>
+                                                     </children>
                                                 </VBox>
-                                                <Label text="di GPU" textAlignment="CENTER">
+                                                 <Label text="di GPU" textAlignment="CENTER">
                                                     <font>
-                                                        <Font name="System Bold" size="18.0" />
+                                                         <Font name="System Bold" size="18.0" />
                                                     </font>
-                                                </Label>
+                                                 </Label>
                                                 <VBox alignment="CENTER" spacing="0.0">
-                                                    <children>
+                                                   <children>
                                                         <Label text="Da" textAlignment="CENTER">
                                                             <font>
-                                                                <Font name="System Bold" size="16.0" />
+                                                                 <Font name="System Bold" size="16.0" />
                                                             </font>
-                                                        </Label>
+                                                         </Label>
                                                         <Label text="16GB">
                                                             <font>
-                                                                <Font name="System Bold" size="64.0" />
+                                                                 <Font name="System Bold" size="64.0" />
                                                             </font>
-                                                        </Label>
+                                                         </Label>
                                                     </children>
-                                                </VBox>
+                                                 </VBox>
                                                 <Label text="di memoria unificata" textAlignment="CENTER">
-                                                    <font>
-                                                        <Font name="System Bold" size="18.0" />
+                                                     <font>
+                                                         <Font name="System Bold" size="18.0" />
                                                     </font>
-                                                </Label>
+                                                 </Label>
                                                 <VBox alignment="CENTER" spacing="0.0">
-                                                    <children>
+                                                     <children>
                                                         <Label text="Da" textAlignment="CENTER">
-                                                            <font>
+                                                              <font>
                                                                 <Font name="System Bold" size="16.0" />
-                                                            </font>
-                                                        </Label>
+                                                             </font>
+                                                         </Label>
                                                         <Label text="256GB">
-                                                            <font>
+                                                              <font>
                                                                 <Font name="System Bold" size="64.0" />
-                                                            </font>
-                                                        </Label>
+                                                             </font>
+                                                         </Label>
                                                     </children>
-                                                </VBox>
+                                                 </VBox>
                                                 <Label text="di archiviazione" textAlignment="CENTER">
-                                                    <font>
+                                                     <font>
                                                         <Font name="System Bold" size="18.0" />
-                                                    </font>
+                                                     </font>
                                                 </Label>
-                                            </children>
+                                             </children>
                                         </VBox>
-                                        <VBox alignment="TOP_CENTER" prefWidth="323.0" spacing="40.0">
+                                         <VBox alignment="TOP_CENTER" prefWidth="323.0" spacing="40.0">
                                             <children>
                                                 <ImageView fitHeight="91.0" fitWidth="142.0" preserveRatio="true">
-                                                    <image>
-                                                        <Image url="@../it/uid/unitech/Images/M4_max.png" />
+                                                     <image>
+                                                         <Image url="@../it/uid/unitech/Images/M4_max.png" />
                                                     </image>
-                                                </ImageView>
+                                                 </ImageView>
                                                 <Label text="Chip Apple M4 Max" textAlignment="CENTER">
-                                                    <font>
+                                                     <font>
                                                         <Font name="System Bold" size="18.0" />
-                                                    </font>
+                                                     </font>
                                                 </Label>
-                                                <VBox alignment="CENTER" spacing="0.0">
+                                                 <VBox alignment="CENTER" spacing="0.0">
                                                     <children>
+                                                         <Label text="Da" textAlignment="CENTER">
+                                                            <font>
+                                                                 <Font name="System Bold" size="16.0" />
+                                                             </font>
+                                                        </Label>
+                                                         <Label text="14‑core">
+                                                            <font>
+                                                                 <Font name="System Bold" size="64.0" />
+                                                             </font>
+                                                        </Label>
+                                                     </children>
+                                                </VBox>
+                                                 <Label text="di CPU" textAlignment="CENTER">
+                                                    <font>
+                                                         <Font name="System Bold" size="18.0" />
+                                                    </font>
+                                                 </Label>
+                                                <VBox alignment="CENTER" spacing="0.0">
+                                                     <children>
                                                         <Label text="Da" textAlignment="CENTER">
                                                             <font>
-                                                                <Font name="System Bold" size="16.0" />
+                                                                 <Font name="System Bold" size="16.0" />
                                                             </font>
-                                                        </Label>
-                                                        <Label text="14‑core">
+                                                         </Label>
+                                                         <Label text="32‑core">
                                                             <font>
-                                                                <Font name="System Bold" size="64.0" />
+                                                                 <Font name="System Bold" size="64.0" />
                                                             </font>
-                                                        </Label>
+                                                         </Label>
                                                     </children>
-                                                </VBox>
-                                                <Label text="di CPU" textAlignment="CENTER">
-                                                    <font>
-                                                        <Font name="System Bold" size="18.0" />
-                                                    </font>
-                                                </Label>
-                                                <VBox alignment="CENTER" spacing="0.0">
-                                                    <children>
-                                                        <Label text="Da" textAlignment="CENTER">
-                                                            <font>
-                                                                <Font name="System Bold" size="16.0" />
-                                                            </font>
-                                                        </Label>
-                                                        <Label text="32‑core">
-                                                            <font>
-                                                                <Font name="System Bold" size="64.0" />
-                                                            </font>
-                                                        </Label>
-                                                    </children>
-                                                </VBox>
+                                                 </VBox>
                                                 <Label text="di GPU" textAlignment="CENTER">
                                                     <font>
-                                                        <Font name="System Bold" size="18.0" />
+                                                         <Font name="System Bold" size="18.0" />
                                                     </font>
-                                                </Label>
+                                                 </Label>
                                                 <VBox alignment="CENTER" spacing="0.0">
-                                                    <children>
+                                                     <children>
                                                         <Label text="Da" textAlignment="CENTER">
-                                                            <font>
+                                                              <font>
                                                                 <Font name="System Bold" size="16.0" />
-                                                            </font>
-                                                        </Label>
+                                                             </font>
+                                                         </Label>
                                                         <Label text="36GB">
-                                                            <font>
+                                                             <font>
                                                                 <Font name="System Bold" size="64.0" />
-                                                            </font>
-                                                        </Label>
+                                                             </font>
+                                                         </Label>
                                                     </children>
-                                                </VBox>
+                                                 </VBox>
                                                 <Label text="di memoria unificata" textAlignment="CENTER">
-                                                    <font>
+                                                     <font>
                                                         <Font name="System Bold" size="18.0" />
-                                                    </font>
+                                                     </font>
                                                 </Label>
-                                                <VBox alignment="CENTER" spacing="0.0">
+                                                 <VBox alignment="CENTER" spacing="0.0">
                                                     <children>
-                                                        <Label text="Da" textAlignment="CENTER">
+                                                          <Label text="Da" textAlignment="CENTER">
                                                             <font>
-                                                                <Font name="System Bold" size="16.0" />
-                                                            </font>
+                                                                 <Font name="System Bold" size="16.0" />
+                                                             </font>
                                                         </Label>
-                                                        <Label text="512GB">
+                                                         <Label text="512GB">
                                                             <font>
                                                                 <Font name="System Bold" size="64.0" />
-                                                            </font>
+                                                             </font>
                                                         </Label>
-                                                    </children>
+                                                     </children>
                                                 </VBox>
-                                                <Label text="di archiviazione" textAlignment="CENTER">
+                                                 <Label text="di archiviazione" textAlignment="CENTER">
                                                     <font>
-                                                        <Font name="System Bold" size="18.0" />
+                                                         <Font name="System Bold" size="18.0" />
                                                     </font>
-                                                </Label>
+                                                 </Label>
                                             </children>
-                                        </VBox>
+                                         </VBox>
                                         <VBox alignment="TOP_CENTER" prefWidth="323.0" spacing="40.0">
-                                            <children>
+                                           <children>
                                                 <ImageView fitHeight="91.0" fitWidth="142.0" preserveRatio="true">
-                                                    <image>
+                                                     <image>
                                                         <Image url="@../it/uid/unitech/Images/Chip%20M4.png" />
-                                                    </image>
+                                                     </image>
                                                 </ImageView>
-                                                <Label text="Chip Apple M4" textAlignment="CENTER">
+                                                 <Label text="Chip Apple M4" textAlignment="CENTER">
                                                     <font>
-                                                        <Font name="System Bold" size="18.0" />
+                                                         <Font name="System Bold" size="18.0" />
                                                     </font>
-                                                </Label>
+                                                 </Label>
                                                 <VBox alignment="CENTER" spacing="0.0">
-                                                    <children>
-                                                        <Label text=" " textAlignment="CENTER">
+                                                     <children>
+                                                         <Label text=" " textAlignment="CENTER">
                                                             <font>
-                                                                <Font name="System Bold" size="16.0" />
+                                                                 <Font name="System Bold" size="16.0" />
                                                             </font>
-                                                        </Label>
-                                                        <Label text="8‑core">
+                                                         </Label>
+                                                         <Label text="8‑core">
                                                             <font>
-                                                                <Font name="System Bold" size="64.0" />
+                                                                 <Font name="System Bold" size="64.0" />
                                                             </font>
-                                                        </Label>
-                                                    </children>
+                                                         </Label>
+                                                     </children>
                                                 </VBox>
                                                 <Label text="di CPU" textAlignment="CENTER">
                                                     <font>
-                                                        <Font name="System Bold" size="18.0" />
+                                                         <Font name="System Bold" size="18.0" />
                                                     </font>
-                                                </Label>
+                                                 </Label>
                                                 <VBox alignment="CENTER" spacing="0.0">
-                                                    <children>
+                                                     <children>
                                                         <Label text=" " textAlignment="CENTER">
-                                                            <font>
+                                                              <font>
                                                                 <Font name="System Bold" size="16.0" />
                                                             </font>
-                                                        </Label>
+                                                         </Label>
                                                         <Label text="8‑core">
-                                                            <font>
+                                                              <font>
                                                                 <Font name="System Bold" size="64.0" />
                                                             </font>
-                                                        </Label>
+                                                         </Label>
                                                     </children>
-                                                </VBox>
+                                                 </VBox>
                                                 <Label text="di GPU" textAlignment="CENTER">
-                                                    <font>
+                                                     <font>
                                                         <Font name="System Bold" size="18.0" />
-                                                    </font>
+                                                     </font>
+                                                </Label>
+                                                 <VBox alignment="CENTER" spacing="0.0">
+                                                    <children>
+                                                         <Label text="Da" textAlignment="CENTER">
+                                                             <font>
+                                                                <Font name="System Bold" size="16.0" />
+                                                             </font>
+                                                        </Label>
+                                                          <Label text="16GB">
+                                                             <font>
+                                                                <Font name="System Bold" size="64.0" />
+                                                             </font>
+                                                        </Label>
+                                                     </children>
+                                                </VBox>
+                                                 <Label text="di memoria unificata" textAlignment="CENTER">
+                                                    <font>
+                                                         <Font name="System Bold" size="18.0" />
+                                                     </font>
                                                 </Label>
                                                 <VBox alignment="CENTER" spacing="0.0">
                                                     <children>
-                                                        <Label text="Da" textAlignment="CENTER">
+                                                         <Label text="Da" textAlignment="CENTER">
                                                             <font>
-                                                                <Font name="System Bold" size="16.0" />
+                                                                 <Font name="System Bold" size="16.0" />
                                                             </font>
-                                                        </Label>
-                                                        <Label text="16GB">
+                                                         </Label>
+                                                         <Label text="256GB">
                                                             <font>
-                                                                <Font name="System Bold" size="64.0" />
+                                                                 <Font name="System Bold" size="64.0" />
                                                             </font>
-                                                        </Label>
-                                                    </children>
+                                                         </Label>
+                                                     </children>
                                                 </VBox>
-                                                <Label text="di memoria unificata" textAlignment="CENTER">
+                                                 <Label text="di archiviazione" textAlignment="CENTER">
                                                     <font>
-                                                        <Font name="System Bold" size="18.0" />
+                                                         <Font name="System Bold" size="18.0" />
                                                     </font>
-                                                </Label>
-                                                <VBox alignment="CENTER" spacing="0.0">
-                                                    <children>
-                                                        <Label text="Da" textAlignment="CENTER">
-                                                            <font>
-                                                                <Font name="System Bold" size="16.0" />
-                                                            </font>
-                                                        </Label>
-                                                        <Label text="256GB">
-                                                            <font>
-                                                                <Font name="System Bold" size="64.0" />
-                                                            </font>
-                                                        </Label>
-                                                    </children>
-                                                </VBox>
-                                                <Label text="di archiviazione" textAlignment="CENTER">
-                                                    <font>
-                                                        <Font name="System Bold" size="18.0" />
-                                                    </font>
-                                                </Label>
+                                                 </Label>
                                             </children>
-                                        </VBox>
+                                         </VBox>
                                     </children>
                                 </HBox>
                             </children>
-                        </VBox>
+                         </VBox>
                     </children>
                     <VBox.margin>
                         <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
-                    </VBox.margin>
+                     </VBox.margin>
                 </VBox>
             </children>
         </VBox>
