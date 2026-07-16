@@ -224,7 +224,7 @@
                   <Label style="-fx-font-size: 15; -fx-text-fill: #888888;" text="Design innovativo per prestazioniestreme e un’autonomia eccezionale." />
                   <Separator maxWidth="1.7976931348623157E308" minWidth="-Infinity" VBox.vgrow="ALWAYS" />
                   <Label fx:id="prezzoLabel17Pro" style="-fx-font-size: 28; -fx-font-weight: bold; -fx-text-fill: #1a1a1a;" text="Da 1339€" />
-                  <Label fx:id="coloreLabel17Pro" style="-fx-font-size: 14; -fx-text-fill: #555;" text="Colore: Nero" />
+                  <Label fx:id="coloreLabel17Pro" style="-fx-font-size: 14; -fx-text-fill: #555;" text="Colore: Arancione" />
                   <HBox alignment="CENTER_LEFT" spacing="15.0">
                      <children>
                         <Circle fx:id="circleArancione17Pro" fill="#e36942" radius="20.0" stroke="#cccccc" strokeWidth="2.0" style="-fx-cursor: hand;" />

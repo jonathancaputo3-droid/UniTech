@@ -73,6 +73,8 @@ public class ProfileController {
     private Button confermaElimina;
     @FXML
     private Button annullaElimina;
+    @FXML
+    private Label passwordLost;
 
     private static final String SOLO_LETTERE="^[a-zA-ZÀ-ù\\s]+$";
     private  static final String LETTERE_NUMERI="^[a-zA-ZÀ-ù0-9\\s]+$";
@@ -171,6 +173,7 @@ public class ProfileController {
         AnimazioneUtil.aggiungiAnimazioneScale(tornaHome);
         AnimazioneUtil.aggiungiAnimazioneScale(annullaElimina);
         AnimazioneUtil.aggiungiAnimazioneScale(confermaElimina);
+        AnimazioneUtil.aggiungiAnimazione(passwordLost);
 
         modificaDettagli.setOnMouseClicked(event -> {
             setFieldsEditable(true);
@@ -214,6 +217,10 @@ public class ProfileController {
 
         tornaHome.setOnMouseClicked(event -> {
            cambiaScena(tornaHome,"/Fxml/Home.fxml");
+        });
+
+        passwordLost.setOnMouseClicked(event -> {
+            cambiaScena(passwordLost,"/Fxml/PasswordUpdate.fxml");
         });
 
 

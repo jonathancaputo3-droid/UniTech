@@ -22,7 +22,6 @@ public class UtenteDAO {
         st.setString(3, u.getEmail());
         st.setString(4, passwordCriptata);
         int righe=st.executeUpdate();
-
         if(righe>0){
             ResultSet keys= st.getGeneratedKeys();
             if(keys.next()){
@@ -108,6 +107,19 @@ public class UtenteDAO {
             DELETE FROM utenti WHERE id = ?
         """);
         st.setInt(1, id);
+        return st.executeUpdate()>0;
+    }
+
+    public static boolean cambiaPassword(String email,String password) throws SQLException{
+        Connection conn= DatabaseConnection.getConnessione();
+        String passwordCriptata= BCrypt.hashpw(password,BCrypt.gensalt(12));
+        PreparedStatement st= conn.prepareStatement("""
+            UPDATE utenti SET
+                password= ?
+            WHERE email= ?
+        """);
+        st.setString(1,passwordCriptata);
+        st.setString(2,email);
         return st.executeUpdate()>0;
     }
 }

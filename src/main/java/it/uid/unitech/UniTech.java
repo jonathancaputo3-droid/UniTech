@@ -1,5 +1,6 @@
 package it.uid.unitech;
 
+import Util.DatabaseConnection;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -15,11 +16,9 @@ public class UniTech extends Application {
     public void start(Stage stage) throws Exception {
 
         FXMLLoader loader = new FXMLLoader(
-                getClass().getResource("/fxml/Home.fxml")
+                getClass().getResource("/Fxml/SplashScreen.fxml")
         );
-
         Parent root = loader.load();
-
         Scene scene = new Scene(root);
         stage.setTitle("UniTech");
         stage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/it/uid/unitech/Images/UnitechLogo.png"))));
@@ -27,5 +26,11 @@ public class UniTech extends Application {
         stage.setMaximized(true);
         stage.show();
         stage.setOnCloseRequest(event -> System.exit(0));
+    }
+
+    @Override
+    public void stop() throws Exception{
+        DatabaseConnection.chiudi();
+        super.stop();
     }
 }

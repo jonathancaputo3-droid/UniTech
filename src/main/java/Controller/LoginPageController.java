@@ -26,6 +26,9 @@ public class LoginPageController {
     private PasswordField passwordField;
     @FXML
     private Label erroreLabel;
+    @FXML
+    private Label passwordLost;
+
 
     public void initialize() {
 
@@ -63,9 +66,14 @@ public class LoginPageController {
         });
 
         AnimazioneUtil.aggiungiAnimazioneScale(signUp);
+        AnimazioneUtil.aggiungiAnimazione(passwordLost);
 
         signUp.setOnMouseClicked(event -> {
             AnimazioneUtil.cambiaScena(signUp,"/Fxml/SignUp.fxml");
+        });
+
+        passwordLost.setOnMouseClicked(event -> {
+            AnimazioneUtil.cambiaScena(passwordLost,"/Fxml/PasswordUpdate.fxml");
         });
     }
 }
