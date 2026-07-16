@@ -50,5 +50,7 @@
    <Label layoutX="834.0" layoutY="514.0" styleClass="label-email-password" text="Non hai un Account?" AnchorPane.leftAnchor="834.0" AnchorPane.topAnchor="501.0" />
    <Label fx:id="signUp" layoutX="979.0" layoutY="501.0" style="-fx-text-fill: #2092e4; -fx-font-weight: bold;" text="Registrati!" textFill="#2092e4" underline="true" AnchorPane.leftAnchor="979.0" AnchorPane.topAnchor="501.0" />
    <Label fx:id="erroreLabel" layoutX="839.0" layoutY="436.0" styleClass="signup-error" stylesheets="@../Style/unitech.css" text="Label" />
+   <Label layoutX="844.0" layoutY="524.0" styleClass="label-email-password" text="Password Dimenticata?" AnchorPane.leftAnchor="834.4" AnchorPane.topAnchor="521.0" />
+   <Label fx:id="passwordLost" layoutX="989.0" layoutY="511.0" style="-fx-text-fill: #2092e4; -fx-font-weight: bold;" text="Reimpostala!" textFill="#2092e4" underline="true" AnchorPane.leftAnchor="988.0" AnchorPane.topAnchor="521.0" />
 
 </AnchorPane>

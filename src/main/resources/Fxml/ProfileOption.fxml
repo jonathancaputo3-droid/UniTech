@@ -93,6 +93,7 @@
             <Label fx:id="tornaHome" layoutX="213.0" layoutY="37.0" style="-fx-font-size: 15; -fx-text-fill: #3496ff;" styleClass="signup-subtitle" text="Torna Alla Home!" textFill="#3496ff" underline="true" AnchorPane.leftAnchor="192.0" AnchorPane.topAnchor="37.0" />
             <Label fx:id="indirizzoError" layoutX="58.0" layoutY="302.0" styleClass="signup-error" text="Inserisci un Indirizzo Valido!" visible="false" AnchorPane.leftAnchor="914.0" AnchorPane.topAnchor="423.0" />
             <Button fx:id="eliminaAccount" layoutX="643.0" layoutY="608.0" minWidth="-Infinity" mnemonicParsing="false" prefHeight="38.0" prefWidth="154.0" style="-fx-background-color: red;" styleClass="button-profile" text="Elimina Account!" AnchorPane.leftAnchor="523.0" AnchorPane.topAnchor="608.0" />
+            <Label fx:id="passwordLost" style="-fx-font-size: 15; -fx-text-fill: #3496ff;" styleClass="signup-subtitle" text="Modifica Password!" textFill="#3496ff" underline="true" AnchorPane.leftAnchor="340.0" AnchorPane.topAnchor="37.0" />
          </children>
       </AnchorPane>
    </children>

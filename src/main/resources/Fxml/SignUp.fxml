@@ -31,8 +31,8 @@
             <Label fx:id="nomeErrorLabel" layoutX="218.0" layoutY="267.0" styleClass="signup-error" text=" Usare solo Lettere senza Spazi!" AnchorPane.leftAnchor="218.4" AnchorPane.topAnchor="267.0" />
             <Label fx:id="emailErrorLabel" layoutX="218.4" layoutY="467.0" styleClass="signup-error" text="Usare un'email Valida!" AnchorPane.leftAnchor="218.4" AnchorPane.topAnchor="467.0" />
             <Label fx:id="cognomeErrorLabel" layoutX="218.4" layoutY="367.0" styleClass="signup-error" text=" Usare solo Lettere senza Spazi!" AnchorPane.leftAnchor="218.4" AnchorPane.topAnchor="367.0" />
-            <Label fx:id="passwordErrorLabel" layoutX="218.0" layoutY="560.0" minWidth="-Infinity" prefWidth="220.0" styleClass="signup-error" text="Includi un carattere Speciale: !.$&amp;%#@ Lunghezza minima 8 caratteri!      Inserisci una Maiuscola ed una Minuscola!" wrapText="true" AnchorPane.leftAnchor="218.0" AnchorPane.topAnchor="567.0" />
-            <Button fx:id="confermaButton" layoutX="218.0" layoutY="617.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="196.0" text="Conferma!" AnchorPane.leftAnchor="218.0" AnchorPane.topAnchor="637.0" />
+            <Label fx:id="passwordErrorLabel" layoutX="218.0" layoutY="560.0" minWidth="-Infinity" prefHeight="51.0" prefWidth="220.0" styleClass="signup-error" text="Includi un carattere Speciale: !.$&amp;%#@ Lunghezza minima 8 caratteri!      Inserisci una Lettera!" wrapText="true" AnchorPane.leftAnchor="218.0" AnchorPane.topAnchor="567.0" />
+            <Button fx:id="confermaButton" layoutX="218.0" layoutY="617.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="196.0" text="Conferma!" AnchorPane.leftAnchor="218.0" AnchorPane.topAnchor="630.0" />
             <Label fx:id="confermaErrorLabelEmpty" layoutX="206.0" layoutY="665.0" minWidth="-Infinity" prefWidth="220.0" styleClass="signup-error" text="Compila i campi prima di Proseguire!" wrapText="true" AnchorPane.leftAnchor="218.0" AnchorPane.topAnchor="667.0" />
          </children>
       </AnchorPane>
