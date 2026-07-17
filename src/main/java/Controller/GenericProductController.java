@@ -214,11 +214,11 @@ public class GenericProductController
     private MenuItem AirPods4HomeMacProduct;
     
     @FXML
-    private Button discoverMacBookProProduct;
+    private Button discoveriMacProduct;
     @FXML
-    private Button discoverMacBookAirProduct;
+    private Button discoverMacStudioProduct;
     @FXML
-    private Button discoverMacBookNeoProduct;
+    private Button discoverMacMiniProduct;
 
     //MacBook Product
     @FXML
@@ -235,6 +235,51 @@ public class GenericProductController
     private SplitMenuButton AirPodsHomeMacBookProduct;
     @FXML
     private FontIcon loginIconMacBookProduct;
+    @FXML
+    private ImageView logoiconMacBookProduct;
+    @FXML
+    private MenuItem iPhone17ProHomeMacBookProduct;
+    @FXML
+    private MenuItem iPhone17HomeMacBookProduct;
+    @FXML
+    private MenuItem iPhoneAirHomeMacBookProduct;
+    @FXML
+    private MenuItem iPadProHomeMacBookProduct;
+    @FXML
+    private MenuItem iPadAirHomeMacBookProduct;
+    @FXML
+    private MenuItem iPadBaseHomeMacBookProduct;
+    @FXML
+    private MenuItem MacBookProHomeMacBookProduct;
+    @FXML
+    private MenuItem MacBookAirHomeMacBookProduct;
+    @FXML
+    private MenuItem MacBookNeoHomeMacBookProduct;
+    @FXML
+    private MenuItem MacStudioHomeMacBookProduct;
+    @FXML
+    private MenuItem MacMiniHomeMacBookProduct;
+    @FXML
+    private MenuItem iMacHomeMacBookProduct;
+    @FXML
+    private MenuItem WatchUltra3HomeMacBookProduct;
+    @FXML
+    private MenuItem WatchSeries11HomeMacBookProduct;
+    @FXML
+    private MenuItem WatchSE3HomeMacBookProduct;    
+    @FXML
+    private MenuItem AirPodsMax2HomeMacBookProduct;
+    @FXML
+    private MenuItem AirPodsPro3HomeMacBookProduct;
+    @FXML
+    private MenuItem AirPods4HomeMacBookProduct;
+    
+    @FXML
+    private Button discoverMacBookProProduct;
+    @FXML
+    private Button discoverMacBookAirProduct;
+    @FXML
+    private Button discoverMacBookNeoProduct;
 
     //Watch Product
     @FXML
@@ -464,9 +509,45 @@ public class GenericProductController
         AnimazioneUtil.verificaCambiaScenaItem(AirPodsPro3HomeMacProduct, "/fxml/AirPods Pro 3 PageProduct.fxml");
         AnimazioneUtil.verificaCambiaScenaItem(AirPods4HomeMacProduct, "/fxml/AirPods 4 PageProduct.fxml");
 
+        AnimazioneUtil.verificaCambiaScena(discoveriMacProduct, "/fxml/iMac PageProduct.fxml");
+        AnimazioneUtil.verificaCambiaScena(discoverMacStudioProduct, "/fxml/MacStudio PageProduct.fxml");
+        AnimazioneUtil.verificaCambiaScena(discoverMacMiniProduct, "/fxml/MacMini PageProduct.fxml");
+
+        // Navigazione MacBook Product
+        AnimazioneUtil.verificaCambiaScena(iPhoneHomeMacBookProduct, "/fxml/iPhone Product.fxml");
+        AnimazioneUtil.verificaCambiaScena(iPadHomeMacBookProduct, "/fxml/iPad Product.fxml");
+        AnimazioneUtil.verificaCambiaScena(MacHomeMacBookProduct, "/fxml/Mac Product.fxml");
+        AnimazioneUtil.verificaCambiaScena(MacBookHomeMacBookProduct, "/fxml/MacBook Product.fxml");
+        AnimazioneUtil.verificaCambiaScena(WatchHomeMacBookProduct, "/fxml/Watch Product.fxml");
+        AnimazioneUtil.verificaCambiaScena(AirPodsHomeMacBookProduct, "/fxml/AirPods Product.fxml");
+        AnimazioneUtil.verificaCambiaScena(logoiconMacBookProduct, "/fxml/Home.fxml");
+        AnimazioneUtil.verificaCambiaScena(loginIconMacBookProduct, "/fxml/ProfileOption.fxml");
+        AnimazioneUtil.aggiungiAnimazione(logoiconMacBookProduct);
+        AnimazioneUtil.aggiungiAnimazione(loginIconMacBookProduct);
+
+        AnimazioneUtil.verificaCambiaScenaItem(iPhone17ProHomeMacBookProduct, "/fxml/iPhone 17 Pro PageProduct.fxml");
+        AnimazioneUtil.verificaCambiaScenaItem(iPhone17HomeMacBookProduct, "/fxml/iPhone 17 PageProduct.fxml");
+        AnimazioneUtil.verificaCambiaScenaItem(iPhoneAirHomeMacBookProduct, "/fxml/iPhone Air PageProduct.fxml");
+        AnimazioneUtil.verificaCambiaScenaItem(iPadProHomeMacBookProduct, "/fxml/iPad Pro PageProduct.fxml");
+        AnimazioneUtil.verificaCambiaScenaItem(iPadAirHomeMacBookProduct, "/fxml/iPad Air PageProduct.fxml");
+        AnimazioneUtil.verificaCambiaScenaItem(iPadBaseHomeMacBookProduct, "/fxml/iPad PageProduct.fxml");
+        AnimazioneUtil.verificaCambiaScenaItem(MacBookProHomeMacBookProduct, "/fxml/MacBook Pro 14 PageProduct.fxml");
+        AnimazioneUtil.verificaCambiaScenaItem(MacBookAirHomeMacBookProduct, "/fxml/MacBook Air 13 PageProduct.fxml");
+        AnimazioneUtil.verificaCambiaScenaItem(MacBookNeoHomeMacBookProduct, "/fxml/MacBook Neo PageProduct.fxml");
+        AnimazioneUtil.verificaCambiaScenaItem(MacStudioHomeMacBookProduct, "/fxml/MacStudio PageProduct.fxml");
+        AnimazioneUtil.verificaCambiaScenaItem(MacMiniHomeMacBookProduct, "/fxml/MacMini PageProduct.fxml");
+        AnimazioneUtil.verificaCambiaScenaItem(iMacHomeMacBookProduct, "/fxml/iMac PageProduct.fxml");
+        AnimazioneUtil.verificaCambiaScenaItem(WatchUltra3HomeMacBookProduct, "/fxml/Apple Watch Ultra 3 PageProduct.fxml");
+        AnimazioneUtil.verificaCambiaScenaItem(WatchSeries11HomeMacBookProduct, "/fxml/Apple Watch Series 11 PageProduct.fxml");
+        AnimazioneUtil.verificaCambiaScenaItem(WatchSE3HomeMacBookProduct, "/fxml/Apple Watch SE 3 PageProduct.fxml");
+        AnimazioneUtil.verificaCambiaScenaItem(AirPodsMax2HomeMacBookProduct, "/fxml/AirPods Max 2 PageProduct.fxml");
+        AnimazioneUtil.verificaCambiaScenaItem(AirPodsPro3HomeMacBookProduct, "/fxml/AirPods Pro 3 PageProduct.fxml");
+        AnimazioneUtil.verificaCambiaScenaItem(AirPods4HomeMacBookProduct, "/fxml/AirPods 4 PageProduct.fxml");
+
         AnimazioneUtil.verificaCambiaScena(discoverMacBookProProduct, "/fxml/MacBook Pro 14 PageProduct.fxml");
         AnimazioneUtil.verificaCambiaScena(discoverMacBookAirProduct, "/fxml/MacBook Air 13 PageProduct.fxml");
         AnimazioneUtil.verificaCambiaScena(discoverMacBookNeoProduct, "/fxml/MacBook Neo PageProduct.fxml");
+
 
         // Navigazione Watch Product
         AnimazioneUtil.verificaCambiaScena(iPhoneHomeWatchProduct, "/fxml/iPhone Product.fxml");

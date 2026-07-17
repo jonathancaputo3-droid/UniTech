@@ -32,7 +32,7 @@
                         <String fx:value="elevated-1" />
                      </styleClass>
                      <children>
-                        <ImageView cache="true" cacheHint="QUALITY" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="logoIconMacBookProduct" cache="true" cacheHint="QUALITY" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                                <Image url="@../it/uid/unitech/Images/UnitechLogo.png" />
                            </image>
@@ -42,9 +42,9 @@
                         </ImageView>
                         <SplitMenuButton fx:id="iPhoneHomeMacBookProduct" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPhone">
                           <items>
-                              <MenuItem mnemonicParsing="false" text="iPhone 17 Pro" />
-                              <MenuItem mnemonicParsing="false" text="iPhone 17" />
-                               <MenuItem mnemonicParsing="false" text="iPhone Air" />
+                              <MenuItem fx:id="iPhone17ProHomeMacBookProduct" mnemonicParsing="false" text="iPhone 17 Pro" />
+                              <MenuItem fx:id="iPhone17HomeMacBookProduct" mnemonicParsing="false" text="iPhone 17" />
+                               <MenuItem fx:id="iPhoneAirHomeMacBookProduct" mnemonicParsing="false" text="iPhone Air" />
                            </items>
                            <font>
                                <Font name="Segoe UI" size="18.0" />
@@ -60,9 +60,9 @@
                          </SplitMenuButton>
                         <SplitMenuButton fx:id="iPadHomeMacBookProduct" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPad">
                            <items>
-                              <MenuItem mnemonicParsing="false" text="iPad Pro" />
-                               <MenuItem mnemonicParsing="false" text="iPad Air" />
-                              <MenuItem mnemonicParsing="false" text="iPad" />
+                              <MenuItem fx:id="iPadProHomeMacBookProduct" mnemonicParsing="false" text="iPad Pro" />
+                               <MenuItem fx:id="iPadAirHomeMacBookProduct" mnemonicParsing="false" text="iPad Air" />
+                              <MenuItem fx:id="iPadBaseHomeMacBookProduct" mnemonicParsing="false" text="iPad" />
                            </items>
                            <font>
                               <Font name="Segoe UI" size="18.0" />
@@ -78,9 +78,9 @@
                         </SplitMenuButton>
                         <SplitMenuButton fx:id="MacHomeMacBookProduct" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Mac">
                            <items>
-                               <MenuItem mnemonicParsing="false" text="iMac" />
-                              <MenuItem mnemonicParsing="false" text="Mac Studio" />
-                              <MenuItem mnemonicParsing="false" text="Mac Mini" />
+                               <MenuItem fx:id="iMacHomeMacBookProduct" mnemonicParsing="false" text="iMac" />
+                              <MenuItem fx:id="MacStudioHomeMacBookProduct" mnemonicParsing="false" text="Mac Studio" />
+                              <MenuItem fx:id="MacMiniHomeMacProduct" mnemonicParsing="false" text="Mac Mini" />
                             </items>
                            <font>
                               <Font name="Segoe UI" size="18.0" />
@@ -96,9 +96,9 @@
                         </SplitMenuButton>
                         <SplitMenuButton fx:id="MacBookHomeMacBookProduct" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="MacBook">
                            <items>
-                              <MenuItem mnemonicParsing="false" text="MacBook Pro" />
-                              <MenuItem mnemonicParsing="false" text="MacBook Air" />
-                               <MenuItem mnemonicParsing="false" text="MacBook Neo" />
+                              <MenuItem fx:id="MacBookProHomeMacBookProduct" mnemonicParsing="false" text="MacBook Pro" />
+                              <MenuItem fx:id="MacBookAirHomeMacBookProduct" mnemonicParsing="false" text="MacBook Air" />
+                               <MenuItem fx:id="MacBookNeoHomeMacBookProduct" mnemonicParsing="false" text="MacBook Neo" />
                            </items>
                            <font>
                                <Font name="Segoe UI" size="18.0" />
@@ -114,9 +114,9 @@
                          </SplitMenuButton>
                         <SplitMenuButton fx:id="WatchHomeMacBookProduct" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Watch">
                            <items>
-                              <MenuItem mnemonicParsing="false" text="Apple Watch Ultra 3" />
-                               <MenuItem mnemonicParsing="false" text="Apple Watch Series 11" />
-                              <MenuItem mnemonicParsing="false" text="Apple Watch SE 3" />
+                              <MenuItem fx:id="WatchUltra3HomeMacBookProduct" mnemonicParsing="false" text="Apple Watch Ultra 3" />
+                               <MenuItem fx:id="WatchSeries11HomeMacBookProduct" mnemonicParsing="false" text="Apple Watch Series 11" />
+                              <MenuItem fx:id="WatchSE3HomeMacBookProduct" mnemonicParsing="false" text="Apple Watch SE 3" />
                            </items>
                             <font>
                               <Font name="Segoe UI" size="18.0" />
@@ -132,9 +132,9 @@
                         </SplitMenuButton>
                         <SplitMenuButton fx:id="AirPodsHomeMacBookProduct" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="AirPods">
                             <items>
-                              <MenuItem mnemonicParsing="false" text="AirPods Max 2" />
-                              <MenuItem mnemonicParsing="false" text="AirPods Pro 3" />
-                               <MenuItem mnemonicParsing="false" text="AirPods 4" />
+                              <MenuItem fx:id="AirPodsMax2HomeMacBookProduct" mnemonicParsing="false" text="AirPods Max 2" />
+                              <MenuItem fx:id="AirPodsPro3HomeMacBookProduct" mnemonicParsing="false" text="AirPods Pro 3" />
+                               <MenuItem fx:id="AirPods4HomeMacBookProduct" mnemonicParsing="false" text="AirPods 4" />
                            </items>
                            <font>
                               <Font name="Segoe UI" size="18.0" />
@@ -189,7 +189,7 @@
                                             </font>
                                          </Label>
                                         <Separator prefWidth="319.0" />
-                                         <Button mnemonicParsing="false" styleClass="accent" text="Scopri di più">
+                                         <Button fx:id="discoverMacBookProProduct" mnemonicParsing="false" styleClass="accent" text="Scopri di più">
                                             <font>
                                                  <Font size="18.0" />
                                             </font>
@@ -214,7 +214,7 @@
                                             </font>
                                        </Label>
                                         <Separator prefWidth="319.0" />
-                                        <Button mnemonicParsing="false" styleClass="accent" text="Scopri di più">
+                                        <Button fx:id="discoverMacBookAirProduct" mnemonicParsing="false" styleClass="accent" text="Scopri di più">
                                               <font>
                                                 <Font size="18.0" />
                                              </font>
@@ -239,7 +239,7 @@
                                              </font>
                                         </Label>
                                      <Separator prefWidth="319.0" />
-                                        <Button mnemonicParsing="false" styleClass="accent" text="Scopri di più">
+                                        <Button fx:id="discoverMacBookNeoProduct" mnemonicParsing="false" styleClass="accent" text="Scopri di più">
                                              <font>
                                                 <Font size="18.0" />
                                              </font>
@@ -287,11 +287,6 @@
                                                     <children>
                                                          <VBox alignment="CENTER" spacing="0.0">
                                                             <children>
-                                                                 <Label text="Da" textAlignment="CENTER">
-                                                                     <font>
-                                                                        <Font name="System Bold" size="16.0" />
-                                                                      </font>
-                                                                 </Label>
                                                                 <Label text="16GB">
                                                                        <font>
                                                                           <Font name="System Bold" size="64.0" />
@@ -377,11 +372,6 @@
                                                     <children>
                                                           <VBox alignment="CENTER" spacing="0.0">
                                                             <children>
-                                                                  <Label text="Da" textAlignment="CENTER">
-                                                                      <font>
-                                                                          <Font name="System Bold" size="16.0" />
-                                                                    </font>
-                                                                  </Label>
                                                                   <Label text="16GB">
                                                                     <font>
                                                                           <Font name="System Bold" size="64.0" />
@@ -468,11 +458,6 @@
                                                     <children>
                                                           <VBox alignment="CENTER" spacing="0.0">
                                                               <children>
-                                                                <Label text="Da" textAlignment="CENTER">
-                                                                      <font>
-                                                                          <Font name="System Bold" size="16.0" />
-                                                                    </font>
-                                                                  </Label>
                                                                   <Label text="8GB">
                                                                     <font>
                                                                            <Font name="System Bold" size="64.0" />

@@ -192,7 +192,7 @@
                                             </font>
                                         </Label>
                                           <Separator prefWidth="319.0" />
-                                        <Button fx:id="discoverMacBookProProduct" mnemonicParsing="false" styleClass="accent" text="Scopri di più">
+                                        <Button fx:id="discoveriMacProduct" mnemonicParsing="false" styleClass="accent" text="Scopri di più">
                                              <font>
                                                 <Font size="18.0" />
                                              </font>
@@ -217,7 +217,7 @@
                                              </font>
                                         </Label>
                                          <Separator prefWidth="319.0" />
-                                        <Button fx:id="discoverMacBookAirProduct" mnemonicParsing="false"  styleClass="accent" text="Scopri di più">
+                                        <Button fx:id="discoverMacStudioProduct" mnemonicParsing="false" styleClass="accent" text="Scopri di più">
                                              <font>
                                                 <Font size="18.0" />
                                             </font>
@@ -242,7 +242,7 @@
                                              </font>
                                         </Label>
                                         <Separator prefWidth="319.0" />
-                                         <Button fx:id="discoverMacBookNeoProduct" mnemonicParsing="false" styleClass="accent" text="Scopri di più">
+                                         <Button fx:id="discoverMacMiniProduct" mnemonicParsing="false" styleClass="accent" text="Scopri di più">
                                             <font>
                                                  <Font size="18.0" />
                                             </font>
@@ -278,11 +278,6 @@
                                                  </Label>
                                                 <VBox alignment="CENTER" spacing="0.0">
                                                      <children>
-                                                        <Label text=" " textAlignment="CENTER">
-                                                             <font>
-                                                                <Font name="System Bold" size="16.0" />
-                                                             </font>
-                                                         </Label>
                                                         <Label text="8‑core">
                                                              <font>
                                                                 <Font name="System Bold" size="64.0" />
@@ -297,11 +292,6 @@
                                                 </Label>
                                                  <VBox alignment="CENTER" spacing="0.0">
                                                     <children>
-                                                         <Label text=" " textAlignment="CENTER">
-                                                            <font>
-                                                                 <Font name="System Bold" size="16.0" />
-                                                             </font>
-                                                        </Label>
                                                          <Label text="8‑core">
                                                             <font>
                                                                   <Font name="System Bold" size="64.0" />
@@ -316,7 +306,7 @@
                                                  </Label>
                                                 <VBox alignment="CENTER" spacing="0.0">
                                                    <children>
-                                                        <Label text="Da" textAlignment="CENTER">
+                                                        <Label textAlignment="CENTER">
                                                             <font>
                                                                  <Font name="System Bold" size="16.0" />
                                                             </font>
@@ -368,11 +358,6 @@
                                                 </Label>
                                                  <VBox alignment="CENTER" spacing="0.0">
                                                     <children>
-                                                         <Label text="Da" textAlignment="CENTER">
-                                                            <font>
-                                                                 <Font name="System Bold" size="16.0" />
-                                                             </font>
-                                                        </Label>
                                                          <Label text="14‑core">
                                                             <font>
                                                                  <Font name="System Bold" size="64.0" />
@@ -387,11 +372,6 @@
                                                  </Label>
                                                 <VBox alignment="CENTER" spacing="0.0">
                                                      <children>
-                                                        <Label text="Da" textAlignment="CENTER">
-                                                            <font>
-                                                                 <Font name="System Bold" size="16.0" />
-                                                            </font>
-                                                         </Label>
                                                          <Label text="32‑core">
                                                             <font>
                                                                  <Font name="System Bold" size="64.0" />
@@ -406,7 +386,7 @@
                                                  </Label>
                                                 <VBox alignment="CENTER" spacing="0.0">
                                                      <children>
-                                                        <Label text="Da" textAlignment="CENTER">
+                                                        <Label textAlignment="CENTER">
                                                               <font>
                                                                 <Font name="System Bold" size="16.0" />
                                                              </font>
@@ -458,11 +438,6 @@
                                                  </Label>
                                                 <VBox alignment="CENTER" spacing="0.0">
                                                      <children>
-                                                         <Label text=" " textAlignment="CENTER">
-                                                            <font>
-                                                                 <Font name="System Bold" size="16.0" />
-                                                            </font>
-                                                         </Label>
                                                          <Label text="8‑core">
                                                             <font>
                                                                  <Font name="System Bold" size="64.0" />
@@ -477,11 +452,6 @@
                                                  </Label>
                                                 <VBox alignment="CENTER" spacing="0.0">
                                                      <children>
-                                                        <Label text=" " textAlignment="CENTER">
-                                                              <font>
-                                                                <Font name="System Bold" size="16.0" />
-                                                            </font>
-                                                         </Label>
                                                         <Label text="8‑core">
                                                               <font>
                                                                 <Font name="System Bold" size="64.0" />
@@ -496,7 +466,7 @@
                                                 </Label>
                                                  <VBox alignment="CENTER" spacing="0.0">
                                                     <children>
-                                                         <Label text="Da" textAlignment="CENTER">
+                                                         <Label textAlignment="CENTER">
                                                              <font>
                                                                 <Font name="System Bold" size="16.0" />
                                                              </font>
