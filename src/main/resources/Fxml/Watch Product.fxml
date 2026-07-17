@@ -185,7 +185,7 @@
                                      <Font name="System Bold" size="24.0" />
                                  </font>
                               </Label>
-                               <Label text="€ 879" textFill="#6e6e73">
+                               <Label text="€ 759" textFill="#6e6e73">
                                  <font>
                                     <Font name="System Bold" size="16.0" />
                                  </font>
@@ -211,7 +211,7 @@
                                     <Font name="System Bold" size="24.0" />
                                  </font>
                                </Label>
-                              <Label text="€ 449" textFill="#6e6e73">
+                              <Label text="€ 759" textFill="#6e6e73">
                                  <font>
                                      <Font name="System Bold" size="16.0" />
                                  </font>

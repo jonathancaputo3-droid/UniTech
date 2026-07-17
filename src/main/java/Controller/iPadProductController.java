@@ -313,13 +313,13 @@ public class iPadProductController {
         AnimazioneUtil.verificaCambiaScenaItem(AirPods4HomeiPad, "/fxml/AirPods 4 PageProduct.fxml");
         //Prodotto iPad Air
         AnimazioneUtil.aggiungiClickColore(circleGrigioiPadAir, "Grigio", "/it/uid/unitech/Images/iPad Air Grigio.png", coloreLabeliPadAir, immagineProdottoiPadAir);
-        AnimazioneUtil.aggiungiClickColore(circleOroiPadAir, "Oro", "/it/uid/unitech/Images/iPad Air Oro.png", coloreLabeliPadAir, immagineProdottoiPadAir);
+        AnimazioneUtil.aggiungiClickColore(circleOroiPadAir, "Oro", "/it/uid/unitech/Images/iPad Air Argento.png", coloreLabeliPadAir, immagineProdottoiPadAir);
         AnimazioneUtil.aggiungiClickColore(circleAzzurroiPadAir, "Azzurro", "/it/uid/unitech/Images/iPad Air Azzurro.png", coloreLabeliPadAir, immagineProdottoiPadAir);
         AnimazioneUtil.aggiungiClickColore(circleViolaiPadAir, "Viola", "/it/uid/unitech/Images/iPad Air Viola.png", coloreLabeliPadAir, immagineProdottoiPadAir);
-        AnimazioneUtil.aggiungiClickBottone(btn128_iPadAir, "1029€", prezzoLabeliPadAir);
-        AnimazioneUtil.aggiungiClickBottone(btn256_iPadAir, "1159€", prezzoLabeliPadAir);
-        AnimazioneUtil.aggiungiClickBottone(btn512_iPadAir, "1409€", prezzoLabeliPadAir);
-        AnimazioneUtil.aggiungiClickBottone(btn1TB_iPadAir, "1789€", prezzoLabeliPadAir);
+        AnimazioneUtil.aggiungiClickBottone(btn128_iPadAir, "829€", prezzoLabeliPadAir);
+        AnimazioneUtil.aggiungiClickBottone(btn256_iPadAir, "959€", prezzoLabeliPadAir);
+        AnimazioneUtil.aggiungiClickBottone(btn512_iPadAir, "1209€", prezzoLabeliPadAir);
+        AnimazioneUtil.aggiungiClickBottone(btn1TB_iPadAir, "1589€", prezzoLabeliPadAir);
 
         AnimazioneUtil.verificaCambiaScena(iPhoneHomeiPadAir, "/fxml/iPhone Product.fxml");
         AnimazioneUtil.verificaCambiaScena(iPadHomeiPadAir, "/fxml/iPad Product.fxml");

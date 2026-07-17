@@ -178,9 +178,9 @@ public class WatchProductController {
     @FXML
     private Button btnGPSCellularSE;
     @FXML
-    private FontIcon loginIconSE;
+    private FontIcon loginIconSE3;
     @FXML
-    private ImageView logoIconSE;
+    private ImageView logoIconSE3;
     @FXML
     private ImageView immagineProdottoSE;
 
@@ -294,23 +294,23 @@ public class WatchProductController {
 
         AnimazioneUtil.aggiungiAnimazione(loginIconUltra);
 
-        AnimazioneUtil.aggiungiAnimazione(loginIconSE);
+        AnimazioneUtil.aggiungiAnimazione(loginIconSE3);
 
         AnimazioneUtil.aggiungiAnimazione(loginIcon11);
 
         AnimazioneUtil.verificaCambiaScena(loginIconUltra, "/fxml/ProfileOption.fxml");
 
-        AnimazioneUtil.verificaCambiaScena(loginIconSE, "/fxml/ProfileOption.fxml");
+        AnimazioneUtil.verificaCambiaScena(loginIconSE3, "/fxml/ProfileOption.fxml");
 
         AnimazioneUtil.verificaCambiaScena(loginIcon11, "/fxml/ProfileOption.fxml");
 
-        AnimazioneUtil.aggiungiAnimazione(logoIconSE);
+        AnimazioneUtil.aggiungiAnimazione(logoIconSE3);
 
         AnimazioneUtil.aggiungiAnimazione(logoIconUltra);
 
         AnimazioneUtil.aggiungiAnimazione(logoIcon11);
 
-        AnimazioneUtil.verificaCambiaScena(logoIconSE, "/fxml/Home.fxml");
+        AnimazioneUtil.verificaCambiaScena(logoIconSE3, "/fxml/Home.fxml");
 
         AnimazioneUtil.verificaCambiaScena(logoIconUltra, "/fxml/Home.fxml");
 
@@ -353,8 +353,8 @@ public class WatchProductController {
         AnimazioneUtil.verificaCambiaScena(MacBookHomeWatchSE3, "/fxml/MacBook Product.fxml");
         AnimazioneUtil.verificaCambiaScena(WatchHomeWatchSE3, "/fxml/Watch Product.fxml");
         AnimazioneUtil.verificaCambiaScena(AirPodsHomeWatchSE3, "/fxml/AirPods Product.fxml");
-        AnimazioneUtil.verificaCambiaScena(loginIconSE, "/fxml/ProfileOption.fxml");
-        AnimazioneUtil.verificaCambiaScena(logoIconSE, "/fxml/Home.fxml");
+        AnimazioneUtil.verificaCambiaScena(loginIconSE3, "/fxml/ProfileOption.fxml");
+        AnimazioneUtil.verificaCambiaScena(logoIconSE3, "/fxml/Home.fxml");
 
         AnimazioneUtil.verificaCambiaScenaItem(iPhone17ProHomeWatchSE3, "/fxml/iPhone 17 Pro PageProduct.fxml");
         AnimazioneUtil.verificaCambiaScenaItem(iPhone17HomeWatchSE3, "/fxml/iPhone 17 PageProduct.fxml");

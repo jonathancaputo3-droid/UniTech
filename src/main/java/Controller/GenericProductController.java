@@ -236,7 +236,7 @@ public class GenericProductController
     @FXML
     private FontIcon loginIconMacBookProduct;
     @FXML
-    private ImageView logoiconMacBookProduct;
+    private ImageView logoIconMacBookProduct;
     @FXML
     private MenuItem iPhone17ProHomeMacBookProduct;
     @FXML
@@ -520,9 +520,9 @@ public class GenericProductController
         AnimazioneUtil.verificaCambiaScena(MacBookHomeMacBookProduct, "/fxml/MacBook Product.fxml");
         AnimazioneUtil.verificaCambiaScena(WatchHomeMacBookProduct, "/fxml/Watch Product.fxml");
         AnimazioneUtil.verificaCambiaScena(AirPodsHomeMacBookProduct, "/fxml/AirPods Product.fxml");
-        AnimazioneUtil.verificaCambiaScena(logoiconMacBookProduct, "/fxml/Home.fxml");
+        AnimazioneUtil.verificaCambiaScena(logoIconMacBookProduct, "/fxml/Home.fxml");
         AnimazioneUtil.verificaCambiaScena(loginIconMacBookProduct, "/fxml/ProfileOption.fxml");
-        AnimazioneUtil.aggiungiAnimazione(logoiconMacBookProduct);
+        AnimazioneUtil.aggiungiAnimazione(logoIconMacBookProduct);
         AnimazioneUtil.aggiungiAnimazione(loginIconMacBookProduct);
 
         AnimazioneUtil.verificaCambiaScenaItem(iPhone17ProHomeMacBookProduct, "/fxml/iPhone 17 Pro PageProduct.fxml");

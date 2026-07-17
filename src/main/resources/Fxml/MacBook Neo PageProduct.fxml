@@ -221,7 +221,7 @@
                     </HBox.margin>
                     <children>
                         <Label style="-fx-font-size: 36; -fx-font-weight: bold; -fx-text-fill: #1a1a1a;" text="MacBook Neo" />
-                        <Label style="-fx-font-size: 15; -fx-text-fill: #888888;" text="Il nostro iPhone più bello di sempre" />
+                        <Label style="-fx-font-size: 15; -fx-text-fill: #888888;" text="La magia del Mac, a un prezzo che non ti aspetti." />
                         <Separator maxWidth="1.7976931348623157E308" minWidth="-Infinity" VBox.vgrow="ALWAYS" />
                         <Label fx:id="prezzoLabelNeo" style="-fx-font-size: 28; -fx-font-weight: bold; -fx-text-fill: #1a1a1a;" text="Da 799€" />
                         <Label fx:id="coloreLabelNeo" style="-fx-font-size: 14; -fx-text-fill: #555;" text="Colore: Argento" />
