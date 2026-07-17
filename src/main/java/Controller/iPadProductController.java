@@ -18,8 +18,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Circle;
-import javafx.scene.text.Font;
-import javafx.stage.Stage;
 import javafx.util.Duration;
 import Util.AnimazioneUtil;
 import Util.Navigation;

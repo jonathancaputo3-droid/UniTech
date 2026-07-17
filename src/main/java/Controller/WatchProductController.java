@@ -21,9 +21,6 @@ import javafx.util.Duration;
 import Util.Navigation;
 import org.kordamp.ikonli.javafx.FontIcon;
 
-import static Util.AnimazioneUtil.*;
-import static Util.AnimazioneUtil.aggiungiAnimazione;
-import static Util.AnimazioneUtil.verificaCambiaScena;
 
 public class WatchProductController {
 

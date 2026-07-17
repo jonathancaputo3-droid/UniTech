@@ -4,7 +4,6 @@ import Model.Utente;
 import Model.UtenteDAO;
 import Util.AnimazioneUtil;
 import Util.SessioneUtente;
-import javafx.animation.*;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.StackPane;
