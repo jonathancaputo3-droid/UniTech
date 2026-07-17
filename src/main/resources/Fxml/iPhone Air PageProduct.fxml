@@ -228,7 +228,7 @@
                   <HBox alignment="CENTER_LEFT" spacing="15.0">
                      <children>
                         <Circle fx:id="circleNeroAir" fill="#1c1c1e" radius="20.0" stroke="#cccccc" strokeWidth="2.0" style="-fx-cursor: hand;" />
-                        <Circle fx:id="circleBiancoAir" fill="#f2f4f7" radius="20.0" stroke="#cccccc" strokeWidth="2.0" style="-fx-cursor: hand;" />
+                        <Circle fx:id="circleBiancoAir" fill="WHITE" radius="20.0" stroke="#cccccc" strokeWidth="2.0" style="-fx-cursor: hand;" />
                         <Circle fx:id="circleCelesteAir" fill="#c5d5e4" radius="20.0" stroke="#cccccc" strokeWidth="2.0" style="-fx-cursor: hand;" />
                         <Circle fx:id="circleOroAir" fill="#e6dec9" radius="20.0" stroke="#cccccc" strokeWidth="2.0" style="-fx-cursor: hand;" />
                      </children>

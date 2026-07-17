@@ -220,7 +220,7 @@
                   <Insets bottom="20.0" left="20.0" right="50.0" top="20.0" />
                </HBox.margin>
                <children>
-                  <Label style="-fx-font-size: 36; -fx-font-weight: bold; -fx-text-fill: #1a1a1a;" text="AiPods 4" />
+                  <Label style="-fx-font-size: 36; -fx-font-weight: bold; -fx-text-fill: #1a1a1a;" text="AirPods 4" />
                   <Label style="-fx-font-size: 15; -fx-text-fill: #888888;" text="SuperSonici!" />
                   <Separator maxWidth="1.7976931348623157E308" minWidth="-Infinity" VBox.vgrow="ALWAYS" />
                   <Label fx:id="prezzoLabel4" style="-fx-font-size: 28; -fx-font-weight: bold; -fx-text-fill: #1a1a1a;" text="Da 149€" />

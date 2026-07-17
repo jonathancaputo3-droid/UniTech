@@ -224,7 +224,7 @@
                   <Label style="-fx-font-size: 15; -fx-text-fill: #888888;" text="Ti motiva, ti connette, ti informa. Ti piace" />
                   <Separator maxWidth="1.7976931348623157E308" minWidth="-Infinity" VBox.vgrow="ALWAYS" />
                   <Label fx:id="prezzoLabelSE" style="-fx-font-size: 28; -fx-font-weight: bold; -fx-text-fill: #1a1a1a;" text="Da 279€" />
-                  <Label fx:id="coloreLabelSE" style="-fx-font-size: 14; -fx-text-fill: #555;" text="Colore: Rosa Fard" />
+                  <Label fx:id="coloreLabelSE" style="-fx-font-size: 14; -fx-text-fill: #555;" text="Colore: Nero" />
                   <HBox alignment="CENTER_LEFT" spacing="15.0">
                      <children>
                         <Circle fx:id="circleRosaSE" fill="#ebe3e0" radius="20.0" stroke="#cccccc" strokeWidth="2.0" style="-fx-cursor: hand;" />
