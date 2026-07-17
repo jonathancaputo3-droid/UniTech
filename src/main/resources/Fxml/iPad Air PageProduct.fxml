@@ -196,7 +196,7 @@
                         </VBox>
                         <VBox alignment="CENTER" spacing="5" style="-fx-background-color: #EEF2FB; -fx-background-radius: 12;                                -fx-border-color: #C4DEFF; -fx-border-width: 1.5;                                -fx-border-radius: 12; -fx-padding: 10 14 10 14;">
                            <children>
-                              <FontIcon iconColor="#3A7BD5" iconLiteral="fas-bolt" iconSize="22" />
+                              <FontIcon iconColor="#3A7BD5" iconLiteral="fas-microchip" iconSize="22" />
                               <Label style="-fx-font-size: 12; -fx-font-weight: 700; -fx-text-fill: #1a1a1a;" text="M4" />
                               <Label style="-fx-font-size: 10; -fx-text-fill: #888;" text="Chip" />
                            </children>
