@@ -149,7 +149,7 @@
                   <Insets left="30.0" />
                </HBox.margin>
             </Region>
-            <FontIcon iconColor="#1d1d1f" iconLiteral="fas-shopping-bag" iconSize="22">
+            <FontIcon iconColor="#1d1d1f" iconLiteral="fas-shopping-bag" iconSize="22" onMouseClicked="#apriCarrello">
                <HBox.margin>
                   <Insets right="24.0" />
                </HBox.margin>
@@ -325,7 +325,7 @@
                   <Separator prefWidth="200.0" />
                   <HBox spacing="15.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="200.0" style="-fx-font-weight: bold;" styleClass="accent" text="Aggiungi al Carrello" />
+                        <Button fx:id="btnAggiungiCarrello11" onMouseClicked="#aggiungiWatchSeries11" mnemonicParsing="false" prefHeight="42.0" prefWidth="200.0" style="-fx-font-weight: bold;" styleClass="accent" text="Aggiungi al Carrello" />
                         <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="200.0" style="-fx-font-weight: bold;" styleClass="button-outlined" text="Acquista" />
                      </children>
                   </HBox>

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-        <?import java.lang.*?>
-        <?import javafx.geometry.*?>
-        <?import javafx.scene.control.*?>
-        <?import javafx.scene.layout.*?>
-        <?import javafx.scene.text.*?>
-        <?import org.kordamp.ikonli.javafx.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import org.kordamp.ikonli.javafx.*?>
 
-<AnchorPane prefHeight="542.0" prefWidth="600.0" style="-fx-background-color: #f5f5f7;" stylesheets="@../Style/cupertino-light.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CheckoutController">
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #f5f5f7;" stylesheets="@../Style/cupertino-light.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CheckoutController">
 
     <children>
 
-        <VBox alignment="TOP_CENTER" layoutX="8.0" layoutY="14.0" maxWidth="Infinity" prefWidth="600.0" spacing="30.0" AnchorPane.bottomAnchor="-14.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="-8.0" AnchorPane.topAnchor="14.0">
+        <VBox alignment="TOP_CENTER" layoutX="8.0" layoutY="14.0" maxWidth="Infinity" prefWidth="1000.0" spacing="30.0" AnchorPane.bottomAnchor="-14.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="-8.0" AnchorPane.topAnchor="14.0">
 
             <padding>
                 <Insets bottom="40.0" left="40.0" right="40.0" top="50.0" />
@@ -29,78 +29,183 @@
                     </styleClass>
                 </Label>
 
-                <VBox fx:id="cardBox" maxWidth="420.0" minWidth="420.0" prefWidth="420.0" spacing="14.0" style="-fx-background-color: white; -fx-background-radius: 16; -fx-border-radius: 16; -fx-border-color: #e5e5ea; -fx-border-width: 1;" styleClass="elevated-2">
+                <HBox alignment="TOP_CENTER" spacing="30.0">
 
                     <children>
 
-                        <Label style="-fx-text-fill: #1d1d1f;" styleClass="title-3" text="Indirizzo di Spedizione">
-                            <font>
-                                <Font name="System Bold" size="16.0" />
-                            </font>
+                        <!-- ================== COLONNA SINISTRA: FORM ================== -->
+                        <VBox fx:id="cardBox" maxWidth="420.0" minWidth="420.0" prefWidth="420.0" spacing="10.0" style="-fx-background-color: white; -fx-background-radius: 16; -fx-border-radius: 16; -fx-border-color: #e5e5ea; -fx-border-width: 1;" styleClass="elevated-2">
+
+                            <children>
+
+                                <Label style="-fx-text-fill: #1d1d1f;" styleClass="title-3" text="Indirizzo di Spedizione">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets top="5.0" />
+                                    </padding>
+                                </Label>
+
+                                <!-- NOME + COGNOME -->
+                                <HBox spacing="12.0">
+                                    <children>
+                                        <VBox spacing="4.0" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <TextField fx:id="nomeField" prefHeight="35.0" promptText="Nome" style="-fx-background-color: #f2f2f7; -fx-background-radius: 10; -fx-border-color: transparent; -fx-padding: 8 10 8 10;" styleClass="input" />
+                                                <Label fx:id="errNome" managed="false" maxWidth="Infinity" styleClass="signup-error" visible="false" wrapText="true" />
+                                            </children>
+                                        </VBox>
+                                        <VBox spacing="4.0" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <TextField fx:id="cognomeField" prefHeight="35.0" promptText="Cognome" style="-fx-background-color: #f2f2f7; -fx-background-radius: 10; -fx-border-color: transparent; -fx-padding: 8 10 8 10;" styleClass="input" />
+                                                <Label fx:id="errCognome" managed="false" maxWidth="Infinity" styleClass="signup-error" visible="false" wrapText="true" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+
+                                <!-- VIA -->
+                                <VBox spacing="4.0">
+                                    <children>
+                                        <TextField fx:id="viaField" prefHeight="35.0" promptText="Via" style="-fx-background-color: #f2f2f7; -fx-background-radius: 10; -fx-border-color: transparent; -fx-padding: 8 10 8 10;" styleClass="input" />
+                                        <Label fx:id="errVia" managed="false" maxWidth="Infinity" styleClass="signup-error" visible="false" wrapText="true" />
+                                    </children>
+                                </VBox>
+
+                                <!-- CITTA -->
+                                <VBox spacing="4.0">
+                                    <children>
+                                        <TextField fx:id="cittaField" prefHeight="35.0" promptText="Città" style="-fx-background-color: #f2f2f7; -fx-background-radius: 10; -fx-border-color: transparent; -fx-padding: 8 10 8 10;" styleClass="input" />
+                                        <Label fx:id="errCitta" managed="false" maxWidth="Infinity" styleClass="signup-error" visible="false" wrapText="true" />
+                                    </children>
+                                </VBox>
+
+                                <!-- CAP + PROVINCIA -->
+                                <HBox spacing="12.0" styleClass="row">
+                                    <children>
+                                        <VBox spacing="4.0" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <TextField fx:id="capField" prefHeight="35.0" promptText="CAP" style="-fx-background-color: #f2f2f7; -fx-background-radius: 10; -fx-border-color: transparent; -fx-padding: 8 10 8 10;" styleClass="input" />
+                                                <Label fx:id="errCap" managed="false" maxWidth="Infinity" styleClass="signup-error" visible="false" wrapText="true" />
+                                            </children>
+                                        </VBox>
+                                        <VBox spacing="4.0" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <TextField fx:id="provinciaField" prefHeight="35.0" promptText="Provincia (es. MI)" style="-fx-background-color: #f2f2f7; -fx-background-radius: 10; -fx-border-color: transparent; -fx-padding: 8 10 8 10;" styleClass="input" />
+                                                <Label fx:id="errProvincia" managed="false" maxWidth="Infinity" styleClass="signup-error" visible="false" wrapText="true" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+
+                                <Separator style="-fx-opacity: 0.5;" styleClass="separator" />
+
+                                <Label style="-fx-text-fill: #1d1d1f;" styleClass="title-3" text="Pagamento">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                </Label>
+
+                                <!-- NOME SULLA CARTA -->
+                                <VBox spacing="4.0">
+                                    <children>
+                                        <TextField fx:id="nomeCartaField" prefHeight="35.0" promptText="Nome sulla carta" style="-fx-background-color: #f2f2f7; -fx-background-radius: 10; -fx-border-color: transparent; -fx-padding: 8 10 8 10;" styleClass="input" />
+                                        <Label fx:id="errNomeCarta" managed="false" maxWidth="Infinity" styleClass="signup-error" visible="false" wrapText="true" />
+                                    </children>
+                                </VBox>
+
+                                <!-- NUMERO CARTA -->
+                                <VBox spacing="4.0">
+                                    <children>
+                                        <StackPane prefHeight="35.0" prefWidth="358.0">
+                                            <children>
+                                                <TextField fx:id="cardField" prefHeight="35.0" prefWidth="358.0" promptText="Numero Carta (16 cifre)" style="-fx-background-color: #f2f2f7; -fx-background-radius: 10; -fx-border-color: transparent; -fx-padding: 8 10 8 10;" />
+                                                <FontIcon fx:id="visaIcon" iconLiteral="fab-cc-visa" text="" translateX="-10.0" StackPane.alignment="CENTER_RIGHT" visible="false" managed="false" />
+                                                <FontIcon fx:id="mastercardIcon" iconLiteral="fab-cc-mastercard" translateX="-10.0" StackPane.alignment="CENTER_RIGHT" visible="false" managed="false" />
+                                                <FontIcon fx:id="amexIcon" iconLiteral="fab-cc-amex" translateX="-10.0" StackPane.alignment="CENTER_RIGHT" visible="false" managed="false" />
+                                            </children>
+                                        </StackPane>
+                                        <Label fx:id="errCard" managed="false" maxWidth="Infinity" styleClass="signup-error" visible="false" wrapText="true" />
+                                    </children>
+                                </VBox>
+
+                                <!-- SCADENZA + CVV -->
+                                <HBox spacing="15.0">
+                                    <children>
+                                        <VBox spacing="4.0" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <TextField fx:id="scadenzaField" prefHeight="35.0" promptText="Scadenza (MM/AA)" style="-fx-background-color: #f2f2f7; -fx-background-radius: 10; -fx-border-color: transparent; -fx-padding: 8 10 8 10;" />
+                                                <Label fx:id="errScadenza" managed="false" maxWidth="Infinity" styleClass="signup-error" visible="false" wrapText="true" />
+                                            </children>
+                                        </VBox>
+                                        <VBox spacing="4.0" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <TextField fx:id="cvvField" prefHeight="35.0" promptText="CVV" style="-fx-background-color: #f2f2f7; -fx-background-radius: 10; -fx-border-color: transparent; -fx-padding: 8 10 8 10;" />
+                                                <Label fx:id="errCvv" managed="false" maxWidth="Infinity" styleClass="signup-error" visible="false" wrapText="true" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+
+                                <!-- ANNULLA + PAGA ORA -->
+                                <HBox alignment="CENTER_LEFT">
+                                    <children>
+                                        <Button fx:id="btnAnnulla" onAction="#annullaCheckout" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: #ff3b30; -fx-font-size: 14; -fx-font-weight: bold; -fx-cursor: hand;" text="← Annulla" />
+
+                                        <Region HBox.hgrow="ALWAYS" />
+
+                                        <Button fx:id="btnPagaOra" onAction="#pagaOra" minHeight="44.0" minWidth="160.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="110.0" style="-fx-background-color: #0071e3; -fx-text-fill: white; -fx-background-radius: 12; -fx-font-weight: bold;" styleClass="accent" text="Paga Ora" textAlignment="CENTER" />
+                                    </children>
+                                    <padding>
+                                        <Insets top="20.0" />
+                                    </padding>
+                                </HBox>
+
+                            </children>
+
                             <padding>
-                                <Insets top="5.0" />
+                                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
                             </padding>
-                        </Label>
 
-                        <TextField prefHeight="35.0" promptText="Nome completo" style="-fx-background-color: #f2f2f7; -fx-background-radius: 10; -fx-border-color: transparent; -fx-padding: 8 10 8 10;" styleClass="input" />
-                        <TextField prefHeight="35.0" promptText="Via" style="-fx-background-color: #f2f2f7; -fx-background-radius: 10; -fx-border-color: transparent; -fx-padding: 8 10 8 10;" styleClass="input" />
-                        <TextField prefHeight="35.0" promptText="Città" style="-fx-background-color: #f2f2f7; -fx-background-radius: 10; -fx-border-color: transparent; -fx-padding: 8 10 8 10;" styleClass="input" />
+                        </VBox>
 
-                        <HBox spacing="12.0" styleClass="row">
-                            <children>
-                                <TextField prefHeight="35.0" promptText="CAP" style="-fx-background-color: #f2f2f7; -fx-background-radius: 10; -fx-border-color: transparent; -fx-padding: 8 10 8 10;" styleClass="input" HBox.hgrow="ALWAYS" />
-                                <TextField prefHeight="35.0" promptText="Provincia" style="-fx-background-color: #f2f2f7; -fx-background-radius: 10; -fx-border-color: transparent; -fx-padding: 8 10 8 10;" styleClass="input" HBox.hgrow="ALWAYS" />
-                            </children>
-                        </HBox>
+                        <!-- ================== COLONNA DESTRA: RIEPILOGO ORDINE ================== -->
+                        <VBox maxWidth="360.0" minWidth="360.0" prefWidth="360.0" spacing="14.0" style="-fx-background-color: white; -fx-background-radius: 16; -fx-border-radius: 16; -fx-border-color: #e5e5ea; -fx-border-width: 1;" styleClass="elevated-2">
 
-                        <Separator style="-fx-opacity: 0.5;" styleClass="separator" />
-
-                        <Label style="-fx-text-fill: #1d1d1f;" styleClass="title-3" text="Pagamento">
-                            <font>
-                                <Font name="System Bold" size="16.0" />
-                            </font>
-                        </Label>
-
-                        <StackPane prefHeight="35.0" prefWidth="358.0">
                             <children>
 
-                                <!-- 🔥 TUTTE LE ICONE RIMOSSE -->
-                                <!-- (FontIcon eliminati perché rompevano Scene Builder) -->
+                                <Label style="-fx-text-fill: #1d1d1f;" styleClass="title-3" text="Riepilogo Ordine">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets top="5.0" />
+                                    </padding>
+                                </Label>
 
-                                <TextField fx:id="cardField" prefHeight="35.0" prefWidth="358.0" promptText="Numero Carta" style="-fx-background-color: #f2f2f7; -fx-background-radius: 10; -fx-border-color: transparent; -fx-padding: 8 10 8 10;" />
-                                <FontIcon fx:id="mastercardIcon" iconLiteral="fab-cc-mastercard" translateX="-10.0" StackPane.alignment="CENTER_RIGHT" />
-                                <FontIcon fx:id="visaIcon" iconLiteral="fab-cc-visa" text="" translateX="-10.0" StackPane.alignment="CENTER_RIGHT" />
+                                <VBox fx:id="riepilogoBox" spacing="10.0" />
+
+                                <Separator style="-fx-opacity: 0.5;" styleClass="separator" />
+
+                                <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                                    <children>
+                                        <Label style="-fx-font-size: 16; -fx-text-fill: #1d1d1f;" text="Totale:" />
+                                        <Label fx:id="lblTotaleCheckout" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #1d1d1f;" text="€ 0.00" />
+                                    </children>
+                                </HBox>
 
                             </children>
-                        </StackPane>
 
-                        <HBox spacing="15.0">
-                            <children>
-                                <TextField prefHeight="35.0" promptText="Scadenza" style="-fx-background-color: #f2f2f7; -fx-background-radius: 10; -fx-border-color: transparent; -fx-padding: 8 10 8 10;" HBox.hgrow="ALWAYS" />
-                                <TextField prefHeight="35.0" promptText="CVV" style="-fx-background-color: #f2f2f7; -fx-background-radius: 10; -fx-border-color: transparent; -fx-padding: 8 10 8 10;" HBox.hgrow="ALWAYS" />
-                            </children>
-                        </HBox>
-
-                        <HBox alignment="CENTER_RIGHT">
-                            <children>
-                                <Button minHeight="44.0" minWidth="160.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="110.0" style="-fx-background-color: #0071e3; -fx-text-fill: white; -fx-background-radius: 12; -fx-font-weight: bold;" styleClass="accent" text="Paga Ora" textAlignment="CENTER" />
-                            </children>
                             <padding>
-                                <Insets top="30.0" />
+                                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
                             </padding>
-                        </HBox>
+
+                        </VBox>
 
                     </children>
 
-                    <padding>
-                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
-                    </padding>
-
-                    <VBox.margin>
-                        <Insets />
-                    </VBox.margin>
-
-                </VBox>
+                </HBox>
 
             </children>
 

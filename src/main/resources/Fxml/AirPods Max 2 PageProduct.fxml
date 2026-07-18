@@ -25,7 +25,7 @@
             <String fx:value="elevated-1" />
          </styleClass>
          <children>
-            <ImageView fx:id="logoIconMax2" cache="true" cacheHint="QUALITY" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="logoIcon3" cache="true" cacheHint="QUALITY" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../it/uid/unitech/Images/UnitechLogo.png" />
                </image>
@@ -33,11 +33,11 @@
                   <Insets left="30.0" />
                </HBox.margin>
             </ImageView>
-            <SplitMenuButton fx:id="iPhoneHomeAirPodsMax2" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPhone">
+            <SplitMenuButton fx:id="iPhoneHomeAirPodsPro3" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPhone">
                <items>
-                  <MenuItem fx:id="iPhone17ProHomeAirPodsMax2" mnemonicParsing="false" text="iPhone 17 Pro" />
-                  <MenuItem fx:id="iPhone17HomeAirPodsMax2" mnemonicParsing="false" text="iPhone 17" />
-                  <MenuItem fx:id="iPhoneAirHomeAirPodsMax2" mnemonicParsing="false" text="iPhone Air" />
+                  <MenuItem fx:id="iPhone17ProHomeAirPodsPro3" mnemonicParsing="false" text="iPhone 17 Pro" />
+                  <MenuItem fx:id="iPhone17HomeAirPodsPro3" mnemonicParsing="false" text="iPhone 17" />
+                  <MenuItem fx:id="iPhoneAirHomeAirPodsPro3" mnemonicParsing="false" text="iPhone Air" />
                </items>
                <font>
                   <Font name="Segoe UI" size="18.0" />
@@ -51,11 +51,11 @@
                   <Insets left="30.0" />
                </HBox.margin>
             </SplitMenuButton>
-            <SplitMenuButton fx:id="iPadHomeAirPodsMax2" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPad">
+            <SplitMenuButton fx:id="iPadHomeAirPodsPro3" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="iPad">
                <items>
-                  <MenuItem fx:id="iPadProHomeAirPodsMax2" mnemonicParsing="false" text="iPad Pro" />
-                  <MenuItem fx:id="iPadAirHomeAirPodsMax2" mnemonicParsing="false" text="iPad Air" />
-                  <MenuItem fx:id="iPadBaseHomeAirPodsMax2" mnemonicParsing="false" text="iPad" />
+                  <MenuItem fx:id="iPadProHomeAirPodsPro3" mnemonicParsing="false" text="iPad Pro" />
+                  <MenuItem fx:id="iPadAirHomeAirPodsPro3" mnemonicParsing="false" text="iPad Air" />
+                  <MenuItem fx:id="iPadBaseHomeAirPodsPro3" mnemonicParsing="false" text="iPad" />
                </items>
                <font>
                   <Font name="Segoe UI" size="18.0" />
@@ -69,11 +69,11 @@
                   <Insets left="20.0" />
                </HBox.margin>
             </SplitMenuButton>
-            <SplitMenuButton fx:id="MacHomeAirPodsMax2" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Mac">
+            <SplitMenuButton fx:id="MacHomeAirPodsPro3" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Mac">
                <items>
-                  <MenuItem fx:id="iMacHomeAirPodsMax2" mnemonicParsing="false" text="iMac" />
-                  <MenuItem fx:id="MacStudioHomeAirPodsMax2" mnemonicParsing="false" text="Mac Studio" />
-                  <MenuItem fx:id="MacMiniHomeAirPodsMax2" mnemonicParsing="false" text="Mac Mini" />
+                  <MenuItem fx:id="iMacHomeAirPodsPro3" mnemonicParsing="false" text="iMac" />
+                  <MenuItem fx:id="MacStudioHomeAirPodsPro3" mnemonicParsing="false" text="Mac Studio" />
+                  <MenuItem fx:id="MacMiniHomeAirPodsPro3" mnemonicParsing="false" text="Mac Mini" />
                </items>
                <font>
                   <Font name="Segoe UI" size="18.0" />
@@ -87,11 +87,11 @@
                   <Insets left="20.0" />
                </HBox.margin>
             </SplitMenuButton>
-            <SplitMenuButton fx:id="MacBookHomeAirPodsMax2" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="MacBook">
+            <SplitMenuButton fx:id="MacBookHomeAirPodsPro3" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="MacBook">
                <items>
-                  <MenuItem fx:id="MacBookProHomeAirPodsMax2" mnemonicParsing="false" text="MacBook Pro" />
-                  <MenuItem fx:id="MacBookAirHomeAirPodsMax2" mnemonicParsing="false" text="MacBook Air" />
-                  <MenuItem fx:id="MacBookNeoHomeAirPodsMax2" mnemonicParsing="false" text="MacBook Neo" />
+                  <MenuItem fx:id="MacBookProHomeAirPodsPro3" mnemonicParsing="false" text="MacBook Pro" />
+                  <MenuItem fx:id="MacBookAirHomeAirPodsPro3" mnemonicParsing="false" text="MacBook Air" />
+                  <MenuItem fx:id="MacBookNeoHomeAirPodsPro3" mnemonicParsing="false" text="MacBook Neo" />
                </items>
                <font>
                   <Font name="Segoe UI" size="18.0" />
@@ -105,11 +105,11 @@
                   <Insets left="20.0" />
                </HBox.margin>
             </SplitMenuButton>
-            <SplitMenuButton fx:id="WatchHomeAirPodsMax2" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Watch">
+            <SplitMenuButton fx:id="WatchHomeAirPodsPro3" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="Watch">
                <items>
-                  <MenuItem fx:id="WatchUltra3HomeAirPodsMax2" mnemonicParsing="false" text="Apple Watch Ultra 3" />
-                  <MenuItem fx:id="WatchSeries11HomeAirPodsMax2" mnemonicParsing="false" text="Apple Watch Series 11" />
-                  <MenuItem fx:id="WatchSE3HomeAirPodsMax2" mnemonicParsing="false" text="Apple Watch SE 3" />
+                  <MenuItem fx:id="WatchUltra3HomeAirPodsPro3" mnemonicParsing="false" text="Apple Watch Ultra 3" />
+                  <MenuItem fx:id="WatchSeries11HomeAirPodsPro3" mnemonicParsing="false" text="Apple Watch Series 11" />
+                  <MenuItem fx:id="WatchSE3HomeAirPodsPro3" mnemonicParsing="false" text="Apple Watch SE 3" />
                </items>
                <font>
                   <Font name="Segoe UI" size="18.0" />
@@ -123,11 +123,11 @@
                   <Insets left="20.0" />
                </HBox.margin>
             </SplitMenuButton>
-            <SplitMenuButton fx:id="AirPodsHomeAirPodsMax2" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="AirPods">
+            <SplitMenuButton fx:id="AirPodsHomeAirPodsPro3" cache="true" cacheHint="QUALITY" minWidth="-Infinity" mnemonicParsing="false" text="AirPods">
                <items>
-                  <MenuItem fx:id="AirPodsMax2HomeAirPodsMax2" mnemonicParsing="false" text="AirPods Max 2" />
-                  <MenuItem fx:id="AirPodsPro3HomeAirPodsMax2" mnemonicParsing="false" text="AirPods Pro 3" />
-                  <MenuItem fx:id="AirPods4HomeAirPodsMax2" mnemonicParsing="false" text="AirPods 4" />
+                  <MenuItem fx:id="AirPodsMax2HomeAirPodsPro3" mnemonicParsing="false" text="AirPods Max 2" />
+                  <MenuItem fx:id="AirPodsPro3HomeAirPodsPro3" mnemonicParsing="false" text="AirPods Pro 3" />
+                  <MenuItem fx:id="AirPods4HomeAirPodsPro3" mnemonicParsing="false" text="AirPods 4" />
                </items>
                <font>
                   <Font name="Segoe UI" size="18.0" />
@@ -146,12 +146,12 @@
                   <Insets left="30.0" />
                </HBox.margin>
             </Region>
-            <FontIcon iconColor="#1d1d1f" iconLiteral="fas-shopping-bag" iconSize="22">
+            <FontIcon iconColor="#1d1d1f" iconLiteral="fas-shopping-bag" iconSize="22" onMouseClicked="#apriCarrello">
                <HBox.margin>
                   <Insets right="24.0" />
                </HBox.margin>
             </FontIcon>
-            <FontIcon fx:id="loginIconMax2" iconColor="#1d1d1f" iconLiteral="fas-user-alt" iconSize="22" />
+            <FontIcon fx:id="loginIcon3" iconColor="#1d1d1f" iconLiteral="fas-user-alt" iconSize="22" />
          </children>
          <padding>
             <Insets left="2.0" right="20.0" />
@@ -170,9 +170,9 @@
                   <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
                </padding>
                <children>
-                  <ImageView fx:id="immagineProdotto" cache="true" cacheHint="QUALITY" fitHeight="400.0" fitWidth="481.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="immagineProdotto3" cache="true" cacheHint="QUALITY" fitHeight="400.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../it/uid/unitech/Images/AirPods Max 2 Nere.png" />
+                        <Image url="@../it/uid/unitech/Images/AirPods%20Pro%203.png" />
                      </image>
                   </ImageView>
                   <HBox alignment="CENTER" spacing="10">
@@ -183,14 +183,14 @@
                         <VBox alignment="CENTER" spacing="5" style="-fx-background-color: #EEF2FB; -fx-background-radius: 12;                                -fx-border-color: #C4DEFF; -fx-border-width: 1.5;                                -fx-border-radius: 12; -fx-padding: 10 14 10 14;">
                            <children>
                               <FontIcon iconColor="#3A7BD5" iconLiteral="fas-battery-full" iconSize="22" />
-                              <Label style="-fx-font-size: 12; -fx-font-weight: 700; -fx-text-fill: #1a1a1a;" text="30 ore" />
+                              <Label style="-fx-font-size: 12; -fx-font-weight: 700; -fx-text-fill: #1a1a1a;" text="8 ore" />
                               <Label style="-fx-font-size: 10; -fx-text-fill: #888;" text="Batteria" />
                            </children>
                         </VBox>
                         <VBox alignment="CENTER" spacing="5" style="-fx-background-color: #EEF2FB; -fx-background-radius: 12;                                -fx-border-color: #C4DEFF; -fx-border-width: 1.5;                                -fx-border-radius: 12; -fx-padding: 10 14 10 14;">
                            <children>
                               <FontIcon iconColor="#3A7BD5" iconLiteral="fas-microphone" iconSize="22" />
-                              <Label style="-fx-font-size: 12; -fx-font-weight: 700; -fx-text-fill: #1a1a1a;" text="6 Mic" />
+                              <Label style="-fx-font-size: 12; -fx-font-weight: 700; -fx-text-fill: #1a1a1a;" text="4 Mic" />
                               <Label style="-fx-font-size: 10; -fx-text-fill: #888;" text="Microfoni" />
                            </children>
                         </VBox>
@@ -220,24 +220,21 @@
                   <Insets bottom="20.0" left="20.0" right="50.0" top="20.0" />
                </HBox.margin>
                <children>
-                  <Label style="-fx-font-size: 36; -fx-font-weight: bold; -fx-text-fill: #1a1a1a;" text="AiPods Max 2" />
-                  <Label style="-fx-font-size: 15; -fx-text-fill: #888888;" text="L'ascolto cambia Musica" />
+                  <Label style="-fx-font-size: 36; -fx-font-weight: bold; -fx-text-fill: #1a1a1a;" text="AiPods Pro 3" />
+                  <Label style="-fx-font-size: 15; -fx-text-fill: #888888;" text="Gli auricolari con la migliore cancellazione del rumore" />
                   <Separator maxWidth="1.7976931348623157E308" minWidth="-Infinity" VBox.vgrow="ALWAYS" />
-                  <Label fx:id="prezzoLabel" style="-fx-font-size: 28; -fx-font-weight: bold; -fx-text-fill: #1a1a1a;" text="Da 579€" />
-                  <Label fx:id="coloreLabel" style="-fx-font-size: 14; -fx-text-fill: #555;" text="Colore: Nero" />
+                  <Label fx:id="prezzoLabel3" style="-fx-font-size: 28; -fx-font-weight: bold; -fx-text-fill: #1a1a1a;" text="Da 249€" />
+                  <Label fx:id="coloreLabel3" style="-fx-font-size: 14; -fx-text-fill: #555;" text="Colore: Bianco" />
                   <HBox alignment="CENTER_LEFT" spacing="15.0">
                      <children>
-                        <Circle fx:id="circleNero" fill="#3f434d" radius="20.0" stroke="#cccccc" strokeWidth="2.0" style="-fx-cursor: hand;" />
-                        <Circle fx:id="circleBianco" fill="#e5dbd1" radius="20.0" stroke="#cccccc" strokeWidth="2.0" style="-fx-cursor: hand;" />
-                        <Circle fx:id="circleArancione" fill="#f3a98b" radius="20.0" stroke="#cccccc" strokeWidth="2.0" style="-fx-cursor: hand;" />
-                        <Circle fx:id="circleBlu" fill="#a8bac6" radius="20.0" stroke="#cccccc" strokeWidth="2.0" style="-fx-cursor: hand;" />
+                        <Circle fx:id="circleBianco3" fill="WHITE" radius="20.0" stroke="#cccccc" strokeWidth="2.0" style="-fx-cursor: hand;" />
                      </children>
                   </HBox>
                   <Label style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: #333;" text="Cancellazione del Rumore:" />
                   <HBox alignment="CENTER_LEFT" spacing="12.0">
                      <children>
-                        <Button fx:id="btnNo" mnemonicParsing="false" styleClass="memory-btn" text="No" />
-                        <Button fx:id="btnSi" mnemonicParsing="false" styleClass="memory-btn" text="Si" />
+                        <Button fx:id="btnNo3" mnemonicParsing="false" styleClass="memory-btn" text="Standard" />
+                        <Button fx:id="btnSi3" mnemonicParsing="false" styleClass="memory-btn" text="Pro" />
                      </children>
                   </HBox>
                   <Separator prefWidth="200.0" />
@@ -272,7 +269,7 @@
                   <Separator prefWidth="200.0" />
                   <HBox spacing="15.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="200.0" style="-fx-font-weight: bold;" styleClass="accent" text="Aggiungi al Carrello" />
+                        <Button mnemonicParsing="false" onMouseClicked="#aggiungiAirPodsPro3" prefHeight="42.0" prefWidth="200.0" style="-fx-font-weight: bold;" styleClass="accent" text="Aggiungi al Carrello" />
                         <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="200.0" style="-fx-font-weight: bold;" styleClass="button-outlined" text="Acquista" />
                      </children>
                   </HBox>

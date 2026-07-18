@@ -1,11 +1,14 @@
 package Controller;
 
 import Util.AnimazioneUtil;
+import Util.NavigationManager;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.SplitMenuButton;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import org.kordamp.ikonli.javafx.FontIcon;
 
 public class HomeController {
@@ -107,7 +110,11 @@ public class HomeController {
     @FXML
     private Button DiscoveriMacHome;
 
-    
+    @FXML
+    private void apriCarrello(MouseEvent event) {
+        NavigationManager.apriCarrello((Node) event.getSource());
+    }
+
     public void initialize() {
 
         AnimazioneUtil.verificaCambiaScena(iPhoneHome, "/fxml/iPhone Product.fxml");

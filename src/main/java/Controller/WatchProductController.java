@@ -3,6 +3,7 @@ package Controller;
 import Model.Carrello;
 import Model.ElementoCarrello;
 import Util.AnimazioneUtil;
+import Util.NavigationManager;
 import javafx.animation.FadeTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -21,94 +22,84 @@ import javafx.util.Duration;
 import Util.Navigation;
 import org.kordamp.ikonli.javafx.FontIcon;
 
+import java.util.Objects;
+
 
 public class WatchProductController {
 
     // =========================
-    // 📦 AGGIUNTA PRODOTTI
+    // 📦 VARIABILI Apple Watch Ultra 3
     // =========================
+    private String coloreUltra3 = "Nero";
+    private String connettivitaUltra3 = "GPS";
+    private double prezzoUltra3 = 759.0;
+    private Image immagineUltra3 = loadImage("/it/uid/unitech/Images/Apple Watch Ultra 3 Black.png");
 
+    // =========================
+    // 📦 VARIABILI Apple Watch SE 3
+    // =========================
+    private String coloreSE3 = "Nero";
+    private String connettivitaSE3 = "GPS";
+    private double prezzoSE3 = 279.0;
+    private Image immagineSE3 = loadImage("/it/uid/unitech/Images/Apple Watch SE 3 Black.png");
+
+    // =========================
+    // 📦 VARIABILI Apple Watch Series 11
+    // =========================
+    private String coloreSeries11 = "Naturale";
+    private String connettivitaSeries11 = "GPS";
+    private double prezzoSeries11 = 759.0;
+    private Image immagineSeries11 = loadImage("/it/uid/unitech/Images/Apple Watch Series 11 Naturale.png");
+
+
+    // =========================
+    // 🛒 AGGIUNTA AL CARRELLO
+    // =========================
     @FXML
     private void aggiungiWatchUltra3(MouseEvent event) {
-
         ElementoCarrello item = new ElementoCarrello(
                 "Apple Watch Ultra 3",
-                879.0,
-                new Image(getClass().getResourceAsStream(
-                        "/it/uid/unitech/Images/WatchUltra3_AWHome.png"
-                ))
+                prezzoUltra3,
+                1,
+                immagineUltra3,
+                "Colore: " + coloreUltra3 + " | Connettività: " + connettivitaUltra3
         );
-
-        Carrello.getIstanza().aggiungiProdotto(item);
-    }
-
-    @FXML
-    private void aggiungiWatchSeries11(MouseEvent event) {
-
-        ElementoCarrello item = new ElementoCarrello(
-                "Apple Watch Series 11",
-                449.0,
-                new Image(getClass().getResourceAsStream(
-                        "/it/uid/unitech/Images/WatchSeries11_AWHome.png"
-                ))
-        );
-
         Carrello.getIstanza().aggiungiProdotto(item);
     }
 
     @FXML
     private void aggiungiWatchSE3(MouseEvent event) {
-
         ElementoCarrello item = new ElementoCarrello(
                 "Apple Watch SE 3",
-                279.0,
-                new Image(getClass().getResourceAsStream(
-                        "/it/uid/unitech/Images/WatchSE3_AWHome.png"
-                ))
+                prezzoSE3,
+                1,
+                immagineSE3,
+                "Colore: " + coloreSE3 + " | Connettività: " + connettivitaSE3
         );
-
         Carrello.getIstanza().aggiungiProdotto(item);
     }
+
+    @FXML
+    private void aggiungiWatchSeries11(MouseEvent event) {
+        ElementoCarrello item = new ElementoCarrello(
+                "Apple Watch Series 11",
+                prezzoSeries11,
+                1,
+                immagineSeries11,
+                "Colore: " + coloreSeries11 + " | Connettività: " + connettivitaSeries11
+        );
+        Carrello.getIstanza().aggiungiProdotto(item);
+    }
+
 
     // =========================
     // 🛒 APERTURA CARRELLO
     // =========================
-
     @FXML
     private void apriCarrello(MouseEvent event) {
-
-        Scene scene = ((Node) event.getSource()).getScene();
-        Parent root = scene.getRoot();
-
-        Navigation.setPreviousRoot(root);
-
-        FadeTransition fadeOut = new FadeTransition(Duration.millis(600), root);
-        fadeOut.setFromValue(1.0);
-        fadeOut.setToValue(0.0);
-
-        fadeOut.setOnFinished(e -> {
-            try {
-                FXMLLoader loader = new FXMLLoader(
-                        getClass().getResource("/fxml/Carrello.fxml")
-                );
-
-                Parent newRoot = loader.load();
-
-                newRoot.setOpacity(0.0);
-                scene.setRoot(newRoot);
-
-                FadeTransition fadeIn = new FadeTransition(Duration.millis(600), newRoot);
-                fadeIn.setFromValue(0.0);
-                fadeIn.setToValue(1.0);
-                fadeIn.play();
-
-            } catch (Exception ex) {
-                ex.printStackTrace();
-            }
-        });
-
-        fadeOut.play();
+        NavigationManager.apriCarrello((Node) event.getSource());
     }
+
     @FXML
     private Label prezzoLabelUltra;
     @FXML
@@ -260,57 +251,194 @@ public class WatchProductController {
 
     public void initialize(){
 
-        AnimazioneUtil.aggiungiClickColore(circleNeroUltra, "Nero", "/it/uid/unitech/Images/Apple Watch Ultra 3 Black.png", coloreLabelUltra, immagineProdottoUltra);
-        AnimazioneUtil.aggiungiClickBottone(btnGPSUltra, "759€", prezzoLabelUltra);
+        // ==========================================
+        // ⌚ Apple Watch Ultra 3
+        // ==========================================
+        if (immagineProdottoUltra != null) {
+            if (circleNeroUltra != null) AnimazioneUtil.aggiungiClickColore(circleNeroUltra, "Nero", "/it/uid/unitech/Images/Apple Watch Ultra 3 Black.png", coloreLabelUltra, immagineProdottoUltra);
+            if (btnGPSUltra != null) AnimazioneUtil.aggiungiClickBottone(btnGPSUltra, "759€", prezzoLabelUltra);
+            if (circleVerdeUltra != null) AnimazioneUtil.aggiungiClickColore(circleVerdeUltra, "Verde Neon", "/it/uid/unitech/Images/Apple Watch Ultra 3 Green.png", coloreLabelUltra, immagineProdottoUltra);
+            if (circleBluUltra != null) AnimazioneUtil.aggiungiClickColore(circleBluUltra, "Blu Navy", "/it/uid/unitech/Images/Apple Watch Ultra 3 Blu.png", coloreLabelUltra, immagineProdottoUltra);
+            if (btnGPSCellularUltra != null) AnimazioneUtil.aggiungiClickBottone(btnGPSCellularUltra,"859€",prezzoLabelUltra);
 
-        AnimazioneUtil.aggiungiClickColore(circleGrigio11, "Naturale", "/it/uid/unitech/Images/Apple Watch Series 11 Naturale.png", coloreLabel11, immagineProdotto11);
-        AnimazioneUtil.aggiungiClickBottone(btnGPS11, "759€", prezzoLabel11);
+            if (circleNeroUltra != null) {
+                circleNeroUltra.setOnMouseClicked(e -> {
+                    coloreUltra3 = "Nero";
+                    immagineUltra3 = loadImage("/it/uid/unitech/Images/Apple Watch Ultra 3 Black.png");
+                    coloreLabelUltra.setText("Colore: Nero");
+                    immagineProdottoUltra.setImage(immagineUltra3);
+                });
+            }
 
-        AnimazioneUtil.aggiungiClickColore(circleNeroSE, "Nero", "/it/uid/unitech/Images/Apple Watch SE 3 Black.png", coloreLabelSE, immagineProdottoSE);
-        AnimazioneUtil.aggiungiClickBottone(btnGPSSE, "279€", prezzoLabelSE);
+            if (circleVerdeUltra != null) {
+                circleVerdeUltra.setOnMouseClicked(e -> {
+                    coloreUltra3 = "Verde Neon";
+                    immagineUltra3 = loadImage("/it/uid/unitech/Images/Apple Watch Ultra 3 Green.png");
+                    coloreLabelUltra.setText("Colore: Verde Neon");
+                    immagineProdottoUltra.setImage(immagineUltra3);
+                });
+            }
 
-        AnimazioneUtil.aggiungiClickColore(circleVerdeUltra, "Verde Neon", "/it/uid/unitech/Images/Apple Watch Ultra 3 Green.png", coloreLabelUltra, immagineProdottoUltra);
+            if (circleBluUltra != null) {
+                circleBluUltra.setOnMouseClicked(e -> {
+                    coloreUltra3 = "Blu Navy";
+                    immagineUltra3 = loadImage("/it/uid/unitech/Images/Apple Watch Ultra 3 Blu.png");
+                    coloreLabelUltra.setText("Colore: Blu Navy");
+                    immagineProdottoUltra.setImage(immagineUltra3);
+                });
+            }
 
-        AnimazioneUtil.aggiungiClickColore(circleBluUltra, "Blu Navy", "/it/uid/unitech/Images/Apple Watch Ultra 3 Blu.png", coloreLabelUltra, immagineProdottoUltra);
+            if (btnGPSUltra != null) {
+                btnGPSUltra.setOnAction(e -> {
+                    connettivitaUltra3 = "GPS";
+                    prezzoUltra3 = 759.0;
+                    prezzoLabelUltra.setText("759€");
+                });
+            }
 
-        AnimazioneUtil.aggiungiClickColore(circleRosaSE, "Rosa Fard", "/it/uid/unitech/Images/Apple Watch SE 3 Pink.png", coloreLabelSE, immagineProdottoSE);
+            if (btnGPSCellularUltra != null) {
+                btnGPSCellularUltra.setOnAction(e -> {
+                    connettivitaUltra3 = "GPS+Cellular";
+                    prezzoUltra3 = 859.0;
+                    prezzoLabelUltra.setText("859€");
+                });
+            }
+        }
 
-        AnimazioneUtil.aggiungiClickColore(circleGialloSE, "Giallo Neon", "/it/uid/unitech/Images/Apple Watch SE 3 Yellow.png", coloreLabelSE, immagineProdottoSE);
 
-        AnimazioneUtil.aggiungiClickColore(circleBluSE, "Blu Salmastro", "/it/uid/unitech/Images/Apple Watch SE 3 Blu.png", coloreLabelSE, immagineProdottoSE);
+        // ==========================================
+        // ⌚ Apple Watch SE 3
+        // ==========================================
+        if (immagineProdottoSE != null) {
+            if (circleNeroSE != null) AnimazioneUtil.aggiungiClickColore(circleNeroSE, "Nero", "/it/uid/unitech/Images/Apple Watch SE 3 Black.png", coloreLabelSE, immagineProdottoSE);
+            if (btnGPSSE != null) AnimazioneUtil.aggiungiClickBottone(btnGPSSE, "279€", prezzoLabelSE);
+            if (circleRosaSE != null) AnimazioneUtil.aggiungiClickColore(circleRosaSE, "Rosa Fard", "/it/uid/unitech/Images/Apple Watch SE 3 Pink.png", coloreLabelSE, immagineProdottoSE);
+            if (circleGialloSE != null) AnimazioneUtil.aggiungiClickColore(circleGialloSE, "Giallo Neon", "/it/uid/unitech/Images/Apple Watch SE 3 Yellow.png", coloreLabelSE, immagineProdottoSE);
+            if (circleBluSE != null) AnimazioneUtil.aggiungiClickColore(circleBluSE, "Blu Salmastro", "/it/uid/unitech/Images/Apple Watch SE 3 Blu.png", coloreLabelSE, immagineProdottoSE);
+            if (btnGPSCellularSE != null) AnimazioneUtil.aggiungiClickBottone(btnGPSCellularSE, "379€", prezzoLabelSE);
 
-        AnimazioneUtil.aggiungiClickColore(circleOro11, "Oro", "/it/uid/unitech/Images/Apple Watch Series 11 Oro.png", coloreLabel11, immagineProdotto11);
+            if (circleNeroSE != null) {
+                circleNeroSE.setOnMouseClicked(e -> {
+                    coloreSE3 = "Nero";
+                    immagineSE3 = loadImage("/it/uid/unitech/Images/Apple Watch SE 3 Black.png");
+                    coloreLabelSE.setText("Colore: Nero");
+                    immagineProdottoSE.setImage(immagineSE3);
+                });
+            }
 
-        AnimazioneUtil.aggiungiClickColore(circleNero11, "Ardesia", "/it/uid/unitech/Images/Apple Watch Series 11 Ardesia.png", coloreLabel11, immagineProdotto11);
+            if (circleRosaSE != null) {
+                circleRosaSE.setOnMouseClicked(e -> {
+                    coloreSE3 = "Rosa Fard";
+                    immagineSE3 = loadImage("/it/uid/unitech/Images/Apple Watch SE 3 Pink.png");
+                    coloreLabelSE.setText("Colore: Rosa Fard");
+                    immagineProdottoSE.setImage(immagineSE3);
+                });
+            }
 
-        AnimazioneUtil.aggiungiClickBottone(btnGPSCellular11, "859€", prezzoLabel11);
+            if (circleGialloSE != null) {
+                circleGialloSE.setOnMouseClicked(e -> {
+                    coloreSE3 = "Giallo Neon";
+                    immagineSE3 = loadImage("/it/uid/unitech/Images/Apple Watch SE 3 Yellow.png");
+                    coloreLabelSE.setText("Colore: Giallo Neon");
+                    immagineProdottoSE.setImage(immagineSE3);
+                });
+            }
 
-        AnimazioneUtil.aggiungiClickBottone(btnGPSCellularUltra,"859€",prezzoLabelUltra);
+            if (circleBluSE != null) {
+                circleBluSE.setOnMouseClicked(e -> {
+                    coloreSE3 = "Blu Salmastro";
+                    immagineSE3 = loadImage("/it/uid/unitech/Images/Apple Watch SE 3 Blu.png");
+                    coloreLabelSE.setText("Colore: Blu Salmastro");
+                    immagineProdottoSE.setImage(immagineSE3);
+                });
+            }
 
-        AnimazioneUtil.aggiungiClickBottone(btnGPSCellularSE, "379€", prezzoLabelSE);
+            if (btnGPSSE != null) {
+                btnGPSSE.setOnAction(e -> {
+                    connettivitaSE3 = "GPS";
+                    prezzoSE3 = 279.0;
+                    prezzoLabelSE.setText("279€");
+                });
+            }
+
+            if (btnGPSCellularSE != null) {
+                btnGPSCellularSE.setOnAction(e -> {
+                    connettivitaSE3 = "GPS+Cellular";
+                    prezzoSE3 = 379.0;
+                    prezzoLabelSE.setText("379€");
+                });
+            }
+        }
+
+
+        // ==========================================
+        // ⌚ Apple Watch Series 11
+        // ==========================================
+        if (immagineProdotto11 != null) {
+            if (circleGrigio11 != null) AnimazioneUtil.aggiungiClickColore(circleGrigio11, "Naturale", "/it/uid/unitech/Images/Apple Watch Series 11 Naturale.png", coloreLabel11, immagineProdotto11);
+            if (btnGPS11 != null) AnimazioneUtil.aggiungiClickBottone(btnGPS11, "759€", prezzoLabel11);
+            if (circleOro11 != null) AnimazioneUtil.aggiungiClickColore(circleOro11, "Oro", "/it/uid/unitech/Images/Apple Watch Series 11 Oro.png", coloreLabel11, immagineProdotto11);
+            if (circleNero11 != null) AnimazioneUtil.aggiungiClickColore(circleNero11, "Ardesia", "/it/uid/unitech/Images/Apple Watch Series 11 Ardesia.png", coloreLabel11, immagineProdotto11);
+            if (btnGPSCellular11 != null) AnimazioneUtil.aggiungiClickBottone(btnGPSCellular11, "859€", prezzoLabel11);
+
+            if (circleGrigio11 != null) {
+                circleGrigio11.setOnMouseClicked(e -> {
+                    coloreSeries11 = "Naturale";
+                    immagineSeries11 = loadImage("/it/uid/unitech/Images/Apple Watch Series 11 Naturale.png");
+                    coloreLabel11.setText("Colore: Naturale");
+                    immagineProdotto11.setImage(immagineSeries11);
+                });
+            }
+
+            if (circleOro11 != null) {
+                circleOro11.setOnMouseClicked(e -> {
+                    coloreSeries11 = "Oro";
+                    immagineSeries11 = loadImage("/it/uid/unitech/Images/Apple Watch Series 11 Oro.png");
+                    coloreLabel11.setText("Colore: Oro");
+                    immagineProdotto11.setImage(immagineSeries11);
+                });
+            }
+
+            if (circleNero11 != null) {
+                circleNero11.setOnMouseClicked(e -> {
+                    coloreSeries11 = "Ardesia";
+                    immagineSeries11 = loadImage("/it/uid/unitech/Images/Apple Watch Series 11 Ardesia.png");
+                    coloreLabel11.setText("Colore: Ardesia");
+                    immagineProdotto11.setImage(immagineSeries11);
+                });
+            }
+
+            if (btnGPS11 != null) {
+                btnGPS11.setOnAction(e -> {
+                    connettivitaSeries11 = "GPS";
+                    prezzoSeries11 = 759.0;
+                    prezzoLabel11.setText("759€");
+                });
+            }
+
+            if (btnGPSCellular11 != null) {
+                btnGPSCellular11.setOnAction(e -> {
+                    connettivitaSeries11 = "GPS+Cellular";
+                    prezzoSeries11 = 859.0;
+                    prezzoLabel11.setText("859€");
+                });
+            }
+        }
 
         AnimazioneUtil.aggiungiAnimazione(loginIconUltra);
-
         AnimazioneUtil.aggiungiAnimazione(loginIconSE3);
-
         AnimazioneUtil.aggiungiAnimazione(loginIcon11);
 
         AnimazioneUtil.verificaCambiaScena(loginIconUltra, "/fxml/ProfileOption.fxml");
-
         AnimazioneUtil.verificaCambiaScena(loginIconSE3, "/fxml/ProfileOption.fxml");
-
         AnimazioneUtil.verificaCambiaScena(loginIcon11, "/fxml/ProfileOption.fxml");
 
         AnimazioneUtil.aggiungiAnimazione(logoIconSE3);
-
         AnimazioneUtil.aggiungiAnimazione(logoIconUltra);
-
         AnimazioneUtil.aggiungiAnimazione(logoIcon11);
 
         AnimazioneUtil.verificaCambiaScena(logoIconSE3, "/fxml/Home.fxml");
-
         AnimazioneUtil.verificaCambiaScena(logoIconUltra, "/fxml/Home.fxml");
-
         AnimazioneUtil.verificaCambiaScena(logoIcon11, "/fxml/Home.fxml");
 
         // Navigazione (sezione Apple Watch Ultra 3)
@@ -320,8 +448,6 @@ public class WatchProductController {
         AnimazioneUtil.verificaCambiaScena(MacBookHomeWatchUltra3, "/fxml/MacBook Product.fxml");
         AnimazioneUtil.verificaCambiaScena(WatchHomeWatchUltra3, "/fxml/Watch Product.fxml");
         AnimazioneUtil.verificaCambiaScena(AirPodsHomeWatchUltra3, "/fxml/AirPods Product.fxml");
-        AnimazioneUtil.verificaCambiaScena(loginIconUltra, "/fxml/ProfileOption.fxml");
-        AnimazioneUtil.verificaCambiaScena(logoIconUltra, "/fxml/Home.fxml");
 
         AnimazioneUtil.verificaCambiaScenaItem(iPhone17ProHomeWatchUltra3, "/fxml/iPhone 17 Pro PageProduct.fxml");
         AnimazioneUtil.verificaCambiaScenaItem(iPhone17HomeWatchUltra3, "/fxml/iPhone 17 PageProduct.fxml");
@@ -350,8 +476,6 @@ public class WatchProductController {
         AnimazioneUtil.verificaCambiaScena(MacBookHomeWatchSE3, "/fxml/MacBook Product.fxml");
         AnimazioneUtil.verificaCambiaScena(WatchHomeWatchSE3, "/fxml/Watch Product.fxml");
         AnimazioneUtil.verificaCambiaScena(AirPodsHomeWatchSE3, "/fxml/AirPods Product.fxml");
-        AnimazioneUtil.verificaCambiaScena(loginIconSE3, "/fxml/ProfileOption.fxml");
-        AnimazioneUtil.verificaCambiaScena(logoIconSE3, "/fxml/Home.fxml");
 
         AnimazioneUtil.verificaCambiaScenaItem(iPhone17ProHomeWatchSE3, "/fxml/iPhone 17 Pro PageProduct.fxml");
         AnimazioneUtil.verificaCambiaScenaItem(iPhone17HomeWatchSE3, "/fxml/iPhone 17 PageProduct.fxml");
@@ -379,8 +503,6 @@ public class WatchProductController {
         AnimazioneUtil.verificaCambiaScena(MacBookHomeWatchSeries11, "/fxml/MacBook Product.fxml");
         AnimazioneUtil.verificaCambiaScena(WatchHomeWatchSeries11, "/fxml/Watch Product.fxml");
         AnimazioneUtil.verificaCambiaScena(AirPodsHomeWatchSeries11, "/fxml/AirPods Product.fxml");
-        AnimazioneUtil.verificaCambiaScena(loginIcon11, "/fxml/ProfileOption.fxml");
-        AnimazioneUtil.verificaCambiaScena(logoIcon11, "/fxml/Home.fxml");
 
         AnimazioneUtil.verificaCambiaScenaItem(iPhone17ProHomeWatchSeries11, "/fxml/iPhone 17 Pro PageProduct.fxml");
         AnimazioneUtil.verificaCambiaScenaItem(iPhone17HomeWatchSeries11, "/fxml/iPhone 17 PageProduct.fxml");
@@ -400,5 +522,10 @@ public class WatchProductController {
         AnimazioneUtil.verificaCambiaScenaItem(AirPodsMax2HomeWatchSeries11, "/fxml/AirPods Max 2 PageProduct.fxml");
         AnimazioneUtil.verificaCambiaScenaItem(AirPodsPro3HomeWatchSeries11, "/fxml/AirPods Pro 3 PageProduct.fxml");
         AnimazioneUtil.verificaCambiaScenaItem(AirPods4HomeWatchSeries11, "/fxml/AirPods 4 PageProduct.fxml");
+    }
+
+    private Image loadImage(String resourcePath) {
+        return new Image(Objects.requireNonNull(getClass().getResourceAsStream(resourcePath),
+                "Resource not found: " + resourcePath));
     }
 }

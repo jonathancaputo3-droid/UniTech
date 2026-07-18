@@ -137,7 +137,7 @@
                             <HBox.margin><Insets left="30.0" /></HBox.margin>
                         </Region>
 
-                        <FontIcon iconColor="#1d1d1f" iconLiteral="fas-shopping-bag" iconSize="22">
+                        <FontIcon iconColor="#1d1d1f" iconLiteral="fas-shopping-bag" iconSize="22" onMouseClicked="#apriCarrello">
                             <HBox.margin><Insets right="24.0" /></HBox.margin>
                         </FontIcon>
 
