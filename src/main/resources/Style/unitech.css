@@ -511,7 +511,6 @@
 .button.accent, .menu-button.accent {
   -fx-background-color: -color-accent-5;
   -fx-text-fill: -color-light;
-
 }
 
 .button.accent:hover, .menu-button.accent:hover {
@@ -868,3 +867,20 @@
   -fx-border-radius: 10px;
   -fx-border-width: 1.2;
 }
+
+.splash-icon{
+  -fx-icon-color: #5c5fd6;
+}
+
+.splash-icon:hover {
+
+  -fx-icon-color: #5c5fd6;
+
+  -fx-cursor: hand;
+
+}
+
+.profile-icon{
+  -fx-icon-color: white;
+}
+

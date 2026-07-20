@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Font?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<ScrollPane fitToWidth="true" hbarPolicy="ALWAYS" style="-fx-background-color: white;" stylesheets="@../Style/cupertino-light.css" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GenericProductController">
+<ScrollPane fitToWidth="true" hbarPolicy="ALWAYS" style="-fx-background-color: white;" stylesheets="@../Style/unitech.css" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GenericProductController">
    <content>
       <VBox alignment="TOP_CENTER" style="-fx-background-color: #C4DEFF;">
          <children>
@@ -150,7 +150,7 @@
                               <Insets left="30.0" />
                            </HBox.margin>
                          </Region>
-                        <FontIcon iconColor="#1d1d1f" iconLiteral="fas-shopping-bag" iconSize="22">
+                        <FontIcon iconColor="#1d1d1f" iconLiteral="fas-shopping-bag" iconSize="22" onMouseClicked="#apriCarrello">
                            <HBox.margin>
                               <Insets right="24.0" />
                             </HBox.margin>
@@ -185,7 +185,7 @@
                                       <Font name="System Bold" size="24.0" />
                                  </font>
                               </Label>
-                               <Label text="€ 579" textFill="#6e6e73">
+                               <Label text="A partire da 579€" textFill="#6e6e73">
                                  <font>
                                     <Font name="System Bold" size="16.0" />
                                  </font>
@@ -211,7 +211,7 @@
                                     <Font name="System Bold" size="24.0" />
                                  </font>
                                </Label>
-                              <Label text="€ 249" textFill="#6e6e73">
+                              <Label text="A partire da 249€" textFill="#6e6e73">
                                  <font>
                                      <Font name="System Bold" size="16.0" />
                                  </font>
@@ -237,7 +237,7 @@
                                     <Font name="System Bold" size="24.0" />
                                  </font>
                                </Label>
-                              <Label text="€ 149" textFill="#6e6e73">
+                              <Label text="A partire da 149€" textFill="#6e6e73">
                                  <font>
                                      <Font name="System Bold" size="16.0" />
                                  </font>

@@ -14,6 +14,7 @@ import javafx.scene.layout.Priority;
 
 import Model.Carrello;
 import Model.ElementoCarrello;
+import Util.NavigationManager;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -31,6 +32,9 @@ public class CarrelloController {
     private Label lblTotale;
 
     @FXML
+    private Button btnCheckout;
+
+    @FXML
     public void initialize() {
         aggiornaCarrello();
     }
@@ -46,11 +50,15 @@ public class CarrelloController {
             lblCarrelloVuoto.setVisible(true);
             lblCarrelloVuoto.setManaged(true);
             lblTotale.setText("€ 0.00");
+            btnCheckout.setVisible(false);
+            btnCheckout.setManaged(false);
             return;
         }
 
         lblCarrelloVuoto.setVisible(false);
         lblCarrelloVuoto.setManaged(false);
+        btnCheckout.setVisible(true);
+        btnCheckout.setManaged(true);
 
         for (ElementoCarrello p : prodotti) {
 
@@ -69,6 +77,7 @@ public class CarrelloController {
             Label nome = new Label(p.getNome());
             Label prezzo = new Label("Prezzo: € " + p.getPrezzo());
             Label quantita = new Label("Quantità: " + p.getQuantita());
+            Label caratteristiche = new Label(p.getCaratteristiche());
             Label totale = new Label("Totale: € " + p.getTotale());
 
             // 🔥 BOTTONI QUI
@@ -150,7 +159,7 @@ public class CarrelloController {
 
             HBox controls = new HBox(10, btnMinus, btnPlus);
 
-            info.getChildren().addAll(nome, prezzo, quantita, totale, controls);
+            info.getChildren().addAll(nome, prezzo, quantita, totale, controls, caratteristiche);
 
             Region spacer = new Region();
             HBox.setHgrow(spacer, Priority.ALWAYS);
@@ -194,6 +203,11 @@ public class CarrelloController {
 
             fadeOut.play();
         }
+    }
+
+    @FXML
+    private void vaiAlCheckout(javafx.event.ActionEvent event) {
+        NavigationManager.apriCheckout((Node) event.getSource());
     }
 
 

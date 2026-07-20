@@ -1,14 +1,15 @@
 package Model;
-import java.util.ArrayList;
-import java.util.List;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 public class Carrello {
-    private static Carrello istanza;
 
-    private List<ElementoCarrello> prodotti;
+    private static Carrello istanza = null;
 
-    private Carrello() {
-        prodotti = new ArrayList<>();
-    }
+    private ObservableList<ElementoCarrello> prodotti = FXCollections.observableArrayList();
+
+    private Carrello() {}
 
     public static Carrello getIstanza() {
         if (istanza == null) {
@@ -17,59 +18,57 @@ public class Carrello {
         return istanza;
     }
 
-    public List<ElementoCarrello> getProdotti() {
+    public ObservableList<ElementoCarrello> getProdotti() {
         return prodotti;
     }
 
     public void aggiungiProdotto(ElementoCarrello nuovo) {
 
-        for (ElementoCarrello p : prodotti) {
-            if (p.getNome().equals(nuovo.getNome())) {
-                p.aumentaQuantita();
+        // Se esiste già un prodotto con stesso nome + caratteristiche → aumenta quantità
+        for (ElementoCarrello e : prodotti) {
+            if (e.getNome().equals(nuovo.getNome()) &&
+                    e.getCaratteristiche().equals(nuovo.getCaratteristiche())) {
+
+                e.aumentaQuantita();
                 return;
             }
         }
 
+        // Altrimenti lo aggiungo come nuovo elemento
         prodotti.add(nuovo);
     }
 
-    public void diminuisciProdotto(ElementoCarrello prodotto) {
-
-        java.util.Iterator<ElementoCarrello> it = prodotti.iterator();
-
-        while (it.hasNext()) {
-            ElementoCarrello p = it.next();
-
-            if (p.getNome().equals(prodotto.getNome())) {
-
-                p.diminuisciQuantita();
-
-                if (p.getQuantita() <= 0) {
-                    it.remove(); // 👈 FIX IMPORTANTE
-                }
-
-                return;
-            }
+    public void diminuisciQuantita(ElementoCarrello e) {
+        e.diminuisciQuantita();
+        if (e.getQuantita() <= 0) {
+            prodotti.remove(e);
         }
-
-
-
     }
 
-    public void rimuoviProdotto(ElementoCarrello prodotto) {
-        prodotti.removeIf(p -> p.getNome().equals(prodotto.getNome()));
+    // Alias usato da CarrelloController
+    public void diminuisciProdotto(ElementoCarrello e) {
+        diminuisciQuantita(e);
     }
 
-    public void svuota() {
-        prodotti.clear();
+    public void rimuoviProdotto(ElementoCarrello e) {
+        prodotti.remove(e);
     }
 
-    public double getTotale() {
+    public double getTotaleCarrello() {
         double totale = 0;
-        for (ElementoCarrello p : prodotti) {
-            totale += p.getTotale();
+        for (ElementoCarrello e : prodotti) {
+            totale += e.getTotale();
         }
         return totale;
     }
-}
 
+    // Alias usato da CarrelloController
+    public double getTotale() {
+        return getTotaleCarrello();
+    }
+
+    // Svuota completamente il carrello (usato dopo il pagamento)
+    public void svuota() {
+        prodotti.clear();
+    }
+}

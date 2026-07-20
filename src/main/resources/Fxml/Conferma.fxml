@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import org.kordamp.ikonli.javafx.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #f5f5f7;" stylesheets="@../Style/unitech.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ConfermaController">
+
+    <children>
+
+        <VBox alignment="CENTER" layoutX="8.0" layoutY="14.0" maxWidth="Infinity" prefWidth="1000.0" AnchorPane.bottomAnchor="-14.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="-8.0" AnchorPane.topAnchor="14.0">
+
+            <padding>
+                <Insets bottom="40.0" left="40.0" right="40.0" top="50.0" />
+            </padding>
+
+            <children>
+
+                <VBox alignment="CENTER" maxWidth="480.0" minWidth="480.0" prefWidth="480.0" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 16; -fx-border-radius: 16; -fx-border-color: #e5e5ea; -fx-border-width: 1;" styleClass="elevated-2">
+
+                    <padding>
+                        <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                    </padding>
+
+                    <children>
+
+                        <FontIcon iconColor="#34c759" iconLiteral="fas-check-circle" iconSize="72" />
+
+                        <Label style="-fx-text-fill: #1d1d1f;" text="Acquisto confermato!" textAlignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="26.0" />
+                            </font>
+                            <styleClass>
+                                <String fx:value="title-1" />
+                                <String fx:value="text-bolder" />
+                            </styleClass>
+                        </Label>
+
+                        <Label style="-fx-text-fill: #6e6e73; -fx-text-alignment: center; -fx-wrap-text: true;" text="Grazie per aver scelto Unitech. Ci impegniamo ogni giorno per offrirti prodotti affidabili e un'esperienza d'acquisto eccellente." textAlignment="CENTER" wrapText="true">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Label>
+
+                        <Button fx:id="btnTornaHome" onAction="#tornaHome" minHeight="44.0" minWidth="200.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="200.0" style="-fx-background-color: #0071e3; -fx-text-fill: white; -fx-background-radius: 12; -fx-font-weight: bold;" styleClass="accent" text="Torna alla Home" textAlignment="CENTER">
+                            <VBox.margin>
+                                <Insets top="15.0" />
+                            </VBox.margin>
+                        </Button>
+
+                    </children>
+
+                </VBox>
+
+            </children>
+
+        </VBox>
+
+    </children>
+
+</AnchorPane>

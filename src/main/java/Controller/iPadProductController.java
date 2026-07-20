@@ -1,5 +1,6 @@
 package Controller;
 
+import Util.NavigationManager;
 import org.kordamp.ikonli.javafx.FontIcon;
 
 import Model.Carrello;
@@ -22,21 +23,48 @@ import javafx.util.Duration;
 import Util.AnimazioneUtil;
 import Util.Navigation;
 
+import java.util.Objects;
+
 public class iPadProductController {
 
     // =========================
-    // 📦 AGGIUNTA PRODOTTI
+    // 📦 VARIABILI IPAD
+    // =========================
+    private String coloreIPad = "Argento";
+    private String memoriaIPad = "128GB";
+    private double prezzoIPad = 509.0;
+    private Image immagineIPad = loadImage("/it/uid/unitech/Images/iPad Argento.png");
+
+    // =========================
+    // 📦 VARIABILI IPAD AIR
+    // =========================
+    private String coloreIPadAir = "Grigio";
+    private String memoriaIPadAir = "128GB";
+    private double prezzoIPadAir = 829.0;
+    private Image immagineIPadAir = loadImage("/it/uid/unitech/Images/iPad Air Grigio.png");
+
+    // =========================
+    // 📦 VARIABILI IPAD PRO
+    // =========================
+    private String coloreIPadPro = "Nero";
+    private String memoriaIPadPro = "256GB";
+    private double prezzoIPadPro = 1299.0;
+    private Image immagineIPadPro = loadImage("/it/uid/unitech/Images/iPad Pro Nero.png");
+
+
+    // =========================
+    // 🛒 AGGIUNTA AL CARRELLO
     // =========================
 
     @FXML
-    private void aggiungiIPadPro(MouseEvent event) {
+    private void aggiungiIPad(MouseEvent event) {
 
         ElementoCarrello item = new ElementoCarrello(
-                "iPad Pro",
-                1299.0,
-                new Image(getClass().getResourceAsStream(
-                        "/it/uid/unitech/Images/iPad Pro Nero.png"
-                ))
+                "iPad",
+                prezzoIPad,
+                1,
+                immagineIPad,
+                "Colore: " + coloreIPad + " | Memoria: " + memoriaIPad
         );
 
         Carrello.getIstanza().aggiungiProdotto(item);
@@ -47,28 +75,29 @@ public class iPadProductController {
 
         ElementoCarrello item = new ElementoCarrello(
                 "iPad Air",
-                799.0,
-                new Image(getClass().getResourceAsStream(
-                        "/it/uid/unitech/Images/iPad Air Nero.png"
-                ))
+                prezzoIPadAir,
+                1,
+                immagineIPadAir,
+                "Colore: " + coloreIPadAir + " | Memoria: " + memoriaIPadAir
         );
 
         Carrello.getIstanza().aggiungiProdotto(item);
     }
 
     @FXML
-    private void aggiungiIPadBase(MouseEvent event) {
+    private void aggiungiIPadPro(MouseEvent event) {
 
         ElementoCarrello item = new ElementoCarrello(
-                "iPad",
-                449.0,
-                new Image(getClass().getResourceAsStream(
-                        "/it/uid/unitech/Images/iPad Argento.png"
-                ))
+                "iPad Pro",
+                prezzoIPadPro,
+                1,
+                immagineIPadPro,
+                "Colore: " + coloreIPadPro + " | Memoria: " + memoriaIPadPro
         );
 
         Carrello.getIstanza().aggiungiProdotto(item);
     }
+
 
     // =========================
     // 🛒 APERTURA CARRELLO
@@ -76,41 +105,9 @@ public class iPadProductController {
 
     @FXML
     private void apriCarrello(MouseEvent event) {
-
-        Scene scene = ((Node) event.getSource()).getScene();
-        Parent root = scene.getRoot();
-
-        // 👉 SALVA IL ROOT ATTUALE (iPad page), non la Scene
-        Navigation.setPreviousRoot(root);
-
-        FadeTransition fadeOut = new FadeTransition(Duration.millis(600), root);
-        fadeOut.setFromValue(1.0);
-        fadeOut.setToValue(0.0);
-
-        fadeOut.setOnFinished(e -> {
-            try {
-                FXMLLoader loader = new FXMLLoader(
-                        getClass().getResource("/fxml/Carrello.fxml")
-                );
-
-                Parent newRoot = loader.load();
-
-                // 🔑 sostituisci SOLO il root, niente new Scene, niente setMaximized
-                newRoot.setOpacity(0.0);
-                scene.setRoot(newRoot);
-
-                FadeTransition fadeIn = new FadeTransition(Duration.millis(600), newRoot);
-                fadeIn.setFromValue(0.0);
-                fadeIn.setToValue(1.0);
-                fadeIn.play();
-
-            } catch (Exception ex) {
-                ex.printStackTrace();
-            }
-        });
-
-        fadeOut.play();
+        NavigationManager.apriCarrello((Node) event.getSource());
     }
+
     //Dati iPad
     @FXML
     private ImageView immagineProdottoiPad;
@@ -280,6 +277,51 @@ public class iPadProductController {
         AnimazioneUtil.aggiungiClickBottone(btn256_iPad, "639€", prezzoLabeliPad);
         AnimazioneUtil.aggiungiClickBottone(btn512_iPad, "889€", prezzoLabeliPad);
 
+        // Tracciamento stato per il carrello (iPad)
+        if (circleArgentoiPad != null) {
+            circleArgentoiPad.setOnMouseClicked(e -> {
+                coloreIPad = "Argento";
+                immagineIPad = loadImage("/it/uid/unitech/Images/iPad Argento.png");
+                AnimazioneUtil.selezionaColore(circleArgentoiPad, "Argento", "/it/uid/unitech/Images/iPad Argento.png", coloreLabeliPad, immagineProdottoiPad);
+            });
+
+            circleAzzurroiPad.setOnMouseClicked(e -> {
+                coloreIPad = "Azzurro";
+                immagineIPad = loadImage("/it/uid/unitech/Images/iPad Azzurro.png");
+                AnimazioneUtil.selezionaColore(circleAzzurroiPad, "Azzurro", "/it/uid/unitech/Images/iPad Azzurro.png", coloreLabeliPad, immagineProdottoiPad);
+            });
+
+            circleRosaiPad.setOnMouseClicked(e -> {
+                coloreIPad = "Rosa";
+                immagineIPad = loadImage("/it/uid/unitech/Images/iPad Rosa.png");
+                AnimazioneUtil.selezionaColore(circleRosaiPad, "Rosa", "/it/uid/unitech/Images/iPad Rosa.png", coloreLabeliPad, immagineProdottoiPad);
+            });
+
+            circleGialloiPad.setOnMouseClicked(e -> {
+                coloreIPad = "Giallo";
+                immagineIPad = loadImage("/it/uid/unitech/Images/iPad Giallo.png");
+                AnimazioneUtil.selezionaColore(circleGialloiPad, "Giallo", "/it/uid/unitech/Images/iPad Giallo.png", coloreLabeliPad, immagineProdottoiPad);
+            });
+
+            btn128_iPad.setOnAction(e -> {
+                memoriaIPad = "128GB";
+                prezzoIPad = 509.0;
+                prezzoLabeliPad.setText("509€");
+            });
+
+            btn256_iPad.setOnAction(e -> {
+                memoriaIPad = "256GB";
+                prezzoIPad = 639.0;
+                prezzoLabeliPad.setText("639€");
+            });
+
+            btn512_iPad.setOnAction(e -> {
+                memoriaIPad = "512GB";
+                prezzoIPad = 889.0;
+                prezzoLabeliPad.setText("889€");
+            });
+        }
+
         AnimazioneUtil.verificaCambiaScena(iPhoneHomeiPad, "/fxml/iPhone Product.fxml");
         AnimazioneUtil.verificaCambiaScena(iPadHomeiPad, "/fxml/iPad Product.fxml");
         AnimazioneUtil.verificaCambiaScena(MacHomeiPad, "/fxml/Mac Product.fxml");
@@ -309,6 +351,7 @@ public class iPadProductController {
         AnimazioneUtil.verificaCambiaScenaItem(AirPodsMax2HomeiPad, "/fxml/AirPods Max 2 PageProduct.fxml");
         AnimazioneUtil.verificaCambiaScenaItem(AirPodsPro3HomeiPad, "/fxml/AirPods Pro 3 PageProduct.fxml");
         AnimazioneUtil.verificaCambiaScenaItem(AirPods4HomeiPad, "/fxml/AirPods 4 PageProduct.fxml");
+
         //Prodotto iPad Air
         AnimazioneUtil.aggiungiClickColore(circleGrigioiPadAir, "Grigio", "/it/uid/unitech/Images/iPad Air Grigio.png", coloreLabeliPadAir, immagineProdottoiPadAir);
         AnimazioneUtil.aggiungiClickColore(circleOroiPadAir, "Oro", "/it/uid/unitech/Images/iPad Air Argento.png", coloreLabeliPadAir, immagineProdottoiPadAir);
@@ -318,6 +361,53 @@ public class iPadProductController {
         AnimazioneUtil.aggiungiClickBottone(btn256_iPadAir, "959€", prezzoLabeliPadAir);
         AnimazioneUtil.aggiungiClickBottone(btn512_iPadAir, "1209€", prezzoLabeliPadAir);
         AnimazioneUtil.aggiungiClickBottone(btn1TB_iPadAir, "1589€", prezzoLabeliPadAir);
+
+        // Tracciamento stato per il carrello (iPad Air)
+        if (circleGrigioiPadAir != null) {
+            circleGrigioiPadAir.setOnMouseClicked(e -> {
+                coloreIPadAir = "Grigio";
+                AnimazioneUtil.selezionaColore(circleGrigioiPadAir, "Grigio", "/it/uid/unitech/Images/iPad Air Grigio.png", coloreLabeliPadAir, immagineProdottoiPadAir);
+            });
+
+            circleOroiPadAir.setOnMouseClicked(e -> {
+                coloreIPadAir = "Oro";
+                AnimazioneUtil.selezionaColore(circleOroiPadAir, "Oro", "/it/uid/unitech/Images/iPad Air Argento.png", coloreLabeliPadAir, immagineProdottoiPadAir);
+            });
+
+            circleAzzurroiPadAir.setOnMouseClicked(e -> {
+                coloreIPadAir = "Azzurro";
+                AnimazioneUtil.selezionaColore(circleAzzurroiPadAir, "Azzurro", "/it/uid/unitech/Images/iPad Air Azzurro.png", coloreLabeliPadAir, immagineProdottoiPadAir);
+            });
+
+            circleViolaiPadAir.setOnMouseClicked(e -> {
+                coloreIPadAir = "Viola";
+                AnimazioneUtil.selezionaColore(circleViolaiPadAir, "Viola", "/it/uid/unitech/Images/iPad Air Viola.png", coloreLabeliPadAir, immagineProdottoiPadAir);
+            });
+
+            btn128_iPadAir.setOnAction(e -> {
+                memoriaIPadAir = "128GB";
+                prezzoIPadAir = 829.0;
+                prezzoLabeliPadAir.setText("829€");
+            });
+
+            btn256_iPadAir.setOnAction(e -> {
+                memoriaIPadAir = "256GB";
+                prezzoIPadAir = 959.0;
+                prezzoLabeliPadAir.setText("959€");
+            });
+
+            btn512_iPadAir.setOnAction(e -> {
+                memoriaIPadAir = "512GB";
+                prezzoIPadAir = 1209.0;
+                prezzoLabeliPadAir.setText("1209€");
+            });
+
+            btn1TB_iPadAir.setOnAction(e -> {
+                memoriaIPadAir = "1TB";
+                prezzoIPadAir = 1589.0;
+                prezzoLabeliPadAir.setText("1589€");
+            });
+        }
 
         AnimazioneUtil.verificaCambiaScena(iPhoneHomeiPadAir, "/fxml/iPhone Product.fxml");
         AnimazioneUtil.verificaCambiaScena(iPadHomeiPadAir, "/fxml/iPad Product.fxml");
@@ -357,6 +447,45 @@ public class iPadProductController {
         AnimazioneUtil.aggiungiClickBottone(btn1TB_iPadPro, "2049€", prezzoLabeliPadPro);
         AnimazioneUtil.aggiungiClickBottone(btn2TB_iPadPro, "2269€", prezzoLabeliPadPro);
 
+        // Tracciamento stato per il carrello (iPad Pro)
+        if (circleNeroiPadPro != null) {
+            circleNeroiPadPro.setOnMouseClicked(e -> {
+                coloreIPadPro = "Nero";
+                immagineIPadPro = loadImage("/it/uid/unitech/Images/iPad Pro Nero.png");
+                AnimazioneUtil.selezionaColore(circleNeroiPadPro, "Nero", "/it/uid/unitech/Images/iPad Pro Nero.png", coloreLabeliPadPro, immagineProdottoiPadPro);
+            });
+
+            circleArgentoiPadPro.setOnMouseClicked(e -> {
+                coloreIPadPro = "Argento";
+                immagineIPadPro = loadImage("/it/uid/unitech/Images/iPad Pro Argento.png");
+                AnimazioneUtil.selezionaColore(circleArgentoiPadPro, "Argento", "/it/uid/unitech/Images/iPad Pro Argento.png", coloreLabeliPadPro, immagineProdottoiPadPro);
+            });
+
+            btn256_iPadPro.setOnAction(e -> {
+                memoriaIPadPro = "256GB";
+                prezzoIPadPro = 1299.0;
+                prezzoLabeliPadPro.setText("1299€");
+            });
+
+            btn512_iPadPro.setOnAction(e -> {
+                memoriaIPadPro = "512GB";
+                prezzoIPadPro = 1569.0;
+                prezzoLabeliPadPro.setText("1569€");
+            });
+
+            btn1TB_iPadPro.setOnAction(e -> {
+                memoriaIPadPro = "1TB";
+                prezzoIPadPro = 2049.0;
+                prezzoLabeliPadPro.setText("2049€");
+            });
+
+            btn2TB_iPadPro.setOnAction(e -> {
+                memoriaIPadPro = "2TB";
+                prezzoIPadPro = 2269.0;
+                prezzoLabeliPadPro.setText("2269€");
+            });
+        }
+
         AnimazioneUtil.verificaCambiaScena(iPhoneHomeiPadPro, "/fxml/iPhone Product.fxml");
         AnimazioneUtil.verificaCambiaScena(iPadHomeiPadPro, "/fxml/iPad Product.fxml");
         AnimazioneUtil.verificaCambiaScena(MacHomeiPadPro, "/fxml/Mac Product.fxml");
@@ -388,5 +517,10 @@ public class iPadProductController {
         AnimazioneUtil.verificaCambiaScenaItem(AirPods4HomeiPadPro, "/fxml/AirPods 4 PageProduct.fxml");
 
 
+    }
+
+    private Image loadImage(String resourcePath) {
+        return new Image(Objects.requireNonNull(getClass().getResourceAsStream(resourcePath),
+                "Resource not found: " + resourcePath));
     }
 }

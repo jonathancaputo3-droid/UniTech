@@ -1,5 +1,8 @@
 package Controller;
 
+import Util.NavigationManager;
+import javafx.scene.Node;
+import javafx.scene.input.MouseEvent;
 import org.kordamp.ikonli.javafx.FontIcon;
 
 import Util.AnimazioneUtil;
@@ -402,6 +405,11 @@ public class GenericProductController
     private Button discoverAirPodsPro3Product;
     @FXML
     private Button discoverAirPods4Product;
+
+    @FXML
+    private void apriCarrello(MouseEvent event) {
+        NavigationManager.apriCarrello((Node) event.getSource());
+    }
 
     @FXML
     private void initialize() {

@@ -20,6 +20,7 @@ import javafx.util.Duration;
 
 public class AnimazioneUtil {
 
+    //Metodo per aggiungere la ScaleTransition agli elementi
     public static void aggiungiAnimazioneScale(Node nodo){
         nodo.setOnMouseEntered(event -> {
             ScaleTransition scaleIn = new ScaleTransition(Duration.millis(150), nodo);
@@ -35,6 +36,7 @@ public class AnimazioneUtil {
         });
     }
 
+    //Metodo per mostrare il messaggio di aggiornamento dei dati profilo
     public static void mostraMessaggio(Label label, String testo, Color colore){
         label.setText(testo);
         label.setBackground(new Background(new BackgroundFill(colore,new CornerRadii(10), Insets.EMPTY)));
@@ -54,6 +56,7 @@ public class AnimazioneUtil {
         fadeOut.play();
     }
 
+    //Metodo per cambiare scena con effetto FadeTransition
     public static void cambiaScena(Node nodo,String fxmlPath){
         Node root=nodo.getScene().getRoot();
         FadeTransition fadeOut = new FadeTransition(Duration.millis(600), root);
@@ -78,6 +81,7 @@ public class AnimazioneUtil {
         fadeOut.play();
     }
 
+    //Metodo per aprire il messaggio popUp
     public static void apriOverlay(Node overlay) {
         overlay.setVisible(true);
         overlay.setOpacity(0.0);
@@ -90,6 +94,7 @@ public class AnimazioneUtil {
         new ParallelTransition(fade, slide).play();
     }
 
+    //Metodo per chiudere il messaggio popUp
     public static void chiudiOverlay(Node overlay) {
         TranslateTransition slide = new TranslateTransition(Duration.millis(300), overlay);
         slide.setFromY(0); slide.setToY(-200);
@@ -101,17 +106,46 @@ public class AnimazioneUtil {
         chiudi.play();
     }
 
+    //Metodo per mostrare i messaggi di errore
     public static void mostraErrore(Label label, String testo, Color colore){
         label.setText(testo);
         label.setTextFill(colore);
         label.setVisible(true);
     }
 
-    private static Circle cerchioSelezionato;
-    private static Button varianteSelezionata;
+    private static Circle getSelectedCircleScope(Node scope) {
+        if (scope == null) {
+            return null;
+        }
+        Object selected = scope.getProperties().get("selectedColorCircle");
+        return selected instanceof Circle ? (Circle) selected : null;
+    }
 
+    private static void setSelectedCircleScope(Node scope, Circle cerchio) {
+        if (scope != null) {
+            scope.getProperties().put("selectedColorCircle", cerchio);
+        }
+    }
+
+    private static Button getSelectedVariantScope(Node scope) {
+        if (scope == null) {
+            return null;
+        }
+        Object selected = scope.getProperties().get("selectedVariantButton");
+        return selected instanceof Button ? (Button) selected : null;
+    }
+
+    private static void setSelectedVariantScope(Node scope, Button bottone) {
+        if (scope != null) {
+            scope.getProperties().put("selectedVariantButton", bottone);
+        }
+    }
+
+    //Metodo per selezionare i cerchi dei colori prodotti e cambio immagine
     public static void selezionaColore(Circle cerchio, String nomeColore, String pathImmagine, Label coloreLabel, ImageView immagineProdotto){
-        if(cerchioSelezionato!=null){
+        Node scope = cerchio.getParent() != null ? cerchio.getParent() : cerchio.getScene() != null ? cerchio.getScene().getRoot() : null;
+        Circle cerchioSelezionato = getSelectedCircleScope(scope);
+        if(cerchioSelezionato!=null && cerchioSelezionato != cerchio){
             if (Color.WHITE.equals(cerchioSelezionato.getFill())){
                 cerchioSelezionato.setStroke(javafx.scene.paint.Color.web("#cccccc"));
                 cerchioSelezionato.setStrokeWidth(2);
@@ -123,8 +157,14 @@ public class AnimazioneUtil {
 
         cerchio.setStroke(javafx.scene.paint.Color.web("#3A7BD5"));
         cerchio.setStrokeWidth(3);
-        cerchioSelezionato=cerchio;
-        coloreLabel.setText(nomeColore);
+        setSelectedCircleScope(scope, cerchio);
+        if (coloreLabel != null) {
+            coloreLabel.setText("Colore: " + nomeColore);
+        }
+
+        if (immagineProdotto == null) {
+            return;
+        }
 
         FadeTransition fadeOut = new FadeTransition(Duration.millis(150), immagineProdotto);
         fadeOut.setFromValue(1);
@@ -139,16 +179,22 @@ public class AnimazioneUtil {
         fadeOut.play();
     }
 
+    //Metodo per selezionare le variante del prodotto con cambio prezzo
     public static void selezionaVariante(Button bottone, String prezzo, Label prezzoLabel){
-        if(varianteSelezionata!=null){
+        Node scope = bottone.getParent() != null ? bottone.getParent() : bottone.getScene() != null ? bottone.getScene().getRoot() : null;
+        Button varianteSelezionata = getSelectedVariantScope(scope);
+        if(varianteSelezionata!=null && varianteSelezionata != bottone){
             varianteSelezionata.setStyle("");
             varianteSelezionata.getStyleClass().remove("memory-btn-selected");
         }
         bottone.setStyle("-fx-background-color: #EEF2FB; -fx-border-color: #3A7BD5; -fx-border-width: 2; -fx-text-fill: #3A7BD5;");
-        varianteSelezionata=bottone;
-        prezzoLabel.setText(prezzo);
+        setSelectedVariantScope(scope, bottone);
+        if (prezzoLabel != null) {
+            prezzoLabel.setText(prezzo);
+        }
     }
 
+    //Metodo per evitare cerchi colori null
     public static void aggiungiClickColore(Circle cerchio, String nome, String immagine, Label label, ImageView imageView){
         if(cerchio != null){
             cerchio.setOnMouseClicked(e ->
@@ -157,6 +203,7 @@ public class AnimazioneUtil {
         }
     }
 
+    //Metodo per evitare bottoni null
     public static void aggiungiClickBottone(Button bottone, String prezzo, Label label) {
         if (bottone != null) {
             bottone.setOnMouseClicked(event -> {
@@ -165,11 +212,14 @@ public class AnimazioneUtil {
         }
     }
 
+    //Metodo per evitare nodi null
     public static void aggiungiAnimazione(Node nodo){
         if(nodo != null){
             aggiungiAnimazioneScale(nodo);
         }
     }
+
+    //Metodo per evitare cambio scena con nodi null
     public static void verificaCambiaScena(Node nodo,String path){
         if(nodo != null){
             nodo.setOnMouseClicked(event -> {
@@ -177,6 +227,8 @@ public class AnimazioneUtil {
             });
         }
     }
+
+    //Metodo per evitare cambio scena con item null
     public static void verificaCambiaScenaItem(MenuItem item,String path){
         if(item != null){
             item.setOnAction(event -> {
@@ -185,6 +237,7 @@ public class AnimazioneUtil {
         }
     }
 
+    //Metodo per i cambio scena con item del MenuBar
     public static void cambiaScenaItem(MenuItem item,String path){
         Stage stage=(Stage) item.getParentPopup().getOwnerWindow();
         Node root=stage.getScene().getRoot();

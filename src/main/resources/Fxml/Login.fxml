@@ -13,7 +13,6 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="900.0" style="-fx-background-radius: 25; -fx-background-color: #EEF2FB;" stylesheets="@../Style/unitech.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginPageController">
 
-   <!-- SINISTRA: invariata -->
    <VBox maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="550.0" style="-fx-background-color: #C4DEFF; -fx-background-radius: 25;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="0">
       <children>
          <ImageView cache="true" cacheHint="QUALITY" fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
@@ -41,7 +40,7 @@
    </TextField>
    <Label layoutX="834.0" layoutY="366.0" styleClass="label-email-password" text="Password" AnchorPane.leftAnchor="834.4" AnchorPane.topAnchor="366.0" />
    <PasswordField fx:id="passwordField" layoutX="834.0" layoutY="386.0" minWidth="-Infinity" prefHeight="35.0" prefWidth="238.0" promptText="es. 12345" styleClass="password-field" AnchorPane.leftAnchor="834.0" AnchorPane.topAnchor="386.0" />
-   <Button fx:id="loginButton" layoutX="834.0" layoutY="454.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="238.0" text="Accedi!" AnchorPane.leftAnchor="834.0" AnchorPane.topAnchor="454.0" />
+   <Button fx:id="loginButton" layoutX="834.0" layoutY="454.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="238.0" styleClass="button-login" text="Accedi!" AnchorPane.leftAnchor="834.0" AnchorPane.topAnchor="454.0" />
    <ImageView cache="true" cacheHint="QUALITY" fitHeight="32.0" fitWidth="32.0" layoutX="1479.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="1450.0" AnchorPane.topAnchor="167.0">
       <image>
          <Image url="@../it/uid/unitech/Images/UnitechLogo.png" />

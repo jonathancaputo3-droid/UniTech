@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Font?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<ScrollPane fitToWidth="true" hbarPolicy="NEVER" stylesheets="@../Style/cupertino-light.css" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GenericProductController">
+<ScrollPane fitToWidth="true" hbarPolicy="NEVER" stylesheets="@../Style/unitech.css" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GenericProductController">
    <content>
       <VBox style="-fx-background-color: #C4DEFF;">
          <children>
@@ -153,7 +153,7 @@
                               <Insets left="30.0" />
                            </HBox.margin>
                         </Region>
-                        <FontIcon iconColor="#1d1d1f" iconLiteral="fas-shopping-bag" iconSize="22">
+                        <FontIcon iconColor="#1d1d1f" iconLiteral="fas-shopping-bag" iconSize="22" onMouseClicked="#apriCarrello">
                            <HBox.margin>
                               <Insets right="24.0" />
                            </HBox.margin>

@@ -10,6 +10,7 @@ import java.sql.SQLException;
 
 public class UtenteDAO {
 
+    //Metodo per registare un utente nel database con password criptata
     public static boolean registra(Utente u) throws SQLException{
         String passwordCriptata= BCrypt.hashpw(u.getPassword(),BCrypt.gensalt(12));
         Connection conn= DatabaseConnection.getConnessione();
@@ -31,6 +32,7 @@ public class UtenteDAO {
         return righe>0;
     }
 
+    //Metodo per eseguire il login con email e password
     public static Utente login(String email, String password) throws SQLException {
         Connection conn = DatabaseConnection.getConnessione();
         PreparedStatement stmt = conn.prepareStatement(
@@ -41,7 +43,7 @@ public class UtenteDAO {
 
         if (rs.next()) {
             String passwordCriptata = rs.getString("password");
-            // BCrypt.checkpw confronta la password in chiaro con quella criptata
+            //BCrypt.checkpw confronta la password in chiaro con quella criptata
             if (BCrypt.checkpw(password, passwordCriptata)) {
                 Utente u = new Utente(
                         rs.getString("nome"),
@@ -59,9 +61,10 @@ public class UtenteDAO {
                 return u;
             }
         }
-        return null; // email non trovata o password errata
+        return null; //email non trovata o password errata
     }
 
+    //Metodo per aggiornare i dati del profilo
     public static boolean aggiornaProfilo(Utente u) throws SQLException{
         Connection conn = DatabaseConnection.getConnessione();
         PreparedStatement st = conn.prepareStatement("""
@@ -91,6 +94,7 @@ public class UtenteDAO {
         return st.executeUpdate()>0;
     }
 
+    //Metodo per verificare se l'email inserita è già presente nel db
     public static boolean emailEsistente(String email) throws SQLException{
         Connection conn = DatabaseConnection.getConnessione();
         PreparedStatement st = conn.prepareStatement("""
@@ -101,6 +105,7 @@ public class UtenteDAO {
         return rs.next() && rs.getInt(1)>0;
     }
 
+    //Metodo per eliminare l'account
     public static boolean eliminaAccount(int id) throws SQLException{
         Connection conn = DatabaseConnection.getConnessione();
         PreparedStatement st = conn.prepareStatement("""
@@ -110,6 +115,7 @@ public class UtenteDAO {
         return st.executeUpdate()>0;
     }
 
+    //Metodo per cambiare la password inserendo l'email
     public static boolean cambiaPassword(String email,String password) throws SQLException{
         Connection conn= DatabaseConnection.getConnessione();
         String passwordCriptata= BCrypt.hashpw(password,BCrypt.gensalt(12));

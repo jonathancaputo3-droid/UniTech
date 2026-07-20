@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b8563383-da05-4c61-b460-6fb53134e349" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/AirPodsProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/AirPodsProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/CarrelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/CarrelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/CheckoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/CheckoutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/GenericProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/GenericProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/MacBookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/MacBookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/MacProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/MacProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/WatchProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/WatchProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/iPadProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/iPadProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/iPhoneProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/iPhoneProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Carrello.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Carrello.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/ElementoCarrello.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/ElementoCarrello.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Util/AnimazioneUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Util/AnimazioneUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/uid/unitech/UniTech.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/uid/unitech/UniTech.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/AirPods 4 PageProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/AirPods 4 PageProduct.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/AirPods Max 2 PageProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/AirPods Max 2 PageProduct.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/AirPods Pro 3 PageProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/AirPods Pro 3 PageProduct.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/AirPods Product.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/AirPods Product.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Apple Watch SE 3 PageProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Apple Watch SE 3 PageProduct.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Apple Watch Series 11 PageProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Apple Watch Series 11 PageProduct.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Apple Watch Ultra 3 PageProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Apple Watch Ultra 3 PageProduct.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Carrello.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Carrello.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Checkout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Checkout.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Mac Product.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Mac Product.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/MacBook Air 13 PageProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/MacBook Air 13 PageProduct.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/MacBook Neo PageProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/MacBook Neo PageProduct.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/MacBook Pro 14 PageProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/MacBook Pro 14 PageProduct.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/MacBook Product.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/MacBook Product.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/MacMini PageProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/MacMini PageProduct.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/MacStudio PageProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/MacStudio PageProduct.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Watch Product.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Watch Product.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/iMac PageProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/iMac PageProduct.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/iPad Air PageProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/iPad Air PageProduct.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/iPad PageProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/iPad PageProduct.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/iPad Pro PageProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/iPad Pro PageProduct.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/iPad Product.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/iPad Product.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/iPhone 17 PageProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/iPhone 17 PageProduct.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/iPhone 17 Pro PageProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/iPhone 17 Pro PageProduct.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/iPhone Air PageProduct.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/iPhone Air PageProduct.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/iPhone Product.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/iPhone Product.fxml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="3GlD3zhuMAnKojtuzaQK31CMmjl" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.UniTech.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-63390994e64e-intellij.indexing.shared.core-IU-262.8665.258" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.8665.258" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b8563383-da05-4c61-b460-6fb53134e349" name="Changes" comment="" />
+      <created>1784537067362</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1784537067362</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

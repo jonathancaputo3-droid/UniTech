@@ -3,6 +3,7 @@ package Controller;
 import Model.Carrello;
 import Model.ElementoCarrello;
 import Util.AnimazioneUtil;
+import Util.NavigationManager;
 import javafx.animation.FadeTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -21,21 +22,62 @@ import javafx.util.Duration;
 import Util.Navigation;
 import org.kordamp.ikonli.javafx.FontIcon;
 
+import java.util.Objects;
+
 public class iPhoneProductController {
 
     // =========================
-    // 📦 AGGIUNTA PRODOTTI
+    // 📦 VARIABILI IPHONE 17
     // =========================
+    private String colore17 = "Nero";
+    private String memoria17 = "128GB";
+    private double prezzo17 = 939.0;
+    private Image immagine17 = loadImage("/it/uid/unitech/Images/iPhone 17 Nero.png");
+
+    // =========================
+    // 📦 VARIABILI IPHONE 17 PRO
+    // =========================
+    private String colore17Pro = "Arancione";
+    private String memoria17Pro = "256GB";
+    private double prezzo17Pro = 1339.0;
+    private Image immagine17Pro = loadImage("/it/uid/unitech/Images/iPhone 17 Pro Arancione.png");
+
+    // =========================
+    // 📦 VARIABILI IPHONE AIR
+    // =========================
+    private String coloreAir = "Nero";
+    private String memoriaAir = "256GB";
+    private double prezzoAir = 1219.0;
+    private Image immagineAir = loadImage("/it/uid/unitech/Images/iPhone Air Nero.png");
+
+
+    // =========================
+    // 🛒 AGGIUNTA AL CARRELLO
+    // =========================
+
+    @FXML
+    private void aggiungiIPhone17(MouseEvent event) {
+
+        ElementoCarrello item = new ElementoCarrello(
+                "iPhone 17",
+                prezzo17,
+                1,
+                immagine17,
+                "Colore: " + colore17 + " | Memoria: " + memoria17
+        );
+
+        Carrello.getIstanza().aggiungiProdotto(item);
+    }
 
     @FXML
     private void aggiungiIPhone17Pro(MouseEvent event) {
 
         ElementoCarrello item = new ElementoCarrello(
                 "iPhone 17 Pro",
-                1339.0,
-                new Image(getClass().getResourceAsStream(
-                        "/it/uid/unitech/Images/iPhone 17 Pro_ipProduct.png"
-                ))
+                prezzo17Pro,
+                1,
+                immagine17Pro,
+                "Colore: " + colore17Pro + " | Memoria: " + memoria17Pro
         );
 
         Carrello.getIstanza().aggiungiProdotto(item);
@@ -46,28 +88,15 @@ public class iPhoneProductController {
 
         ElementoCarrello item = new ElementoCarrello(
                 "iPhone Air",
-                1219.0,
-                new Image(getClass().getResourceAsStream(
-                        "/it/uid/unitech/Images/iPhone Air_ipProduct.png"
-                ))
+                prezzoAir,
+                1,
+                immagineAir,
+                "Colore: " + coloreAir + " | Memoria: " + memoriaAir
         );
 
         Carrello.getIstanza().aggiungiProdotto(item);
     }
 
-    @FXML
-    private void aggiungiIPhone17(MouseEvent event) {
-
-        ElementoCarrello item = new ElementoCarrello(
-                "iPhone 17",
-                939.0,
-                new Image(getClass().getResourceAsStream(
-                        "/it/uid/unitech/Images/iPhone 17_ipProduct.png"
-                ))
-        );
-
-        Carrello.getIstanza().aggiungiProdotto(item);
-    }
 
     // =========================
     // 🛒 APERTURA CARRELLO
@@ -75,39 +104,9 @@ public class iPhoneProductController {
 
     @FXML
     private void apriCarrello(MouseEvent event) {
-
-        Scene scene = ((Node) event.getSource()).getScene();
-        Parent root = scene.getRoot();
-
-        Navigation.setPreviousRoot(root);
-
-        FadeTransition fadeOut = new FadeTransition(Duration.millis(600), root);
-        fadeOut.setFromValue(1.0);
-        fadeOut.setToValue(0.0);
-
-        fadeOut.setOnFinished(e -> {
-            try {
-                FXMLLoader loader = new FXMLLoader(
-                        getClass().getResource("/fxml/Carrello.fxml")
-                );
-
-                Parent newRoot = loader.load();
-
-                newRoot.setOpacity(0.0);
-                scene.setRoot(newRoot);
-
-                FadeTransition fadeIn = new FadeTransition(Duration.millis(600), newRoot);
-                fadeIn.setFromValue(0.0);
-                fadeIn.setToValue(1.0);
-                fadeIn.play();
-
-            } catch (Exception ex) {
-                ex.printStackTrace();
-            }
-        });
-
-        fadeOut.play();
+        NavigationManager.apriCarrello((Node) event.getSource());
     }
+
 
     // ==========================================
     // 📱 DATI iPhone 17
@@ -290,6 +289,57 @@ public class iPhoneProductController {
         AnimazioneUtil.aggiungiClickBottone(btn256_17, "1.039€", prezzoLabel17);
         AnimazioneUtil.aggiungiClickBottone(btn512_17, "1.239€", prezzoLabel17);
 
+        // Tracciamento stato per il carrello (iPhone 17)
+        if (circleNero17 != null) {
+            circleNero17.setOnMouseClicked(e -> {
+                colore17 = "Nero";
+                immagine17 = loadImage("/it/uid/unitech/Images/iPhone 17 Nero.png");
+                AnimazioneUtil.selezionaColore(circleNero17, "Nero", "/it/uid/unitech/Images/iPhone 17 Nero.png", coloreLabel17, immagineProdotto17);
+            });
+
+            circleBlu17.setOnMouseClicked(e -> {
+                colore17 = "Blu";
+                immagine17 = loadImage("/it/uid/unitech/Images/iPhone 17 Azzurro.png");
+                AnimazioneUtil.selezionaColore(circleBlu17, "Blu", "/it/uid/unitech/Images/iPhone 17 Azzurro.png", coloreLabel17, immagineProdotto17);
+            });
+
+            circleBianco17.setOnMouseClicked(e -> {
+                colore17 = "Bianco";
+                immagine17 = loadImage("/it/uid/unitech/Images/iPhone 17 Bianco.png");
+                AnimazioneUtil.selezionaColore(circleBianco17, "Bianco", "/it/uid/unitech/Images/iPhone 17 Bianco.png", coloreLabel17, immagineProdotto17);
+            });
+
+            circleVerde17.setOnMouseClicked(e -> {
+                colore17 = "Verde";
+                immagine17 = loadImage("/it/uid/unitech/Images/iPhone 17 Verde.png");
+                AnimazioneUtil.selezionaColore(circleVerde17, "Verde", "/it/uid/unitech/Images/iPhone 17 Verde.png", coloreLabel17, immagineProdotto17);
+            });
+
+            circleRosa17.setOnMouseClicked(e -> {
+                colore17 = "Rosa";
+                immagine17 = loadImage("/it/uid/unitech/Images/iPhone 17 Rosa.png");
+                AnimazioneUtil.selezionaColore(circleRosa17, "Rosa", "/it/uid/unitech/Images/iPhone 17 Rosa.png", coloreLabel17, immagineProdotto17);
+            });
+
+            btn128_17.setOnAction(e -> {
+                memoria17 = "128GB";
+                prezzo17 = 939.0;
+                prezzoLabel17.setText("939€");
+            });
+
+            btn256_17.setOnAction(e -> {
+                memoria17 = "256GB";
+                prezzo17 = 1039.0;
+                prezzoLabel17.setText("1.039€");
+            });
+
+            btn512_17.setOnAction(e -> {
+                memoria17 = "512GB";
+                prezzo17 = 1239.0;
+                prezzoLabel17.setText("1.239€");
+            });
+        }
+
         AnimazioneUtil.verificaCambiaScena(iPhoneHome17, "/fxml/iPhone Product.fxml");
         AnimazioneUtil.verificaCambiaScena(iPadHome17, "/fxml/iPad Product.fxml");
         AnimazioneUtil.verificaCambiaScena(MacHome17, "/fxml/Mac Product.fxml");
@@ -330,6 +380,45 @@ public class iPhoneProductController {
         AnimazioneUtil.aggiungiClickBottone(btn256_17Pro, "1.339€", prezzoLabel17Pro);
         AnimazioneUtil.aggiungiClickBottone(btn512_17Pro, "1.539€", prezzoLabel17Pro);
         AnimazioneUtil.aggiungiClickBottone(btn1TB_17Pro, "1.839€", prezzoLabel17Pro);
+
+        // Tracciamento stato per il carrello (iPhone 17 Pro)
+        if (circleArancione17Pro != null) {
+            circleArancione17Pro.setOnMouseClicked(e -> {
+                colore17Pro = "Arancione";
+                immagine17Pro = loadImage("/it/uid/unitech/Images/iPhone 17 Pro Arancione.png");
+                AnimazioneUtil.selezionaColore(circleArancione17Pro, "Arancione", "/it/uid/unitech/Images/iPhone 17 Pro Arancione.png", coloreLabel17Pro, immagineProdotto17Pro);
+            });
+
+            circleBianco17Pro.setOnMouseClicked(e -> {
+                colore17Pro = "Bianco";
+                immagine17Pro = loadImage("/it/uid/unitech/Images/iPhone 17 Pro Bianco.png");
+                AnimazioneUtil.selezionaColore(circleBianco17Pro, "Bianco", "/it/uid/unitech/Images/iPhone 17 Pro Bianco.png", coloreLabel17Pro, immagineProdotto17Pro);
+            });
+
+            circleBlu17Pro.setOnMouseClicked(e -> {
+                colore17Pro = "Blu";
+                immagine17Pro = loadImage("/it/uid/unitech/Images/iPhone 17 Pro Blu.png");
+                AnimazioneUtil.selezionaColore(circleBlu17Pro, "Blu", "/it/uid/unitech/Images/iPhone 17 Pro Blu.png", coloreLabel17Pro, immagineProdotto17Pro);
+            });
+
+            btn256_17Pro.setOnAction(e -> {
+                memoria17Pro = "256GB";
+                prezzo17Pro = 1339.0;
+                prezzoLabel17Pro.setText("1.339€");
+            });
+
+            btn512_17Pro.setOnAction(e -> {
+                memoria17Pro = "512GB";
+                prezzo17Pro = 1539.0;
+                prezzoLabel17Pro.setText("1.539€");
+            });
+
+            btn1TB_17Pro.setOnAction(e -> {
+                memoria17Pro = "1TB";
+                prezzo17Pro = 1839.0;
+                prezzoLabel17Pro.setText("1.839€");
+            });
+        }
 
         AnimazioneUtil.verificaCambiaScena(iPhoneHome17Pro, "/fxml/iPhone Product.fxml");
         AnimazioneUtil.verificaCambiaScena(iPadHome17Pro, "/fxml/iPad Product.fxml");
@@ -373,6 +462,51 @@ public class iPhoneProductController {
         AnimazioneUtil.aggiungiClickBottone(btn512Air, "1.419€", prezzoLabelAir);  
         AnimazioneUtil.aggiungiClickBottone(btn1TBAir, "1.619€", prezzoLabelAir);
 
+        // Tracciamento stato per il carrello (iPhone Air)
+        if (circleNeroAir != null) {
+            circleNeroAir.setOnMouseClicked(e -> {
+                coloreAir = "Nero";
+                immagineAir = loadImage("/it/uid/unitech/Images/iPhone Air Nero.png");
+                AnimazioneUtil.selezionaColore(circleNeroAir, "Nero", "/it/uid/unitech/Images/iPhone Air Nero.png", coloreLabelAir, immagineProdottoAir);
+            });
+
+            circleBiancoAir.setOnMouseClicked(e -> {
+                coloreAir = "Bianco";
+                immagineAir = loadImage("/it/uid/unitech/Images/iPhone Air Bianco.png");
+                AnimazioneUtil.selezionaColore(circleBiancoAir, "Bianco", "/it/uid/unitech/Images/iPhone Air Bianco.png", coloreLabelAir, immagineProdottoAir);
+            });
+
+            circleCelesteAir.setOnMouseClicked(e -> {
+                coloreAir = "Celeste";
+                immagineAir = loadImage("/it/uid/unitech/Images/iPhone Air Celeste.png");
+                AnimazioneUtil.selezionaColore(circleCelesteAir, "Celeste", "/it/uid/unitech/Images/iPhone Air Celeste.png", coloreLabelAir, immagineProdottoAir);
+            });
+
+            circleOroAir.setOnMouseClicked(e -> {
+                coloreAir = "Oro";
+                immagineAir = loadImage("/it/uid/unitech/Images/iPhone Air Oro.png");
+                AnimazioneUtil.selezionaColore(circleOroAir, "Oro", "/it/uid/unitech/Images/iPhone Air Oro.png", coloreLabelAir, immagineProdottoAir);
+            });
+
+            btn256Air.setOnAction(e -> {
+                memoriaAir = "256GB";
+                prezzoAir = 1219.0;
+                prezzoLabelAir.setText("1.219€");
+            });
+
+            btn512Air.setOnAction(e -> {
+                memoriaAir = "512GB";
+                prezzoAir = 1419.0;
+                prezzoLabelAir.setText("1.419€");
+            });
+
+            btn1TBAir.setOnAction(e -> {
+                memoriaAir = "1TB";
+                prezzoAir = 1619.0;
+                prezzoLabelAir.setText("1.619€");
+            });
+        }
+
         AnimazioneUtil.verificaCambiaScena(iPhoneHomeAir, "/fxml/iPhone Product.fxml");
         AnimazioneUtil.verificaCambiaScena(iPadHomeAir, "/fxml/iPad Product.fxml");
         AnimazioneUtil.verificaCambiaScena(MacHomeAir, "/fxml/Mac Product.fxml");
@@ -403,5 +537,10 @@ public class iPhoneProductController {
         AnimazioneUtil.verificaCambiaScena(logoIconAir, "/fxml/Home.fxml");
         AnimazioneUtil.aggiungiAnimazione(logoIconAir);
         AnimazioneUtil.aggiungiAnimazione(loginIconAir);
+    }
+
+    private Image loadImage(String resourcePath) {
+        return new Image(Objects.requireNonNull(getClass().getResourceAsStream(resourcePath),
+                "Resource not found: " + resourcePath));
     }
 }

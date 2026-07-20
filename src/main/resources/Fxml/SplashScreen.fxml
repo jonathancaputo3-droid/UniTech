@@ -33,6 +33,6 @@
       <Label layoutX="1095.0" layoutY="53.0" styleClass="splash-text" text="LEARN" />
       <Label layoutX="1213.0" layoutY="53.0" styleClass="splash-text" text="IMPROVE" />
       <Label layoutX="1348.0" layoutY="53.0" styleClass="splash-text" text="REPEAT" />
-      <FontIcon fx:id="loginArrow" cache="true" cacheHint="QUALITY" iconColor="#5c5fd6" iconLiteral="far-arrow-alt-circle-right" iconSize="70" layoutX="630.0" layoutY="406.0" selectionFill="RED" text="" wrappingWidth="55.19999999999993" AnchorPane.leftAnchor="630.0" AnchorPane.topAnchor="351.0" />
+      <FontIcon fx:id="loginArrow" cache="true" cacheHint="QUALITY" iconColor="#5c5fd6" iconLiteral="far-arrow-alt-circle-right" iconSize="70" layoutX="630.0" layoutY="406.0" selectionFill="RED" styleClass="splash-icon" text="" wrappingWidth="55.19999999999993" AnchorPane.leftAnchor="630.0" AnchorPane.topAnchor="351.0" />
    </children>
 </AnchorPane>

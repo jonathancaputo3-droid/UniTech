@@ -10,6 +10,7 @@ public class DatabaseConnection {
     private static final String URL="jdbc:sqlite:database.db";
     private static Connection connessione;
 
+    //Apro la connessione al database
     public static Connection getConnessione() throws SQLException {
         if(connessione==null || connessione.isClosed()){
             connessione = DriverManager.getConnection(URL);
@@ -17,6 +18,7 @@ public class DatabaseConnection {
         return connessione;
     }
 
+    //Creo la tabella degli utenti se non esiste
     public static void inizializzaDB() throws SQLException{
         Connection conn=getConnessione();
         Statement st=conn.createStatement();
@@ -37,6 +39,7 @@ public class DatabaseConnection {
             """);
     }
 
+    //Alla chiusura del programma, chiudo la connessione al database
     public static void chiudi() throws SQLException{
         if (connessione!=null && !connessione.isClosed()){
             connessione.close();

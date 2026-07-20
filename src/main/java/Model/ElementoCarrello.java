@@ -1,16 +1,26 @@
 package Model;
+
 import javafx.scene.image.Image;
+
 public class ElementoCarrello {
+
     private String nome;
     private double prezzo;
-    private Image immagine;
     private int quantita;
+    private Image immagine;
+    private String caratteristiche;
 
-    public ElementoCarrello(String nome, double prezzo, Image immagine) {
+    public ElementoCarrello(String nome, double prezzo, int quantita, Image immagine, String caratteristiche) {
         this.nome = nome;
         this.prezzo = prezzo;
+        this.quantita = quantita;
         this.immagine = immagine;
-        this.quantita = 1;
+        this.caratteristiche = caratteristiche;
+    }
+
+    public ElementoCarrello(String nome2, double prezzoMax2, int quantita2, Image immagineMax2,
+            Object caratteristiche2) {
+        //TODO Auto-generated constructor stub
     }
 
     public String getNome() {
@@ -21,23 +31,25 @@ public class ElementoCarrello {
         return prezzo;
     }
 
-    public Image getImmagine() {
-        return immagine;
-    }
-
     public int getQuantita() {
         return quantita;
     }
 
+    public Image getImmagine() {
+        return immagine;
+    }
+
+    public String getCaratteristiche() {
+        return caratteristiche;
+    }
+
     public void aumentaQuantita() {
-        this.quantita++;
+        quantita++;
     }
 
     public void diminuisciQuantita() {
-
-            this.quantita--;
-        }
-
+        quantita--;
+    }
 
     public double getTotale() {
         return prezzo * quantita;

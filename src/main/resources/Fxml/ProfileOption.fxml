@@ -57,7 +57,7 @@
                </children>
             </StackPane>
             <Circle fill="#cccccc" radius="60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="372.00000000000006" AnchorPane.topAnchor="50.0" />
-            <FontIcon iconColor="WHITE" iconLiteral="fas-user" iconSize="60" layoutX="75.0" layoutY="134.0" text="" wrappingWidth="36.10004425048828" AnchorPane.bottomAnchor="227.40000000000003" AnchorPane.leftAnchor="74.0" AnchorPane.topAnchor="79.0" />
+            <FontIcon iconColor="WHITE" iconLiteral="fas-user" iconSize="60" layoutX="75.0" layoutY="134.0" styleClass="profile-icon" text="" wrappingWidth="36.10004425048828" AnchorPane.bottomAnchor="227.40000000000003" AnchorPane.leftAnchor="74.0" AnchorPane.topAnchor="79.0" />
             <Label fx:id="nomeLabel" layoutX="192.0" layoutY="74.0" minWidth="-Infinity" prefHeight="20.0" styleClass="profile-option-text" text="Nome" textFill="#ff1c1c" AnchorPane.leftAnchor="192.0" AnchorPane.topAnchor="74.0" />
             <Label fx:id="emailLabel" layoutX="199.0" layoutY="122.0" minWidth="-Infinity" prefHeight="20.0" styleClass="profile-option-subtext" text="Email" AnchorPane.leftAnchor="192.0" />
             <Label layoutX="22.0" layoutY="337.0" minWidth="-Infinity" prefHeight="20.0" styleClass="profile-main-text" text="Data di Nascita" AnchorPane.leftAnchor="468.0" AnchorPane.topAnchor="350.0" />
